@@ -91,3 +91,7 @@ Before initializing repos with Hath0r:
 ## Peer reference
 
 Structure and ops patterns mirror **1-Nation ATC** at `/Users/raybayly/Development/1-Nation/ATC` with Hath0r naming (`hath0r` / `hath0r-net` / `com.hath0r.*` / ports `38xxx`).
+
+## Branch rules (pointer)
+
+See `docs/governance/branch-rules.md` (cr-branch-gov-001 / CR-BAI-001). Work PRs → `development` only; release trains use `release/x.x.x`.
