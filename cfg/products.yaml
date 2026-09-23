@@ -1,0 +1,97 @@
+# Canonical OpenSource Project product catalog (ATC control tower copy)
+# group: hath0r-opensource
+# updated: 2026-09-23
+
+group_id: hath0r-opensource
+group_label: OpenSource Project
+group_root: /Users/raybayly/Development/OpenSource
+control_tower:
+  product_id: hath0r-atc
+  local_path: /Users/raybayly/Development/OpenSource/hath0r-atc
+  github: Bayly-AI/HATH0R-ATC
+  roles:
+    - infrastructure
+    - observation
+    - central_group_controller
+operator_cli:
+  product_id: hath0r-cli
+  local_path: /Users/raybayly/Development/OpenSource/hathor-cli
+  github: Bayly-AI/HATH0R-CLI
+  binary: hath0r
+canonical_knowledgebase: /Users/raybayly/Development/OpenSource/.hath0r/knowledgebase
+framework_hidden_root: .hath0r
+docker_network: hath0r-net
+compose_project_name: hath0r
+
+products:
+  - product_id: hath0r-atc
+    product_name: HATH0R ATC
+    role: control-tower-infrastructure
+    canonical: true
+    is_control_tower: true
+    local_path: /Users/raybayly/Development/OpenSource/hath0r-atc
+    github: Bayly-AI/HATH0R-ATC
+    remote: https://github.com/Bayly-AI/HATH0R-ATC.git
+    kb_mode: stub
+    notes: >
+      Infrastructure, observation, and Docker-group control tower for the
+      OpenSource Project. Standalone from MCP; supports framework builds.
+
+  - product_id: hath0r-mcp
+    product_name: HATH0R MCP
+    role: mcp-server
+    canonical: true
+    is_control_tower: false
+    standalone: true
+    local_path: /Users/raybayly/Development/OpenSource/hath0r-mcp
+    github: Bayly-AI/HATH0R-MCP
+    remote: https://github.com/Bayly-AI/HATH0R-MCP.git
+    container: hath0r-mcp
+    image: hath0r/mcp:local
+    kb_mode: stub
+    notes: Standalone MCP member on hath0r-net; not owned by ATC compose lifecycle.
+
+  - product_id: hath0r-cli
+    product_name: HATH0R CLI
+    role: operator-cli
+    canonical: true
+    is_control_tower: false
+    local_path: /Users/raybayly/Development/OpenSource/hathor-cli
+    github: Bayly-AI/HATH0R-CLI
+    remote: https://github.com/Bayly-AI/HATH0R-CLI.git
+    binary: hath0r
+    package: hath0r-cli
+    kb_mode: stub
+    notes: Operator/developer CLI (hath0r binary). Governance helpers live here.
+
+  - product_id: hath0r-framework
+    product_name: HATHOR Framework
+    role: agentic-application-framework
+    canonical: true
+    is_control_tower: false
+    local_path: /Users/raybayly/Development/OpenSource/hath0r
+    github: Bayly-AI/HATH0R-Agentic-Framework
+    remote: https://github.com/Bayly-AI/HATH0R-Agentic-Framework.git
+    docs_canonical_path: /Users/raybayly/Development/OpenSource/hath0r/docs
+    kb_mode: stub
+    notes: Framework + canonical docs corpus. ATC + MCP support building it.
+
+  - product_id: hath0r-poc
+    product_name: HATHOR POC
+    role: integration-test-bed
+    lifecycle: archived
+    canonical: false
+    is_control_tower: false
+    local_path: /Users/raybayly/Development/OpenSource/hath0r-poc
+    github: Bayly-AI/HATH0R-Agentic-POC
+    remote: https://github.com/Bayly-AI/HATH0R-Agentic-POC.git
+    kb_mode: stub
+    notes: Archived optional fixture.
+
+membership:
+  rule: all-siblings-under-group-root
+  group_root: /Users/raybayly/Development/OpenSource
+  description: >
+    All repositories under the OpenSource folder are canonical members of the
+    OpenSource Project and the hath0r Docker group unless explicitly excluded.
+updated_at: "2026-09-23T18:45:00Z"
