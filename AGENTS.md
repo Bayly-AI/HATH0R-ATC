@@ -91,3 +91,10 @@ Before initializing repos with Hath0r:
 ## Peer reference
 
 Structure and ops patterns mirror **1-Nation ATC** at `/Users/raybayly/Development/1-Nation/ATC` with Hath0r naming (`hath0r` / `hath0r-net` / `com.hath0r.*` / ports `38xxx`).
+
+## SonarCloud Quality Gate (CRITICAL)
+
+- Canonical thresholds: SonarCloud Quality Gate only — do not modify gate thresholds ad hoc.
+- PR check **SonarCloud Quality Gate** is a hard stop on failure.
+- See `docs/governance/sonarcloud-quality-gates.md`
+- Secret required: `SONAR_TOKEN`
