@@ -91,3 +91,9 @@ Before initializing repos with Hath0r:
 ## Peer reference
 
 Structure and ops patterns mirror **1-Nation ATC** at `/Users/raybayly/Development/1-Nation/ATC` with Hath0r naming (`hath0r` / `hath0r-net` / `com.hath0r.*` / ports `38xxx`).
+
+## Documentation → MCP
+
+Docs are published to the **proper group MCP** via control-tower
+`python3 scripts/publish-docs-to-mcp.py` (`cfg/mcp-doc-publish.json`).
+See HATH0R-CLI `docs/governance/mcp-doc-publish.md`.
