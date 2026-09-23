@@ -1,0 +1,108 @@
+# CR-BAI-001 / CR-BRANCH-GOV-001 — Environment Promotion Path
+# local/feature → development → testing → staging → master
+name: Enforce Promotion Path
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+    branches:
+      - development
+      - testing
+      - staging
+      - master
+  push:
+    branches:
+      - testing
+      - staging
+      - master
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: promotion-path-${{ github.repository }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-promotion-path:
+    name: validate-promotion-path
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enforce source → target rules
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
+          PUSH_REF: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          echo "CR-BRANCH-GOV-001: feature → development → testing → staging → master"
+
+          allowed_head_for_base() {
+            local base="$1" head="$2"
+            case "$base" in
+              development)
+                case "$head" in
+                  testing|staging|master)
+                    echo "❌ PRs into development cannot come from '$head'."
+                    return 1
+                    ;;
+                  *) return 0 ;;
+                esac
+                ;;
+              testing)
+                [ "$head" = "development" ] && return 0
+                echo "❌ PRs into testing must come from development (got '$head')."
+                return 1
+                ;;
+              staging)
+                [ "$head" = "testing" ] && return 0
+                echo "❌ PRs into staging must come from testing (got '$head')."
+                return 1
+                ;;
+              master)
+                [ "$head" = "staging" ] && return 0
+                echo "❌ PRs into master must come from staging (got '$head')."
+                return 1
+                ;;
+              *)
+                echo "❌ Unsupported base '$base'."
+                return 1
+                ;;
+            esac
+          }
+
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            echo "PR: '$HEAD_REF' → '$BASE_REF'"
+            allowed_head_for_base "$BASE_REF" "$HEAD_REF"
+            echo "✅ PR path allowed."
+            exit 0
+          fi
+
+          TARGET="$PUSH_REF"
+          case "$TARGET" in
+            testing) REQUIRED_PREV="development" ;;
+            staging) REQUIRED_PREV="testing" ;;
+            master) REQUIRED_PREV="staging" ;;
+            *) echo "No push gate for '$TARGET'"; exit 0 ;;
+          esac
+
+          git fetch origin "$REQUIRED_PREV" --depth=1 2>/dev/null || git fetch origin "$REQUIRED_PREV"
+          PREV_SHA=$(git rev-parse "origin/${REQUIRED_PREV}" 2>/dev/null || true)
+          if [ -z "$PREV_SHA" ]; then
+            echo "❌ Could not resolve origin/${REQUIRED_PREV}."
+            exit 1
+          fi
+          if git merge-base --is-ancestor "$PREV_SHA" HEAD; then
+            echo "✅ origin/${REQUIRED_PREV} is ancestor of $TARGET."
+            exit 0
+          fi
+          echo "❌ Push to '$TARGET' rejected: promote via $REQUIRED_PREV → $TARGET."
+          exit 1

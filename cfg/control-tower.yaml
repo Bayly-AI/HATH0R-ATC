@@ -1,0 +1,39 @@
+group_id: hath0r-opensource
+group_label: OpenSource Project
+title: Hath0r ATC (Control Tower)
+remote: Bayly-AI/HATH0R-ATC
+local_path: /Users/raybayly/Development/OpenSource/hath0r-atc
+canonical_knowledgebase: /Users/raybayly/Development/OpenSource/.hath0r/knowledgebase
+knowledge_mode: group_hub
+is_control_tower: true
+roles:
+  - infrastructure
+  - observation
+  - central_group_controller
+env_source: .env
+updated_at: "2026-09-23T18:45:00Z"
+members_root: /Users/raybayly/Development/OpenSource
+projects_location: /Users/raybayly/Development/OpenSource
+docker_network: hath0r-net
+compose_project_name: hath0r
+image_prefix: hath0r/
+label_prefix: com.hath0r.
+suite_config: cfg/suite.yaml
+products_catalog: cfg/products.yaml
+operator_cli: hath0r
+cli_note: "HATH0R-CLI remains the operator/developer CLI binary; ATC owns infrastructure, observation, and Docker group control."
+framework_support: true
+framework_path: /Users/raybayly/Development/OpenSource/hath0r
+mcp_standalone_path: /Users/raybayly/Development/OpenSource/hath0r-mcp
+infrastructure:
+  compose: deploy/docker/docker-compose.yml
+  edge_container: hath0r-nginx
+  state_container: hath0r-redis
+  rule_docker_group: cr-docker-hath0r-group-001
+observation:
+  smoke: deploy/docker/smoke-test.sh
+  status_make: docker-status
+  archives: docs/archive/
+  reports: docs/reports/
+versioning:
+  policy: central
