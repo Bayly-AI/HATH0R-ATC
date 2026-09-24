@@ -109,3 +109,24 @@ See `docs/governance/pr-workflow.md`. Work PRs → `development` (agents + CODEO
 Docs are published to the **proper group MCP** via control-tower
 `python3 scripts/publish-docs-to-mcp.py` (`cfg/mcp-doc-publish.json`).
 See HATH0R-CLI `docs/governance/mcp-doc-publish.md`.
+
+## CLI-first (CRITICAL — cr-cli-first-001)
+
+For connections, MCP, workflows, factories, Docker workflows, KB path, or suite orientation:
+
+1. Prefer the operator CLI **`hath0r`** (`../hathor-cli`) when installed.
+2. Prefer ATC Make targets for Docker group lifecycle (`make docker-up`, `make smoke`).
+3. Do not invent parallel ad-hoc scripts that bypass CLI/ATC entrypoints.
+
+Canonical: [HATH0R-CLI cli-first-rules.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/cli-first-rules.md)  
+Local pointer: [`docs/governance/cli-first-rules.md`](docs/governance/cli-first-rules.md)
+
+## Suite standards fan-out
+
+Shared epics (OTel, OpenFeature, OpenObservation, SemVer, Docker group templates, workflow docs, MCP priority) are defined in **HATH0R-CLI** on `development`. ATC pins them via:
+
+- [`docs/governance/SUITE_STANDARDS.md`](docs/governance/SUITE_STANDARDS.md)
+- Stubs: `cfg/observability/otel.json`, `cfg/feature-flags/openfeature.json`
+- Docker runtime: `deploy/docker/` · template pointer: `cfg/docker/groups/hath0r/`
+- MCP priority: [`cfg/mcp.priority.md`](cfg/mcp.priority.md) → CLI `cfg/mcp.servers.json` (project MCP = priority 1)
+- Adopt audit: [`.hath0r/ADOPT_AUDIT.md`](.hath0r/ADOPT_AUDIT.md)
