@@ -5,11 +5,12 @@
 .env.*
 !.env.example
 
-# Nested product git repos (tracked separately)
-hath0r/
-hathor-cli/
-hath0r-mcp/
-hath0r-poc/
+# Nested product git repos at repo root only (tracked separately)
+# Use leading slash so suite paths like cfg/docker/groups/hath0r/ are not ignored.
+/hath0r/
+/hathor-cli/
+/hath0r-mcp/
+/hath0r-poc/
 
 # Site build artifacts
 site/**/node_modules/
