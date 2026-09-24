@@ -95,3 +95,6 @@ Structure and ops patterns mirror **1-Nation ATC** at `/Users/raybayly/Developme
 ## Branch rules (pointer)
 
 See `docs/governance/branch-rules.md` (cr-branch-gov-001 / CR-BAI-001). Work PRs → `development` only; release trains use `release/x.x.x`.
+## PR workflow hardening
+
+See `docs/governance/pr-workflow.md`. Work PRs → `development` (agents + CODEOWNERS). **Human gate** before staging/master.
