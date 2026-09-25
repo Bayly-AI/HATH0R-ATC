@@ -98,30 +98,3 @@ Prose authority (until superseded by a released Framework contract tag):
 
 Introduced in Framework issue
 [#21](https://github.com/Bayly-AI/HATH0R-Agentic-Framework/issues/21).
-
-## UPL / contracts pin refresh (ATC #2)
-
-**Pin date:** 2026-09-24
-
-This tree is the **vendored contract pin** used by ATC for suite machine-interface alignment.
-Refresh policy (no large binary blobs):
-
-1. Compare schema filenames + `$id` / identity strings against the Framework and HATH0R-CLI contract sources on `development`.
-2. Copy only JSON Schema / YAML contract text (draft-07); do **not** commit packaged wheels, node_modules, or binary artifacts.
-3. Keep this README’s schema table current; bump notes here when majors change (`*-v2`).
-4. Consumers pin **response majors** (`hath0r.cli.response/1`) and refuse unsupported majors.
-
-### Current pin inventory
-
-| Artifact | Role |
-|----------|------|
-| `hath0r-cli-response-v1.schema.json` | Envelope |
-| `hath0r-cli-diagnostic-v1.schema.json` | Diagnostics |
-| `hath0r-cli-version-v1.schema.json` | `version` data |
-| `hath0r-cli-doctor-v1.schema.json` | `doctor` data |
-| `hath0r-cli-kb-path-v1.schema.json` | `kb.path` data |
-| `hath0r-cli-kb-products-v1.schema.json` | `kb.products` data |
-| `exit-codes.yaml` | Stable process exit codes |
-
-Upstream prose: `HATH0R-CLI` TS-005 machine interface on `development`.  
-Suite standards hub: [`docs/governance/SUITE_STANDARDS.md`](../docs/governance/SUITE_STANDARDS.md).
