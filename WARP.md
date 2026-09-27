@@ -38,7 +38,7 @@ Members point Docker-group / observation questions at **ATC**. Use **`hath0r`** 
 
 ## Hidden root
 
-Only `.hath0r/`. Forbidden: `.ai/`, `.aegis/`, `.infraOS/`.
+Only `.hath0r/`. Forbidden: `.ai/`, `.customerSystem/`, `.infraOS/`.
 
 ## Docker group (CR-DOCKER-HATH0R-GROUP-001)
 

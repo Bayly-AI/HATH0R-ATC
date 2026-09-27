@@ -4,7 +4,7 @@ Date: 2026-09-24 · Issue: #21
 
 | Check | Status | Evidence |
 |-------|--------|----------|
-| Hidden root `.hath0r/` only | PASS | `.hath0r/` present; no `.ai/` / `.aegis/` / `.infraOS/` |
+| Hidden root `.hath0r/` only | PASS | `.hath0r/` present; no `.ai/` / `.customerSystem/` / `.infraOS/` |
 | Knowledgebase stub | PASS | `.hath0r/knowledgebase/README.md` → group KB |
 | `VERSION` SemVer | PASS | root `VERSION` |
 | Runbook | PASS | `docs/runbook.md` |

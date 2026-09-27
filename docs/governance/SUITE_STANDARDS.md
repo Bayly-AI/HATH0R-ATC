@@ -44,7 +44,7 @@ Local CLI checkout (operators): `/Users/raybayly/Development/OpenSource/hathor-c
 
 ## Non-negotiables (suite)
 
-1. **Hidden root:** `.hath0r/` only — never `.ai/`, `.aegis/`, `.infraOS/`.
+1. **Hidden root:** `.hath0r/` only — never `.ai/`, `.customerSystem/`, `.infraOS/`.
 2. **Secrets:** only under `/Users/raybayly/Development/.credentials/<service>/.env` — never commit.
 3. **Branches:** feature work → PR base **`development`** only (`CR-BRANCH-GOV-001`).
 4. **Docker group:** compose `name: hath0r`, network `hath0r-net`, shared edge/state via ATC deploy.
