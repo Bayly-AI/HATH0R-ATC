@@ -130,3 +130,24 @@ Shared epics (OTel, OpenFeature, OpenObservation, SemVer, Docker group templates
 - Docker runtime: `deploy/docker/` · template pointer: `cfg/docker/groups/hath0r/`
 - MCP priority: [`cfg/mcp.priority.md`](cfg/mcp.priority.md) → CLI `cfg/mcp.servers.json` (project MCP = priority 1)
 - Adopt audit: [`.hath0r/ADOPT_AUDIT.md`](.hath0r/ADOPT_AUDIT.md)
+
+## Hyper Context Pointers
+- **Deploy Subsystem**: `deploy/AGENTS.md`
+
+## Hyper Context Pointers
+- **Contracts Subsystem**: `contracts/AGENTS.md`
+
+## Hyper Context Pointers
+- **Tests Subsystem**: `tests/AGENTS.md`
+
+## Hyper Context Pointers
+- **Docs Subsystem**: `docs/AGENTS.md`
+
+## Hyper Context Pointers
+- **Cfg Subsystem**: `cfg/AGENTS.md`
+
+## Hyper Context Pointers
+- **Lib Subsystem**: `lib/AGENTS.md`
+
+## Hyper Context Pointers
+- **Site Subsystem**: `site/AGENTS.md`
