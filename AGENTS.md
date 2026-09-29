@@ -21,6 +21,8 @@
 | Framework | `../hath0r` |
 | Tech runbook | [`docs/runbook.md`](docs/runbook.md) |
 | Setup playbook | `../hathor-cli/docs/hathor-playbook-001-repo-init-setup-20260919.md` |
+| Local Memory Space | [`.hath0r/memory/`](.hath0r/memory/) (`hath0r memory read <topic>`) |
+| Tri-Graph Substrate | KnowledgeGraph AST · ContextGraph Subsystems · MemoryGraph |
 
 ## ATC responsibilities (CRITICAL)
 
