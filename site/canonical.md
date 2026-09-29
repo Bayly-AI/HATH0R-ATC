@@ -1,6 +1,13 @@
-# Site Subsystem - Canonical Reference
+# Site Subsystem — Canonical Web Structure
 
-> Canonical sources of truth for Site Subsystem.
+> Canonical index of site layout in HATH0R-ATC.
 
-## Architecture
-- 
+## Layout
+
+```text
+site/
+  README.md   # Site subsystem overview
+  AGENTS.md   # Subsystem context
+  rules.md    # Security & styling constraints
+  canonical.md# Layout reference
+```

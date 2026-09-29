@@ -1,6 +1,7 @@
-# Lib Subsystem - Canonical Reference
+# Library Subsystem — Canonical Components
 
-> Canonical sources of truth for Lib Subsystem.
+> Canonical index of library utilities and shared components in HATH0R-ATC.
 
-## Architecture
-- 
+## Components
+
+- Shared infrastructure asset bundles and verification utilities.
