@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-atc",
-  "timestamp": "2026-10-02T22:13:07.403819+00:00",
+  "timestamp": "2026-10-02T22:19:55.418780+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -96,6 +96,84 @@
       "properties": {
         "path": "site/AGENTS.md",
         "subsystem": "site"
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Deploy Subsystem — Local Rules & Constraints\n\n> Constraints and governance for Docker infrastructure in HATH0R-ATC.\n\n## CR-DOCKER-HATH0R-GROUP-001 Constraints\n\n1. **Group Name**: Top-level compose `name:` must always be `hath0r`.\n2. **Network Policy**: Use external bridge network `hath0r-net`. Never create unattached isolated networks for suite members.\n3. **Container Naming**: Prefix container names with `hath0r-` (e.g., `hath0r-nginx`, `hath0r-redis`).\n4. **Mandatory Labels**:\n   - `com.hath0r.org=bayly-ai`\n   - `com.hath0r.project=hath0r-opensource`\n   - `com.hath0r.component=<component_name>`\n   - `com.hath0r.container=<container_name>`\n5. **Security Constraints**:\n   - Non-root user execution whenever possible.\n   - Read-only root filesystem (`read_only: true`) with explicit temporary volume mounts.\n   - Drop all unnecessary Linux capabilities (`cap_drop: [ALL]`).\n   - `security_opt: [no-new-privileges:true]`.\n",
+      "properties": {
+        "path": "deploy/rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Contracts Subsystem — Local Rules & Constraints\n\n> Constraints and schema governance for HATH0R-ATC.\n\n## Rules\n\n1. **Envelope Conformance**: Output responses must validate against `hath0r-cli-response-v1.schema.json`.\n2. **Schema Mutability**: Do NOT edit schema definitions directly in member repos without syncing from `Bayly-AI/HATH0R-Agentic-Framework/lib/schemas`.\n3. **Exit Code Validation**: Tools must return exit codes specified in `contracts/exit-codes.yaml`.\n4. **No Undocumented Extensions**: Unknown payload properties must be declared or rejected per strict JSONSchema standards.\n",
+      "properties": {
+        "path": "contracts/rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Tests Subsystem — Local Rules & Constraints\n\n> Constraints and requirements for tests in HATH0R-ATC.\n\n## Rules\n\n1. **State Cleanliness**: Tests must not leave dangling temporary containers or untracked test fixtures.\n2. **Network Isolation**: Tests asserting Docker connectivity must verify `hath0r-net` availability before sending traffic.\n3. **Exit Code Validation**: Smoke and bootstrap scripts must exit with code 0 on success and non-zero on error.\n",
+      "properties": {
+        "path": "tests/rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Documentation Subsystem — Local Rules & Constraints\n\n> Constraints and formatting standards for documentation in HATH0R-ATC.\n\n## Rules\n\n1. **Taxonomy Discipline**: Structure documentation according to canonical hierarchy: Playbook (troubleshooting/triage) → Procedure (step-by-step operation) → Runbook (lifecycle/service ops).\n2. **Path Pointers**: Relative links must use markdown format and valid file targets.\n3. **Redaction**: Never write plain text tokens, API keys, or private SSH keys into markdown files.\n4. **Header Consistency**: Markdown documents must include front-matter or initial block summary with document ownership and status.\n",
+      "properties": {
+        "path": "docs/rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Configuration Subsystem — Local Rules & Constraints\n\n> Constraints and schema requirements for HATH0R-ATC configurations.\n\n## Rules\n\n1. **Schema Validation**: All YAML files must parse cleanly and match their respective schema definitions.\n2. **Hidden Root Pointer**: Suite configurations must reference `.hath0r/` only (`cr-hath0r-root-001`).\n3. **No Secret Storage**: Secrets must be stored outside git in `/Users/raybayly/Development/.credentials/`.\n4. **Member Immutability**: Changes to `cfg/suite.yaml` or `cfg/products.yaml` require approval by CODEOWNERS.\n",
+      "properties": {
+        "path": "cfg/rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Library Subsystem — Local Rules & Constraints\n\n> Constraints and standards for shared code in HATH0R-ATC.\n\n## Rules\n\n1. **Modularity**: Functions should be single-purpose and type-annotated (`from __future__ import annotations`).\n2. **Error Handling**: Raise explicit exception types rather than broad `Exception`.\n3. **No Direct Secret Access**: Accept credentials via configuration objects or function arguments.\n",
+      "properties": {
+        "path": "lib/rules.md",
+        "priority": 3,
+        "restricted_actions": []
       },
       "is_current": true
     },
@@ -297,96 +375,6 @@
         ]
       },
       "is_current": true
-    },
-    {
-      "id": "rule:cr-bai-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "BAI Promotion Gate",
-      "content": "Canonical promotion development -> testing -> staging -> master.",
-      "policy_type": "governance",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-BAI-001"
-      }
-    },
-    {
-      "id": "rule:cr-branch-gov-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "Branch Governance",
-      "content": "Branch & Promotion Governance: work PRs target development only, canonical promotion path.",
-      "policy_type": "governance",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-BRANCH-GOV-001"
-      }
-    },
-    {
-      "id": "rule:cr-hath0r-init-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "Hath0r Repo Init Gate",
-      "content": "Follow canonical playbook and runbook before repo initialization.",
-      "policy_type": "workflow",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-HATH0R-INIT-001"
-      }
-    },
-    {
-      "id": "rule:cr-cli-first-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "Rule CR-CLI-FIRST-001",
-      "content": "Governance policy rule CR-CLI-FIRST-001",
-      "policy_type": "governance",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-CLI-FIRST-001"
-      }
-    },
-    {
-      "id": "rule:cr-docker-1n-group-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "Rule CR-DOCKER-1N-GROUP-001",
-      "content": "Governance policy rule CR-DOCKER-1N-GROUP-001",
-      "policy_type": "governance",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-DOCKER-1N-GROUP-001"
-      }
-    },
-    {
-      "id": "rule:cr-hath0r-root-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "Hidden Root Rule",
-      "content": "Use only .hath0r/ as hidden project root. Never create legacy .ai/ or .infraOS/.",
-      "policy_type": "governance",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-HATH0R-ROOT-001"
-      }
     }
   ],
   "edges": [
@@ -442,54 +430,6 @@
       "source": "rule:cr-docker-hath0r-group-001",
       "target": "role:developer",
       "relation": "GOVERNS",
-      "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-bai-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
-      "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-branch-gov-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
-      "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-hath0r-init-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
-      "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-cli-first-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
-      "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-docker-1n-group-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
-      "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-hath0r-root-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-02T22:13:07.403673+00:00",
-      "valid_to": null,
       "is_current": true
     }
   ],
