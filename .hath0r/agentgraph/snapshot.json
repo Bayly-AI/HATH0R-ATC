@@ -1,0 +1,500 @@
+{
+  "schema_version": "hath0r.agentgraph/1",
+  "graph_id": "agentgraph-hath0r-atc",
+  "timestamp": "2026-10-02T22:13:07.403819+00:00",
+  "nodes": [
+    {
+      "id": "doc:agents-root",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (root)",
+      "content": "# AGENTS.md — HATH0R ATC (Control Tower)\n\n> **Canonical control tower** for the **OpenSource Project** (`hath0r-opensource`).  \n> Roles: **infrastructure repo** · **observation hub** · **central group controller**.  \n> ATC and MCP are **standalone**; both support building the HATHOR framework.\n\n| Field | Value |\n|-------|-------|\n| Product | **HATH0R ATC** |\n| Product ID | `hath0r-atc` |\n| Role | Control Tower — infrastructure / observation / group controller (`is_control_tower: true`) |\n| GitHub | **[Bayly-AI/HATH0R-ATC](https://github.com/Bayly-AI/HATH0R-ATC)** (CANONICAL) |\n| Local path | `/Users/raybayly/Development/OpenSource/hath0r-atc` |\n| Group | `hath0r-opensource` / **OpenSource Project** |\n| Docker group | **`hath0r`** (CANONICAL) |\n| Docker network | **`hath0r-net`** (CANONICAL) |\n| Shared edge / state | `hath0r-nginx` / `hath0r-redis` |\n| Members root | `/Users/raybayly/Development/OpenSource` |\n| Operator CLI | **`hath0r`** (`../hathor-cli`) |\n| Standalone MCP | `../hath0",
+      "properties": {
+        "path": "AGENTS.md",
+        "subsystem": "root"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-deploy",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (deploy)",
+      "content": "# AGENTS.md — Deploy Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Deployment & Infrastructure Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `deploy` |\n| Scope | Docker Compose, NGINX Edge Ingress, Redis Shared State, Local Network (`hath0r-net`) |\n| Docker Group | `hath0r` |\n| External Network | `hath0r-net` (Subnet: `172.38.0.0/16` / standard bridge) |\n| Local Port Mapping | `38xxx` range |\n\n## Operational Guidelines\n\n1. **Docker Group Membership (`CR-DOCKER-HATH0R-GROUP-001`)**: All services managed by or joining ATC must belong to the `hath0r` Docker group.\n2. **Edge Proxy**: NGINX acts as the reverse proxy edge (`deploy/docker/nginx.conf`) routing requests across OpenSource services.\n3. **State Management**: Shared Redis instance (`hath0r-redis`) manages suite session cache and distributed locks.\n4. **Secrets Isolation**: No secret injection into git; utilize external credentials ",
+      "properties": {
+        "path": "deploy/AGENTS.md",
+        "subsystem": "deploy"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-contracts",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (contracts)",
+      "content": "# AGENTS.md — Contracts Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Contracts & JSON Schemas Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `contracts` |\n| Scope | JSON Schemas, Exit Code Registry, CLI/Tower Interoperability Contracts |\n| Standards Authority | `Bayly-AI/HATH0R-Agentic-Framework` |\n| Pinned Version | `0.2.0` / `0.3.0` |\n\n## Operational Guidelines\n\n1. **Schema Authority**: Pinned schemas define the invariant envelope contracts between CLI, Control Tower, and member services.\n2. **Backward Compatibility**: Schema additions must be backward compatible; removing or altering required fields is prohibited without explicit SemVer major bump.\n3. **Exit Code Mapping**: All automated processes and bots must emit standard exit codes defined in [`exit-codes.yaml`](exit-codes.yaml).\n\n## Key Files & Direct Links\n\n- [exit-codes.yaml](file:///Users/raybayly/Development/OpenSource/hath",
+      "properties": {
+        "path": "contracts/AGENTS.md",
+        "subsystem": "contracts"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-tests",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (tests)",
+      "content": "# AGENTS.md — Tests Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Test Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `tests` |\n| Scope | Infrastructure Smoke Tests, Bootstrap Verification, Contract Testing |\n| Entrypoints | `make smoke`, `make bootstrap`, `./bin/hath0r-bootstrap.sh` |\n\n## Operational Guidelines\n\n1. **Bootstrap Validation**: Always run `make bootstrap` or `./bin/hath0r-bootstrap.sh` to ensure layout and identity conformance.\n2. **Smoke Testing**: Run `make smoke` against live local containers to verify edge NGINX and Redis connectivity.\n3. **Contract Tests**: Verify that ATC schemas validate against the canonical framework schemas.\n\n## Key Files & Direct Links\n\n- [hath0r-bootstrap.sh](file:///Users/raybayly/Development/OpenSource/hath0r-atc/bin/hath0r-bootstrap.sh): Local fileset and environment verification script.\n- [smoke-test.sh](file:///Users/raybayly/Development/O",
+      "properties": {
+        "path": "tests/AGENTS.md",
+        "subsystem": "tests"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-docs",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (docs)",
+      "content": "# AGENTS.md — Documentation Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Documentation Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `docs` |\n| Scope | Operational Runbooks, Governance Rules, Observation Logs, Deployment Guides |\n| Standard | Standard Playbook → Procedure → Runbook taxonomy (`HATHOR-GUIDE-001`) |\n\n## Operational Guidelines\n\n1. **Docs Before Code**: Before changing operational infrastructure, verify or update the runbook at [`docs/runbook.md`](runbook.md).\n2. **Observation Archives**: Operational smoke test logs and health snapshots are archived in `docs/observe/` and `docs/archive/`.\n3. **Governance References**: Branch promotion, PR workflow hardening, SonarCloud gates, and Docker group rules live in `docs/governance/` and `docs/rules/`.\n\n## Key Files & Direct Links\n\n- [runbook.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/docs/runbook.md): Technology ",
+      "properties": {
+        "path": "docs/AGENTS.md",
+        "subsystem": "docs"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-cfg",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (cfg)",
+      "content": "# AGENTS.md — Configuration Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Configuration & Governance Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `cfg` |\n| Scope | Suite Identity, Product Catalog, Control Tower Topology, Observability Pointers |\n| Role | Central configuration registry for OpenSource suite members |\n\n## Operational Guidelines\n\n1. **Central Group Controller**: Suite configuration in [`cfg/suite.yaml`](suite.yaml) and [`cfg/control-tower.yaml`](control-tower.yaml) governs membership policies across all repositories in this workspace.\n2. **Product Catalog**: Canonical repository metadata, paths, and remotes are indexed in [`cfg/products.yaml`](products.yaml).\n3. **Observability & Feature Flags**: Pointers to OpenTelemetry (`cfg/observability/`) and OpenFeature (`cfg/feature-flags/`) stubs are maintained here.\n4. **Zero Git Secrets**: Never commit tokens, passwords, or cre",
+      "properties": {
+        "path": "cfg/AGENTS.md",
+        "subsystem": "cfg"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-lib",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (lib)",
+      "content": "# AGENTS.md — Library Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Shared Libraries & Scripts Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `lib` |\n| Scope | Shared helper scripts, telemetry utilities, asset bundles |\n\n## Operational Guidelines\n\n1. **Self-Contained Utilities**: Helper scripts and modules should be modular and avoid external dependency bloat.\n2. **Python Compatibility**: All python scripts in `lib/` must support Python 3.10+.\n3. **No Side Effects on Import**: Modules in `lib/` must not perform network or filesystem mutations on import.\n\n## Key Files & Direct Links\n\n- [rules.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/lib/rules.md): Library design rules.\n- [canonical.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/lib/canonical.md): Library assets index.\n",
+      "properties": {
+        "path": "lib/AGENTS.md",
+        "subsystem": "lib"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-site",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (site)",
+      "content": "# AGENTS.md — Site Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Portal & Static Web Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `site` |\n| Scope | Static Landing Portal, Control Tower Dashboard UI |\n\n## Operational Guidelines\n\n1. **Lightweight & Portable**: Site assets must be lightweight and function without heavy Node build chains or remote dependencies.\n2. **Local Serving**: Serve cleanly behind NGINX at port `38080` (or root path `/`).\n3. **No External CDN Lock-In**: Avoid external third-party CDN scripts or fonts.\n\n## Key Files & Direct Links\n\n- [README.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/site/README.md): Site subsystem overview.\n- [rules.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/site/rules.md): Static site design rules.\n- [canonical.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/site/canonical.md): Site structure index.",
+      "properties": {
+        "path": "site/AGENTS.md",
+        "subsystem": "site"
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Site Subsystem — Local Rules & Constraints\n\n> Constraints for static web portal assets in HATH0R-ATC.\n\n## Rules\n\n1. **Self-Contained**: HTML/CSS/JS must reside entirely in-repo with relative asset paths.\n2. **Security**: Content-Security-Policy compliant; no inline executable scripts or eval.\n3. **Responsive**: Portable layout across standard desktop and mobile viewports.\n",
+      "properties": {
+        "path": "site/rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-branch-gov-001-canonical-branches",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule cr-branch-gov-001-canonical-branches",
+      "content": "---\nid: cr-branch-gov-001\ntitle: Canonical Branch & PR Governance\nversion: 0.2.0\nseverity: CRITICAL\napplies_to: \"hath0r-opensource\"\neffective_date: 2026-05-16\nlast_updated: 2026-09-23\n---\n\n# CR-BRANCH-GOV-001 — Canonical Branch & PR Governance (CRITICAL)\n\n## Integration (long-lived) branches\n\n```\ndevelopment → testing → staging → master\n```\n\n- Do **not** skip stages or reverse-promote.\n- `development` is the **default integration branch** for day-to-day delivery.\n- `master` is the **production** line (not a day-to-day PR target).\n- `main` is not used as an integration branch; prefer `master` for production.\n\n## Feature-branch workflow (CANONICAL)\n\n1. Branch from **`development`**.\n2. Implement on `feature/*`, `fix/*`, `chore/*`, or `docs/*` (issue number required).\n3. Open PR with **base = `development`**.\n4. Merge into **`development` only**.\n5. Promote: `development` → `testing` → `staging` → `master` (release path).\n\n### Forbidden\n\n- Normal delivery PRs targeting `master` or `main`\n- Feature PRs targeting `testing` or `staging`\n- Unreviewed pushes of delivery work to `master`\n\n## Agent checklist\n\n- [ ] Work branch is not `master` / `main` / `development`\n- [ ] Branched from latest `development`\n- [ ] PR base is `development`\n",
+      "properties": {
+        "path": "docs/rules/cr-branch-gov-001-canonical-branches.md",
+        "priority": 4,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-docker-hath0r-group-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule cr-docker-hath0r-group-001",
+      "content": "---\nid: cr-docker-hath0r-group-001\ntitle: Canonical hath0r Docker group for all OpenSource workspace repos\nversion: 1.0.0\nseverity: CRITICAL\nstatus: canonical\napplies_to: \"/Users/raybayly/Development/OpenSource/**\"\neffective_date: 2026-09-23\nsuite: hath0r-opensource\n---\n\n# CR-DOCKER-HATH0R-GROUP-001 — hath0r Docker group (CANONICAL)\n\n## Rule statement\n\n**Every repository, service, and container defined under the `OpenSource` workspace folder is a member of the Docker Compose project / Docker Desktop group `hath0r` for local suite runtime.**\n\nThis is **canonical** and not optional for local OpenSource suite runtime.\n\n## Workspace root\n\n```text\n/Users/raybayly/Development/OpenSource\n```\n\nIncludes (now and future):\n\n- Control tower (`hath0r-atc/`)\n- Standalone MCP (`hath0r-mcp/`)\n- Operator CLI (`hathor-cli/`)\n- Framework (`hath0r/`)\n- Any additional clone under this directory\n\n## Canonical artifacts\n\n| Artifact | Value |\n|----------|--------|\n| Compose project name (`name:`) | `hath0r` |\n| Docker Desktop group | `hath0r` |\n| Network | `hath0r-net` (external, shared) |\n| Shared communication | container `hath0r-nginx` |\n| Shared state | container `hath0r-redis` |\n| Image naming | `hath0r/{component}:tag` |\n| Project label | `com.hath0r.project=hath0r-opensource` |\n| Org label | `com.hath0r.org=bayly-ai` |\n\n## Required compose skeleton\n\n```yaml\nname: hath0r\n\nservices:\n  example:\n    image: hath0r/example:local\n    container_name: hath0r-example\n    networks:\n      hath0r-net:\n   ",
+      "properties": {
+        "path": "docs/rules/cr-docker-hath0r-group-001.md",
+        "priority": 4,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-voice-action-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "HATH0R Voice Action Contract v1",
+      "content": "Standardized contract for voice-driven intent recognition, routing, and dispatch across platforms and agents in HATHOR.",
+      "properties": {
+        "schema_id": "https://hath0r.dev/schemas/hath0r-voice-action-v1.schema.json",
+        "path": "contracts/hath0r-voice-action-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-response-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.response/1",
+      "content": "Top-level structured JSON response envelope for hath0r CLI machine output (HATHOR-TS-005 §4).",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-response-v1.schema.json",
+        "path": "contracts/hath0r-cli-response-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-docker-workflow-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "Hath0r Docker Workflow Specification",
+      "content": "Declarative Docker workflow contract for Hath0r container validation and Docker Factory execution.",
+      "properties": {
+        "schema_id": "https://schemas.baylyai.com/hath0r/contracts/hath0r-docker-workflow-v1.schema.json",
+        "path": "contracts/hath0r-docker-workflow-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-diagnostic-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.diagnostic/1",
+      "content": "Structured diagnostic entry for hath0r CLI machine responses (HATHOR-TS-005 §5).",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-diagnostic-v1.schema.json",
+        "path": "contracts/hath0r-cli-diagnostic-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-doctor-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.doctor.data/1",
+      "content": "Command-specific data payload for the doctor operation (HATHOR-TS-005 §10). Placed under response envelope field data when command is doctor.",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-doctor-v1.schema.json",
+        "path": "contracts/hath0r-cli-doctor-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-mcp-servers-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "Hath0r MCP Servers Configuration",
+      "content": "Configuration specification for Model Context Protocol (MCP) servers with priority ordering and scope rules.",
+      "properties": {
+        "schema_id": "https://schema.bayly.ai/hath0r/contracts/hath0r-mcp-servers-v1.schema.json",
+        "path": "contracts/hath0r-mcp-servers-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-kb-products-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.kb-products.data/1",
+      "content": "Command-specific data payload for the kb.products operation (HATHOR-TS-005 §12). Placed under response envelope field data when command is kb.products.",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-kb-products-v1.schema.json",
+        "path": "contracts/hath0r-cli-kb-products-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-kb-path-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.kb-path.data/1",
+      "content": "Command-specific data payload for the kb.path operation (HATHOR-TS-005 §11). Placed under response envelope field data when command is kb.path. Path is operator data; POC adapters must strip it from normal browser responses.",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-kb-path-v1.schema.json",
+        "path": "contracts/hath0r-cli-kb-path-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-factory-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "Hath0rFactoryManifest",
+      "content": "Schema definition for Hath0r declarative automation factories and orchestrated micro-bots.",
+      "properties": {
+        "schema_id": "https://raw.githubusercontent.com/Bayly-AI/HATH0R-Agentic-Framework/development/contracts/hath0r-factory-v1.schema.json",
+        "path": "contracts/hath0r-factory-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-version-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.version.data/1",
+      "content": "Command-specific data payload for the version operation (HATHOR-TS-005 §9). Placed under response envelope field data when command is version.",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-version-v1.schema.json",
+        "path": "contracts/hath0r-cli-version-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "role:developer",
+      "plane": "rules",
+      "type": "agent_role",
+      "label": "Developer Agent",
+      "content": "Full access software engineer role permitted to run commands, edit files, and build.",
+      "properties": {
+        "role_name": "developer",
+        "permitted_tools": [
+          "read_file",
+          "write_file",
+          "run_command",
+          "search_code"
+        ],
+        "forbidden_tools": [
+          "direct_push_master"
+        ]
+      },
+      "is_current": true
+    },
+    {
+      "id": "role:reader",
+      "plane": "rules",
+      "type": "agent_role",
+      "label": "Read-Only Agent",
+      "content": "Read-only inspection role strictly prohibited from modifying code or executing commands.",
+      "properties": {
+        "role_name": "reader",
+        "permitted_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "forbidden_tools": [
+          "run_command",
+          "write_file",
+          "git_push"
+        ]
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-bai-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "BAI Promotion Gate",
+      "content": "Canonical promotion development -> testing -> staging -> master.",
+      "policy_type": "governance",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-BAI-001"
+      }
+    },
+    {
+      "id": "rule:cr-branch-gov-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Branch Governance",
+      "content": "Branch & Promotion Governance: work PRs target development only, canonical promotion path.",
+      "policy_type": "governance",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-BRANCH-GOV-001"
+      }
+    },
+    {
+      "id": "rule:cr-hath0r-init-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Hath0r Repo Init Gate",
+      "content": "Follow canonical playbook and runbook before repo initialization.",
+      "policy_type": "workflow",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-HATH0R-INIT-001"
+      }
+    },
+    {
+      "id": "rule:cr-cli-first-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-CLI-FIRST-001",
+      "content": "Governance policy rule CR-CLI-FIRST-001",
+      "policy_type": "governance",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-CLI-FIRST-001"
+      }
+    },
+    {
+      "id": "rule:cr-docker-1n-group-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-DOCKER-1N-GROUP-001",
+      "content": "Governance policy rule CR-DOCKER-1N-GROUP-001",
+      "policy_type": "governance",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-DOCKER-1N-GROUP-001"
+      }
+    },
+    {
+      "id": "rule:cr-hath0r-root-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Hidden Root Rule",
+      "content": "Use only .hath0r/ as hidden project root. Never create legacy .ai/ or .infraOS/.",
+      "policy_type": "governance",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-HATH0R-ROOT-001"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:cr-branch-gov-001-canonical-branches",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:cr-docker-hath0r-group-001",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-bai-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-branch-gov-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-hath0r-init-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-cli-first-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-docker-1n-group-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-hath0r-root-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-02T22:13:07.403673+00:00",
+      "valid_to": null,
+      "is_current": true
+    }
+  ],
+  "metadata": {
+    "repo_root": "/Users/raybayly/Development/OpenSource/hath0r-atc",
+    "synced_sources": 27
+  }
+}
