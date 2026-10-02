@@ -142,3 +142,9 @@ Shared epics (OTel, OpenFeature, OpenObservation, SemVer, Docker group templates
 - **Cfg Subsystem**: [`cfg/AGENTS.md`](cfg/AGENTS.md)
 - **Lib Subsystem**: [`lib/AGENTS.md`](lib/AGENTS.md)
 - **Site Subsystem**: [`site/AGENTS.md`](site/AGENTS.md)
+
+## AgentGraph Substrate
+
+This repository is governed by the Hath0r AgentGraph substrate. Dynamic rule retrieval, role RBAC, and policy graphs are stored under `.hath0r/agentgraph/`.
+- Query status: `hath0r agentgraph status`
+- Validate rules: `hath0r agentgraph validate`
