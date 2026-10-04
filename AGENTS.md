@@ -71,6 +71,10 @@ make -C ../hath0r-mcp docker-up
 3. Secrets stay out of git — `/Users/raybayly/Development/.credentials/`.
 4. Tower configs: `cfg/control-tower.yaml`, `cfg/suite.yaml`, `cfg/products.yaml`.
 5. Hidden root: **`.hath0r/` only** (`cr-hath0r-root-001`).
+6. **CR-CLI-FEATURE-STANDARD-001 (Shared Code in CLI & Artifact Hexad — CRITICAL · CANONICAL)**:
+   - **Zero Code Duplication**: Anything usable across multiple repos MUST live in `HATH0R-CLI`.
+   - **Complete Feature Package**: When adding any feature that should be a CLI command, deliver the CLI commands (`src/hath0r_cli/commands/`), managing bot(s) (`src/hath0r_cli/bots/`), workflows/scripts, and the Governance Documentation Hexad (Strategy, Procedure, Playbook, Runbook, Workflow, Bot Spec).
+   - **Configuration-Only Member Repos**: Member repositories only contain declarative configuration files (`cfg/`, `otel.json`, factory YAMLs) that configure and bind to the CLI's tools.
 
 ## Branch & PR targets (CRITICAL — CR-BRANCH-GOV-001)
 
