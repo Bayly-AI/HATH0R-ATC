@@ -106,12 +106,47 @@ services:
       com.hath0r.container: hath0r-postgres
       com.hath0r.role: canonical-database
 
+  phoenix:
+    image: arizephoenix/phoenix:latest
+    container_name: hath0r-phoenix
+    restart: unless-stopped
+    ports:
+      - "${HATH0R_PHOENIX_HOST_PORT:-36006}:6006"
+      - "${HATH0R_PHOENIX_GRPC_PORT:-34317}:4317"
+      - "${HATH0R_PHOENIX_HTTP_PORT:-34318}:4318"
+    environment:
+      PHOENIX_PORT: 6006
+      PHOENIX_GRPC_PORT: 4317
+      PHOENIX_WORKING_DIR: /data
+    volumes:
+      - hath0r_phoenix_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:6006/"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    networks:
+      hath0r-net:
+        aliases:
+          - hath0r-phoenix
+          - phoenix
+          - h0-phoenix
+    labels:
+      com.hath0r.org: bayly-ai
+      com.hath0r.project: hath0r-opensource
+      com.hath0r.component: phoenix
+      com.hath0r.container: hath0r-phoenix
+      com.hath0r.role: observability
+
 volumes:
   hath0r_redis_data:
     name: hath0r_redis_data
   hath0r_postgres_data:
     name: hath0r_postgres_data
     external: true
+  hath0r_phoenix_data:
+    name: hath0r_phoenix_data
 
 networks:
   hath0r-net:
