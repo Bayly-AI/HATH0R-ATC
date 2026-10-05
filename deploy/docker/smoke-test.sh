@@ -26,7 +26,7 @@ docker ps -a --filter label=com.docker.compose.project=hath0r \
   --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}' || true
 echo
 
-for c in hath0r-nginx hath0r-redis; do
+for c in hath0r-nginx hath0r-redis hath0r-phoenix; do
   st=$(docker inspect -f '{{.State.Status}} health={{if .State.Health}}{{.State.Health.Status}}{{else}}n/a{{end}}' "$c" 2>/dev/null || echo missing)
   echo "$c: $st"
   if [[ "$st" == missing ]]; then
@@ -53,6 +53,14 @@ else check "nginx /healthz" 0 "body=$body"; fi
 body=$(curl -fsS -m 5 "http://${LOOPBACK}:${NGINX_PORT}/" 2>/dev/null || true)
 if printf '%s' "$body" | grep -qi 'hath0r-nginx'; then check "nginx /" 1 "banner ok"
 else check "nginx /" 0 "body=$body"; fi
+
+# Phoenix via edge
+code=$(curl -sS -m 8 -o /tmp/h0_phoenix.out -w '%{http_code}' "http://${LOOPBACK}:${NGINX_PORT}/phoenix/" 2>/dev/null || echo 000)
+if [[ "$code" == "200" ]]; then
+  check "nginx /phoenix/" 1 "http=$code (Arize Phoenix UI ok)"
+else
+  check "nginx /phoenix/" 0 "http=$code"
+fi
 
 # MCP via edge (optional — pass if MCP up, soft-fail note if not)
 if docker inspect hath0r-mcp >/dev/null 2>&1; then
