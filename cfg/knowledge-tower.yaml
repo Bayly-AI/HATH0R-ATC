@@ -1,0 +1,16 @@
+# Knowledge tower pointer — HATH0R ATC (non-secret)
+group_id: hath0r-opensource
+group_label: OpenSource Project
+is_control_tower: true
+control_tower_path: /Users/raybayly/Development/OpenSource/hath0r-atc
+control_tower_remote: Bayly-AI/HATH0R-ATC
+operator_cli: hath0r
+operator_cli_path: /Users/raybayly/Development/OpenSource/hathor-cli
+project_knowledgebase_mode: stub
+canonical_knowledgebase: /Users/raybayly/Development/OpenSource/.hath0r/knowledgebase
+framework_hidden_root: .hath0r
+legacy_roots_forbidden:
+  - .ai
+  - .customerSystem
+  - .infraOS
+updated_at: "2026-09-23T18:45:00Z"
