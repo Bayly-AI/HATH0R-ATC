@@ -1,14 +1,14 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-atc",
-  "timestamp": "2026-10-05T17:11:07.621345+00:00",
+  "timestamp": "2026-10-11T11:42:29.441462+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
       "plane": "knowledge",
       "type": "knowledge_doc",
       "label": "AGENTS.md (root)",
-      "content": "# AGENTS.md — HATH0R ATC (Control Tower)\n\n> **Canonical control tower** for the **OpenSource Project** (`hath0r-opensource`).  \n> Roles: **infrastructure repo** · **observation hub** · **central group controller**.  \n> ATC and MCP are **standalone**; both support building the HATHOR framework.\n\n| Field | Value |\n|-------|-------|\n| Product | **HATH0R ATC** |\n| Product ID | `hath0r-atc` |\n| Role | Control Tower — infrastructure / observation / group controller (`is_control_tower: true`) |\n| GitHub | **[Bayly-AI/HATH0R-ATC](https://github.com/Bayly-AI/HATH0R-ATC)** (CANONICAL) |\n| Local path | `/Users/raybayly/Development/OpenSource/hath0r-atc` |\n| Group | `hath0r-opensource` / **OpenSource Project** |\n| Docker group | **`hath0r`** (CANONICAL) |\n| Docker network | **`hath0r-net`** (CANONICAL) |\n| Shared edge / state | `hath0r-nginx` / `hath0r-redis` |\n| Members root | `/Users/raybayly/Development/OpenSource` |\n| Operator CLI | **`hath0r`** (`../hathor-cli`) |\n| Standalone MCP | `../hath0",
+      "content": "# AGENTS.md — HATH0R ATC (Control Tower)\n\n> **Canonical control tower** for the **OpenSource Project** (`hath0r-opensource`).  \n> Roles: **infrastructure repo** · **observation hub** · **central group controller**.  \n> ATC and MCP are **standalone**; both support building the HATHOR framework.\n\n| Field | Value |\n|-------|-------|\n| Product | **HATH0R ATC** |\n| Product ID | `hath0r-atc` |\n| Role | Control Tower — infrastructure / observation / group controller (`is_control_tower: true`) |\n| GitHub | **[Bayly-AI/HATH0R-ATC](https://github.com/Bayly-AI/HATH0R-ATC)** (CANONICAL) |\n| Local path | `/Users/raybayly/Development/OpenSource/hath0r-atc` |\n| Group | `hath0r-opensource` / **OpenSource Project** |\n| Docker group | **`hath0r`** (CANONICAL) |\n| Docker network | **`hath0r-net`** (CANONICAL) |\n| Shared edge / state | `hath0r-nginx` / `hath0r-redis` / `Hathor-MLFLOW` |\n| Members root | `/Users/raybayly/Development/OpenSource` |\n| Operator CLI | **`hath0r`** (`../hathor-cli`) |\n| Standalo",
       "properties": {
         "path": "AGENTS.md",
         "subsystem": "root"
@@ -104,7 +104,7 @@
       "plane": "rules",
       "type": "rule_policy",
       "label": "Rule rules",
-      "content": "# Deploy Subsystem — Local Rules & Constraints\n\n> Constraints and governance for Docker infrastructure in HATH0R-ATC.\n\n## CR-DOCKER-HATH0R-GROUP-001 Constraints\n\n1. **Group Name**: Top-level compose `name:` must always be `hath0r`.\n2. **Network Policy**: Use external bridge network `hath0r-net`. Never create unattached isolated networks for suite members.\n3. **Container Naming**: Prefix container names with `hath0r-` (e.g., `hath0r-nginx`, `hath0r-redis`).\n4. **Mandatory Labels**:\n   - `com.hath0r.org=bayly-ai`\n   - `com.hath0r.project=hath0r-opensource`\n   - `com.hath0r.component=<component_name>`\n   - `com.hath0r.container=<container_name>`\n5. **Security Constraints**:\n   - Non-root user execution whenever possible.\n   - Read-only root filesystem (`read_only: true`) with explicit temporary volume mounts.\n   - Drop all unnecessary Linux capabilities (`cap_drop: [ALL]`).\n   - `security_opt: [no-new-privileges:true]`.\n",
+      "content": "# Deploy Subsystem — Local Rules & Constraints\n\n> Constraints and governance for Docker infrastructure in HATH0R-ATC.\n\n## CR-DOCKER-HATH0R-GROUP-001 Constraints\n\n1. **Group Name**: Top-level compose `name:` must always be `hath0r`.\n2. **Network Policy**: Use external bridge network `hath0r-net`. Never create unattached isolated networks for suite members.\n3. **Container Naming**: Canonical container names: `Hath0r-Edge` (edge), `Hath0r-Sessions` (redis), `Hath0r-Data` (postgres), `Hath0r-phoenix` (phoenix), `Hathor-MLFLOW` (mlflow), `Hath0r-MCP` (mcp). Legacy `hath0r-*` network aliases are maintained for backwards compatibility.\n4. **Mandatory Labels**:\n   - `com.hath0r.org=bayly-ai`\n   - `com.hath0r.project=hath0r-opensource`\n   - `com.hath0r.component=<component_name>`\n   - `com.hath0r.container=<container_name>`\n5. **Security Constraints**:\n   - Non-root user execution whenever possible.\n   - Read-only root filesystem (`read_only: true`) with explicit temporary volume mounts.\n   - Drop all unnecessary Linux capabilities (`cap_drop: [ALL]`).\n   - `security_opt: [no-new-privileges:true]`.\n",
       "properties": {
         "path": "deploy/rules.md",
         "priority": 3,
@@ -410,7 +410,7 @@
       "properties": {
         "path": "docs/deployment-local-docker.md",
         "category": "docs",
-        "size_bytes": 5092
+        "size_bytes": 5317
       },
       "is_current": true
     },
@@ -458,11 +458,11 @@
       "plane": "knowledge",
       "type": "knowledge_doc",
       "label": "Semantic Versioning",
-      "content": "# Semantic versioning (ATC pointer)\n\nCanonical suite policy: [HATH0R-CLI semantic-versioning.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/semantic-versioning.md) (SemVer 2.0.0).\n\n## ATC rules\n\n| Rule | Value |\n|------|-------|\n| Canonical version file | [`VERSION`](../../VERSION) at repo root (currently single-line SemVer) |\n| Align | `VERSION`, package/metadata manifests, release tags, and changelog entries |\n| Pre-release | Use SemVer pre-release labels when needed (`-rc.N`, `-beta.N`) |\n| Breaking | MAJOR; features MINOR; fixes PATCH |\n| Control tower | Do not fork policy — update CLI standards, then refresh this pointer if paths change |\n\nIssue: #10\n",
+      "content": "# Semantic Versioning — HATH0R ATC\n\nCanonical suite policy: [HATH0R-CLI semantic-versioning.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/semantic-versioning.md) (SemVer 2.0.0).\n\n## ATC Rules & Single Canonical Source of Truth\n\nThe root [`VERSION`](../../VERSION) file is the **exclusive canonical source of truth** for HATH0R ATC version state.\n\n| Rule | Value | Description |\n|------|-------|-------------|\n| Canonical version file | [`VERSION`](../../VERSION) | Single-line SemVer string (`MAJOR.MINOR.PATCH`) |\n| Changelog alignment | [`CHANGELOG.md`](../../CHANGELOG.md) | Must contain matching section `## [X.Y.Z]` |\n| PR Declaration | `version-policy-guard.yml` | All PRs must declare impact (`semver:patch`, `minor`, `major`, `none`) |\n| Release Runbook | [`release-runbook.md`](playbooks/release-runbook.md) | Step-by-step operational release procedures |\n| Tag Format | `vX.Y.Z` (e.g. `v0.2.2`) | Annotated Git tags triggering `.github/workflows/release.yml` |\n\n## SemVer Impact Taxonomy\n\n- **MAJOR (`semver:major`)**: Breaking architectural changes, incompatible configuration schema shifts, or backwards-incompatible API changes.\n- **MINOR (`semver:minor`)**",
       "properties": {
         "path": "docs/governance/semantic-versioning.md",
         "category": "governance",
-        "size_bytes": 695
+        "size_bytes": 1485
       },
       "is_current": true
     },
@@ -645,6 +645,19 @@
         "path": "docs/governance/checklists/pr-post-merge-development.md",
         "category": "checklists",
         "size_bytes": 282
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__playbooks__release-runbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Release Runbook",
+      "content": "# Release Runbook — HATH0R ATC\n\n> Role: Operational guide for versioning, release validation, and tag publishing.  \n> Status: Canonical · Member of `hath0r-opensource`  \n> Policy: [Semantic Versioning](../semantic-versioning.md) · [HATH0R-CLI SemVer](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/semantic-versioning.md)\n\n---\n\n## 1. Prerequisites\n\nBefore cutting a release:\n1. All PRs merged into `development`.\n2. Promotion gates satisfied: `development` -> `testing` -> `staging` -> `master`.\n3. Working tree is clean: `git status`.\n4. Quality checks pass: SonarCloud quality gate and branch governance.\n\n---\n\n## 2. Release Steps\n\n### Step 1: Validate Version and Changelog\nVerify alignment between `VERSION` and `CHANGELOG.md`:\n```bash\nhath0r release validate\n```\n\n### Step 2: Bump Version (if necessary)\nFor new releases, update the root `VERSION` file:\n```bash\necho \"0.2.3\" > VERSION\n```\nUpdate `CHANGELOG.md` with the new version section under `## [X.Y.Z] - YYYY-MM-DD`.\n\n### Step 3: Promote along Canonical Path\nPromote branch following CR-BAI-001:\n```bash\ngit checkout testing && git merge development\ngit checkout staging && git merge testing\ngit checkout master &&",
+      "properties": {
+        "path": "docs/governance/playbooks/release-runbook.md",
+        "category": "playbooks",
+        "size_bytes": 1579
       },
       "is_current": true
     },
@@ -864,6 +877,6 @@
   ],
   "metadata": {
     "repo_root": "/Users/raybayly/Development/OpenSource/hath0r-atc",
-    "synced_sources": 60
+    "synced_sources": 61
   }
 }
