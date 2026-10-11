@@ -1,0 +1,14 @@
+# Product identity — non-secret
+product_id: hath0r-atc
+product_name: HATH0R ATC
+description: >
+  OpenSource Project control tower for infrastructure, observation, and Docker-group membership.
+role: control-tower-infrastructure
+canonical: true
+is_control_tower: true
+github: Bayly-AI/HATH0R-ATC
+local_path_hint: OpenSource/hath0r-atc
+layout: hathor-upl
+fileset_version: "0.2.0"
+cli_version: "0.2.0"
+updated_at: "2026-09-23T20:00:17Z"

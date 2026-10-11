@@ -1,0 +1,35 @@
+.DS_Store
+**/.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+
+# Nested product git repos at repo root only (tracked separately)
+# Use leading slash so suite paths like cfg/docker/groups/hath0r/ are not ignored.
+/hath0r/
+/hathor-cli/
+/hath0r-mcp/
+/hath0r-poc/
+
+# Site build artifacts
+site/**/node_modules/
+site/**/.venv/
+site/**/dist/
+site/**/__pycache__/
+
+# Editor / local
+.idea/
+.vscode/
+*.swp
+# Python artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Hath0r runtime state
+.hath0r/state/
+.hath0r/events.jsonl
+.hath0r/finops/
+
+config.json

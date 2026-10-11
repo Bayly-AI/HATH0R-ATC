@@ -1,0 +1,22 @@
+{
+  "apiVersion": "hath0r.feature-flags.catalog/v1",
+  "kind": "FeatureFlagCatalogExample",
+  "metadata": {
+    "name": "hath0r-atc-example-catalog",
+    "note": "Example only — do not treat as production flag source"
+  },
+  "flags": [
+    {
+      "key": "atc.observe.verbose",
+      "description": "Verbose observation surfaces for local ATC",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "key": "atc.docker.smoke_extended",
+      "description": "Enable extended docker smoke checks",
+      "type": "boolean",
+      "default": false
+    }
+  ]
+}

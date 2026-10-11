@@ -1,0 +1,55 @@
+group_id: hath0r-opensource
+group_label: OpenSource Project
+projects_location: /Users/raybayly/Development/OpenSource
+control_tower_path: /Users/raybayly/Development/OpenSource/hath0r-atc
+control_tower_github: Bayly-AI/HATH0R-ATC
+operator_cli_path: /Users/raybayly/Development/OpenSource/hathor-cli
+operator_cli_github: Bayly-AI/HATH0R-CLI
+operator_cli: hath0r
+docker_network: hath0r-net
+compose_project_name: hath0r
+image_prefix: hath0r/
+label_prefix: com.hath0r.
+is_control_tower_repo: true
+roles:
+  infrastructure: true
+  observation: true
+  central_group_controller: true
+group_of_apps_description: >
+  OpenSource Project (hath0r-opensource): Hath0r ATC is the infrastructure,
+  observation, and Docker-group control tower. HATH0R-CLI is the operator CLI.
+  hath0r-mcp is a standalone MCP member on hath0r-net. Together they support
+  building the HATHOR agentic framework (hath0r).
+canonical_containers:
+  - hath0r-nginx
+  - hath0r-redis
+  - hath0r-postgres
+  - hath0r-mcp
+member_products:
+  - id: hath0r-atc
+    path: hath0r-atc
+    github: Bayly-AI/HATH0R-ATC
+    role: control-tower-infrastructure
+  - id: hath0r-mcp
+    path: hath0r-mcp
+    github: Bayly-AI/HATH0R-MCP
+    role: mcp-server
+    standalone: true
+  - id: hath0r-cli
+    path: hathor-cli
+    github: Bayly-AI/HATH0R-CLI
+    role: operator-cli
+  - id: hath0r-framework
+    path: hath0r
+    github: Bayly-AI/HATH0R-Agentic-Framework
+    role: framework
+  - id: hath0r-poc
+    path: hath0r-poc
+    github: Bayly-AI/HATH0R-Agentic-POC
+    role: integration-test-bed
+    lifecycle: archived
+rule_docker: cr-docker-hath0r-group-001
+rule_tower: cr-kb-tower-001
+rule_branch: cr-branch-gov-001
+rule_root: cr-hath0r-root-001
+updated_at: "2026-09-23T18:45:00Z"
