@@ -14,7 +14,7 @@ name: hath0r
 services:
   redis:
     image: redis:7-alpine
-    container_name: hath0r-redis
+    container_name: Hath0r-Sessions
     restart: unless-stopped
     command: ["redis-server", "--appendonly", "yes"]
     volumes:
@@ -28,6 +28,7 @@ services:
     networks:
       hath0r-net:
         aliases:
+          - Hath0r-Sessions
           - hath0r-redis
           - redis
           - h0-redis
@@ -35,12 +36,12 @@ services:
       com.hath0r.org: bayly-ai
       com.hath0r.project: hath0r-opensource
       com.hath0r.component: redis
-      com.hath0r.container: hath0r-redis
+      com.hath0r.container: Hath0r-Sessions
       com.hath0r.role: shared-state
 
   nginx:
     image: nginx:1.27-alpine
-    container_name: hath0r-nginx
+    container_name: Hath0r-Edge
     restart: unless-stopped
     depends_on:
       redis:
@@ -59,6 +60,7 @@ services:
     networks:
       hath0r-net:
         aliases:
+          - Hath0r-Edge
           - hath0r-nginx
           - nginx
           - h0-nginx
@@ -66,13 +68,13 @@ services:
       com.hath0r.org: bayly-ai
       com.hath0r.project: hath0r-opensource
       com.hath0r.component: nginx
-      com.hath0r.container: hath0r-nginx
+      com.hath0r.container: Hath0r-Edge
       com.hath0r.role: shared-edge
 
   postgres:
     profiles: ["db"]
     image: postgres:16-alpine
-    container_name: hath0r-postgres
+    container_name: Hath0r-Data
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-hath0r}
@@ -96,6 +98,7 @@ services:
     networks:
       hath0r-net:
         aliases:
+          - Hath0r-Data
           - hath0r-postgres
           - postgres
           - h0-postgres
@@ -103,12 +106,12 @@ services:
       com.hath0r.org: bayly-ai
       com.hath0r.project: hath0r-opensource
       com.hath0r.component: postgres
-      com.hath0r.container: hath0r-postgres
+      com.hath0r.container: Hath0r-Data
       com.hath0r.role: canonical-database
 
   phoenix:
     image: arizephoenix/phoenix:latest
-    container_name: hath0r-phoenix
+    container_name: Hath0r-phoenix
     restart: unless-stopped
     ports:
       - "${HATH0R_PHOENIX_HOST_PORT:-36006}:6006"
@@ -132,6 +135,7 @@ services:
     networks:
       hath0r-net:
         aliases:
+          - Hath0r-phoenix
           - hath0r-phoenix
           - phoenix
           - h0-phoenix
@@ -139,8 +143,87 @@ services:
       com.hath0r.org: bayly-ai
       com.hath0r.project: hath0r-opensource
       com.hath0r.component: phoenix
-      com.hath0r.container: hath0r-phoenix
+      com.hath0r.container: Hath0r-phoenix
       com.hath0r.role: observability
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:latest
+    container_name: Hathor-MLFLOW
+    restart: unless-stopped
+    ports:
+      - "${HATH0R_MLFLOW_HOST_PORT:-35000}:5000"
+    environment:
+      MLFLOW_PORT: 5000
+      MLFLOW_HOST: 0.0.0.0
+    command:
+      - mlflow
+      - server
+      - --backend-store-uri
+      - sqlite:////data/mlflow.db
+      - --default-artifact-root
+      - /data/artifacts
+      - --host
+      - 0.0.0.0
+      - --port
+      - "5000"
+      - --static-prefix
+      - /mlflow
+    volumes:
+      - hath0r_mlflow_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "python -c 'import urllib.request; urllib.request.urlopen(\"http://127.0.0.1:5000/mlflow/health\")'"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    networks:
+      hath0r-net:
+        aliases:
+          - Hathor-MLFLOW
+          - hath0r-mlflow
+          - mlflow
+          - h0-mlflow
+    labels:
+      com.hath0r.org: bayly-ai
+      com.hath0r.project: hath0r-opensource
+      com.hath0r.component: mlflow
+      com.hath0r.container: Hathor-MLFLOW
+      com.hath0r.role: mlops-experiment-tracking
+
+  mcp:
+    profiles: ["mcp", "apps"]
+    image: ${HATH0R_MCP_IMAGE:-hath0r/mcp:local}
+    container_name: Hath0r-MCP
+    restart: unless-stopped
+    ports:
+      - "${HATH0R_MCP_HOST_PORT:-38083}:8083"
+    environment:
+      HATH0R_MCP_ENVIRONMENT: ${HATH0R_MCP_ENVIRONMENT:-local}
+      HATH0R_MCP_KNOWLEDGE_ROOT: /app/knowledgebase/canonical
+      HATH0R_MCP_TOKEN: ${HATH0R_MCP_TOKEN:-}
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    init: true
+    networks:
+      hath0r-net:
+        aliases:
+          - Hath0r-MCP
+          - hath0r-mcp
+          - mcp
+    labels:
+      com.hath0r.org: bayly-ai
+      com.hath0r.project: hath0r-opensource
+      com.hath0r.component: mcp
+      com.hath0r.container: Hath0r-MCP
+      com.hath0r.role: knowledge-mcp
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8083/ready', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
 
 volumes:
   hath0r_redis_data:
@@ -151,8 +234,12 @@ volumes:
   hath0r_phoenix_data:
     name: hath0r_phoenix_data
     external: true
+  hath0r_mlflow_data:
+    name: hath0r_mlflow_data
+    external: true
 
 networks:
   hath0r-net:
     name: hath0r-net
     external: true
+

@@ -83,6 +83,8 @@ hath0r-net
 | hath0r-nginx | `38000` (`HATH0R_NGINX_HOST_PORT`) | `80` | Suite edge |
 | hath0r-postgres | `35432` (`POSTGRES_HOST_PORT`) | `5432` | Optional db profile |
 | hath0r-redis | _(not published)_ | `6379` | Reach only on `hath0r-net` |
+| Hathor-MLFLOW | `35000` (`HATH0R_MLFLOW_HOST_PORT`) | `5000` | MLflow MLOps tracking (edge: `/mlflow/`) |
+| hath0r-phoenix | `36006` (`HATH0R_PHOENIX_HOST_PORT`) | `6006` | Arize Phoenix observability (edge: `/phoenix/`) |
 | hath0r-mcp | `38083` (MCP repo) | `8083` | Standalone member |
 
 Port range `38xxx` avoids collision with 1-Nation suite (`58xxx`).
