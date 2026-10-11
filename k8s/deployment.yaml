@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hath0r-atc
+  namespace: hath0r-atc
+  labels:
+    app.kubernetes.io/name: hath0r-atc
+    app.kubernetes.io/managed-by: hath0r
+    fargate: "true"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hath0r-atc
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hath0r-atc
+        fargate: "true"
+    spec:
+      serviceAccountName: hath0r-atc-sa
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+      containers:
+        - name: hath0r-atc
+          image: 711387127111.dkr.ecr.us-east-1.amazonaws.com/hath0r-atc@sha256:f2274a26fb0998dc362d4f9dbc2359117e0c7d507d51762be749c92b305345ac
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "500m"
+              memory: "1Gi"
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+          volumeMounts:
+            - name: tmp-volume
+              mountPath: /tmp
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+      volumes:
+        - name: tmp-volume
+          emptyDir: {}
