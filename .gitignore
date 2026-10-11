@@ -33,3 +33,8 @@ __pycache__/
 .hath0r/finops/
 
 config.json
+
+# Hath0r runtime
+.hath0r/events.jsonl
+.hath0r/finops/
+
