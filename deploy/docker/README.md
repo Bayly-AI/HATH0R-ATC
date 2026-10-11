@@ -54,3 +54,10 @@ ATC never tears down MCP. MCP never tears down shared ATC infra. Stop MCP only w
 ## Full documentation
 
 [`../../docs/deployment-local-docker.md`](../../docs/deployment-local-docker.md)
+
+## Suite template pointer
+
+- ATC cfg pointer: [`../../cfg/docker/groups/hath0r/README.md`](../../cfg/docker/groups/hath0r/README.md)
+- Control-tower standard: https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/docker-group-standard.md
+- Control-tower template: https://github.com/Bayly-AI/HATH0R-CLI/tree/development/cfg/docker/groups/hath0r
+- Suite hub: [`../../docs/governance/SUITE_STANDARDS.md`](../../docs/governance/SUITE_STANDARDS.md)
