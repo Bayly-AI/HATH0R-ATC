@@ -225,6 +225,43 @@ services:
       retries: 5
       start_period: 30s
 
+  airflow:
+    profiles: ["airflow"]
+    image: ${HATH0R_AIRFLOW_IMAGE:-apache/airflow:2.9.3-python3.11}
+    container_name: Hath0r-Airflow
+    restart: unless-stopped
+    command: ["standalone"]
+    ports:
+      - "${HATH0R_AIRFLOW_HOST_PORT:-38080}:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__WEBSERVER__BASE_URL: "http://localhost:38080"
+      AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth"
+      _AIRFLOW_DB_MIGRATE: "true"
+      _AIRFLOW_WWW_USER_CREATE: "true"
+      _AIRFLOW_WWW_USER_USERNAME: ${AIRFLOW_USERNAME:-admin}
+      _AIRFLOW_WWW_USER_PASSWORD: ${AIRFLOW_PASSWORD:-admin}
+    volumes:
+      - hath0r_airflow_data:/opt/airflow
+    networks:
+      hath0r-net:
+        aliases:
+          - Hath0r-Airflow
+          - hath0r-airflow
+          - airflow
+    labels:
+      com.hath0r.org: bayly-ai
+      com.hath0r.project: hath0r-opensource
+      com.hath0r.component: airflow
+      com.hath0r.container: Hath0r-Airflow
+      com.hath0r.role: enterprise-orchestrator
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://127.0.0.1:8080/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 45s
+
 volumes:
   hath0r_redis_data:
     name: hath0r_redis_data
@@ -237,9 +274,12 @@ volumes:
   hath0r_mlflow_data:
     name: hath0r_mlflow_data
     external: true
+  hath0r_airflow_data:
+    name: hath0r_airflow_data
 
 networks:
   hath0r-net:
     name: hath0r-net
     external: true
+
 

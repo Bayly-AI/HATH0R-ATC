@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hath0r-atc
+  namespace: hath0r-atc
+  labels:
+    app.kubernetes.io/name: hath0r-atc
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8000
+      targetPort: 8000
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: hath0r-atc

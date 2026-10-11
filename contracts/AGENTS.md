@@ -10,7 +10,7 @@
 | Subsystem | `contracts` |
 | Scope | JSON Schemas, Exit Code Registry, CLI/Tower Interoperability Contracts |
 | Standards Authority | `Bayly-AI/HATH0R-Agentic-Framework` |
-| Pinned Version | `0.2.0` / `0.3.0` |
+| Pinned Version | `0.2.0` / `0.3.0` / `0.4.0` |
 
 ## Operational Guidelines
 
