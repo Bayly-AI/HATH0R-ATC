@@ -14,7 +14,7 @@
 | Group | `hath0r-opensource` / **OpenSource Project** |
 | Docker group | **`hath0r`** (CANONICAL) |
 | Docker network | **`hath0r-net`** (CANONICAL) |
-| Shared edge / state | `hath0r-nginx` / `hath0r-redis` |
+| Shared edge / state | `hath0r-nginx` / `hath0r-redis` / `Hathor-MLFLOW` |
 | Members root | `/Users/raybayly/Development/OpenSource` |
 | Operator CLI | **`hath0r`** (`../hathor-cli`) |
 | Standalone MCP | `../hath0r-mcp` (`hath0r-mcp` container) |

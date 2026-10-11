@@ -5,18 +5,20 @@ COMPOSE := docker compose -f $(ROOT)/deploy/docker/docker-compose.yml
 NETWORK_NAME ?= hath0r-net
 POSTGRES_VOLUME ?= hath0r_postgres_data
 PHOENIX_VOLUME ?= hath0r_phoenix_data
+MLFLOW_VOLUME ?= hath0r_mlflow_data
 HATH0R_NGINX_HOST_PORT ?= 38000
 
 .PHONY: help network-ensure volume-ensure up up-shared up-db down ps logs status redis-cli smoke
 
 help:
 	@echo "Hath0r Docker group (project: hath0r, network: $(NETWORK_NAME))"
-	@echo "  make up          - network + hath0r-redis + hath0r-nginx + hath0r-phoenix"
+	@echo "  make up          - network + hath0r-redis + hath0r-nginx + hath0r-phoenix + Hathor-MLFLOW"
 	@echo "  make up-db       - shared + hath0r-postgres"
 	@echo "  make down        - stop group containers created by this compose file"
 	@echo "  make ps | logs | status | smoke"
 	@echo "  Edge: http://localhost:$(HATH0R_NGINX_HOST_PORT)/"
 	@echo "  Phoenix: http://localhost:$(HATH0R_NGINX_HOST_PORT)/phoenix/ (direct :36006)"
+	@echo "  MLflow: http://localhost:$(HATH0R_NGINX_HOST_PORT)/mlflow/ (direct :35000)"
 	@echo "  MCP (standalone): make -C ../hath0r-mcp docker-up"
 
 network-ensure:
@@ -43,10 +45,17 @@ volume-ensure:
 			--label com.hath0r.role=observability \
 			$(PHOENIX_VOLUME)
 	@echo "✓ volume $(PHOENIX_VOLUME)"
+	@docker volume inspect $(MLFLOW_VOLUME) >/dev/null 2>&1 || \
+		docker volume create \
+			--label com.hath0r.component=mlflow \
+			--label com.hath0r.container=Hathor-MLFLOW \
+			--label com.hath0r.role=mlops-experiment-tracking \
+			$(MLFLOW_VOLUME)
+	@echo "✓ volume $(MLFLOW_VOLUME)"
 
 up-shared: network-ensure volume-ensure
-	@HATH0R_NGINX_HOST_PORT=$(HATH0R_NGINX_HOST_PORT) $(COMPOSE) up -d redis nginx phoenix
-	@echo "✓ hath0r-redis + hath0r-nginx + hath0r-phoenix (group hath0r) on :$(HATH0R_NGINX_HOST_PORT)"
+	@HATH0R_NGINX_HOST_PORT=$(HATH0R_NGINX_HOST_PORT) $(COMPOSE) up -d redis nginx phoenix mlflow
+	@echo "✓ hath0r-redis + hath0r-nginx + hath0r-phoenix + Hathor-MLFLOW (group hath0r) on :$(HATH0R_NGINX_HOST_PORT)"
 
 up: up-shared
 

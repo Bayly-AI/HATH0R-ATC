@@ -22,13 +22,14 @@ site/**/__pycache__/
 .idea/
 .vscode/
 *.swp
-config.json
-
-# Python caches
+# Python artifacts
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
 
-# Hath0r dynamic spool / telemetry
+# Hath0r runtime state
+.hath0r/state/
 .hath0r/events.jsonl
 .hath0r/finops/
 
+config.json
