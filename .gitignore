@@ -22,6 +22,15 @@ site/**/__pycache__/
 .idea/
 .vscode/
 *.swp
+# Python artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Hath0r runtime state
 .hath0r/state/
+.hath0r/events.jsonl
+.hath0r/finops/
 
 config.json
+

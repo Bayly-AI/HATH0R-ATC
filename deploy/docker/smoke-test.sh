@@ -26,7 +26,7 @@ docker ps -a --filter label=com.docker.compose.project=hath0r \
   --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}' || true
 echo
 
-for c in hath0r-nginx hath0r-redis hath0r-phoenix; do
+for c in hath0r-nginx hath0r-redis hath0r-phoenix Hathor-MLFLOW; do
   st=$(docker inspect -f '{{.State.Status}} health={{if .State.Health}}{{.State.Health.Status}}{{else}}n/a{{end}}' "$c" 2>/dev/null || echo missing)
   echo "$c: $st"
   if [[ "$st" == missing ]]; then
@@ -62,6 +62,14 @@ else
   check "nginx /phoenix/" 0 "http=$code"
 fi
 
+# MLflow via edge
+code=$(curl -sS -m 8 -o /tmp/h0_mlflow.out -w '%{http_code}' "http://${LOOPBACK}:${NGINX_PORT}/mlflow/" 2>/dev/null || echo 000)
+if [[ "$code" == "200" ]]; then
+  check "nginx /mlflow/" 1 "http=$code (MLflow UI ok)"
+else
+  check "nginx /mlflow/" 0 "http=$code"
+fi
+
 # MCP via edge (optional — pass if MCP up, soft-fail note if not)
 if docker inspect hath0r-mcp >/dev/null 2>&1; then
   code=$(curl -sS -m 8 -o /tmp/h0_mcp.out -w '%{http_code}' "http://${LOOPBACK}:${NGINX_PORT}/mcp/health" 2>/dev/null || echo 000)
@@ -94,7 +102,7 @@ if docker inspect hath0r-nginx >/dev/null 2>&1; then
   if printf '%s' "$out" | grep -q ok; then check "nginx self healthz" 1 "$out"
   else check "nginx self healthz" 0 "$out"; fi
 
-  for alias in hath0r-redis redis h0-redis; do
+  for alias in hath0r-redis redis h0-redis hath0r-phoenix phoenix Hathor-MLFLOW mlflow; do
     ip=$(docker exec hath0r-nginx getent hosts "$alias" 2>/dev/null | awk '{print $1; exit}')
     if [[ -n "${ip:-}" ]]; then check "DNS alias $alias" 1 "resolves=$ip"
     else check "DNS alias $alias" 0 "unresolved"; fi
