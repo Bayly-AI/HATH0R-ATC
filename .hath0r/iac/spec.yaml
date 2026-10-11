@@ -1,0 +1,37 @@
+schema_version: "hath0r.iac.spec/1"
+service_name: "hath0r-atc"
+container:
+  tech_stack: "python"
+  base_image: "python:3.11-slim"
+  multi_stage: true
+  non_root_user:
+    uid: 10001
+    gid: 10001
+    username: "hath0r"
+  healthcheck:
+    enabled: true
+    interval_seconds: 30
+    timeout_seconds: 5
+    retries: 3
+  read_only_root_filesystem: true
+salting:
+  digest_pinning: true
+  sha256_digest: "sha256:f2274a26fb0998dc362d4f9dbc2359117e0c7d507d51762be749c92b305345ac"
+  signature_provider: "cosign"
+  attestation_format: "slsa-provenance-v1"
+  secret_salting_provider: "aws_secrets_manager"
+deployment:
+  target_platform: "aws_eks_fargate"
+  cluster_name: "hath0r-eks-cluster"
+  namespace: "hath0r-atc"
+  fargate_profile: "hath0r-hath0r-atc-profile"
+  replicas: 2
+  resources:
+    cpu_request: "250m"
+    cpu_limit: "500m"
+    memory_request: "512Mi"
+    memory_limit: "1Gi"
+  ingress:
+    alb_scheme: "internet-facing"
+    target_type: "ip"
+  irsa_iam_role_arn: "arn:aws:iam::711387127111:role/hath0r-hath0r-atc-irsa"
