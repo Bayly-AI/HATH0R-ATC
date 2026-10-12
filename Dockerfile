@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
+RUN mkdir -p /install
 COPY requirements*.txt pyproject.toml* ./
 RUN if [ -f requirements.txt ]; then \
         pip install --prefix=/install -r requirements.txt; \
@@ -31,7 +32,7 @@ FROM python:3.11-slim AS runner
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PATH="/install/bin:$PATH" \
-    PYTHONPATH="/install/lib/python3.11/site-packages:$PYTHONPATH"
+    PYTHONPATH="/app:/install/lib/python3.11/site-packages:$PYTHONPATH"
 
 # Create dedicated non-root user (UID/GID 10001)
 RUN groupadd -g 10001 hath0r && \
@@ -53,4 +54,4 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
     CMD python3 -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health').read()" || exit 1
 
-ENTRYPOINT ["python3", "-m", "hath0r_atc"]
+ENTRYPOINT ["python3", "-m", "lib"]
