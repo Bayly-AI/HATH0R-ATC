@@ -5,6 +5,13 @@ All notable changes to HATH0R ATC (Air Traffic Control) will be documented in th
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.1] - 2026-10-12
+
+### Fixed
+- **Container Hardening & Lib Server Entrypoint**:
+  - Provided robust `/install` builder directory and execution context in Dockerfile.
+  - Implemented hardened lib server entrypoint (`lib/__main__.py`) with health probes and non-root execution adhering strictly to CR-IAC-001.
+
 ## [0.4.0] - 2026-10-11
 
 ### Added
