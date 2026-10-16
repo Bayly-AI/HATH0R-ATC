@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-atc",
-  "timestamp": "2026-10-11T18:30:27.051063+00:00",
+  "timestamp": "2026-10-16T15:24:54.339972+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -32,7 +32,7 @@
       "plane": "knowledge",
       "type": "knowledge_doc",
       "label": "AGENTS.md (contracts)",
-      "content": "# AGENTS.md — Contracts Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Contracts & JSON Schemas Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `contracts` |\n| Scope | JSON Schemas, Exit Code Registry, CLI/Tower Interoperability Contracts |\n| Standards Authority | `Bayly-AI/HATH0R-Agentic-Framework` |\n| Pinned Version | `0.2.0` / `0.3.0` |\n\n## Operational Guidelines\n\n1. **Schema Authority**: Pinned schemas define the invariant envelope contracts between CLI, Control Tower, and member services.\n2. **Backward Compatibility**: Schema additions must be backward compatible; removing or altering required fields is prohibited without explicit SemVer major bump.\n3. **Exit Code Mapping**: All automated processes and bots must emit standard exit codes defined in [`exit-codes.yaml`](exit-codes.yaml).\n\n## Key Files & Direct Links\n\n- [exit-codes.yaml](file:///Users/raybayly/Development/OpenSource/hath",
+      "content": "# AGENTS.md — Contracts Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Contracts & JSON Schemas Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `contracts` |\n| Scope | JSON Schemas, Exit Code Registry, CLI/Tower Interoperability Contracts |\n| Standards Authority | `Bayly-AI/HATH0R-Agentic-Framework` |\n| Pinned Version | `0.2.0` / `0.3.0` / `0.4.0` |\n\n## Operational Guidelines\n\n1. **Schema Authority**: Pinned schemas define the invariant envelope contracts between CLI, Control Tower, and member services.\n2. **Backward Compatibility**: Schema additions must be backward compatible; removing or altering required fields is prohibited without explicit SemVer major bump.\n3. **Exit Code Mapping**: All automated processes and bots must emit standard exit codes defined in [`exit-codes.yaml`](exit-codes.yaml).\n\n## Key Files & Direct Links\n\n- [exit-codes.yaml](file:///Users/raybayly/Development/OpenS",
       "properties": {
         "path": "contracts/AGENTS.md",
         "subsystem": "contracts"
@@ -211,6 +211,84 @@
       "content": "---\nid: cr-docker-hath0r-group-001\ntitle: Canonical hath0r Docker group for all OpenSource workspace repos\nversion: 1.0.0\nseverity: CRITICAL\nstatus: canonical\napplies_to: \"/Users/raybayly/Development/OpenSource/**\"\neffective_date: 2026-09-23\nsuite: hath0r-opensource\n---\n\n# CR-DOCKER-HATH0R-GROUP-001 — hath0r Docker group (CANONICAL)\n\n## Rule statement\n\n**Every repository, service, and container defined under the `OpenSource` workspace folder is a member of the Docker Compose project / Docker Desktop group `hath0r` for local suite runtime.**\n\nThis is **canonical** and not optional for local OpenSource suite runtime.\n\n## Workspace root\n\n```text\n/Users/raybayly/Development/OpenSource\n```\n\nIncludes (now and future):\n\n- Control tower (`hath0r-atc/`)\n- Standalone MCP (`hath0r-mcp/`)\n- Operator CLI (`hathor-cli/`)\n- Framework (`hath0r/`)\n- Any additional clone under this directory\n\n## Canonical artifacts\n\n| Artifact | Value |\n|----------|--------|\n| Compose project name (`name:`) | `hath0r` |\n| Docker Desktop group | `hath0r` |\n| Network | `hath0r-net` (external, shared) |\n| Shared communication | container `hath0r-nginx` |\n| Shared state | container `hath0r-redis` |\n| Image naming | `hath0r/{component}:tag` |\n| Project label | `com.hath0r.project=hath0r-opensource` |\n| Org label | `com.hath0r.org=bayly-ai` |\n\n## Required compose skeleton\n\n```yaml\nname: hath0r\n\nservices:\n  example:\n    image: hath0r/example:local\n    container_name: hath0r-example\n    networks:\n      hath0r-net:\n   ",
       "properties": {
         "path": "docs/rules/cr-docker-hath0r-group-001.md",
+        "priority": 4,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-bai-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-BAI-001",
+      "content": "Governance policy rule CR-BAI-001 referenced in AGENTS.md",
+      "properties": {
+        "rule_code": "CR-BAI-001",
+        "priority": 4,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-branch-gov-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-BRANCH-GOV-001",
+      "content": "Governance policy rule CR-BRANCH-GOV-001 referenced in AGENTS.md",
+      "properties": {
+        "rule_code": "CR-BRANCH-GOV-001",
+        "priority": 4,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-cli-feature-standard-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-CLI-FEATURE-STANDARD-001",
+      "content": "Governance policy rule CR-CLI-FEATURE-STANDARD-001 referenced in AGENTS.md",
+      "properties": {
+        "rule_code": "CR-CLI-FEATURE-STANDARD-001",
+        "priority": 4,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-hath0r-init-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-HATH0R-INIT-001",
+      "content": "Governance policy rule CR-HATH0R-INIT-001 referenced in AGENTS.md",
+      "properties": {
+        "rule_code": "CR-HATH0R-INIT-001",
+        "priority": 4,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-cli-first-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-CLI-FIRST-001",
+      "content": "Governance policy rule CR-CLI-FIRST-001 referenced in AGENTS.md",
+      "properties": {
+        "rule_code": "CR-CLI-FIRST-001",
+        "priority": 4,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-hath0r-root-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-HATH0R-ROOT-001",
+      "content": "Governance policy rule CR-HATH0R-ROOT-001 referenced in AGENTS.md",
+      "properties": {
+        "rule_code": "CR-HATH0R-ROOT-001",
         "priority": 4,
         "restricted_actions": []
       },
@@ -779,6 +857,119 @@
       "is_current": true
     },
     {
+      "id": "memory:rule:cr-cli-entry-001",
+      "plane": "memory",
+      "type": "rule",
+      "label": "Start with CLI Rule",
+      "content": "Always start with hath0r operator CLI before inventing ad-hoc actions.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "rule",
+          "governance",
+          "cli"
+        ],
+        "importance": 1.0
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:rule:cr-bai-001",
+      "plane": "memory",
+      "type": "rule",
+      "label": "Promotion Path Policy",
+      "content": "Promotion order: local -> development -> testing -> staging -> master.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "rule",
+          "governance",
+          "ci"
+        ],
+        "importance": 1.0
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:rule:cr-memory-compound-001",
+      "plane": "memory",
+      "type": "rule",
+      "label": "Mandatory MemoryGraph Compounding Rule",
+      "content": "Every project repo must maintain .hath0r/memory/graph.json and every task must compound knowledge prior to announcing complete.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "rule",
+          "governance",
+          "memorygraph",
+          "cr-memory-compound-001"
+        ],
+        "importance": 1.0
+      },
+      "is_current": true
+    },
+    {
+      "id": "concept:tri-graph",
+      "plane": "memory",
+      "type": "concept",
+      "label": "Tri-Graph Substrate",
+      "content": "Three-layer cognitive graph architecture: KnowledgeGraph, ContextGraph, MemoryGraph.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "architecture",
+          "substrate",
+          "tri-graph"
+        ],
+        "importance": 0.9
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:fact:repo-hath0r-atc-orientation",
+      "plane": "memory",
+      "type": "fact",
+      "label": "hath0r-atc Repository Memory Orientation",
+      "content": "hath0r-atc: **Canonical control tower** for the OpenSource Project (`hath0r-opensource`) — infrastructure, observation, and Docker-group controller. | Field | Value | |-------|--------|",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "orientation",
+          "repository",
+          "hath0r-atc",
+          "cr-memory-compound-001",
+          "fact",
+          "compounded"
+        ],
+        "importance": 0.85
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:session:sess-20261016-123220-79e9e4",
+      "plane": "memory",
+      "type": "session",
+      "label": "Micro Session sess-20261016-123220-79e9e4",
+      "content": "Micro Session sess-20261016-123220-79e9e4 [active] | Focus: Repository orientation verified for hath0r-atc | Reads: 4, Writes: 5 | Entries: Compounded fact:repo-hath0r-atc-orientation: hath0r-atc Repository Memory Orientation",
+      "properties": {
+        "session_id": "sess-20261016-123220-79e9e4",
+        "prior_session_id": null,
+        "parent_session_id": null,
+        "read_count": 4,
+        "write_count": 5,
+        "status": "active",
+        "byte_size": 1766,
+        "source": "local_memory",
+        "tags": [
+          "session",
+          "micro-session",
+          "active"
+        ],
+        "importance": 0.75
+      },
+      "is_current": true
+    },
+    {
       "id": "role:developer",
       "plane": "rules",
       "type": "agent_role",
@@ -820,6 +1011,42 @@
     }
   ],
   "edges": [
+    {
+      "source": "memory:rule:cr-cli-entry-001",
+      "target": "concept:tri-graph",
+      "relation": "ENFORCES",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-memory-compound-001",
+      "target": "concept:tri-graph",
+      "relation": "ENFORCES",
+      "is_current": true
+    },
+    {
+      "source": "memory:fact:repo-hath0r-atc-orientation",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:fact:repo-hath0r-atc-orientation",
+      "target": "memory:rule:cr-memory-compound-001",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261016-123220-79e9e4",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:fact:repo-hath0r-atc-orientation",
+      "target": "memory:session:sess-20261016-123220-79e9e4",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
     {
       "source": "rule:rules",
       "target": "role:developer",
@@ -873,10 +1100,82 @@
       "target": "role:developer",
       "relation": "GOVERNS",
       "is_current": true
+    },
+    {
+      "source": "rule:cr-bai-001",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:cr-branch-gov-001",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:cr-cli-feature-standard-001",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:cr-hath0r-init-001",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:cr-cli-first-001",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:cr-hath0r-root-001",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-cli-entry-001",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-bai-001",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-memory-compound-001",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "concept:tri-graph",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:fact:repo-hath0r-atc-orientation",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261016-123220-79e9e4",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
     }
   ],
   "metadata": {
     "repo_root": "/Users/raybayly/Development/OpenSource/hath0r-atc",
-    "synced_sources": 61
+    "synced_sources": 62
   }
 }

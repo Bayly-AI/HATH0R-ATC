@@ -1,0 +1,51 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261016-123220-79e9e4",
+  "prior_session_id": null,
+  "parent_session_id": null,
+  "task_id": null,
+  "role": null,
+  "repo_name": "hath0r-atc",
+  "status": "active",
+  "started_at": "2026-10-16T12:32:20.507811+00:00",
+  "updated_at": "2026-10-16T15:24:54.348528+00:00",
+  "ended_at": null,
+  "read_count": 5,
+  "write_count": 5,
+  "last_read_at": "2026-10-16T15:24:54.348528+00:00",
+  "last_write_at": "2026-10-16T15:24:54.171785+00:00",
+  "active_focus": "Repository orientation verified for hath0r-atc",
+  "prior_summary": "ounded fact:repo-hath0r-atc-orientat; Compounded fact:repo-hath0r-atc-orientat; Compounded fact:repo-hath0r-atc-orientat",
+  "recalled_nodes": [
+    {
+      "id": "fact:repo-hath0r-atc-orientation",
+      "type": "fact",
+      "label": "hath0r-atc Repository Memory Orientation",
+      "snippet": "hath0r-atc: **Canonical control tower** for the OpenSource Project (`hath0r-opensource`) \u2014"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-16T15:24:54.171785+00:00",
+      "kind": "compound",
+      "summary": "Compounded fact:repo-hath0r-atc-orientation: hath0r-atc Repository Memory Orientation",
+      "tags": [
+        "orientation",
+        "repository",
+        "hath0r-atc",
+        "cr-memory-compound-001",
+        "fact",
+        "compounded"
+      ],
+      "node_id": "fact:repo-hath0r-atc-orientation"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "fact:repo-hath0r-atc-orientation"
+  ],
+  "capsule_bytes": 1766,
+  "revision": 6,
+  "base_graph_hash": "sha256:12f040247adc0d95221583e650a96efd7911373338c2c35109aef76d37fbdb45",
+  "content_hash": "sha256:0685269e5677420476f252a3bfb4751dc2643f1a56b93b712df7d572793672fb"
+}
