@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-atc",
-  "timestamp": "2026-10-16T15:24:54.339972+00:00",
+  "timestamp": "2026-10-16T15:48:31.097310+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -946,24 +946,63 @@
       "is_current": true
     },
     {
+      "id": "memory:episode:clean-repo-hath0r-atc",
+      "plane": "memory",
+      "type": "episode",
+      "label": "Clean Repo Lifecycle (hath0r-atc)",
+      "content": "Executed 13-step clean-repo hygiene and knowledge sync for hath0r-atc.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "clean-repo",
+          "hygiene",
+          "hath0r-atc",
+          "episode",
+          "compounded"
+        ],
+        "importance": 0.75
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:insight:hath0r-atc",
+      "plane": "memory",
+      "type": "insight",
+      "label": "Synthesized Insight on hath0r-atc",
+      "content": "Consolidated from 2 memory nodes tagged 'hath0r-atc'. Recurring themes: opensource, clean, repo, repository. Latest context: Executed 13-step clean-repo hygiene and knowledge sync for hath0r-atc.",
+      "properties": {
+        "constituent_count": 2,
+        "source_tag": "hath0r-atc",
+        "source": "local_memory",
+        "tags": [
+          "hath0r-atc",
+          "insight",
+          "reflection",
+          "compounded"
+        ],
+        "importance": 0.95
+      },
+      "is_current": true
+    },
+    {
       "id": "memory:session:sess-20261016-123220-79e9e4",
       "plane": "memory",
       "type": "session",
       "label": "Micro Session sess-20261016-123220-79e9e4",
-      "content": "Micro Session sess-20261016-123220-79e9e4 [active] | Focus: Repository orientation verified for hath0r-atc | Reads: 4, Writes: 5 | Entries: Compounded fact:repo-hath0r-atc-orientation: hath0r-atc Repository Memory Orientation",
+      "content": "Micro Session sess-20261016-123220-79e9e4 [completed] | Focus: Repository orientation verified for hath0r-atc | Reads: 6, Writes: 7 | Entries: Compounded episode:clean-repo-hath0r-atc: Clean Repo Lifecycle (hath0r-atc); Clean Repo Lifecycle completed for hath0r-atc.",
       "properties": {
         "session_id": "sess-20261016-123220-79e9e4",
         "prior_session_id": null,
         "parent_session_id": null,
-        "read_count": 4,
-        "write_count": 5,
-        "status": "active",
-        "byte_size": 1766,
+        "read_count": 6,
+        "write_count": 7,
+        "status": "completed",
+        "byte_size": 2019,
         "source": "local_memory",
         "tags": [
           "session",
           "micro-session",
-          "active"
+          "completed"
         ],
         "importance": 0.75
       },
@@ -1044,6 +1083,36 @@
     {
       "source": "memory:fact:repo-hath0r-atc-orientation",
       "target": "memory:session:sess-20261016-123220-79e9e4",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:clean-repo-hath0r-atc",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:clean-repo-hath0r-atc",
+      "target": "memory:rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:clean-repo-hath0r-atc",
+      "target": "memory:session:sess-20261016-123220-79e9e4",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:insight:hath0r-atc",
+      "target": "memory:fact:repo-hath0r-atc-orientation",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:insight:hath0r-atc",
+      "target": "memory:episode:clean-repo-hath0r-atc",
       "relation": "DERIVES_FROM",
       "is_current": true
     },
@@ -1163,6 +1232,18 @@
     },
     {
       "source": "memory:fact:repo-hath0r-atc-orientation",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:clean-repo-hath0r-atc",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:insight:hath0r-atc",
       "target": "role:developer",
       "relation": "INFORMS",
       "is_current": true

@@ -6,14 +6,14 @@
   "task_id": null,
   "role": null,
   "repo_name": "hath0r-atc",
-  "status": "active",
+  "status": "completed",
   "started_at": "2026-10-16T12:32:20.507811+00:00",
-  "updated_at": "2026-10-16T15:24:54.348528+00:00",
-  "ended_at": null,
-  "read_count": 5,
-  "write_count": 5,
-  "last_read_at": "2026-10-16T15:24:54.348528+00:00",
-  "last_write_at": "2026-10-16T15:24:54.171785+00:00",
+  "updated_at": "2026-10-16T15:48:30.992947+00:00",
+  "ended_at": "2026-10-16T15:48:30.992947+00:00",
+  "read_count": 6,
+  "write_count": 7,
+  "last_read_at": "2026-10-16T15:48:30.944686+00:00",
+  "last_write_at": "2026-10-16T15:48:30.992947+00:00",
   "active_focus": "Repository orientation verified for hath0r-atc",
   "prior_summary": "ounded fact:repo-hath0r-atc-orientat; Compounded fact:repo-hath0r-atc-orientat; Compounded fact:repo-hath0r-atc-orientat",
   "recalled_nodes": [
@@ -26,26 +26,35 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-16T15:24:54.171785+00:00",
+      "timestamp": "2026-10-16T15:48:30.971789+00:00",
       "kind": "compound",
-      "summary": "Compounded fact:repo-hath0r-atc-orientation: hath0r-atc Repository Memory Orientation",
+      "summary": "Compounded episode:clean-repo-hath0r-atc: Clean Repo Lifecycle (hath0r-atc)",
       "tags": [
-        "orientation",
-        "repository",
+        "clean-repo",
+        "hygiene",
         "hath0r-atc",
-        "cr-memory-compound-001",
-        "fact",
+        "episode",
         "compounded"
       ],
-      "node_id": "fact:repo-hath0r-atc-orientation"
+      "node_id": "episode:clean-repo-hath0r-atc"
+    },
+    {
+      "timestamp": "2026-10-16T15:48:30.992947+00:00",
+      "kind": "milestone",
+      "summary": "Clean Repo Lifecycle completed for hath0r-atc.",
+      "tags": [
+        "session-end"
+      ],
+      "node_id": null
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "fact:repo-hath0r-atc-orientation"
+    "fact:repo-hath0r-atc-orientation",
+    "episode:clean-repo-hath0r-atc"
   ],
-  "capsule_bytes": 1766,
-  "revision": 6,
-  "base_graph_hash": "sha256:12f040247adc0d95221583e650a96efd7911373338c2c35109aef76d37fbdb45",
-  "content_hash": "sha256:0685269e5677420476f252a3bfb4751dc2643f1a56b93b712df7d572793672fb"
+  "capsule_bytes": 2019,
+  "revision": 9,
+  "base_graph_hash": "sha256:a83a61cca5e041e3b4dd245bf4f31b43e61d45fceed4f6d88e95a2ac75c6b948",
+  "content_hash": "sha256:d3da506b3cf15ac814988e1f5bc3e2a4e0478f124c5254ac10eba6adc557196e"
 }
