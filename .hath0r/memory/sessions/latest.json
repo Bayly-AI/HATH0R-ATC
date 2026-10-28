@@ -3,53 +3,53 @@
   "session_id": "sess-20261028-143953-cd080f",
   "prior_session_id": "sess-20261028-141506-debfcd",
   "parent_session_id": "sess-20261028-141506-debfcd",
-  "revision": 11,
-  "content_hash": "sha256:92fdad08d974fd6de186990de77a496901db5a4c2fa999fbfdb58f9e859695ac",
-  "base_graph_hash": "sha256:7b7e36e9dfa83a4858a5ebf7a7dd2cc97796650b02e867bf3ba25eecd5bfd37b",
+  "revision": 14,
+  "content_hash": "sha256:63d4ee728e7ce765d2fd67148c47a3060b2611046f40c484752b14484b9b466f",
+  "base_graph_hash": "sha256:f9fcc5914845100bc685728469d1649d61500d2819e03f08f292de0f241d1b83",
   "task_id": "Issue #71: Cruise Control suite config, deployment docs, and eval baseline sync",
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "completed",
   "started_at": "2026-10-28T14:39:53.178852+00:00",
-  "updated_at": "2026-10-28T15:24:13.431064+00:00",
+  "updated_at": "2026-10-28T17:37:28.174469+00:00",
   "ended_at": "2026-10-28T15:24:12.713637+00:00",
-  "read_count": 3,
-  "write_count": 8,
-  "last_read_at": "2026-10-28T15:24:12.647594+00:00",
-  "last_write_at": "2026-10-28T15:24:13.431064+00:00",
-  "active_focus": "Active working session in hath0r-atc",
-  "prior_summary": "Clean Repo Lifecycle completed for hath0",
+  "read_count": 4,
+  "write_count": 10,
+  "last_read_at": "2026-10-28T17:36:28.668051+00:00",
+  "last_write_at": "2026-10-28T17:37:28.174469+00:00",
+  "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-atc",
+  "prior_summary": "Compounded eval:clean-repo-hath0r-atc: T; Compounded rule:cr-task-eval-001: Automa",
   "recalled_nodes": [
     {
-      "id": "insight:hath0r-atc",
-      "type": "insight",
-      "label": "Synthesized Insight on hath0r-atc",
-      "snippet": "Consolidated from 2 memory nodes tagged 'hath0r-atc'. Recurring themes: opensource, clean,"
+      "id": "eval:clean-repo-hath0r-atc",
+      "type": "eval",
+      "label": "Task Evaluation clean-repo-hath0r-atc (R=1.00, PASS)",
+      "snippet": "4-Tier Task Evaluation for clean-repo-hath0r-atc on branch development: R_task=1.0000 (det"
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-28T15:24:13.431064+00:00",
+      "timestamp": "2026-10-28T17:37:28.174469+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:clean-repo-hath0r-atc: Task Evaluation clean-repo-hath0r-atc (R=1.00, PASS)",
+      "summary": "Compounded eval:issue-76: Task Evaluation issue-76 (R=1.00, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "clean-repo-hath0r-atc",
+        "issue-76",
         "passed",
         "compounded"
       ],
-      "node_id": "eval:clean-repo-hath0r-atc"
+      "node_id": "eval:issue-76"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "episode:atc-71-cruise-control-docs-sync",
-    "eval:atc-71-cruise-control-docs-sync",
     "eval:cccd-calibrated-hath0r-atc",
     "eval:branch-docs-73-clean-repo-workflow",
     "episode:clean-repo-hath0r-atc",
-    "eval:clean-repo-hath0r-atc"
+    "eval:clean-repo-hath0r-atc",
+    "rule:cr-task-eval-001",
+    "eval:issue-76"
   ],
-  "capsule_bytes": 2000
+  "capsule_bytes": 1982
 }
