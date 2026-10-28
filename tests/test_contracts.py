@@ -34,7 +34,25 @@ def test_canonical_container_names() -> None:
         "Hath0r-Data",
         "Hath0r-Sessions",
         "Hath0r-MCP",
+        "Hath0r-Cruise-Control",
     ]
     for name in canonical_containers:
         assert f"container_name: {name}" in content, f"Missing container_name: {name}"
+
+
+def test_docker_compose_cruise_control_and_nginx_route() -> None:
+    compose_path = Path(__file__).parent.parent / "deploy" / "docker" / "docker-compose.yml"
+    nginx_path = Path(__file__).parent.parent / "deploy" / "docker" / "nginx" / "conf.d" / "default.conf"
+    compose_content = compose_path.read_text(encoding="utf-8")
+    nginx_content = nginx_path.read_text(encoding="utf-8")
+
+    assert "container_name: Hath0r-Cruise-Control" in compose_content
+    assert "hath0r_cruise_data" in compose_content
+    assert "38090" in compose_content
+    assert "com.hath0r.component: cruise-control" in compose_content
+
+    assert "location /cruise/ {" in nginx_content
+    assert "proxy_pass http://Hath0r-Cruise-Control:8090/;" in nginx_content
+    assert "location /api/decisions {" in nginx_content
+
 

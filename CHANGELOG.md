@@ -5,6 +5,15 @@ All notable changes to **HATH0R-ATC** are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-10-28
+
+### Added
+- **Hath0r Cruise Control Container (`Hath0r-Cruise-Control` — `#69`)**:
+  - Added canonical `cruise-control` (`Hath0r-Cruise-Control`, image `hath0r/cruise-control:local`, port `38090:8090`, volume `hath0r_cruise_data`) service to `deploy/docker/docker-compose.yml` in the `hath0r` Docker group (`CR-DOCKER-HATH0R-GROUP-001`).
+  - Added `/cruise/` and `/api/decisions` reverse-proxy routes to `Hath0r-Edge` NGINX (`deploy/docker/nginx/conf.d/default.conf`).
+  - Updated `deploy/docker/Makefile` and `deploy/docker/smoke-test.sh` to start and verify `Hath0r-Cruise-Control` alongside `Hath0r-Edge`, `Hath0r-Sessions`, `Hath0r-phoenix`, and `Hathor-MLFLOW`.
+  - Added contract tests in `tests/test_contracts.py`.
+
 ## [0.4.4] - 2026-10-28
 
 ### Added

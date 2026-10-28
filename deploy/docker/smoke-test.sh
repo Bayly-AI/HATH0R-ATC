@@ -38,13 +38,16 @@ docker inspect "$PHOENIX_C" >/dev/null 2>&1 || PHOENIX_C="hath0r-phoenix"
 
 MLFLOW_C="Hathor-MLFLOW"
 
+CRUISE_C="Hath0r-Cruise-Control"
+docker inspect "$CRUISE_C" >/dev/null 2>&1 || CRUISE_C="hath0r-cruise-control"
+
 POSTGRES_C="Hath0r-Data"
 docker inspect "$POSTGRES_C" >/dev/null 2>&1 || POSTGRES_C="hath0r-postgres"
 
 MCP_C="Hath0r-MCP"
 docker inspect "$MCP_C" >/dev/null 2>&1 || MCP_C="hath0r-mcp"
 
-for c in "$EDGE_C" "$REDIS_C" "$PHOENIX_C" "$MLFLOW_C"; do
+for c in "$EDGE_C" "$REDIS_C" "$PHOENIX_C" "$MLFLOW_C" "$CRUISE_C"; do
   st=$(docker inspect -f '{{.State.Status}} health={{if .State.Health}}{{.State.Health.Status}}{{else}}n/a{{end}}' "$c" 2>/dev/null || echo missing)
   echo "$c: $st"
   if [[ "$st" == missing ]]; then
@@ -88,6 +91,14 @@ else
   check "nginx /mlflow/" 0 "http=$code"
 fi
 
+# Cruise Control via edge
+code=$(curl -sS -m 8 -o /tmp/h0_cruise.out -w '%{http_code}' "http://${LOOPBACK}:${NGINX_PORT}/cruise/radar" 2>/dev/null || echo 000)
+if [[ "$code" == "200" ]]; then
+  check "nginx /cruise/radar" 1 "http=$code (Hath0r Cruise Control UI ok)"
+else
+  check "nginx /cruise/radar" 0 "http=$code"
+fi
+
 # MCP via edge (optional — pass if MCP up, soft-fail note if not)
 if docker inspect "$MCP_C" >/dev/null 2>&1; then
   code=$(curl -sS -m 8 -o /tmp/h0_mcp.out -w '%{http_code}' "http://${LOOPBACK}:${NGINX_PORT}/mcp/health" 2>/dev/null || echo 000)
@@ -120,7 +131,7 @@ if docker inspect "$EDGE_C" >/dev/null 2>&1; then
   if printf '%s' "$out" | grep -q ok; then check "nginx self healthz" 1 "$out"
   else check "nginx self healthz" 0 "$out"; fi
 
-  for alias in Hath0r-Sessions hath0r-redis redis Hath0r-phoenix phoenix Hathor-MLFLOW mlflow; do
+  for alias in Hath0r-Sessions hath0r-redis redis Hath0r-phoenix phoenix Hathor-MLFLOW mlflow Hath0r-Cruise-Control cruise-control; do
     ip=$(docker exec "$EDGE_C" getent hosts "$alias" 2>/dev/null | awk '{print $1; exit}')
     if [[ -n "${ip:-}" ]]; then check "DNS alias $alias" 1 "resolves=$ip"
     else check "DNS alias $alias" 0 "unresolved"; fi

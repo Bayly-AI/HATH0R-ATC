@@ -5,7 +5,7 @@ help:
 	@echo "  make test            - Unit/contract tests"
 	@echo "  make test-pre-deploy - Tests with coverage XML generation"
 	@echo "  make test-post-deploy- Smoke/health checks"
-	@echo "  make docker-up       - hath0r group: Hath0r-Sessions + Hath0r-Edge"
+	@echo "  make docker-up       - hath0r group: Hath0r-Sessions + Hath0r-Edge + Hath0r-phoenix + Hathor-MLFLOW + Hath0r-Cruise-Control"
 	@echo "  make docker-up-db    - shared + Hath0r-Data"
 	@echo "  make docker-down | docker-ps | docker-status | docker-logs"
 	@echo "  make smoke           - edge + redis smoke test"

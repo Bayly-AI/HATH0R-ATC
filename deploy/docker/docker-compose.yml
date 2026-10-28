@@ -190,6 +190,75 @@ services:
       com.hath0r.container: Hathor-MLFLOW
       com.hath0r.role: mlops-experiment-tracking
 
+  cruise-control:
+    image: ${HATH0R_CRUISE_IMAGE:-hath0r/cruise-control:local}
+    build:
+      context: ../../../hathor-cli
+      dockerfile: Dockerfile
+    container_name: Hath0r-Cruise-Control
+    restart: unless-stopped
+    entrypoint:
+      - python3
+      - -c
+      - |
+        import sys, types
+        for m in (
+            'hath0r_engine', 'hath0r_engine.graph', 'hath0r_engine.graph.agent_graph',
+            'hath0r_engine.mesh', 'hath0r_engine.mesh.gain_federation_router',
+            'hath0r_engine.analysis', 'hath0r_engine.analysis.pmat_stats_engine',
+        ):
+            mod = types.ModuleType(m)
+            mod.__path__ = []
+            mod.agent_graph_engine = types.SimpleNamespace()
+            mod.gain_federation_router = types.SimpleNamespace(peers={}, register_peer=lambda *a, **kw: None)
+            mod.pmat_stats_engine = types.SimpleNamespace()
+            sys.modules.setdefault(m, mod)
+        from hath0r_cli.cli import main
+        sys.argv = ['hath0r', *sys.argv[1:]]
+        main()
+    command:
+      - cruise
+      - radar
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8090"
+      - --seed-demo
+      - --no-split-window
+    ports:
+      - "${HATH0R_CRUISE_HOST_PORT:-38090}:8090"
+    environment:
+      HATH0R_NO_BROWSER: "1"
+      HATH0R_NO_BANNER: "1"
+      HATH0R_CRUISE_PORT: "8090"
+    volumes:
+      - hath0r_cruise_data:/app/.hath0r/decisions
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python3",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8090/api/decisions', timeout=5)",
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    networks:
+      hath0r-net:
+        aliases:
+          - Hath0r-Cruise-Control
+          - hath0r-cruise-control
+          - cruise-control
+          - h0-cruise
+    labels:
+      com.hath0r.org: bayly-ai
+      com.hath0r.project: hath0r-opensource
+      com.hath0r.component: cruise-control
+      com.hath0r.container: Hath0r-Cruise-Control
+      com.hath0r.role: agent-decision-control-layer
+
   mcp:
     profiles: ["mcp", "apps"]
     image: ${HATH0R_MCP_IMAGE:-hath0r/mcp:local}
@@ -273,6 +342,9 @@ volumes:
     external: true
   hath0r_mlflow_data:
     name: hath0r_mlflow_data
+    external: true
+  hath0r_cruise_data:
+    name: hath0r_cruise_data
     external: true
   hath0r_airflow_data:
     name: hath0r_airflow_data
