@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-atc",
-  "timestamp": "2026-10-28T17:45:22.807973+00:00",
+  "timestamp": "2026-10-28T18:13:15.655649+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -1001,18 +1001,18 @@
       "id": "memory:episode:clean-repo-hath0r-atc",
       "plane": "memory",
       "type": "episode",
-      "label": "Clean Repo Lifecycle (hath0r-atc)",
-      "content": "Executed 13-step clean-repo hygiene, branch merges, and knowledge sync for hath0r-atc.",
+      "label": "Clean Repo Development Sync (hath0r-atc)",
+      "content": "Verified all changes merged into development and synced for hath0r-atc.",
       "properties": {
         "source": "local_memory",
         "tags": [
           "clean-repo",
-          "hygiene",
+          "development",
           "hath0r-atc",
           "episode",
           "compounded"
         ],
-        "importance": 0.75
+        "importance": 0.8
       },
       "is_current": true
     },
@@ -1155,7 +1155,7 @@
       "content": "4-Tier Task Evaluation for issue-67 on branch feature/67-automatic-task-evals: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:2ea24670b306507c4cecd06ccd79f219492a3208d0e7bacd695354d31b566c0f"
+          ".hath0r/evals/latest.json": "sha256:ea444157ff9a4cafaecc7d84c4db1c4097ea0f0f48a4a44c36e6b07bf71f39cf"
         },
         "source": "local_memory",
         "tags": [
@@ -1177,7 +1177,7 @@
       "content": "4-Tier Task Evaluation for pr-68 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:2ea24670b306507c4cecd06ccd79f219492a3208d0e7bacd695354d31b566c0f"
+          ".hath0r/evals/latest.json": "sha256:ea444157ff9a4cafaecc7d84c4db1c4097ea0f0f48a4a44c36e6b07bf71f39cf"
         },
         "source": "local_memory",
         "tags": [
@@ -1257,7 +1257,7 @@
       "content": "4-Tier Task Evaluation for pr-68-merged on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:2ea24670b306507c4cecd06ccd79f219492a3208d0e7bacd695354d31b566c0f"
+          ".hath0r/evals/latest.json": "sha256:ea444157ff9a4cafaecc7d84c4db1c4097ea0f0f48a4a44c36e6b07bf71f39cf"
         },
         "source": "local_memory",
         "tags": [
@@ -1364,7 +1364,7 @@
       "content": "4-Tier Task Evaluation for atc-71-cruise-control-docs-sync on branch chore/71-cruise-control-docs-and-eval-sync: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:2ea24670b306507c4cecd06ccd79f219492a3208d0e7bacd695354d31b566c0f"
+          ".hath0r/evals/latest.json": "sha256:ea444157ff9a4cafaecc7d84c4db1c4097ea0f0f48a4a44c36e6b07bf71f39cf"
         },
         "source": "local_memory",
         "tags": [
@@ -1429,7 +1429,7 @@
       "content": "4-Tier Task Evaluation for cccd-calibrated-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:2ea24670b306507c4cecd06ccd79f219492a3208d0e7bacd695354d31b566c0f"
+          ".hath0r/evals/latest.json": "sha256:ea444157ff9a4cafaecc7d84c4db1c4097ea0f0f48a4a44c36e6b07bf71f39cf"
         },
         "source": "local_memory",
         "tags": [
@@ -1451,7 +1451,7 @@
       "content": "4-Tier Task Evaluation for branch-docs-73-clean-repo-workflow on branch docs/73-clean-repo-workflow: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:2ea24670b306507c4cecd06ccd79f219492a3208d0e7bacd695354d31b566c0f"
+          ".hath0r/evals/latest.json": "sha256:ea444157ff9a4cafaecc7d84c4db1c4097ea0f0f48a4a44c36e6b07bf71f39cf"
         },
         "source": "local_memory",
         "tags": [
@@ -1473,7 +1473,7 @@
       "content": "4-Tier Task Evaluation for clean-repo-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:2ea24670b306507c4cecd06ccd79f219492a3208d0e7bacd695354d31b566c0f"
+          ".hath0r/evals/latest.json": "sha256:bd5851c4da7c7d1c687b2e82d30253142e0d40a59f5e9d0072e1974bc4b3eae9"
         },
         "source": "local_memory",
         "tags": [
@@ -1495,7 +1495,7 @@
       "content": "4-Tier Task Evaluation for issue-76 on branch chore/76-eval-scorecard-summary-rule: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:2ea24670b306507c4cecd06ccd79f219492a3208d0e7bacd695354d31b566c0f"
+          ".hath0r/evals/latest.json": "sha256:ea444157ff9a4cafaecc7d84c4db1c4097ea0f0f48a4a44c36e6b07bf71f39cf"
         },
         "source": "local_memory",
         "tags": [
@@ -1514,15 +1514,15 @@
       "plane": "memory",
       "type": "session",
       "label": "Micro Session sess-20261028-143953-cd080f",
-      "content": "Micro Session sess-20261028-143953-cd080f [completed] | Focus: Provisioning CR-TASK-EVAL-001 for hath0r-atc | Reads: 5, Writes: 12 | Entries: Compounded eval:eval-baseline-hath0r-atc: Task Evaluation eval-baseline-hath0r-atc (R=1.00, PASS)",
+      "content": "Micro Session sess-20261028-143953-cd080f [completed] | Focus: Provisioning CR-TASK-EVAL-001 for hath0r-atc | Reads: 6, Writes: 14 | Entries: Compounded eval:clean-repo-hath0r-atc: Task Evaluation clean-repo-hath0r-atc (R=1.00, PASS)",
       "properties": {
         "session_id": "sess-20261028-143953-cd080f",
         "prior_session_id": "sess-20261028-141506-debfcd",
         "parent_session_id": "sess-20261028-141506-debfcd",
-        "read_count": 5,
-        "write_count": 12,
+        "read_count": 6,
+        "write_count": 14,
         "status": "completed",
-        "byte_size": 2044,
+        "byte_size": 2046,
         "source": "local_memory",
         "tags": [
           "session",

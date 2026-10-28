@@ -3,43 +3,43 @@
   "session_id": "sess-20261028-143953-cd080f",
   "prior_session_id": "sess-20261028-141506-debfcd",
   "parent_session_id": "sess-20261028-141506-debfcd",
-  "revision": 17,
-  "content_hash": "sha256:085b86b7b5bfa10e56146650c1e3fa69493d930a87c4be9fdb432e8d4a6e53b6",
-  "base_graph_hash": "sha256:69c6c9d391fc08a1daed1e8e05bc12e25042229da1722264cf93c2cac383ad4c",
+  "revision": 20,
+  "content_hash": "sha256:f8216497b463bc77f5f374e70211ab45f682279c7cd6dbb04d7701c1b993fd90",
+  "base_graph_hash": "sha256:76bd3c8577569d1545a40982d3b99591718f123bb5282e1c17bd4c9cf5ca8ac7",
   "task_id": "Issue #71: Cruise Control suite config, deployment docs, and eval baseline sync",
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "completed",
   "started_at": "2026-10-28T14:39:53.178852+00:00",
-  "updated_at": "2026-10-28T17:45:22.755468+00:00",
+  "updated_at": "2026-10-28T18:13:15.516588+00:00",
   "ended_at": "2026-10-28T15:24:12.713637+00:00",
-  "read_count": 5,
-  "write_count": 12,
-  "last_read_at": "2026-10-28T17:45:22.377363+00:00",
-  "last_write_at": "2026-10-28T17:45:22.755468+00:00",
+  "read_count": 6,
+  "write_count": 14,
+  "last_read_at": "2026-10-28T18:13:14.910428+00:00",
+  "last_write_at": "2026-10-28T18:13:15.516588+00:00",
   "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-atc",
-  "prior_summary": "Compounded eval:issue-76: Task Evaluatio; Compounded rule:cr-task-eval-001: Automa",
+  "prior_summary": "ounded rule:cr-task-eval-001: Automa; Compounded eval:eval-baseline-hath0r-atc; Compounded episode:clean-repo-hath0r-atc",
   "recalled_nodes": [
     {
-      "id": "eval:clean-repo-hath0r-atc",
-      "type": "eval",
-      "label": "Task Evaluation clean-repo-hath0r-atc (R=1.00, PASS)",
-      "snippet": "4-Tier Task Evaluation for clean-repo-hath0r-atc on branch development: R_task=1.0000 (det"
+      "id": "insight:hath0r-atc",
+      "type": "insight",
+      "label": "Synthesized Insight on hath0r-atc",
+      "snippet": "Consolidated from 2 memory nodes tagged 'hath0r-atc'. Recurring themes: opensource, clean,"
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-28T17:45:22.755468+00:00",
+      "timestamp": "2026-10-28T18:13:15.516588+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:eval-baseline-hath0r-atc: Task Evaluation eval-baseline-hath0r-atc (R=1.00, PASS)",
+      "summary": "Compounded eval:clean-repo-hath0r-atc: Task Evaluation clean-repo-hath0r-atc (R=1.00, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "eval-baseline-hath0r-atc",
+        "clean-repo-hath0r-atc",
         "passed",
         "compounded"
       ],
-      "node_id": "eval:eval-baseline-hath0r-atc"
+      "node_id": "eval:clean-repo-hath0r-atc"
     }
   ],
   "next_steps": [],
@@ -51,5 +51,5 @@
     "eval:issue-76",
     "eval:eval-baseline-hath0r-atc"
   ],
-  "capsule_bytes": 2044
+  "capsule_bytes": 2046
 }
