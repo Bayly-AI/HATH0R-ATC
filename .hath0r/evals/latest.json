@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261028-145638-7b2d0d",
-  "task_id": "cccd-calibrated-hath0r-atc",
+  "eval_id": "eval-20261028-151742-fef66c",
+  "task_id": "branch-docs-73-clean-repo-workflow",
   "issue_number": null,
   "repo_name": "hath0r-atc",
-  "branch": "development",
-  "evaluated_at": "2026-10-28T14:56:38.013541+00:00",
-  "duration_ms": 313.58,
+  "branch": "docs/73-clean-repo-workflow",
+  "evaluated_at": "2026-10-28T15:17:42.377808+00:00",
+  "duration_ms": 229.22,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -32,7 +32,7 @@
       "checks": {
         "version_valid": {
           "passed": true,
-          "version": "0.5.1",
+          "version": "0.5.2",
           "error": null
         },
         "agentgraph_valid": {
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 17,
+          "compounded_nodes_count": 18,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -65,12 +65,12 @@
       "max_usd": 0.25,
       "session_id": "sess-20261028-143953-cd080f",
       "session_reads": 2,
-      "session_writes": 3,
-      "session_bytes": 1968,
+      "session_writes": 4,
+      "session_bytes": 1987,
       "within_capsule_budget": true,
-      "latency_ms": 100.37,
+      "latency_ms": 86.44,
       "taguchi_quality_loss": 0.0001,
-      "snr_db": 25.99
+      "snr_db": 27.29
     },
     "adversarial": {
       "score": 1.0,
@@ -85,10 +85,10 @@
     "goal_alignment": {
       "score": 1.0,
       "passed": true,
-      "task_id": "cccd-calibrated-hath0r-atc",
+      "task_id": "branch-docs-73-clean-repo-workflow",
       "issue_number": null,
       "active_focus": "Active working session in hath0r-atc",
-      "compounded_nodes_count": 17,
+      "compounded_nodes_count": 18,
       "consensus_score": 1.0
     }
   },
@@ -96,7 +96,7 @@
   "observability_sync": {
     "mode": "live_synced",
     "phoenix_logged": true,
-    "mlflow_run_id": "77e56a83eefa4575abaf3c9e4d9c4809"
+    "mlflow_run_id": "1ee208daa4934473850d72a9ea5133a3"
   },
-  "content_hash": "sha256:e76b3cae0b154a3947c96d551be99a4854e307f19901aed6a6e5b4066f03d671"
+  "content_hash": "sha256:fa32dd6821f3a484c0f0e1f558ac399ac7ccd15936a0145ae97b289a0daf5827"
 }
