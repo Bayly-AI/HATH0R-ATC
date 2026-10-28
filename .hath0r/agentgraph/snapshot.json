@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-atc",
-  "timestamp": "2026-10-16T15:48:31.097310+00:00",
+  "timestamp": "2026-10-28T11:41:49.456285+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -985,19 +985,63 @@
       "is_current": true
     },
     {
+      "id": "memory:episode:hath0r-ecosystem-diagnostics-repair-and-comprehe",
+      "plane": "memory",
+      "type": "episode",
+      "label": "Hath0r Ecosystem Diagnostics, Repair, and Comprehensive Testing",
+      "content": "Resolved test assertion in hath0r-engine v1.9.0, fixed time-drift and MCP registry fallback in hathor-cli, symlinked hathor to hath0r in /usr/local/bin, calibrated CCCD gate, verified Docker edge/sessions/mcp, and validated full test suites across framework (288 tests), CLI (659 tests), MCP (604 tests), and ATC (11 tests).",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "hathor",
+          "diagnosis",
+          "testing",
+          "release",
+          "cli",
+          "framework",
+          "mcp",
+          "atc",
+          "episode",
+          "compounded"
+        ],
+        "importance": 0.8
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:episode:decision-radar-architecture-plan",
+      "plane": "memory",
+      "type": "episode",
+      "label": "Hath0r Decision Radar Architecture Plan and GitHub Issues",
+      "content": "Formulated comprehensive architectural plan for the Hath0r Decision Radar (Minority Report Agent Decision Control Layer). Created GitHub issues #499 (Epic), #500 (Contracts/Storage), #501 (Decision Graph/Reranker), #502 (Fact Settlement Engine), #503 (Work Boundary Gates), #504 (Agent Hook/CLI), #505 (Radial Sunburst UI/SSE), and #506 (Hexad Docs/Tests).",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "decision-radar",
+          "minority-report",
+          "epic",
+          "architecture",
+          "episode",
+          "compounded"
+        ],
+        "importance": 0.95
+      },
+      "is_current": true
+    },
+    {
       "id": "memory:session:sess-20261016-123220-79e9e4",
       "plane": "memory",
       "type": "session",
       "label": "Micro Session sess-20261016-123220-79e9e4",
-      "content": "Micro Session sess-20261016-123220-79e9e4 [completed] | Focus: Repository orientation verified for hath0r-atc | Reads: 6, Writes: 7 | Entries: Compounded episode:clean-repo-hath0r-atc: Clean Repo Lifecycle (hath0r-atc); Clean Repo Lifecycle completed for hath0r-atc.",
+      "content": "Micro Session sess-20261016-123220-79e9e4 [completed] | Focus: Repository orientation verified for hath0r-atc | Reads: 7, Writes: 10 | Entries: Compounded episode:decision-radar-architecture-plan: Hath0r Decision Radar Architecture Plan and GitHub Issues",
       "properties": {
         "session_id": "sess-20261016-123220-79e9e4",
         "prior_session_id": null,
         "parent_session_id": null,
-        "read_count": 6,
-        "write_count": 7,
+        "read_count": 7,
+        "write_count": 10,
         "status": "completed",
-        "byte_size": 2019,
+        "byte_size": 1978,
         "source": "local_memory",
         "tags": [
           "session",
@@ -1113,6 +1157,30 @@
     {
       "source": "memory:insight:hath0r-atc",
       "target": "memory:episode:clean-repo-hath0r-atc",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:hath0r-ecosystem-diagnostics-repair-and-comprehe",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:hath0r-ecosystem-diagnostics-repair-and-comprehe",
+      "target": "memory:session:sess-20261016-123220-79e9e4",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:decision-radar-architecture-plan",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:decision-radar-architecture-plan",
+      "target": "memory:session:sess-20261016-123220-79e9e4",
       "relation": "DERIVES_FROM",
       "is_current": true
     },
@@ -1244,6 +1312,18 @@
     },
     {
       "source": "memory:insight:hath0r-atc",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:hath0r-ecosystem-diagnostics-repair-and-comprehe",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:decision-radar-architecture-plan",
       "target": "role:developer",
       "relation": "INFORMS",
       "is_current": true
