@@ -38,15 +38,20 @@ Whenever the user requests **"clean repo"** or **"clean repos"**, execute the fo
   ```
 - Remove any unneeded detached or stale worktree directories.
 
-### Step 5: Ensure All PRs in the Repo Are Merged
-- Query open Pull Requests using `gh pr list`.
-- Verify if any open PRs are pending review, approval, or merge.
-- Address blockers or merge ready PRs.
+### Step 5: Review Branches, Merge Changes, Resolve Conflicts & Ensure PRs Are Merged
+- Query open Pull Requests using `gh pr list` and merge ready PRs (`gh pr merge --squash --delete-branch`).
+- Fetch all remote branches (`git fetch --all --prune`).
+- Checkout the canonical base branch (`development`, or `main`/`master` if `development` is absent) and pull latest (`git pull --rebase origin development`).
+- Review every local and remote non-canonical branch (`feature/*`, `chore/*`, `fix/*`, `bugfix/*`, `enhancement/*`, `docs/*`, `claude/*`, `release/*`).
+- For any branch that has unmerged commits (`git cherry development <branch>`):
+  - Merge the branch into `development` (`git merge --no-edit <branch>`).
+  - If merge conflicts occur, resolve them cleanly (`git merge --no-edit -X ours <branch>` or resolving tree conflicts while preserving new feature files) and commit the resolution.
 
-### Step 6: Share Knowledge
+### Step 6: Share Knowledge & Compound MemoryGraph (`CR-MEMORY-COMPOUND-001`)
 - Update shared knowledge bases, indexing systems, and memory stores:
-  - Ray-MCP knowledge roots (OneDrive knowledge roots: Author, Career, Documents, Books, Businesses, Cars, Projects).
+  - Ray-MCP / Hath0r-MCP knowledge roots.
   - Sync indexed data to `.hath0r/knowledgebase` single source of truth when applicable.
+  - Compound clean-repo episode into `.hath0r/memory/graph.json`.
 
 ### Step 7: Update Documentation & AgentGraph Synchronization
 - Ensure all recent features, API modifications, database schemas, and architectural changes are documented in:
@@ -60,20 +65,17 @@ Whenever the user requests **"clean repo"** or **"clean repos"**, execute the fo
   ```
   Verify that 0 cycles and 0 contradictions exist before proceeding to commit.
 
-### Step 8: Commit Documentation & Knowledge Changes
-- Stage any updated documentation, governance files, or knowledge sync artifacts.
-- Commit them cleanly:
+### Step 8: Run Task Evaluation (`CR-TASK-EVAL-001`) & Commit Documentation / State Changes
+- Run the 4-tier Task Evaluation (`hath0r evals run`) and synchronize SHA-256 file hashes (`hath0r memory hash --sync`).
+- Stage any updated documentation, governance files, memory graphs, or evaluation artifacts and commit them cleanly:
   ```bash
-  git add -A && git commit -m "docs: update documentation, runbooks, and knowledge sync"
+  git add -A && git commit -m "docs: update documentation, evaluations, and knowledge sync [skip ci]"
   ```
 
-### Step 9: Ensure All Changes Are PR'd
-- If working on a feature branch (`feature/*`):
+### Step 9: Ensure All Changes Are PR'd or Merged into Base Branch
+- If working on an active feature branch (`feature/*`) requiring PR review:
   - Push branch to remote: `git push -u origin <branch>`
-  - Create Pull Request if one does not exist:
-    ```bash
-    gh pr create --title "..." --body "..."
-    ```
+  - Create Pull Request if one does not exist (`gh pr create --base development`).
 
 ### Step 10: Monitor PRs and Merge When Pass (Or Fix So It Does)
 - Run status checks: `gh pr checks`
@@ -84,21 +86,23 @@ Whenever the user requests **"clean repo"** or **"clean repos"**, execute the fo
   gh pr merge --squash --delete-branch
   ```
 
-### Step 11: Delete Feature Branch (Local & Remote)
-- Once the PR is merged, delete the feature branch locally and ensure remote is purged:
+### Step 11: Remove All Stale Feature Branches (Local & Remote)
+- Delete all merged and stale non-canonical feature branches both locally and on `origin`:
   ```bash
-  git branch -d <feature-branch>
+  git branch -D <feature-branch>
   git push origin --delete <feature-branch> 2>/dev/null || true
   git fetch --prune
   ```
 
-### Step 12: Return to Development and Pull Origin
-- Switch to the main development branch (`development` or `main` according to repository promotion policy):
+### Step 12: Switch Back to Development and Pull/Push Origin
+- Switch back to `development` (or canonical base branch), pull with rebase, and push to `origin` so local and remote are 100% synchronized:
   ```bash
   git checkout development
-  git pull origin development
+  git pull --rebase origin development
+  git push origin development
   ```
-- Verify `git status` reports working tree is clean and up to date.
+- Verify `git status` reports working tree is clean and `up to date with 'origin/development'`.
 
-### Step 13: Announce Complete
-- Provide a structured status report confirming the clean status of all repositories, merged PRs, updated docs, and branch state.
+### Step 13: Verify Pre-Announce Gates & Announce Complete
+- Verify `hath0r memory verify` and `hath0r evals verify` pass (`passed_gate: true`, `R_task >= 0.80`).
+- Provide a structured status report confirming the clean status of all repositories, merged branches/PRs, resolved conflicts, deleted local/remote branches, and `origin/development` sync state.
