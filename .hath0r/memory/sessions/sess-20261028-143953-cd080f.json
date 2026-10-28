@@ -1,0 +1,51 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261028-143953-cd080f",
+  "prior_session_id": "sess-20261028-141506-debfcd",
+  "parent_session_id": "sess-20261028-141506-debfcd",
+  "revision": 5,
+  "content_hash": "sha256:2437e619062ce14f76e7a6755b714ad048608b768a981fbe875eba94d69461c9",
+  "base_graph_hash": "sha256:d2da66ad6118e115fe83241588fe6dd4fd109e06b39d89dbcc9e0d9f34f6bd2d",
+  "task_id": "Issue #71: Cruise Control suite config, deployment docs, and eval baseline sync",
+  "role": null,
+  "repo_name": "hath0r-atc",
+  "status": "active",
+  "started_at": "2026-10-28T14:39:53.178852+00:00",
+  "updated_at": "2026-10-28T14:39:58.167545+00:00",
+  "ended_at": null,
+  "read_count": 2,
+  "write_count": 3,
+  "last_read_at": "2026-10-28T14:39:53.877120+00:00",
+  "last_write_at": "2026-10-28T14:39:58.167545+00:00",
+  "active_focus": "Active working session in hath0r-atc",
+  "prior_summary": "ise-control-docs-sync (R=0.90, FAIL); Updated cfg/suite.yaml, docs/deployment-; Compounded episode:atc-71-cruise-control",
+  "recalled_nodes": [
+    {
+      "id": "episode:atc-69-cruise-control-container",
+      "type": "episode",
+      "label": "Hath0r-Cruise-Control Container in HATH0R-ATC (#69)",
+      "snippet": "Added Hath0r-Cruise-Control container to hath0r Docker group in HATH0R-ATC with port 38090"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-28T14:39:58.167545+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:atc-71-cruise-control-docs-sync: Task Evaluation atc-71-cruise-control-docs-sync (R=1.00, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "atc-71-cruise-control-docs-sync",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:atc-71-cruise-control-docs-sync"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "episode:atc-71-cruise-control-docs-sync",
+    "eval:atc-71-cruise-control-docs-sync"
+  ],
+  "capsule_bytes": 1968
+}

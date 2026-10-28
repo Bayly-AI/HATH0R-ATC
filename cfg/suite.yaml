@@ -25,6 +25,9 @@ canonical_containers:
   - hath0r-redis
   - hath0r-postgres
   - hath0r-mcp
+  - Hath0r-Cruise-Control
+  - Hathor-MLFLOW
+  - Hath0r-phoenix
 member_products:
   - id: hath0r-atc
     path: hath0r-atc

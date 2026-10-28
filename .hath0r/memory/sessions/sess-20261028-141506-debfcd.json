@@ -3,22 +3,22 @@
   "session_id": "sess-20261028-141506-debfcd",
   "prior_session_id": "sess-20261028-130504-acdbfa",
   "parent_session_id": "sess-20261028-130504-acdbfa",
-  "revision": 4,
-  "content_hash": "sha256:6e8ec8258741a8ec4a4b298435d020010172c4d3e8b463a7b19e8cb9e39010e6",
-  "base_graph_hash": "sha256:c74fab711773f6aced2dfa7b64fa91cc505fee4c46058568f06efcdf76b28cce",
+  "revision": 9,
+  "content_hash": "sha256:65996239ff085dfb58514f9720297ab65231b8022e6f2844fffdf82e494185d1",
+  "base_graph_hash": "sha256:b3efeba7474bc6671796673b22e8b97ac671e5f3fac7ae5c467c8dd163806aa1",
   "task_id": "Issue #69: Run Hath0r-Cruise-Control as a canonical container in HATH0R-ATC",
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "active",
   "started_at": "2026-10-28T14:15:06.081977+00:00",
-  "updated_at": "2026-10-28T14:15:37.354549+00:00",
+  "updated_at": "2026-10-28T14:39:04.535605+00:00",
   "ended_at": null,
-  "read_count": 2,
-  "write_count": 2,
-  "last_read_at": "2026-10-28T14:15:06.767377+00:00",
-  "last_write_at": "2026-10-28T14:15:37.354549+00:00",
-  "active_focus": "Active working session in hath0r-atc",
-  "prior_summary": "Compounded eval:pr-68-merged: Task Evaluation pr-68-merged (R=1.00, PASS); Configured Hath0r-Cruise-Control contain",
+  "read_count": 3,
+  "write_count": 6,
+  "last_read_at": "2026-10-28T14:21:11.886600+00:00",
+  "last_write_at": "2026-10-28T14:39:04.535605+00:00",
+  "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-atc",
+  "prior_summary": "ounded rule:cr-task-eval-001: Automa; Compounded eval:eval-baseline-hath0r-atc; Compounded eval:atc-71-cruise-control-do",
   "recalled_nodes": [
     {
       "id": "episode:issue-67-task-evals",
@@ -29,19 +29,25 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-28T14:15:37.354549+00:00",
+      "timestamp": "2026-10-28T14:39:04.535605+00:00",
       "kind": "compound",
-      "summary": "Compounded episode:atc-69-cruise-control-container: Hath0r-Cruise-Control Container in HATH0R-ATC (#69)",
+      "summary": "Compounded eval:atc-71-cruise-control-docs-sync: Task Evaluation atc-71-cruise-control-docs-sync (R=0.90, FAIL)",
       "tags": [
-        "episode",
+        "eval",
+        "cr-task-eval-001",
+        "atc-71-cruise-control-docs-sync",
+        "failed",
         "compounded"
       ],
-      "node_id": "episode:atc-69-cruise-control-container"
+      "node_id": "eval:atc-71-cruise-control-docs-sync"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "episode:atc-69-cruise-control-container"
+    "episode:atc-69-cruise-control-container",
+    "rule:cr-task-eval-001",
+    "eval:eval-baseline-hath0r-atc",
+    "eval:atc-71-cruise-control-docs-sync"
   ],
-  "capsule_bytes": 1821
+  "capsule_bytes": 2035
 }

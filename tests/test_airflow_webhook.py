@@ -5,14 +5,13 @@ from __future__ import annotations
 import hashlib
 import hmac
 import json
-from pathlib import Path
 import sys
+from pathlib import Path
 from unittest.mock import MagicMock
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from lib.webhook_receiver import AirflowWebhookReceiver
-
 
 
 class TestAirflowWebhookReceiver:
