@@ -1,54 +1,47 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261028-130504-acdbfa",
-  "prior_session_id": "sess-20261028-130446-76eb8a",
-  "parent_session_id": "sess-20261028-130446-76eb8a",
-  "revision": 12,
-  "content_hash": "sha256:e84eeb7378c4d3dde09909288da94973f5bbc09e647361eab558d74f288c7acb",
-  "base_graph_hash": "sha256:f1930b0aad6622f9bff64a67ce9b3cb72c1916f0d012b239e82cfaa211ee4675",
-  "task_id": "issue-67",
+  "session_id": "sess-20261028-141506-debfcd",
+  "prior_session_id": "sess-20261028-130504-acdbfa",
+  "parent_session_id": "sess-20261028-130504-acdbfa",
+  "revision": 4,
+  "content_hash": "sha256:6e8ec8258741a8ec4a4b298435d020010172c4d3e8b463a7b19e8cb9e39010e6",
+  "base_graph_hash": "sha256:c74fab711773f6aced2dfa7b64fa91cc505fee4c46058568f06efcdf76b28cce",
+  "task_id": "Issue #69: Run Hath0r-Cruise-Control as a canonical container in HATH0R-ATC",
   "role": null,
   "repo_name": "hath0r-atc",
-  "status": "completed",
-  "started_at": "2026-10-28T13:05:04.952377+00:00",
-  "updated_at": "2026-10-28T13:53:18.985106+00:00",
-  "ended_at": "2026-10-28T13:53:05.698373+00:00",
-  "read_count": 3,
-  "write_count": 10,
-  "last_read_at": "2026-10-28T13:53:05.180014+00:00",
-  "last_write_at": "2026-10-28T13:53:18.985106+00:00",
-  "active_focus": "automatic-task-evals",
-  "prior_summary": "leted PR #68 (feature) via EndOfTask; Compounded eval:pr-68: Task Evaluation p; Compounded episode:pr-68: PR #68 Merged:",
+  "status": "active",
+  "started_at": "2026-10-28T14:15:06.081977+00:00",
+  "updated_at": "2026-10-28T14:15:37.354549+00:00",
+  "ended_at": null,
+  "read_count": 2,
+  "write_count": 2,
+  "last_read_at": "2026-10-28T14:15:06.767377+00:00",
+  "last_write_at": "2026-10-28T14:15:37.354549+00:00",
+  "active_focus": "Active working session in hath0r-atc",
+  "prior_summary": "Compounded eval:pr-68-merged: Task Evaluation pr-68-merged (R=1.00, PASS); Configured Hath0r-Cruise-Control contain",
   "recalled_nodes": [
     {
-      "id": "eval:pr-68",
-      "type": "eval",
-      "label": "Task Evaluation pr-68 (R=1.00, PASS)",
-      "snippet": "4-Tier Task Evaluation for pr-68 on branch feature/67-automatic-task-evals: R_task=1.0000 "
+      "id": "episode:issue-67-task-evals",
+      "type": "episode",
+      "label": "Configured Automatic Task Evaluations (CR-TASK-EVAL-001) in ",
+      "snippet": "Added declarative cfg/evals/task-eval.json binding HATH0R-ATC to TaskEvaluatorBot, .hath0r"
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-28T13:53:18.985106+00:00",
+      "timestamp": "2026-10-28T14:15:37.354549+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:pr-68-merged: Task Evaluation pr-68-merged (R=1.00, PASS)",
+      "summary": "Compounded episode:atc-69-cruise-control-container: Hath0r-Cruise-Control Container in HATH0R-ATC (#69)",
       "tags": [
-        "eval",
-        "cr-task-eval-001",
-        "pr-68-merged",
-        "passed",
+        "episode",
         "compounded"
       ],
-      "node_id": "eval:pr-68-merged"
+      "node_id": "episode:atc-69-cruise-control-container"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "episode:issue-67-task-evals",
-    "eval:issue-67",
-    "eval:pr-68",
-    "episode:pr-68",
-    "eval:pr-68-merged"
+    "episode:atc-69-cruise-control-container"
   ],
-  "capsule_bytes": 1822
+  "capsule_bytes": 1821
 }

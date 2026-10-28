@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-atc",
-  "timestamp": "2026-10-28T13:53:19.324514+00:00",
+  "timestamp": "2026-10-28T14:15:37.444931+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -1142,7 +1142,7 @@
       "content": "4-Tier Task Evaluation for issue-67 on branch feature/67-automatic-task-evals: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:6d1fba8afaba682041b64d62faf18c32c9113ae4780901713b0993affabc60a4"
+          ".hath0r/evals/latest.json": "sha256:ca3cdcde97273dedb75d8bba17925bd16ee1cbfd1d78833161c40a9bb170011f"
         },
         "source": "local_memory",
         "tags": [
@@ -1164,7 +1164,7 @@
       "content": "4-Tier Task Evaluation for pr-68 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:70db6fbad8eb4895069b311af845d0328ac819be243fa01eba3d1c4f220f789c"
+          ".hath0r/evals/latest.json": "sha256:ca3cdcde97273dedb75d8bba17925bd16ee1cbfd1d78833161c40a9bb170011f"
         },
         "source": "local_memory",
         "tags": [
@@ -1277,6 +1277,49 @@
           "session",
           "micro-session",
           "completed"
+        ],
+        "importance": 0.75
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:episode:atc-69-cruise-control-container",
+      "plane": "memory",
+      "type": "episode",
+      "label": "Hath0r-Cruise-Control Container in HATH0R-ATC (#69)",
+      "content": "Added Hath0r-Cruise-Control container to hath0r Docker group in HATH0R-ATC with port 38090, persistent volume hath0r_cruise_data, and NGINX /cruise/ reverse proxy",
+      "properties": {
+        "source_files": {
+          "deploy/docker/docker-compose.yml": "sha256:30ad329c29ecb96e84157354a36fc1c9647447bfd19a972c597a3fff43a664d1"
+        },
+        "source": "local_memory",
+        "tags": [
+          "episode",
+          "compounded"
+        ],
+        "importance": 0.8
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:session:sess-20261028-141506-debfcd",
+      "plane": "memory",
+      "type": "session",
+      "label": "Micro Session sess-20261028-141506-debfcd",
+      "content": "Micro Session sess-20261028-141506-debfcd [active] | Focus: Active working session in hath0r-atc | Reads: 2, Writes: 2 | Entries: Compounded episode:atc-69-cruise-control-container: Hath0r-Cruise-Control Container in HATH0R-ATC (#69)",
+      "properties": {
+        "session_id": "sess-20261028-141506-debfcd",
+        "prior_session_id": "sess-20261028-130504-acdbfa",
+        "parent_session_id": "sess-20261028-130504-acdbfa",
+        "read_count": 2,
+        "write_count": 2,
+        "status": "active",
+        "byte_size": 1821,
+        "source": "local_memory",
+        "tags": [
+          "session",
+          "micro-session",
+          "active"
         ],
         "importance": 0.75
       },
@@ -1565,6 +1608,30 @@
       "is_current": true
     },
     {
+      "source": "memory:session:sess-20261028-130504-acdbfa",
+      "target": "memory:session:sess-20261028-141506-debfcd",
+      "relation": "PRECEDES",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261028-141506-debfcd",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:atc-69-cruise-control-container",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:atc-69-cruise-control-container",
+      "target": "memory:session:sess-20261028-141506-debfcd",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
       "source": "rule:rules",
       "target": "role:developer",
       "relation": "GOVERNS",
@@ -1776,6 +1843,18 @@
     },
     {
       "source": "memory:session:sess-20261028-130504-acdbfa",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:atc-69-cruise-control-container",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261028-141506-debfcd",
       "target": "role:developer",
       "relation": "INFORMS",
       "is_current": true

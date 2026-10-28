@@ -6,17 +6,20 @@ NETWORK_NAME ?= hath0r-net
 POSTGRES_VOLUME ?= hath0r_postgres_data
 PHOENIX_VOLUME ?= hath0r_phoenix_data
 MLFLOW_VOLUME ?= hath0r_mlflow_data
+CRUISE_VOLUME ?= hath0r_cruise_data
 HATH0R_NGINX_HOST_PORT ?= 38000
+HATH0R_CRUISE_HOST_PORT ?= 38090
 
-.PHONY: help network-ensure volume-ensure up up-shared up-db down ps logs status redis-cli smoke
+.PHONY: help network-ensure volume-ensure image-ensure up up-shared up-db down ps logs status redis-cli smoke
 
 help:
 	@echo "Hath0r Docker group (project: hath0r, network: $(NETWORK_NAME))"
-	@echo "  make up          - network + Hath0r-Sessions + Hath0r-Edge + Hath0r-phoenix + Hathor-MLFLOW"
+	@echo "  make up          - network + Hath0r-Sessions + Hath0r-Edge + Hath0r-phoenix + Hathor-MLFLOW + Hath0r-Cruise-Control"
 	@echo "  make up-db       - shared + Hath0r-Data"
 	@echo "  make down        - stop group containers created by this compose file"
 	@echo "  make ps | logs | status | smoke"
 	@echo "  Edge: http://localhost:$(HATH0R_NGINX_HOST_PORT)/"
+	@echo "  Cruise Control: http://localhost:$(HATH0R_NGINX_HOST_PORT)/cruise/radar (direct :$(HATH0R_CRUISE_HOST_PORT)/radar)"
 	@echo "  Phoenix: http://localhost:$(HATH0R_NGINX_HOST_PORT)/phoenix/ (direct :36006)"
 	@echo "  MLflow: http://localhost:$(HATH0R_NGINX_HOST_PORT)/mlflow/ (direct :35000)"
 	@echo "  MCP (standalone): make -C ../hath0r-mcp docker-up"
@@ -52,10 +55,23 @@ volume-ensure:
 			--label com.hath0r.role=mlops-experiment-tracking \
 			$(MLFLOW_VOLUME)
 	@echo "✓ volume $(MLFLOW_VOLUME)"
+	@docker volume inspect $(CRUISE_VOLUME) >/dev/null 2>&1 || \
+		docker volume create \
+			--label com.hath0r.component=cruise-control \
+			--label com.hath0r.container=Hath0r-Cruise-Control \
+			--label com.hath0r.role=agent-decision-control-layer \
+			$(CRUISE_VOLUME)
+	@docker run --rm --user 0:0 -v $(CRUISE_VOLUME):/data redis:7-alpine chown -R 10001:10001 /data >/dev/null 2>&1 || true
+	@echo "✓ volume $(CRUISE_VOLUME)"
 
-up-shared: network-ensure volume-ensure
-	@HATH0R_NGINX_HOST_PORT=$(HATH0R_NGINX_HOST_PORT) $(COMPOSE) up -d redis nginx phoenix mlflow
-	@echo "✓ Hath0r-Sessions + Hath0r-Edge + Hath0r-phoenix + Hathor-MLFLOW (group hath0r) on :$(HATH0R_NGINX_HOST_PORT)"
+image-ensure:
+	@docker image inspect hath0r/cruise-control:local >/dev/null 2>&1 || \
+		docker build -t hath0r/cruise-control:local $(ROOT)/../hathor-cli
+	@echo "✓ image hath0r/cruise-control:local"
+
+up-shared: network-ensure volume-ensure image-ensure
+	@HATH0R_NGINX_HOST_PORT=$(HATH0R_NGINX_HOST_PORT) HATH0R_CRUISE_HOST_PORT=$(HATH0R_CRUISE_HOST_PORT) $(COMPOSE) up -d redis nginx phoenix mlflow cruise-control
+	@echo "✓ Hath0r-Sessions + Hath0r-Edge + Hath0r-phoenix + Hathor-MLFLOW + Hath0r-Cruise-Control (group hath0r) on :$(HATH0R_NGINX_HOST_PORT) (Cruise :$(HATH0R_CRUISE_HOST_PORT))"
 
 up: up-shared
 
