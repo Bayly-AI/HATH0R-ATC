@@ -1,21 +1,24 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261016-123220-79e9e4",
-  "prior_session_id": null,
-  "parent_session_id": null,
-  "task_id": null,
+  "session_id": "sess-20261028-130504-acdbfa",
+  "prior_session_id": "sess-20261028-130446-76eb8a",
+  "parent_session_id": "sess-20261028-130446-76eb8a",
+  "revision": 5,
+  "content_hash": "sha256:38818a0ced0e093ff8e812eb820c7268f9bac523d73ef595fba6620d4a1c3771",
+  "base_graph_hash": "sha256:b37a281ec55aa4b866bfa554c1a82549b437f1e81acfff62ac6d97dfeab30a43",
+  "task_id": "issue-67",
   "role": null,
   "repo_name": "hath0r-atc",
-  "status": "completed",
-  "started_at": "2026-10-16T12:32:20.507811+00:00",
-  "updated_at": "2026-10-28T11:41:49.349964+00:00",
-  "ended_at": "2026-10-16T15:48:30.992947+00:00",
-  "read_count": 7,
-  "write_count": 10,
-  "last_read_at": "2026-10-28T11:41:27.942738+00:00",
-  "last_write_at": "2026-10-28T11:41:49.349964+00:00",
-  "active_focus": "Repository orientation verified for hath0r-atc",
-  "prior_summary": "n Repo Lifecycle completed for hath0; Compounded episode:hath0r-ecosystem-diag; Created comprehensive architectural plan",
+  "status": "active",
+  "started_at": "2026-10-28T13:05:04.952377+00:00",
+  "updated_at": "2026-10-28T13:49:03.141212+00:00",
+  "ended_at": null,
+  "read_count": 2,
+  "write_count": 4,
+  "last_read_at": "2026-10-28T13:32:27.554982+00:00",
+  "last_write_at": "2026-10-28T13:49:03.141212+00:00",
+  "active_focus": "automatic-task-evals",
+  "prior_summary": "rted session focus: automatic-task-ev; Compounded episode:issue-67-task-evals:; Compounded eval:issue-67: Task Evaluatio",
   "recalled_nodes": [
     {
       "id": "fact:repo-hath0r-atc-orientation",
@@ -26,29 +29,24 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-28T11:41:49.349964+00:00",
+      "timestamp": "2026-10-28T13:49:03.141212+00:00",
       "kind": "compound",
-      "summary": "Compounded episode:decision-radar-architecture-plan: Hath0r Decision Radar Architecture Plan and GitHub Issues",
+      "summary": "Compounded eval:pr-68: Task Evaluation pr-68 (R=1.00, PASS)",
       "tags": [
-        "decision-radar",
-        "minority-report",
-        "epic",
-        "architecture",
-        "episode",
+        "eval",
+        "cr-task-eval-001",
+        "pr-68",
+        "passed",
         "compounded"
       ],
-      "node_id": "episode:decision-radar-architecture-plan"
+      "node_id": "eval:pr-68"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "fact:repo-hath0r-atc-orientation",
-    "episode:clean-repo-hath0r-atc",
-    "episode:hath0r-ecosystem-diagnostics-repair-and-comprehe",
-    "episode:decision-radar-architecture-plan"
+    "episode:issue-67-task-evals",
+    "eval:issue-67",
+    "eval:pr-68"
   ],
-  "capsule_bytes": 1978,
-  "revision": 13,
-  "base_graph_hash": "sha256:91ab7c04784561606f64e1a8f6af3d0c616865b4ef184f635c8f82282a3a4a25",
-  "content_hash": "sha256:4dc3330c44b52c1a4fe3323907d3d7bcc6c2ad709b84cf8190a268caa5cdd76a"
+  "capsule_bytes": 1744
 }

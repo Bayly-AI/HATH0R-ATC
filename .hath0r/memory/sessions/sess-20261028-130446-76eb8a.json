@@ -1,0 +1,50 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261028-130446-76eb8a",
+  "prior_session_id": "sess-20261016-123220-79e9e4",
+  "parent_session_id": "sess-20261016-123220-79e9e4",
+  "revision": 1,
+  "content_hash": "sha256:951647480bf3c4d156c7742316a6f2d87f0c6c97a07d7d7bd2ac2d1247a12321",
+  "base_graph_hash": "sha256:aca008edcb79c25fc8de97656e3c8b08c0e4f1e688637eb6273d2a4af3fddd74",
+  "task_id": null,
+  "role": null,
+  "repo_name": "hath0r-atc",
+  "status": "active",
+  "started_at": "2026-10-28T13:04:46.941246+00:00",
+  "updated_at": "2026-10-28T13:04:46.941246+00:00",
+  "ended_at": null,
+  "read_count": 1,
+  "write_count": 1,
+  "last_read_at": "2026-10-28T13:04:46.941246+00:00",
+  "last_write_at": "2026-10-28T13:04:46.941246+00:00",
+  "active_focus": "feat(evals): configure automatic task evaluations (CR-TASK-EVAL-001) in ATC",
+  "prior_summary": "Compounded episode:decision-radar-architecture-plan: Hath0r Decision Radar Architecture Plan and GitHub Issues",
+  "recalled_nodes": [
+    {
+      "id": "fact:repo-hath0r-atc-orientation",
+      "type": "fact",
+      "label": "hath0r-atc Repository Memory Orientation",
+      "snippet": "hath0r-atc: **Canonical control tower** for the OpenSource Project (`hath0r-opensource`) \u2014"
+    },
+    {
+      "id": "episode:hath0r-ecosystem-diagnostics-repair-and-comprehe",
+      "type": "episode",
+      "label": "Hath0r Ecosystem Diagnostics, Repair, and Comprehensive Test",
+      "snippet": "Resolved test assertion in hath0r-engine v1.9.0, fixed time-drift and MCP registry fallbac"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-28T13:04:46.941246+00:00",
+      "kind": "observation",
+      "summary": "Started session focus: feat(evals): configure automatic task evaluations (CR-TASK-EVAL-001) in ATC",
+      "tags": [
+        "session-start"
+      ],
+      "node_id": null
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [],
+  "capsule_bytes": 1964
+}

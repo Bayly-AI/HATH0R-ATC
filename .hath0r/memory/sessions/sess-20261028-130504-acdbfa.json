@@ -1,0 +1,52 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261028-130504-acdbfa",
+  "prior_session_id": "sess-20261028-130446-76eb8a",
+  "parent_session_id": "sess-20261028-130446-76eb8a",
+  "revision": 5,
+  "content_hash": "sha256:38818a0ced0e093ff8e812eb820c7268f9bac523d73ef595fba6620d4a1c3771",
+  "base_graph_hash": "sha256:b37a281ec55aa4b866bfa554c1a82549b437f1e81acfff62ac6d97dfeab30a43",
+  "task_id": "issue-67",
+  "role": null,
+  "repo_name": "hath0r-atc",
+  "status": "active",
+  "started_at": "2026-10-28T13:05:04.952377+00:00",
+  "updated_at": "2026-10-28T13:49:03.141212+00:00",
+  "ended_at": null,
+  "read_count": 2,
+  "write_count": 4,
+  "last_read_at": "2026-10-28T13:32:27.554982+00:00",
+  "last_write_at": "2026-10-28T13:49:03.141212+00:00",
+  "active_focus": "automatic-task-evals",
+  "prior_summary": "rted session focus: automatic-task-ev; Compounded episode:issue-67-task-evals:; Compounded eval:issue-67: Task Evaluatio",
+  "recalled_nodes": [
+    {
+      "id": "fact:repo-hath0r-atc-orientation",
+      "type": "fact",
+      "label": "hath0r-atc Repository Memory Orientation",
+      "snippet": "hath0r-atc: **Canonical control tower** for the OpenSource Project (`hath0r-opensource`) \u2014"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-28T13:49:03.141212+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:pr-68: Task Evaluation pr-68 (R=1.00, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "pr-68",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:pr-68"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "episode:issue-67-task-evals",
+    "eval:issue-67",
+    "eval:pr-68"
+  ],
+  "capsule_bytes": 1744
+}
