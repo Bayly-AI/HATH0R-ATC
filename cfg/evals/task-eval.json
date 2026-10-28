@@ -31,6 +31,10 @@
     "require_finops_budget": true,
     "require_memory_compounded": true
   },
+  "test_commands": [
+    ["python", "-m", "pytest", "-q"],
+    ["python", "-m", "ruff", "check", "tests"]
+  ],
   "observability": {
     "phoenix_enabled": true,
     "mlflow_enabled": true,

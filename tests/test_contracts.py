@@ -1,6 +1,6 @@
 """Basic contract and configuration tests for HATH0R-ATC."""
-from pathlib import Path
 import json
+from pathlib import Path
 
 
 def test_contracts_directory_exists() -> None:

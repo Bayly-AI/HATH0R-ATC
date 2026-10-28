@@ -5,6 +5,14 @@ All notable changes to **HATH0R-ATC** are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.1] - 2026-10-28
+
+### Changed
+- **Cruise Control & Task Evaluation Documentation (`#71`)**:
+  - Added `Hath0r-Cruise-Control`, `Hathor-MLFLOW`, and `Hath0r-phoenix` to `canonical_containers` in `cfg/suite.yaml`.
+  - Documented `Hath0r-Cruise-Control` (`38090` -> `8090`, edge `/cruise/radar`) in `docs/deployment-local-docker.md`.
+  - Synchronized `CR-TASK-EVAL-001` governance rules in `AGENTS.md`, `WARP.md`, `.hath0r/evals/`, and `.hath0r/memory/`.
+
 ## [0.5.0] - 2026-10-28
 
 ### Added

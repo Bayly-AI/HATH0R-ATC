@@ -5,3 +5,4 @@
 3. **Bots not Daemons**: Autonomous processes are bots or factories.
 4. **Zero Git Secrets**: External credentials resolve via `/Users/raybayly/Development/.credentials/`.
 5. **Promotion Path (CR-BRANCH-GOV-001)**: `feature/refactor/* -> development -> testing -> staging -> master`.
+6. Automatic Task Evaluation (CR-TASK-EVAL-001): Every task must execute and pass the 4-tier automatic task evaluation gate (hath0r evals run / hath0r evals verify, R_task >= 0.80) prior to announcing complete.
