@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-29T14:31:35.365506+00:00",
+  "updated_at": "2026-10-29T17:33:40.484906+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -264,7 +264,7 @@
       "updated_at": "2026-10-28T13:32:43.767808+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -288,7 +288,7 @@
       "updated_at": "2026-10-28T13:53:08.660404+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -373,7 +373,7 @@
       "updated_at": "2026-10-28T13:53:18.915330+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -465,7 +465,7 @@
       "updated_at": "2026-10-29T13:58:51.595484+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -489,7 +489,7 @@
       "updated_at": "2026-10-28T14:39:58.148052+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -560,7 +560,7 @@
       "updated_at": "2026-10-28T14:56:38.783598+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -584,7 +584,7 @@
       "updated_at": "2026-10-28T15:17:42.929782+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -608,7 +608,7 @@
       "updated_at": "2026-10-29T14:17:06.122279+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -632,7 +632,7 @@
       "updated_at": "2026-10-28T17:37:28.152548+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -699,7 +699,7 @@
       "updated_at": "2026-10-28T19:46:19.140609+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -766,7 +766,7 @@
       "updated_at": "2026-10-29T12:23:12.787609+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -807,7 +807,7 @@
       "updated_at": "2026-10-29T12:28:21.656697+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -852,7 +852,7 @@
       "updated_at": "2026-10-29T13:27:38.863463+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:28b89416fc5cca21a5f128285c24653b9145a52d2ac89daa82744b19d98a72d3"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -902,7 +902,72 @@
       "updated_at": "2026-10-29T14:31:35.335257+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:445992a0f437d7f1156cea1029164f322ab45618fd41b203f1c2026b9598a846"
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
+        }
+      }
+    },
+    {
+      "id": "episode:list-hath0r-technologies",
+      "type": "episode",
+      "label": "Hath0r Technology Stack Inventory",
+      "content": "Compiled comprehensive technology stack across HATH0R-CLI, HATH0R-Framework, HATH0R-MCP, HATH0R-POC, and HATH0R-ATC.",
+      "importance": 0.8,
+      "tags": [
+        "technologies",
+        "stack",
+        "architecture",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-29T17:33:36.485884+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-29T17:33:36.485884+00:00",
+      "updated_at": "2026-10-29T17:33:36.485884+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "insight:architecture",
+      "type": "insight",
+      "label": "Synthesized Insight on architecture",
+      "content": "Consolidated from 2 memory nodes tagged 'architecture'. Recurring themes: decision, radar, plan, github. Latest context: Compiled comprehensive technology stack across HATH0R-CLI, HATH0R-Framework, HATH0R-MCP, HATH0R-POC, and HATH0R-ATC.",
+      "importance": 1.0,
+      "tags": [
+        "architecture",
+        "insight",
+        "reflection",
+        "compounded"
+      ],
+      "valid_from": "2026-10-29T17:33:36.596270+00:00",
+      "is_current": true,
+      "created_at": "2026-10-29T17:33:36.596270+00:00",
+      "updated_at": "2026-10-29T17:33:36.596270+00:00",
+      "metadata": {
+        "constituent_count": 2,
+        "source_tag": "architecture"
+      }
+    },
+    {
+      "id": "eval:list-hath0r-technologies",
+      "type": "eval",
+      "label": "Task Evaluation list-hath0r-technologies (R=1.00, PASS)",
+      "content": "4-Tier Task Evaluation for list-hath0r-technologies on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
+      "importance": 0.85,
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "list-hath0r-technologies",
+        "passed",
+        "compounded"
+      ],
+      "valid_from": "2026-10-29T17:33:39.468630+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-29T17:33:39.468630+00:00",
+      "updated_at": "2026-10-29T17:33:39.468630+00:00",
+      "metadata": {
+        "source_files": {
+          ".hath0r/evals/latest.json": "sha256:264a859b3aa333a81220ae52983daa225b47ba119692ef38557e5b73348199fa"
         }
       }
     },
@@ -910,7 +975,7 @@
       "id": "session:sess-20261029-132735-028ad9",
       "type": "session",
       "label": "Micro Session sess-20261029-132735-028ad9",
-      "content": "Micro Session sess-20261029-132735-028ad9 [completed] | Focus: Provisioning CR-TASK-EVAL-001 for hath0r-atc | Reads: 4, Writes: 11 | Entries: Compounded eval:release-v0-5-6: Task Evaluation release-v0.5.6 (R=1.00, PASS)",
+      "content": "Micro Session sess-20261029-132735-028ad9 [completed] | Focus: Cataloging Hath0r technology stack | Reads: 5, Writes: 14 | Entries: Compounded eval:list-hath0r-technologies: Task Evaluation list-hath0r-technologies (R=1.00, PASS)",
       "importance": 0.75,
       "tags": [
         "session",
@@ -921,15 +986,15 @@
       "valid_to": "2026-10-29T14:17:05.229452+00:00",
       "is_current": true,
       "created_at": "2026-10-29T13:27:35.402179+00:00",
-      "updated_at": "2026-10-29T14:31:35.361297+00:00",
+      "updated_at": "2026-10-29T17:33:39.508508+00:00",
       "metadata": {
         "session_id": "sess-20261029-132735-028ad9",
         "prior_session_id": "sess-20261029-122307-55c823",
         "parent_session_id": "sess-20261029-122307-55c823",
-        "read_count": 4,
-        "write_count": 11,
+        "read_count": 5,
+        "write_count": 14,
         "status": "completed",
-        "byte_size": 1956
+        "byte_size": 2029
       }
     }
   ],
@@ -1915,8 +1980,72 @@
       "weight": 1.0,
       "valid_from": "2026-10-29T14:30:19.924249+00:00",
       "is_current": true
+    },
+    {
+      "source": "episode:list-hath0r-technologies",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T17:33:36.485884+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:list-hath0r-technologies",
+      "target": "session:sess-20261029-132735-028ad9",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T17:33:36.576526+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:architecture",
+      "target": "episode:decision-radar-architecture-plan",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T17:33:36.596270+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:architecture",
+      "target": "episode:list-hath0r-technologies",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T17:33:36.596270+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:list-hath0r-technologies",
+      "target": "concept:tri-graph",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T17:33:39.468630+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:list-hath0r-technologies",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T17:33:39.468630+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:list-hath0r-technologies",
+      "target": "session:sess-20261029-132735-028ad9",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T17:33:39.468630+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:list-hath0r-technologies",
+      "target": "session:sess-20261029-132735-028ad9",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T17:33:39.510937+00:00",
+      "is_current": true
     }
   ],
-  "revision": 212,
-  "content_hash": "sha256:aca3d257548122d66860016989b75a34cf13f0e019fe26e5c31f1e4c170a5451"
+  "revision": 223,
+  "content_hash": "sha256:64072196b8a61986424d5a2835962cd7b1304588f8aea8617283f7ebeb4d81df"
 }

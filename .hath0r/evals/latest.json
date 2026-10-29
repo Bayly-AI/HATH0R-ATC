@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261029-143134-0b7b11",
-  "task_id": "release-v0.5.6",
+  "eval_id": "eval-20261029-173338-3348f1",
+  "task_id": "list-hath0r-technologies",
   "issue_number": null,
   "repo_name": "hath0r-atc",
   "branch": "development",
-  "evaluated_at": "2026-10-29T14:31:34.144537+00:00",
-  "duration_ms": 877.94,
+  "evaluated_at": "2026-10-29T17:33:38.620254+00:00",
+  "duration_ms": 307.83,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 30,
+          "compounded_nodes_count": 32,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -51,34 +51,8 @@
         },
         "test_suite": {
           "passed": true,
-          "commands_run": 2,
-          "results": [
-            {
-              "command": [
-                "python3",
-                "-m",
-                "pytest",
-                "-q"
-              ],
-              "ok": true,
-              "exit_code": 0,
-              "stdout_tail": "............                                                             [100%]\n12 passed in 0.05s\n",
-              "stderr_tail": ""
-            },
-            {
-              "command": [
-                "python3",
-                "-m",
-                "ruff",
-                "check",
-                "tests"
-              ],
-              "ok": true,
-              "exit_code": 0,
-              "stdout_tail": "All checks passed!\n",
-              "stderr_tail": ""
-            }
-          ]
+          "skipped": true,
+          "message": "Test execution skipped via flag or dry-run."
         }
       }
     },
@@ -90,13 +64,13 @@
       "estimated_usd": 0.0,
       "max_usd": 0.25,
       "session_id": "sess-20261029-132735-028ad9",
-      "session_reads": 4,
-      "session_writes": 10,
-      "session_bytes": 1956,
+      "session_reads": 5,
+      "session_writes": 13,
+      "session_bytes": 1991,
       "within_capsule_budget": true,
-      "latency_ms": 764.53,
-      "taguchi_quality_loss": 0.0073,
-      "snr_db": 8.35
+      "latency_ms": 120.55,
+      "taguchi_quality_loss": 0.0002,
+      "snr_db": 24.4
     },
     "adversarial": {
       "score": 1.0,
@@ -111,10 +85,10 @@
     "goal_alignment": {
       "score": 1.0,
       "passed": true,
-      "task_id": "release-v0.5.6",
+      "task_id": "list-hath0r-technologies",
       "issue_number": null,
-      "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-atc",
-      "compounded_nodes_count": 30,
+      "active_focus": "Cataloging Hath0r technology stack",
+      "compounded_nodes_count": 32,
       "consensus_score": 1.0
     }
   },
@@ -126,32 +100,25 @@
       ],
       "STATIC_AST_ANALYSIS": [
         ".hath0r/agentgraph/snapshot.json",
-        ".hath0r/evals/latest.json",
         ".hath0r/memory/graph.json",
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
-        ".hath0r/memory/sessions/sess-20261029-132735-028ad9.json",
-        "CHANGELOG.md",
-        ".hath0r/evals/history/eval-release-v0-5-6.json",
-        "cfg/quality-gates.json"
+        ".hath0r/memory/sessions/sess-20261029-132735-028ad9.json"
       ],
-      "UNVERIFIED_FILE_PRESENCE": [
-        ".hath0r/agentgraph/snapshot.ttl",
-        "VERSION"
-      ]
+      "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 10,
-      "UNVERIFIED_FILE_PRESENCE": 2
+      "STATIC_AST_ANALYSIS": 6,
+      "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
   "blocking_reasons": [],
   "observability_sync": {
     "mode": "live_synced",
     "phoenix_logged": true,
-    "mlflow_run_id": "70a96c5c1e434d57a3b4575608ebc2ce"
+    "mlflow_run_id": "e6cfb2dfa7e543ed8ad616372c76498a"
   },
-  "content_hash": "sha256:e35f4c75d357147f32e6003f8d9a54d16b8453303b2200376baa7ed4c1bacb98"
+  "content_hash": "sha256:5f17bd769e6f2fb3e8a5a54227169c12e9affbfea22bf87775c7e55d3b1126e9"
 }
