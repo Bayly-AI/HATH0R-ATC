@@ -223,7 +223,6 @@ services:
       - 0.0.0.0
       - --port
       - "8090"
-      - --seed-demo
       - --no-split-window
     ports:
       - "${HATH0R_CRUISE_HOST_PORT:-38090}:8090"
