@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261029-124818-28e17e",
+  "eval_id": "eval-20261029-132738-45c12c",
   "task_id": "task-hath0r-atc",
   "issue_number": null,
   "repo_name": "hath0r-atc",
   "branch": "development",
-  "evaluated_at": "2026-10-29T12:48:18.400543+00:00",
-  "duration_ms": 228.15,
+  "evaluated_at": "2026-10-29T13:27:38.276613+00:00",
+  "duration_ms": 191.32,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -32,7 +32,7 @@
       "checks": {
         "version_valid": {
           "passed": true,
-          "version": "0.5.4",
+          "version": "0.5.5",
           "error": null
         },
         "agentgraph_valid": {
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 28,
+          "compounded_nodes_count": 29,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -63,14 +63,14 @@
       "max_tokens": 50000,
       "estimated_usd": 0.0,
       "max_usd": 0.25,
-      "session_id": "sess-20261029-122307-55c823",
-      "session_reads": 2,
-      "session_writes": 9,
-      "session_bytes": 1945,
+      "session_id": "sess-20261029-132735-028ad9",
+      "session_reads": 1,
+      "session_writes": 1,
+      "session_bytes": 1902,
       "within_capsule_budget": true,
-      "latency_ms": 75.74,
+      "latency_ms": 73.74,
       "taguchi_quality_loss": 0.0001,
-      "snr_db": 28.43
+      "snr_db": 28.67
     },
     "adversarial": {
       "score": 1.0,
@@ -87,8 +87,8 @@
       "passed": true,
       "task_id": "task-hath0r-atc",
       "issue_number": null,
-      "active_focus": "Mine technical intelligence and write Knostic.ai architecture analysis",
-      "compounded_nodes_count": 28,
+      "active_focus": "Active working session in hath0r-atc",
+      "compounded_nodes_count": 29,
       "consensus_score": 1.0
     }
   },
@@ -99,31 +99,36 @@
         ".hath0r/evals/latest.json"
       ],
       "STATIC_AST_ANALYSIS": [
+        ".agents/skills/clean-repos/SKILL.md",
         ".hath0r/agentgraph/snapshot.json",
-        ".hath0r/evals/latest.json",
         ".hath0r/memory/graph.json",
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
-        ".hath0r/evals/history/eval-knostic-architecture-analysis.json",
-        ".hath0r/evals/history/eval-knostic-hath0r-issues-plan.json",
-        ".hath0r/memory/sessions/sess-20261029-122307-55c823.json"
+        "AGENTS.md",
+        "CHANGELOG.md",
+        ".hath0r/memory/sessions/sess-20261029-132735-028ad9.json",
+        "CLAUDE.md",
+        "THREATMODEL.md"
       ],
       "UNVERIFIED_FILE_PRESENCE": [
-        ".hath0r/agentgraph/snapshot.ttl"
+        ".hath0r/agentgraph/snapshot.ttl",
+        "VERSION",
+        ".agents/skills/orient/",
+        ".hath0r/security/"
       ]
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 9,
-      "UNVERIFIED_FILE_PRESENCE": 1
+      "STATIC_AST_ANALYSIS": 11,
+      "UNVERIFIED_FILE_PRESENCE": 4
     }
   },
   "blocking_reasons": [],
   "observability_sync": {
     "mode": "live_synced",
     "phoenix_logged": true,
-    "mlflow_run_id": "308cb8759b0443b19c694b7608221856"
+    "mlflow_run_id": "e26f9a33ebfe4ca4abc95052b0a11e41"
   },
-  "content_hash": "sha256:2005d88656e34b29df39707c0333531721c38591b6cdead09d97d6dda7ec0dd8"
+  "content_hash": "sha256:a639cf0f7592606e1c7567a3d91f12050a1c5f59b3215715dc77bdb11b3c7800"
 }

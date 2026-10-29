@@ -3,91 +3,83 @@ name: clean-repos
 description: Comprehensive standard operating procedure for cleaning repositories across the suite. Activates whenever the user says "clean repo", "clean repos", "clean repository", "clean repositories", or requests repository cleanup and branch hygiene.
 ---
 
-# Clean Repositories Standard Operating Procedure
+# Clean Repositories Standard Operating Procedure (`hath0r clean-repos`)
 
-This workflow enforces complete repository hygiene, quality gates, documentation sync, PR lifecycle management, and branch cleanup across all repositories in the workspace or suite.
+This workflow enforces complete repository hygiene, quality gates, documentation & `CLAUDE.md` synchronization (`CR-CLAUDE-SYNC-001`), agentic security & supply-chain audits (`CR-AGENTIC-SEC-001`), PR lifecycle management, and branch cleanup across all repositories in the OpenSource Project (`/Users/raybayly/Development/OpenSource`).
 
-Whenever the user requests **"clean repo"** or **"clean repos"**, execute the following 13 steps in exact sequence:
+Whenever the user requests **"clean repo"** or **"clean repos"**, start with the operator CLI (`hath0r clean-repos --all`) and execute the following 13 steps in exact sequence:
 
 ---
 
 ## 13-Step Clean Repo Lifecycle
 
 ### Step 1: Capture All Repositories in the Project
-- Discover all repositories in the current suite or project root (e.g. inspecting `cfg/suite.yaml` or listing git repositories in `/Users/raybayly/Development/Ray`).
-- Ensure all downstream steps are systematically executed across **every** member repository.
+- Discover all repositories in the current suite or project root (`cfg/suite.yaml` / `cfg/products.yaml` under `/Users/raybayly/Development/OpenSource`: `hathor-cli`, `hath0r-atc`, `hath0r-framework`, `hath0r-mcp`, `hath0r-poc`).
+- Ensure a micro memory session is active (`hath0r memory session start --task "clean-repos"`).
 
-### Step 2: Ensure All Changes Are Committed
+### Step 2: Ensure All Changes Are Committed & Version Bumped (`CR-SEMVER-BUMP-001`)
 - Run `git status -s` in each repository.
-- If uncommitted modifications or untracked source files exist:
-  - Verify that changes belong to source control.
+- If uncommitted source changes exist:
+  - Ensure `VERSION`, `pyproject.toml` / `package.json`, and `CHANGELOG.md` are bumped in step (`hath0r release validate`).
   - Stage and commit with descriptive conventional commit messages (`feat:`, `fix:`, `chore:`).
 
-### Step 3: Cleanup Development Artifacts
-- Remove temporary OS artifacts (`.DS_Store`, `Thumbs.db`, `._*`).
-- Remove testing, profiling, and coverage caches (`.pytest_cache`, `.coverage`, `coverage.xml`).
-- Remove Python bytecode and build caches (`__pycache__`, `*.pyc`, `build/`, `dist/`, `*.egg-info`).
-- Remove unneeded scratch scripts and temporary logs.
-- Verify `.gitignore` is up to date to prevent re-committing artifacts.
+### Step 3: Cleanup Development Artifacts (`hath0r repo clean`)
+- Execute `hath0r repo clean` (or `CleanReposWorkflowBot` Step 3) to remove:
+  - Temporary OS artifacts (`.DS_Store`, `Thumbs.db`, `._*`).
+  - Testing, profiling, and coverage caches (`.pytest_cache`, `.coverage`, `coverage.xml`, `.ruff_cache`, `.mypy_cache`).
+  - Python bytecode and build caches (`__pycache__`, `*.pyc`, `build/`, `dist/`, `*.egg-info`).
+- Verify `.gitignore` never ignores `.hath0r/memory/`, `.hath0r/agentgraph/`, `.hath0r/graphs/`, `.hath0r/state/cache/`, or `.hath0r/state/context/`.
 
 ### Step 4: Clean Up and Remove Stale Worktrees
-- Check active git worktrees using `git worktree list`.
-- Prune stale worktree references:
+- Check active git worktrees using `git worktree list` and prune stale references:
   ```bash
   git worktree prune
   ```
-- Remove any unneeded detached or stale worktree directories.
 
 ### Step 5: Review Branches, Merge Changes, Resolve Conflicts & Ensure PRs Are Merged
-- Query open Pull Requests using `gh pr list` and merge ready PRs (`gh pr merge --squash --delete-branch`).
-- Fetch all remote branches (`git fetch --all --prune`).
-- Checkout the canonical base branch (`development`, or `main`/`master` if `development` is absent) and pull latest (`git pull --rebase origin development`).
-- Review every local and remote non-canonical branch (`feature/*`, `chore/*`, `fix/*`, `bugfix/*`, `enhancement/*`, `docs/*`, `claude/*`, `release/*`).
-- For any branch that has unmerged commits (`git cherry development <branch>`):
-  - Merge the branch into `development` (`git merge --no-edit <branch>`).
-  - If merge conflicts occur, resolve them cleanly (`git merge --no-edit -X ours <branch>` or resolving tree conflicts while preserving new feature files) and commit the resolution.
+- Query and merge ready Pull Requests via the CLI workflow (`hath0r pr merge <n>` or `gh pr list` / `gh pr merge --squash --delete-branch`).
+- Fetch all remote branches (`git fetch --all --prune`), checkout `development`, and pull latest (`hath0r branch sync` or `git pull --rebase origin development`).
+- Review every local and remote non-canonical branch (`feature/*`, `chore/*`, `fix/*`, `bugfix/*`, `enhancement/*`, `docs/*`, `release/*`) and merge unmerged commits cleanly into `development`.
 
 ### Step 6: Share Knowledge & Compound MemoryGraph (`CR-MEMORY-COMPOUND-001`)
-- Update shared knowledge bases, indexing systems, and memory stores:
-  - Ray-MCP / Hath0r-MCP knowledge roots.
-  - Sync indexed data to `.hath0r/knowledgebase` single source of truth when applicable.
-  - Compound clean-repo episode into `.hath0r/memory/graph.json`.
+- Synchronize knowledge to `HATH0R-MCP` (`hath0r-mcp`) and the canonical group hub `/Users/raybayly/Development/OpenSource/.hath0r/knowledgebase` (`hath0r docs share` / `hath0r kb smart-query`).
+- Write session progress (`hath0r memory session write`) and compound the clean-repo episode into `.hath0r/memory/graph.json` (`hath0r memory compound --type episode`).
 
-### Step 7: Update Documentation & AgentGraph Synchronization
-- Ensure all recent features, API modifications, database schemas, and architectural changes are documented in:
-  - `README.md`
-  - `AGENTS.md`
-  - `docs/` (playbooks, runbooks, architecture specs)
-- Synchronize and validate AgentGraph state:
+### Step 7: Update Documentation, `CLAUDE.md` Sync (`CR-CLAUDE-SYNC-001`), AgentGraph & Security Gates (`CR-AGENTIC-SEC-001`)
+- Ensure `README.md`, `AGENTS.md`, `THREATMODEL.md`, and `docs/` reflect all recent changes.
+- Synchronize `CLAUDE.md` 1:1 from `AGENTS.md`, export W3C OWL `.ttl` snapshot, and validate AgentGraph + security gates:
   ```bash
   hath0r agentgraph sync
   hath0r agentgraph validate
+  hath0r skills audit
+  hath0r mcp audit --pin
+  hath0r threatmodel validate
+  hath0r finops tokens verify-ledger
   ```
-  Verify that 0 cycles and 0 contradictions exist before proceeding to commit.
+  Verify 0 rule conflicts, `CLAUDE.md == AGENTS.md`, and 0 BITE supply-chain findings before proceeding.
 
 ### Step 8: Run Task Evaluation (`CR-TASK-EVAL-001`) & Commit Documentation / State Changes
-- Run the 4-tier Task Evaluation (`hath0r evals run`) and synchronize SHA-256 file hashes (`hath0r memory hash --sync`).
-- Stage any updated documentation, governance files, memory graphs, or evaluation artifacts and commit them cleanly:
+- Sync SHA-256 file hashes (`hath0r memory hash --sync`), run the 4-tier Task Evaluation (`hath0r evals run`), and re-sync file hashes (`hath0r memory hash --sync`):
   ```bash
-  git add -A && git commit -m "docs: update documentation, evaluations, and knowledge sync [skip ci]"
+  hath0r memory hash --sync
+  hath0r evals run
+  hath0r memory hash --sync
+  git add -A && git commit -m "chore: sync documentation, CLAUDE.md, AgentGraph, and evals"
   ```
 
-### Step 9: Ensure All Changes Are PR'd or Merged into Base Branch
-- If working on an active feature branch (`feature/*`) requiring PR review:
-  - Push branch to remote: `git push -u origin <branch>`
-  - Create Pull Request if one does not exist (`gh pr create --base development`).
+### Step 9: Ensure All Changes Are PR'd (`hath0r pr create`)
+- If working on an active feature branch (`feature/*`, `chore/*`, `fix/*`):
+  - Push branch and open a PR targeting `development`:
+    ```bash
+    hath0r pr create --semver patch
+    ```
 
-### Step 10: Monitor PRs and Merge When Pass (Or Fix So It Does)
-- Run status checks: `gh pr checks`
-- If CI/CD checks fail:
-  - Diagnose failure, apply fixes, run local tests (`pytest`, `npm test`), and push commits until green.
-- Merge the PR once checks pass:
-  ```bash
-  gh pr merge --squash --delete-branch
-  ```
+### Step 10: Monitor PRs and Merge When Checks Pass (`hath0r pr merge`)
+- Run antagonistic diff review and status checks (`hath0r pr review --antagonistic`, `gh pr checks`).
+- Merge once green (`hath0r pr merge <n>`).
 
 ### Step 11: Remove All Stale Feature Branches (Local & Remote)
-- Delete all merged and stale non-canonical feature branches both locally and on `origin`:
+- Delete all merged and stale non-canonical feature branches locally and on `origin`:
   ```bash
   git branch -D <feature-branch>
   git push origin --delete <feature-branch> 2>/dev/null || true
@@ -95,14 +87,19 @@ Whenever the user requests **"clean repo"** or **"clean repos"**, execute the fo
   ```
 
 ### Step 12: Switch Back to Development and Pull/Push Origin
-- Switch back to `development` (or canonical base branch), pull with rebase, and push to `origin` so local and remote are 100% synchronized:
+- Switch back to `development`, pull with rebase, and push to `origin`:
   ```bash
   git checkout development
   git pull --rebase origin development
   git push origin development
   ```
-- Verify `git status` reports working tree is clean and `up to date with 'origin/development'`.
 
 ### Step 13: Verify Pre-Announce Gates & Announce Complete
-- Verify `hath0r memory verify` and `hath0r evals verify` pass (`passed_gate: true`, `R_task >= 0.80`).
-- Provide a structured status report confirming the clean status of all repositories, merged branches/PRs, resolved conflicts, deleted local/remote branches, and `origin/development` sync state.
+- Verify all canonical pre-announce gates:
+  ```bash
+  hath0r memory verify
+  hath0r evals verify
+  hath0r quality sonar
+  hath0r release validate
+  ```
+- Present a concise repository status report and the mandatory **Eval Scorecard Summary** (`eval_id`, `task_id`, `passed_gate`, composite `R_task`, Tier 1–4 scores, and `.hath0r/evals/latest.json` path).

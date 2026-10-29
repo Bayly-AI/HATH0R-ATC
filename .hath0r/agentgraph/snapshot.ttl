@@ -234,7 +234,7 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
 <https://hath0r.dev/ontology/v1#memory:episode:aws-ses-forwarder-rbayly-gmail> a hath0r:Plane ;
-    rdfs:label "AWS SES Email Forwarder Updated to rbayly@gmail.com" ;
+    rdfs:label "AWS SES Email Forwarder Updated to [PII_REDACTED:EMAIL]" ;
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
@@ -313,6 +313,11 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
+<https://hath0r.dev/ontology/v1#memory:eval:knostic-hath0r-issues-plan> a hath0r:Plane ;
+    rdfs:label "Task Evaluation knostic-hath0r-issues-plan (R=1.00, PASS)" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
 <https://hath0r.dev/ontology/v1#memory:eval:pr-68> a hath0r:Plane ;
     rdfs:label "Task Evaluation pr-68 (R=1.00, PASS)" ;
     hath0r:inPlane "memory" ;
@@ -320,6 +325,16 @@ hath0r:informs a owl:ObjectProperty .
 
 <https://hath0r.dev/ontology/v1#memory:eval:pr-68-merged> a hath0r:Plane ;
     rdfs:label "Task Evaluation pr-68-merged (R=1.00, PASS)" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:eval:task-hath0r-atc> a hath0r:Plane ;
+    rdfs:label "Task Evaluation task-hath0r-atc (R=1.00, PASS)" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:fact:cr-agentic-sec-001-complete> a hath0r:Plane ;
+    rdfs:label "CR-AGENTIC-SEC-001 Execution Complete (#537-#541, #84, #309)" ;
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
@@ -404,6 +419,11 @@ hath0r:informs a owl:ObjectProperty .
     rdfs:label "Read-Only Agent" ;
     hath0r:inPlane "rules" .
 
+<https://hath0r.dev/ontology/v1#rule:cr-agentic-sec-001> a hath0r:Plane ;
+    rdfs:label "Rule CR-AGENTIC-SEC-001" ;
+    hath0r:governs <https://hath0r.dev/ontology/v1#role:developer> ;
+    hath0r:inPlane "rules" .
+
 <https://hath0r.dev/ontology/v1#rule:cr-bai-001> a hath0r:Plane ;
     rdfs:label "Rule CR-BAI-001" ;
     hath0r:governs <https://hath0r.dev/ontology/v1#role:developer> ;
@@ -416,6 +436,11 @@ hath0r:informs a owl:ObjectProperty .
 
 <https://hath0r.dev/ontology/v1#rule:cr-branch-gov-001-canonical-branches> a hath0r:Plane ;
     rdfs:label "Rule cr-branch-gov-001-canonical-branches" ;
+    hath0r:governs <https://hath0r.dev/ontology/v1#role:developer> ;
+    hath0r:inPlane "rules" .
+
+<https://hath0r.dev/ontology/v1#rule:cr-claude-sync-001> a hath0r:Plane ;
+    rdfs:label "Rule CR-CLAUDE-SYNC-001" ;
     hath0r:governs <https://hath0r.dev/ontology/v1#role:developer> ;
     hath0r:inPlane "rules" .
 
@@ -446,6 +471,11 @@ hath0r:informs a owl:ObjectProperty .
 
 <https://hath0r.dev/ontology/v1#rule:cr-hath0r-root-001> a hath0r:Plane ;
     rdfs:label "Rule CR-HATH0R-ROOT-001" ;
+    hath0r:governs <https://hath0r.dev/ontology/v1#role:developer> ;
+    hath0r:inPlane "rules" .
+
+<https://hath0r.dev/ontology/v1#rule:cr-memory-compound-001> a hath0r:Plane ;
+    rdfs:label "Rule CR-MEMORY-COMPOUND-001" ;
     hath0r:governs <https://hath0r.dev/ontology/v1#role:developer> ;
     hath0r:inPlane "rules" .
 

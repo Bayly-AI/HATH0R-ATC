@@ -18,7 +18,7 @@
 | Members root | `/Users/raybayly/Development/OpenSource` |
 | Operator CLI | **`hath0r`** (`../hathor-cli`) |
 | Standalone MCP | `../hath0r-mcp` (`hath0r-mcp` container) |
-| Framework | `../hath0r` |
+| Framework | `../hath0r-framework` |
 | Tech runbook | [`docs/runbook.md`](docs/runbook.md) |
 | Setup playbook | `../hathor-cli/docs/hathor-playbook-001-repo-init-setup-20260919.md` |
 | Local Memory Space | [`.hath0r/memory/`](.hath0r/memory/) (`hath0r memory read <topic>`) |
@@ -31,6 +31,22 @@
 3. **Docs before code**: Require procedure/playbook/runbook before scaffolding implementation.
 
 Canonical: [HATH0R-CLI `docs/governance/cli-first-rules.md`](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/cli-first-rules.md).
+
+## CR-CLAUDE-SYNC-001 (Mandatory `CLAUDE.md` ↔ `AGENTS.md` 1:1 Synchronization — CRITICAL · CANONICAL)
+- **Exact 1:1 Mirror**: `CLAUDE.md` at the repository root MUST remain an exact byte-for-byte mirror of `AGENTS.md` so all agentic runtimes enforce identical non-conflicting rules.
+- **Automated Synchronization**: `hath0r agentgraph sync`, `hath0r memory hash --sync`, and `hath0r clean-repos` automatically synchronize `CLAUDE.md` from `AGENTS.md` and verify both in `.hath0r/memory/hashes.json`.
+
+## CR-AGENTIC-SEC-001 (Agentic Security, Supply-Chain & Governance Controls — CRITICAL · CANONICAL)
+- **BITE Supply-Chain & Skill Integrity (`hath0r skills audit` / `hath0r mcp audit`)**: Audit all `.agents/skills/**/SKILL.md`, `CLAUDE.md`, `AGENTS.md`, `WARP.md`, and MCP tool schemas for prompt injection, hidden Unicode tag characters, reverse shells, and credential exfiltration, and pin SHA-256 digests in `.hath0r/security/mcp-schema-pins.json`.
+- **L2 Output Sanitizer & Canary Honeytokens**: Enforce output-side taint and canary honeytoken verification (`L2OutputSanitizer`) on RAG/MCP tool results before LLM context injection.
+- **Cryptographic Hash-Chained Token & Tool Ledger (`hath0r finops tokens verify-ledger`)**: Every tool/completion event is recorded in `.hath0r/state/finops/token_ledger.jsonl` with a tamper-evident SHA-256 hash chain (`prev_hash` → `entry_hash`).
+- **Dynamic Purpose-Based Access Control (PBAC) & Confused-Deputy Prevention**: Enforce clearance, sensitivity classification, and stated mission purpose (`PBACPolicyEngine`) across knowledge retrieval and MCP tools.
+- **Fail-Closed `THREATMODEL.md` Gate (`hath0r threatmodel validate`) & Slopsquatting Guard**: Maintain a valid `THREATMODEL.md` in every repository and verify dependency/rule drift (`DependencyGuardBot`) during preflight.
+
+## CR-MEMORY-COMPOUND-001 (Mandatory `.hath0r/memory` Repository Presence, Micro Memory Sessions, SHA-256 File Hashing, Un-Ignored Graph Folders & Pre-Announcement MemoryGraph Compounding — CANONICAL)
+- **Universal `.hath0r/memory`, `.hath0r/memory/sessions` & `.hath0r/memory/hashes.json` Folder**: Maintain `.hath0r/memory/graph.json`, `.hath0r/memory/sessions/current.json`, `.hath0r/memory/sessions/latest.json`, `.hath0r/memory/hashes.json`, `core_rules.md`, and `architecture.md` (`hath0r memory init` / `hath0r memory ensure-all`).
+- **True Micro Memory Session Read & Write**: Every session MUST read and write a compact (<2KB) micro memory session (`hath0r memory session start|read`, `hath0r memory session write`, `hath0r memory session end`).
+- **Pre-Announcement Memory Compounding & Hashing**: Compound structured knowledge (`hath0r memory compound`), sync SHA-256 hashes (`hath0r memory hash --sync`), and verify (`hath0r memory verify`) before announcing complete.
 
 ## ATC responsibilities (CRITICAL)
 
@@ -90,7 +106,7 @@ make -C ../hath0r-mcp docker-up
 feature/* → development → testing → staging → master
 ```
 
-- Day-to-day PRs **base = `development`** only.
+- Day-to-day PRs **base = `development`** only (`hath0r branch start` / `hath0r pr create`).
 - Rule: [`docs/rules/cr-branch-gov-001-canonical-branches.md`](docs/rules/cr-branch-gov-001-canonical-branches.md)
 - CI: `.github/workflows/enforce-promotion-path.yml`
 
@@ -116,15 +132,18 @@ Structure and ops patterns mirror **1-Nation ATC** at `/Users/raybayly/Developme
 ## Branch rules (pointer)
 
 See `docs/governance/branch-rules.md` (cr-branch-gov-001 / CR-BAI-001). Work PRs → `development` only; release trains use `release/x.x.x`.
+
 ## PR workflow hardening
 
 See `docs/governance/pr-workflow.md`. Work PRs → `development` (agents + CODEOWNERS). **Human gate** before staging/master.
+
 ## SonarCloud Quality Gate (CRITICAL)
 
 - Canonical thresholds: SonarCloud Quality Gate only — do not modify gate thresholds ad hoc.
 - PR check **SonarCloud Quality Gate** is a hard stop on failure.
 - See `docs/governance/sonarcloud-quality-gates.md`
 - Secret required: `SONAR_TOKEN`
+
 ## Documentation → MCP
 
 Docs are published to the **proper group MCP** via control-tower
@@ -168,6 +187,7 @@ This repository is governed by the Hath0r AgentGraph substrate. Dynamic rule ret
 - Query status: `hath0r agentgraph status`
 - Query rules: `hath0r agentgraph query "<topic>"`
 - Route role: `hath0r agentgraph route --role <role>`
+- Sync rules & `CLAUDE.md`: `hath0r agentgraph sync`
 - Validate rules: `hath0r agentgraph validate`
 
 ---

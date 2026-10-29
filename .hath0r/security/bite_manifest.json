@@ -1,0 +1,112 @@
+{
+  "schema": "hath0r.security.bite_manifest/1",
+  "scope": "skills_and_rules",
+  "generated_at": "2026-10-29T13:27:33.219843+00:00",
+  "passed": true,
+  "summary": {
+    "total_audited": 5,
+    "clean": 5,
+    "risky": 0,
+    "dangerous": 0
+  },
+  "artifacts": [
+    {
+      "artifact_id": ".agents/skills/clean-repos/SKILL.md",
+      "artifact_type": "skill",
+      "path": ".agents/skills/clean-repos/SKILL.md",
+      "sha256": "d6a908561b50ce12c20ed2ded24ea309c148fece48387b502e171a8e393b096d",
+      "stated_purpose": "comprehensive standard operating procedure for cleaning repositories across the suite. activates whenever the user says \"clean repo\", \"clean repos\", \"clean repository\", \"clean repositories\", or reques",
+      "verdict": "CLEAN",
+      "behaviors": [],
+      "invisible_unicode_count": 0
+    },
+    {
+      "artifact_id": ".agents/skills/orient/SKILL.md",
+      "artifact_type": "skill",
+      "path": ".agents/skills/orient/SKILL.md",
+      "sha256": "823de19538265b54d114f7947dc57c2c0ddbfffb9837ba16460424d83211ae06",
+      "stated_purpose": "standard operating procedure for repository orientation. activates whenever the operator runs \"orient\", \"run orient\", \"orient repo\", \"orient repository\", or requests full repository orientation. cli c",
+      "verdict": "CLEAN",
+      "behaviors": [],
+      "invisible_unicode_count": 0
+    },
+    {
+      "artifact_id": "AGENTS.md",
+      "artifact_type": "rule_file",
+      "path": "AGENTS.md",
+      "sha256": "93c3e2506834d46cd1bff0ab672d94c33d1b325f8a145c47fb28ab521e35dcce",
+      "stated_purpose": "# agents.md \u2014 hath0r atc (control tower) > **canonical control tower** for the **opensource project** (`hath0r-opensource`). > roles: **infrastructure repo** \u00b7 **observation hub** \u00b7 **central group co",
+      "verdict": "CLEAN",
+      "behaviors": [
+        {
+          "category": "CREDENTIAL_READ",
+          "indicator": "ssh_or_aws_creds",
+          "evidence_snippet": ".credentials/",
+          "is_reachable": true,
+          "is_unnecessary": false,
+          "is_concealed": false,
+          "severity": "LOW"
+        },
+        {
+          "category": "CREDENTIAL_READ",
+          "indicator": "secret_token_access",
+          "evidence_snippet": "SONAR_TOKEN",
+          "is_reachable": true,
+          "is_unnecessary": false,
+          "is_concealed": false,
+          "severity": "LOW"
+        }
+      ],
+      "invisible_unicode_count": 0
+    },
+    {
+      "artifact_id": "CLAUDE.md",
+      "artifact_type": "rule_file",
+      "path": "CLAUDE.md",
+      "sha256": "93c3e2506834d46cd1bff0ab672d94c33d1b325f8a145c47fb28ab521e35dcce",
+      "stated_purpose": "# agents.md \u2014 hath0r atc (control tower) > **canonical control tower** for the **opensource project** (`hath0r-opensource`). > roles: **infrastructure repo** \u00b7 **observation hub** \u00b7 **central group co",
+      "verdict": "CLEAN",
+      "behaviors": [
+        {
+          "category": "CREDENTIAL_READ",
+          "indicator": "ssh_or_aws_creds",
+          "evidence_snippet": ".credentials/",
+          "is_reachable": true,
+          "is_unnecessary": false,
+          "is_concealed": false,
+          "severity": "LOW"
+        },
+        {
+          "category": "CREDENTIAL_READ",
+          "indicator": "secret_token_access",
+          "evidence_snippet": "SONAR_TOKEN",
+          "is_reachable": true,
+          "is_unnecessary": false,
+          "is_concealed": false,
+          "severity": "LOW"
+        }
+      ],
+      "invisible_unicode_count": 0
+    },
+    {
+      "artifact_id": "WARP.md",
+      "artifact_type": "rule_file",
+      "path": "WARP.md",
+      "sha256": "686d8708da448b4cd3924ba025f2d8d877b54e9eab94c8c6612118b1cb8d1e61",
+      "stated_purpose": "# warp.md \u2014 hath0r atc / opensource project policy > group: `hath0r-opensource` > infrastructure control tower: `hath0r-atc` (`bayly-ai/hath0r-atc`) cli command shell process run build test docker aut",
+      "verdict": "CLEAN",
+      "behaviors": [
+        {
+          "category": "CREDENTIAL_READ",
+          "indicator": "ssh_or_aws_creds",
+          "evidence_snippet": ".credentials/",
+          "is_reachable": true,
+          "is_unnecessary": false,
+          "is_concealed": false,
+          "severity": "LOW"
+        }
+      ],
+      "invisible_unicode_count": 0
+    }
+  ]
+}
