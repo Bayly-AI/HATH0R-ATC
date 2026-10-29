@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-28T18:13:15.661649+00:00",
+  "updated_at": "2026-10-28T19:46:19.165942+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -661,6 +661,73 @@
         "status": "completed",
         "byte_size": 2046
       }
+    },
+    {
+      "id": "episode:aws-ses-forwarder-rbayly-gmail",
+      "type": "episode",
+      "label": "AWS SES Email Forwarder Updated to rbayly@gmail.com",
+      "content": "Updated AWS Lambda function ses-email-forwarder (arn:aws:lambda:us-east-1:066949051380:function:ses-email-forwarder) environment variables FORWARD_TO and ROUTING_MAP and default fallback in lambda_function.py from ray@baylyai.com to rbayly@gmail.com, plus bounce-loop protection for forwarder@* destinations.",
+      "importance": 0.8,
+      "tags": [
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-28T19:46:16.543865+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-28T19:46:16.543865+00:00",
+      "updated_at": "2026-10-28T19:46:16.543865+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "eval:aws-ses-forwarder-rbayly-gmail",
+      "type": "eval",
+      "label": "Task Evaluation aws-ses-forwarder-rbayly-gmail (R=1.00, PASS)",
+      "content": "4-Tier Task Evaluation for aws-ses-forwarder-rbayly-gmail on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
+      "importance": 0.85,
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "aws-ses-forwarder-rbayly-gmail",
+        "passed",
+        "compounded"
+      ],
+      "valid_from": "2026-10-28T19:46:19.140609+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-28T19:46:19.140609+00:00",
+      "updated_at": "2026-10-28T19:46:19.140609+00:00",
+      "metadata": {
+        "source_files": {
+          ".hath0r/evals/latest.json": "sha256:283b647ac595128fbec7913066fc1ed6d77e09da08f8a1a45d81f134b2e72c71"
+        }
+      }
+    },
+    {
+      "id": "session:sess-20261028-194546-3bcea1",
+      "type": "session",
+      "label": "Micro Session sess-20261028-194546-3bcea1",
+      "content": "Micro Session sess-20261028-194546-3bcea1 [active] | Focus: Active working session in hath0r-atc | Reads: 2, Writes: 3 | Entries: Compounded eval:aws-ses-forwarder-rbayly-gmail: Task Evaluation aws-ses-forwarder-rbayly-gmail (R=1.00, PASS)",
+      "importance": 0.75,
+      "tags": [
+        "session",
+        "micro-session",
+        "active"
+      ],
+      "valid_from": "2026-10-28T19:45:46.882517+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-28T19:45:46.882517+00:00",
+      "updated_at": "2026-10-28T19:46:19.162017+00:00",
+      "metadata": {
+        "session_id": "sess-20261028-194546-3bcea1",
+        "prior_session_id": "sess-20261028-143953-cd080f",
+        "parent_session_id": "sess-20261028-143953-cd080f",
+        "read_count": 2,
+        "write_count": 3,
+        "status": "active",
+        "byte_size": 1934
+      }
     }
   ],
   "edges": [
@@ -1309,8 +1376,72 @@
       "weight": 1.0,
       "valid_from": "2026-10-28T17:45:22.757492+00:00",
       "is_current": true
+    },
+    {
+      "source": "session:sess-20261028-143953-cd080f",
+      "target": "session:sess-20261028-194546-3bcea1",
+      "relation": "PRECEDES",
+      "weight": 1.0,
+      "valid_from": "2026-10-28T19:45:46.888234+00:00",
+      "is_current": true
+    },
+    {
+      "source": "session:sess-20261028-194546-3bcea1",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "weight": 0.8,
+      "valid_from": "2026-10-28T19:45:46.888234+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:aws-ses-forwarder-rbayly-gmail",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-28T19:46:16.543865+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:aws-ses-forwarder-rbayly-gmail",
+      "target": "session:sess-20261028-194546-3bcea1",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-28T19:46:16.568157+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:aws-ses-forwarder-rbayly-gmail",
+      "target": "concept:tri-graph",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-28T19:46:19.140609+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:aws-ses-forwarder-rbayly-gmail",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-28T19:46:19.140609+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:aws-ses-forwarder-rbayly-gmail",
+      "target": "session:sess-20261028-194546-3bcea1",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-28T19:46:19.140609+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:aws-ses-forwarder-rbayly-gmail",
+      "target": "session:sess-20261028-194546-3bcea1",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-28T19:46:19.164039+00:00",
+      "is_current": true
     }
   ],
-  "revision": 134,
-  "content_hash": "sha256:d5c456e87017ba72f9b4ecaa9dafb85725f3338f3b28dd063e9b2e2ec1d38731"
+  "revision": 143,
+  "content_hash": "sha256:4d278fefe9e2147416a6e5d2681a9f7be200eab63acd019b986ca5827e1127de"
 }

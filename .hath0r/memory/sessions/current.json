@@ -1,55 +1,51 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261028-143953-cd080f",
-  "prior_session_id": "sess-20261028-141506-debfcd",
-  "parent_session_id": "sess-20261028-141506-debfcd",
-  "revision": 20,
-  "content_hash": "sha256:f8216497b463bc77f5f374e70211ab45f682279c7cd6dbb04d7701c1b993fd90",
-  "base_graph_hash": "sha256:76bd3c8577569d1545a40982d3b99591718f123bb5282e1c17bd4c9cf5ca8ac7",
-  "task_id": "Issue #71: Cruise Control suite config, deployment docs, and eval baseline sync",
+  "session_id": "sess-20261028-194546-3bcea1",
+  "prior_session_id": "sess-20261028-143953-cd080f",
+  "parent_session_id": "sess-20261028-143953-cd080f",
+  "revision": 5,
+  "content_hash": "sha256:49c490339f7431d01fa5c1678f88b8385cc1ca340de0f04609a8b8a5731c4d99",
+  "base_graph_hash": "sha256:20540b670c2e06b9a0c484297e903c9bd3e66c63b5913c3397a79428681a663f",
+  "task_id": "Update AWS SES email forwarding to rbayly@gmail.com",
   "role": null,
   "repo_name": "hath0r-atc",
-  "status": "completed",
-  "started_at": "2026-10-28T14:39:53.178852+00:00",
-  "updated_at": "2026-10-28T18:13:15.516588+00:00",
-  "ended_at": "2026-10-28T15:24:12.713637+00:00",
-  "read_count": 6,
-  "write_count": 14,
-  "last_read_at": "2026-10-28T18:13:14.910428+00:00",
-  "last_write_at": "2026-10-28T18:13:15.516588+00:00",
-  "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-atc",
-  "prior_summary": "ounded rule:cr-task-eval-001: Automa; Compounded eval:eval-baseline-hath0r-atc; Compounded episode:clean-repo-hath0r-atc",
+  "status": "active",
+  "started_at": "2026-10-28T19:45:46.882517+00:00",
+  "updated_at": "2026-10-28T19:46:19.162017+00:00",
+  "ended_at": null,
+  "read_count": 2,
+  "write_count": 3,
+  "last_read_at": "2026-10-28T19:45:47.709435+00:00",
+  "last_write_at": "2026-10-28T19:46:19.162017+00:00",
+  "active_focus": "Active working session in hath0r-atc",
+  "prior_summary": "clean-repo-hath0r-atc (R=1.00, PASS); Updated AWS Lambda ses-email-forwarder i; Compounded episode:aws-ses-forwarder-rba",
   "recalled_nodes": [
     {
-      "id": "insight:hath0r-atc",
-      "type": "insight",
-      "label": "Synthesized Insight on hath0r-atc",
-      "snippet": "Consolidated from 2 memory nodes tagged 'hath0r-atc'. Recurring themes: opensource, clean,"
+      "id": "episode:atc-69-cruise-control-container",
+      "type": "episode",
+      "label": "Hath0r-Cruise-Control Container in HATH0R-ATC (#69)",
+      "snippet": "Added Hath0r-Cruise-Control container to hath0r Docker group in HATH0R-ATC with port 38090"
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-28T18:13:15.516588+00:00",
+      "timestamp": "2026-10-28T19:46:19.162017+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:clean-repo-hath0r-atc: Task Evaluation clean-repo-hath0r-atc (R=1.00, PASS)",
+      "summary": "Compounded eval:aws-ses-forwarder-rbayly-gmail: Task Evaluation aws-ses-forwarder-rbayly-gmail (R=1.00, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "clean-repo-hath0r-atc",
+        "aws-ses-forwarder-rbayly-gmail",
         "passed",
         "compounded"
       ],
-      "node_id": "eval:clean-repo-hath0r-atc"
+      "node_id": "eval:aws-ses-forwarder-rbayly-gmail"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "eval:branch-docs-73-clean-repo-workflow",
-    "episode:clean-repo-hath0r-atc",
-    "eval:clean-repo-hath0r-atc",
-    "rule:cr-task-eval-001",
-    "eval:issue-76",
-    "eval:eval-baseline-hath0r-atc"
+    "episode:aws-ses-forwarder-rbayly-gmail",
+    "eval:aws-ses-forwarder-rbayly-gmail"
   ],
-  "capsule_bytes": 2046
+  "capsule_bytes": 1934
 }
