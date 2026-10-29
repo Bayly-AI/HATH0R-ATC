@@ -1,51 +1,55 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261028-194546-3bcea1",
-  "prior_session_id": "sess-20261028-143953-cd080f",
-  "parent_session_id": "sess-20261028-143953-cd080f",
-  "revision": 5,
-  "content_hash": "sha256:49c490339f7431d01fa5c1678f88b8385cc1ca340de0f04609a8b8a5731c4d99",
-  "base_graph_hash": "sha256:20540b670c2e06b9a0c484297e903c9bd3e66c63b5913c3397a79428681a663f",
-  "task_id": "Update AWS SES email forwarding to rbayly@gmail.com",
+  "session_id": "sess-20261029-122307-55c823",
+  "prior_session_id": "sess-20261028-194546-3bcea1",
+  "parent_session_id": "sess-20261028-194546-3bcea1",
+  "revision": 11,
+  "content_hash": "sha256:5594f8f963611be752f139d79b48408f6d5f6d74008d725ef451181ccec9fb61",
+  "base_graph_hash": "sha256:1fb3449f34672a7c6146645a1c875c6033ef35bdd496b461b56a6c2a87738e54",
+  "task_id": null,
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "active",
-  "started_at": "2026-10-28T19:45:46.882517+00:00",
-  "updated_at": "2026-10-28T19:46:19.162017+00:00",
+  "started_at": "2026-10-29T12:23:07.597770+00:00",
+  "updated_at": "2026-10-29T12:48:19.124211+00:00",
   "ended_at": null,
   "read_count": 2,
-  "write_count": 3,
-  "last_read_at": "2026-10-28T19:45:47.709435+00:00",
-  "last_write_at": "2026-10-28T19:46:19.162017+00:00",
-  "active_focus": "Active working session in hath0r-atc",
-  "prior_summary": "clean-repo-hath0r-atc (R=1.00, PASS); Updated AWS Lambda ses-email-forwarder i; Compounded episode:aws-ses-forwarder-rba",
+  "write_count": 10,
+  "last_read_at": "2026-10-29T12:23:08.298356+00:00",
+  "last_write_at": "2026-10-29T12:48:19.124211+00:00",
+  "active_focus": "Mine technical intelligence and write Knostic.ai architecture analysis",
+  "prior_summary": "ounded eval:knostic-hath0r-issues-pl; Completed execution of CR-AGENTIC-SEC-00; Compounded fact:cr-agentic-sec-001-compl",
   "recalled_nodes": [
     {
-      "id": "episode:atc-69-cruise-control-container",
+      "id": "episode:decision-radar-architecture-plan",
       "type": "episode",
-      "label": "Hath0r-Cruise-Control Container in HATH0R-ATC (#69)",
-      "snippet": "Added Hath0r-Cruise-Control container to hath0r Docker group in HATH0R-ATC with port 38090"
+      "label": "Hath0r Decision Radar Architecture Plan and GitHub Issues",
+      "snippet": "Formulated comprehensive architectural plan for the Hath0r Decision Radar (Minority Report"
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-28T19:46:19.162017+00:00",
+      "timestamp": "2026-10-29T12:48:19.124211+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:aws-ses-forwarder-rbayly-gmail: Task Evaluation aws-ses-forwarder-rbayly-gmail (R=1.00, PASS)",
+      "summary": "Compounded eval:task-hath0r-atc: Task Evaluation task-hath0r-atc (R=1.00, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "aws-ses-forwarder-rbayly-gmail",
+        "task-hath0r-atc",
         "passed",
         "compounded"
       ],
-      "node_id": "eval:aws-ses-forwarder-rbayly-gmail"
+      "node_id": "eval:task-hath0r-atc"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "episode:aws-ses-forwarder-rbayly-gmail",
-    "eval:aws-ses-forwarder-rbayly-gmail"
+    "insight:knostic-ai-architecture",
+    "eval:knostic-architecture-analysis",
+    "episode:knostic-hath0r-issues-plan",
+    "eval:knostic-hath0r-issues-plan",
+    "fact:cr-agentic-sec-001-complete",
+    "eval:task-hath0r-atc"
   ],
-  "capsule_bytes": 1934
+  "capsule_bytes": 2009
 }

@@ -1,0 +1,55 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261029-122307-55c823",
+  "prior_session_id": "sess-20261028-194546-3bcea1",
+  "parent_session_id": "sess-20261028-194546-3bcea1",
+  "revision": 11,
+  "content_hash": "sha256:5594f8f963611be752f139d79b48408f6d5f6d74008d725ef451181ccec9fb61",
+  "base_graph_hash": "sha256:1fb3449f34672a7c6146645a1c875c6033ef35bdd496b461b56a6c2a87738e54",
+  "task_id": null,
+  "role": null,
+  "repo_name": "hath0r-atc",
+  "status": "active",
+  "started_at": "2026-10-29T12:23:07.597770+00:00",
+  "updated_at": "2026-10-29T12:48:19.124211+00:00",
+  "ended_at": null,
+  "read_count": 2,
+  "write_count": 10,
+  "last_read_at": "2026-10-29T12:23:08.298356+00:00",
+  "last_write_at": "2026-10-29T12:48:19.124211+00:00",
+  "active_focus": "Mine technical intelligence and write Knostic.ai architecture analysis",
+  "prior_summary": "ounded eval:knostic-hath0r-issues-pl; Completed execution of CR-AGENTIC-SEC-00; Compounded fact:cr-agentic-sec-001-compl",
+  "recalled_nodes": [
+    {
+      "id": "episode:decision-radar-architecture-plan",
+      "type": "episode",
+      "label": "Hath0r Decision Radar Architecture Plan and GitHub Issues",
+      "snippet": "Formulated comprehensive architectural plan for the Hath0r Decision Radar (Minority Report"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-29T12:48:19.124211+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:task-hath0r-atc: Task Evaluation task-hath0r-atc (R=1.00, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "task-hath0r-atc",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:task-hath0r-atc"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "insight:knostic-ai-architecture",
+    "eval:knostic-architecture-analysis",
+    "episode:knostic-hath0r-issues-plan",
+    "eval:knostic-hath0r-issues-plan",
+    "fact:cr-agentic-sec-001-complete",
+    "eval:task-hath0r-atc"
+  ],
+  "capsule_bytes": 2009
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-atc",
-  "timestamp": "2026-10-28T19:46:19.226687+00:00",
+  "timestamp": "2026-10-29T12:48:19.208726+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -237,6 +237,19 @@
       "content": "Governance policy rule CR-BRANCH-GOV-001 referenced in AGENTS.md",
       "properties": {
         "rule_code": "CR-BRANCH-GOV-001",
+        "priority": 4,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-cli-entry-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-CLI-ENTRY-001",
+      "content": "Governance policy rule CR-CLI-ENTRY-001 referenced in AGENTS.md",
+      "properties": {
+        "rule_code": "CR-CLI-ENTRY-001",
         "priority": 4,
         "restricted_actions": []
       },
@@ -1155,7 +1168,7 @@
       "content": "4-Tier Task Evaluation for issue-67 on branch feature/67-automatic-task-evals: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bd5851c4da7c7d1c687b2e82d30253142e0d40a59f5e9d0072e1974bc4b3eae9"
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
         },
         "source": "local_memory",
         "tags": [
@@ -1177,7 +1190,7 @@
       "content": "4-Tier Task Evaluation for pr-68 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bd5851c4da7c7d1c687b2e82d30253142e0d40a59f5e9d0072e1974bc4b3eae9"
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
         },
         "source": "local_memory",
         "tags": [
@@ -1257,7 +1270,7 @@
       "content": "4-Tier Task Evaluation for pr-68-merged on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bd5851c4da7c7d1c687b2e82d30253142e0d40a59f5e9d0072e1974bc4b3eae9"
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
         },
         "source": "local_memory",
         "tags": [
@@ -1303,7 +1316,7 @@
       "content": "Added Hath0r-Cruise-Control container to hath0r Docker group in HATH0R-ATC with port 38090, persistent volume hath0r_cruise_data, and NGINX /cruise/ reverse proxy",
       "properties": {
         "source_files": {
-          "deploy/docker/docker-compose.yml": "sha256:30ad329c29ecb96e84157354a36fc1c9647447bfd19a972c597a3fff43a664d1"
+          "deploy/docker/docker-compose.yml": "sha256:2ac8948bdea35943a0abcd3dfaedcafb74c8f21a65af33c84ed90d73e3909f9b"
         },
         "source": "local_memory",
         "tags": [
@@ -1342,7 +1355,7 @@
       "content": "4-Tier Task Evaluation for eval-baseline-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bd5851c4da7c7d1c687b2e82d30253142e0d40a59f5e9d0072e1974bc4b3eae9"
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
         },
         "source": "local_memory",
         "tags": [
@@ -1364,7 +1377,7 @@
       "content": "4-Tier Task Evaluation for atc-71-cruise-control-docs-sync on branch chore/71-cruise-control-docs-and-eval-sync: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bd5851c4da7c7d1c687b2e82d30253142e0d40a59f5e9d0072e1974bc4b3eae9"
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
         },
         "source": "local_memory",
         "tags": [
@@ -1429,7 +1442,7 @@
       "content": "4-Tier Task Evaluation for cccd-calibrated-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bd5851c4da7c7d1c687b2e82d30253142e0d40a59f5e9d0072e1974bc4b3eae9"
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
         },
         "source": "local_memory",
         "tags": [
@@ -1451,7 +1464,7 @@
       "content": "4-Tier Task Evaluation for branch-docs-73-clean-repo-workflow on branch docs/73-clean-repo-workflow: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bd5851c4da7c7d1c687b2e82d30253142e0d40a59f5e9d0072e1974bc4b3eae9"
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
         },
         "source": "local_memory",
         "tags": [
@@ -1473,7 +1486,7 @@
       "content": "4-Tier Task Evaluation for clean-repo-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bd5851c4da7c7d1c687b2e82d30253142e0d40a59f5e9d0072e1974bc4b3eae9"
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
         },
         "source": "local_memory",
         "tags": [
@@ -1495,7 +1508,7 @@
       "content": "4-Tier Task Evaluation for issue-76 on branch chore/76-eval-scorecard-summary-rule: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bd5851c4da7c7d1c687b2e82d30253142e0d40a59f5e9d0072e1974bc4b3eae9"
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
         },
         "source": "local_memory",
         "tags": [
@@ -1537,8 +1550,8 @@
       "id": "memory:episode:aws-ses-forwarder-rbayly-gmail",
       "plane": "memory",
       "type": "episode",
-      "label": "AWS SES Email Forwarder Updated to rbayly@gmail.com",
-      "content": "Updated AWS Lambda function ses-email-forwarder (arn:aws:lambda:us-east-1:066949051380:function:ses-email-forwarder) environment variables FORWARD_TO and ROUTING_MAP and default fallback in lambda_function.py from ray@baylyai.com to rbayly@gmail.com, plus bounce-loop protection for forwarder@* destinations.",
+      "label": "AWS SES Email Forwarder Updated to [PII_REDACTED:EMAIL]",
+      "content": "Updated AWS Lambda function ses-email-forwarder (arn:aws:lambda:us-east-1:066949051380:function:ses-email-forwarder) environment variables FORWARD_TO and ROUTING_MAP and default fallback in lambda_function.py from [PII_REDACTED:EMAIL] to [PII_REDACTED:EMAIL], plus bounce-loop protection for forwarder@* destinations.",
       "properties": {
         "source": "local_memory",
         "tags": [
@@ -1557,7 +1570,7 @@
       "content": "4-Tier Task Evaluation for aws-ses-forwarder-rbayly-gmail on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:283b647ac595128fbec7913066fc1ed6d77e09da08f8a1a45d81f134b2e72c71"
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
         },
         "source": "local_memory",
         "tags": [
@@ -1585,6 +1598,147 @@
         "write_count": 3,
         "status": "active",
         "byte_size": 1934,
+        "source": "local_memory",
+        "tags": [
+          "session",
+          "micro-session",
+          "active"
+        ],
+        "importance": 0.75
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:insight:knostic-ai-architecture",
+      "plane": "memory",
+      "type": "insight",
+      "label": "Knostic.ai Agentic Endpoint & Supply Chain Architecture Analysis",
+      "content": "Analyzed Knostic (knostic.ai): Phase I PBAC/Need-to-Know RAG governance for Copilot/Glean; Phase II Kirin (BPF/JA4 user-space daemon + IDE extensions/hooks), AgentMesh (BITE Behavior-Intent Traceable Evaluation + VirusTotal stream), OpenAnt (6-stage reachability + constrained adversarial persona + Docker dynamic exploit harness, arXiv:2606.19149), AgentSonar, MCP-Scanner, and OpenClaw 5-layer shield.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "insight",
+          "compounded"
+        ],
+        "importance": 0.8
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:eval:knostic-architecture-analysis",
+      "plane": "memory",
+      "type": "eval",
+      "label": "Task Evaluation knostic-architecture-analysis (R=1.00, PASS)",
+      "content": "4-Tier Task Evaluation for knostic-architecture-analysis on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
+      "properties": {
+        "source_files": {
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
+        },
+        "source": "local_memory",
+        "tags": [
+          "eval",
+          "cr-task-eval-001",
+          "knostic-architecture-analysis",
+          "passed",
+          "compounded"
+        ],
+        "importance": 0.85
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:episode:knostic-hath0r-issues-plan",
+      "plane": "memory",
+      "type": "episode",
+      "label": "Knostic Security Suite Implementation Plan & GitHub Issues (CR-AGENTIC-SEC-001)",
+      "content": "Created implementation plan and opened GitHub issues Bayly-AI/HATH0R-CLI#537, #538, #539, #540, #541, Bayly-AI/HATH0R-MCP#84, and Bayly-AI/HATH0R-Agentic-Framework#309 covering BITE, L2 Secret/PII Sanitizer, PBAC Curation, OpenAnt Reachability, ThreatModel/Trust Report, and Slopsquatting/AgentSonar.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "episode",
+          "compounded"
+        ],
+        "importance": 0.8
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:eval:knostic-hath0r-issues-plan",
+      "plane": "memory",
+      "type": "eval",
+      "label": "Task Evaluation knostic-hath0r-issues-plan (R=1.00, PASS)",
+      "content": "4-Tier Task Evaluation for knostic-hath0r-issues-plan on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
+      "properties": {
+        "source_files": {
+          ".hath0r/evals/latest.json": "sha256:368d350bb24db0d753ae4d5fe3416fdf108a289c988223923141c201e59b0217"
+        },
+        "source": "local_memory",
+        "tags": [
+          "eval",
+          "cr-task-eval-001",
+          "knostic-hath0r-issues-plan",
+          "passed",
+          "compounded"
+        ],
+        "importance": 0.85
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:fact:cr-agentic-sec-001-complete",
+      "plane": "memory",
+      "type": "fact",
+      "label": "CR-AGENTIC-SEC-001 Execution Complete (#537-#541, #84, #309)",
+      "content": "Completed all 6 workstreams of CR-AGENTIC-SEC-001 across HATH0R-Agentic-Framework v1.11.0 (#309), HATH0R-MCP v1.3.0 (#84), and HATH0R-CLI v1.14.0 (#537-#541).",
+      "properties": {
+        "source_files": {
+          "AGENTS.md": "sha256:6e84a5f5992a8ea48e61665bc1eb3cfd1570a0dc7a9818abddee10baa3d2bd18"
+        },
+        "source": "local_memory",
+        "tags": [
+          "fact",
+          "compounded"
+        ],
+        "importance": 0.8
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:eval:task-hath0r-atc",
+      "plane": "memory",
+      "type": "eval",
+      "label": "Task Evaluation task-hath0r-atc (R=1.00, PASS)",
+      "content": "4-Tier Task Evaluation for task-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
+      "properties": {
+        "source_files": {
+          ".hath0r/evals/latest.json": "sha256:0d74d69f0b57d232777c027661d45b3ef4e572901a125cd266b91f72955515b6"
+        },
+        "source": "local_memory",
+        "tags": [
+          "eval",
+          "cr-task-eval-001",
+          "task-hath0r-atc",
+          "passed",
+          "compounded"
+        ],
+        "importance": 0.85
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:session:sess-20261029-122307-55c823",
+      "plane": "memory",
+      "type": "session",
+      "label": "Micro Session sess-20261029-122307-55c823",
+      "content": "Micro Session sess-20261029-122307-55c823 [active] | Focus: Mine technical intelligence and write Knostic.ai architecture analysis | Reads: 2, Writes: 10 | Entries: Compounded eval:task-hath0r-atc: Task Evaluation task-hath0r-atc (R=1.00, PASS)",
+      "properties": {
+        "session_id": "sess-20261029-122307-55c823",
+        "prior_session_id": "sess-20261028-194546-3bcea1",
+        "parent_session_id": "sess-20261028-194546-3bcea1",
+        "read_count": 2,
+        "write_count": 10,
+        "status": "active",
+        "byte_size": 2009,
         "source": "local_memory",
         "tags": [
           "session",
@@ -2172,6 +2326,126 @@
       "is_current": true
     },
     {
+      "source": "memory:session:sess-20261028-194546-3bcea1",
+      "target": "memory:session:sess-20261029-122307-55c823",
+      "relation": "PRECEDES",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261029-122307-55c823",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:insight:knostic-ai-architecture",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:insight:knostic-ai-architecture",
+      "target": "memory:session:sess-20261029-122307-55c823",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:knostic-architecture-analysis",
+      "target": "concept:tri-graph",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:knostic-architecture-analysis",
+      "target": "memory:rule:cr-memory-compound-001",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:knostic-architecture-analysis",
+      "target": "memory:session:sess-20261029-122307-55c823",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:knostic-architecture-analysis",
+      "target": "memory:session:sess-20261029-122307-55c823",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:knostic-hath0r-issues-plan",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:knostic-hath0r-issues-plan",
+      "target": "memory:session:sess-20261029-122307-55c823",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:knostic-hath0r-issues-plan",
+      "target": "concept:tri-graph",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:knostic-hath0r-issues-plan",
+      "target": "memory:rule:cr-memory-compound-001",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:knostic-hath0r-issues-plan",
+      "target": "memory:session:sess-20261029-122307-55c823",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:knostic-hath0r-issues-plan",
+      "target": "memory:session:sess-20261029-122307-55c823",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:fact:cr-agentic-sec-001-complete",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:fact:cr-agentic-sec-001-complete",
+      "target": "memory:session:sess-20261029-122307-55c823",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:task-hath0r-atc",
+      "target": "concept:tri-graph",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:task-hath0r-atc",
+      "target": "memory:rule:cr-memory-compound-001",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:task-hath0r-atc",
+      "target": "memory:session:sess-20261029-122307-55c823",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:task-hath0r-atc",
+      "target": "memory:session:sess-20261029-122307-55c823",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
       "source": "rule:rules",
       "target": "role:developer",
       "relation": "GOVERNS",
@@ -2233,6 +2507,12 @@
     },
     {
       "source": "rule:cr-branch-gov-001",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:cr-cli-entry-001",
       "target": "role:developer",
       "relation": "GOVERNS",
       "is_current": true
@@ -2473,6 +2753,48 @@
     },
     {
       "source": "memory:session:sess-20261028-194546-3bcea1",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:insight:knostic-ai-architecture",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:knostic-architecture-analysis",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:knostic-hath0r-issues-plan",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:knostic-hath0r-issues-plan",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:fact:cr-agentic-sec-001-complete",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:task-hath0r-atc",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261029-122307-55c823",
       "target": "role:developer",
       "relation": "INFORMS",
       "is_current": true
