@@ -239,7 +239,7 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
 <https://hath0r.dev/ontology/v1#memory:episode:clean-repo-hath0r-atc> a hath0r:Plane ;
-    rdfs:label "Clean Repo Development Sync (hath0r-atc)" ;
+    rdfs:label "Clean Repo Lifecycle (hath0r-atc)" ;
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
@@ -328,6 +328,11 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
+<https://hath0r.dev/ontology/v1#memory:eval:release-v0-5-6> a hath0r:Plane ;
+    rdfs:label "Task Evaluation release-v0.5.6 (R=0.90, FAIL)" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
 <https://hath0r.dev/ontology/v1#memory:eval:task-hath0r-atc> a hath0r:Plane ;
     rdfs:label "Task Evaluation task-hath0r-atc (R=1.00, PASS)" ;
     hath0r:inPlane "memory" ;
@@ -412,6 +417,11 @@ hath0r:informs a owl:ObjectProperty .
 
 <https://hath0r.dev/ontology/v1#memory:session:sess-20261029-122307-55c823> a hath0r:Plane ;
     rdfs:label "Micro Session sess-20261029-122307-55c823" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:session:sess-20261029-132735-028ad9> a hath0r:Plane ;
+    rdfs:label "Micro Session sess-20261029-132735-028ad9" ;
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 

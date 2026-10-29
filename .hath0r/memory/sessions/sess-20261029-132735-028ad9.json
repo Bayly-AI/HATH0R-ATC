@@ -3,22 +3,22 @@
   "session_id": "sess-20261029-132735-028ad9",
   "prior_session_id": "sess-20261029-122307-55c823",
   "parent_session_id": "sess-20261029-122307-55c823",
-  "revision": 13,
-  "content_hash": "sha256:3fbe72c14bc0370895c8af9cd7da4f994ab05621bb006998951136daa398971c",
+  "revision": 15,
+  "content_hash": "sha256:6bfd93a8ddf7b56cf386910dff98040002af14b45f19bd538778e7fcae2de071",
   "base_graph_hash": "sha256:d8d01da4dd5dcdf0f80f3c54c6db882f36f8e145254751cd6e7378d6c9a04755",
   "task_id": "rule-sync-and-workflow-upgrade",
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "completed",
   "started_at": "2026-10-29T13:27:35.402179+00:00",
-  "updated_at": "2026-10-29T14:17:06.167594+00:00",
+  "updated_at": "2026-10-29T14:31:35.361297+00:00",
   "ended_at": "2026-10-29T14:17:05.229452+00:00",
   "read_count": 4,
-  "write_count": 9,
+  "write_count": 11,
   "last_read_at": "2026-10-29T14:17:05.147030+00:00",
-  "last_write_at": "2026-10-29T14:17:06.167594+00:00",
+  "last_write_at": "2026-10-29T14:31:35.361297+00:00",
   "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-atc",
-  "prior_summary": "ounded eval:eval-baseline-hath0r-atc; Compounded episode:clean-repo-hath0r-atc; Clean Repo Lifecycle completed for hath0",
+  "prior_summary": "n Repo Lifecycle completed for hath0; Compounded eval:clean-repo-hath0r-atc: T; Compounded eval:release-v0-5-6: Task Eva",
   "recalled_nodes": [
     {
       "id": "insight:hath0r-atc",
@@ -29,17 +29,17 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-29T14:17:06.167594+00:00",
+      "timestamp": "2026-10-29T14:31:35.361297+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:clean-repo-hath0r-atc: Task Evaluation clean-repo-hath0r-atc (R=1.00, PASS)",
+      "summary": "Compounded eval:release-v0-5-6: Task Evaluation release-v0.5.6 (R=1.00, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "clean-repo-hath0r-atc",
+        "release-v0-5-6",
         "passed",
         "compounded"
       ],
-      "node_id": "eval:clean-repo-hath0r-atc"
+      "node_id": "eval:release-v0-5-6"
     }
   ],
   "next_steps": [],
@@ -48,7 +48,8 @@
     "rule:cr-task-eval-001",
     "eval:eval-baseline-hath0r-atc",
     "episode:clean-repo-hath0r-atc",
-    "eval:clean-repo-hath0r-atc"
+    "eval:clean-repo-hath0r-atc",
+    "eval:release-v0-5-6"
   ],
   "capsule_bytes": 1956
 }

@@ -1,0 +1,17 @@
+{
+  "schema": "hath0r.quality.gates/v1",
+  "preflight": {
+    "enabled": true,
+    "commands": [
+      ["python3", "-m", "pytest", "-q"],
+      ["python3", "-m", "ruff", "check", "tests"]
+    ]
+  },
+  "pre_deploy": {
+    "counts_toward_coverage": true,
+    "commands": [
+      ["python3", "-m", "pytest", "-q"],
+      ["python3", "-m", "ruff", "check", "tests"]
+    ]
+  }
+}
