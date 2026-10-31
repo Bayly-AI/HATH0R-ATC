@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261029-132738-45c12c",
+  "eval_id": "eval-20261031-100915-eb83b2",
   "task_id": "task-hath0r-atc",
   "issue_number": null,
   "repo_name": "hath0r-atc",
   "branch": "development",
-  "evaluated_at": "2026-10-29T13:27:38.276613+00:00",
-  "duration_ms": 191.32,
+  "evaluated_at": "2026-10-31T10:09:15.429913+00:00",
+  "duration_ms": 1005.15,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -32,7 +32,7 @@
       "checks": {
         "version_valid": {
           "passed": true,
-          "version": "0.5.5",
+          "version": "0.5.6",
           "error": null
         },
         "agentgraph_valid": {
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 29,
+          "compounded_nodes_count": 37,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -51,8 +51,34 @@
         },
         "test_suite": {
           "passed": true,
-          "skipped": true,
-          "message": "Test execution skipped via flag or dry-run."
+          "commands_run": 2,
+          "results": [
+            {
+              "command": [
+                "python3",
+                "-m",
+                "pytest",
+                "-q"
+              ],
+              "ok": true,
+              "exit_code": 0,
+              "stdout_tail": "............                                                             [100%]\n12 passed in 0.05s\n",
+              "stderr_tail": ""
+            },
+            {
+              "command": [
+                "python3",
+                "-m",
+                "ruff",
+                "check",
+                "tests"
+              ],
+              "ok": true,
+              "exit_code": 0,
+              "stdout_tail": "All checks passed!\n",
+              "stderr_tail": ""
+            }
+          ]
         }
       }
     },
@@ -63,14 +89,14 @@
       "max_tokens": 50000,
       "estimated_usd": 0.0,
       "max_usd": 0.25,
-      "session_id": "sess-20261029-132735-028ad9",
-      "session_reads": 1,
+      "session_id": "sess-20261031-100732-78cdec",
+      "session_reads": 2,
       "session_writes": 1,
-      "session_bytes": 1902,
+      "session_bytes": 1943,
       "within_capsule_budget": true,
-      "latency_ms": 73.74,
-      "taguchi_quality_loss": 0.0001,
-      "snr_db": 28.67
+      "latency_ms": 861.65,
+      "taguchi_quality_loss": 0.0093,
+      "snr_db": 7.31
     },
     "adversarial": {
       "score": 1.0,
@@ -87,8 +113,8 @@
       "passed": true,
       "task_id": "task-hath0r-atc",
       "issue_number": null,
-      "active_focus": "Active working session in hath0r-atc",
-      "compounded_nodes_count": 29,
+      "active_focus": "Create the MCP-centralized architecture, SuperSqueeze, Iteration Cascade, and Architecture-Preserving Bots plan as GitHub Issues across HATH0R-MCP, HATH0R-CLI,",
+      "compounded_nodes_count": 37,
       "consensus_score": 1.0
     }
   },
@@ -99,36 +125,33 @@
         ".hath0r/evals/latest.json"
       ],
       "STATIC_AST_ANALYSIS": [
-        ".agents/skills/clean-repos/SKILL.md",
         ".hath0r/agentgraph/snapshot.json",
+        ".hath0r/cccd_state.json",
+        ".hath0r/evals/latest.json",
+        ".hath0r/l2ws_warmstarts.json",
         ".hath0r/memory/graph.json",
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
-        "AGENTS.md",
-        "CHANGELOG.md",
-        ".hath0r/memory/sessions/sess-20261029-132735-028ad9.json",
-        "CLAUDE.md",
-        "THREATMODEL.md"
+        ".hath0r/evals/history/eval-analyze-hath0r-architecture-bots.json",
+        ".hath0r/evals/history/eval-refactor-mcp-central-architecture-plan.json",
+        ".hath0r/memory/sessions/sess-20261031-095809-2919a3.json",
+        ".hath0r/memory/sessions/sess-20261031-100320-4a07d8.json",
+        ".hath0r/memory/sessions/sess-20261031-100732-78cdec.json"
       ],
-      "UNVERIFIED_FILE_PRESENCE": [
-        ".hath0r/agentgraph/snapshot.ttl",
-        "VERSION",
-        ".agents/skills/orient/",
-        ".hath0r/security/"
-      ]
+      "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 11,
-      "UNVERIFIED_FILE_PRESENCE": 4
+      "STATIC_AST_ANALYSIS": 13,
+      "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
   "blocking_reasons": [],
   "observability_sync": {
     "mode": "live_synced",
     "phoenix_logged": true,
-    "mlflow_run_id": "e26f9a33ebfe4ca4abc95052b0a11e41"
+    "mlflow_run_id": "ad46d983baa64881afd774238096b345"
   },
-  "content_hash": "sha256:a639cf0f7592606e1c7567a3d91f12050a1c5f59b3215715dc77bdb11b3c7800"
+  "content_hash": "sha256:31b271c288dc1234e0abc54e18599e9e82bf864a3ea95509af3ae8c102b8c97d"
 }

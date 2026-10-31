@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261029-173338-3348f1",
-  "task_id": "list-hath0r-technologies",
-  "issue_number": null,
+  "eval_id": "eval-20261031-101253-fc8757",
+  "task_id": "issue-80",
+  "issue_number": 80,
   "repo_name": "hath0r-atc",
-  "branch": "development",
-  "evaluated_at": "2026-10-29T17:33:38.620254+00:00",
-  "duration_ms": 307.83,
+  "branch": "chore/80-mcp-central-architecture-issue",
+  "evaluated_at": "2026-10-31T10:12:53.917539+00:00",
+  "duration_ms": 966.92,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -32,7 +32,7 @@
       "checks": {
         "version_valid": {
           "passed": true,
-          "version": "0.5.6",
+          "version": "0.5.7",
           "error": null
         },
         "agentgraph_valid": {
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 32,
+          "compounded_nodes_count": 41,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -51,8 +51,34 @@
         },
         "test_suite": {
           "passed": true,
-          "skipped": true,
-          "message": "Test execution skipped via flag or dry-run."
+          "commands_run": 2,
+          "results": [
+            {
+              "command": [
+                "python3",
+                "-m",
+                "pytest",
+                "-q"
+              ],
+              "ok": true,
+              "exit_code": 0,
+              "stdout_tail": "............                                                             [100%]\n12 passed in 0.05s\n",
+              "stderr_tail": ""
+            },
+            {
+              "command": [
+                "python3",
+                "-m",
+                "ruff",
+                "check",
+                "tests"
+              ],
+              "ok": true,
+              "exit_code": 0,
+              "stdout_tail": "All checks passed!\n",
+              "stderr_tail": ""
+            }
+          ]
         }
       }
     },
@@ -63,14 +89,14 @@
       "max_tokens": 50000,
       "estimated_usd": 0.0,
       "max_usd": 0.25,
-      "session_id": "sess-20261029-132735-028ad9",
-      "session_reads": 5,
-      "session_writes": 13,
-      "session_bytes": 1991,
+      "session_id": "sess-20261031-101144-433224",
+      "session_reads": 2,
+      "session_writes": 4,
+      "session_bytes": 1713,
       "within_capsule_budget": true,
-      "latency_ms": 120.55,
-      "taguchi_quality_loss": 0.0002,
-      "snr_db": 24.4
+      "latency_ms": 831.69,
+      "taguchi_quality_loss": 0.0086,
+      "snr_db": 7.62
     },
     "adversarial": {
       "score": 1.0,
@@ -85,10 +111,10 @@
     "goal_alignment": {
       "score": 1.0,
       "passed": true,
-      "task_id": "list-hath0r-technologies",
-      "issue_number": null,
-      "active_focus": "Cataloging Hath0r technology stack",
-      "compounded_nodes_count": 32,
+      "task_id": "issue-80",
+      "issue_number": 80,
+      "active_focus": "mcp-central-architecture-issue-plan",
+      "compounded_nodes_count": 41,
       "consensus_score": 1.0
     }
   },
@@ -100,25 +126,39 @@
       ],
       "STATIC_AST_ANALYSIS": [
         ".hath0r/agentgraph/snapshot.json",
+        ".hath0r/cccd_state.json",
+        ".hath0r/evals/history/eval-task-hath0r-atc.json",
+        ".hath0r/evals/latest.json",
+        ".hath0r/l2ws_warmstarts.json",
         ".hath0r/memory/graph.json",
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
-        ".hath0r/memory/sessions/sess-20261029-132735-028ad9.json"
+        "CHANGELOG.md",
+        ".hath0r/evals/history/eval-analyze-hath0r-architecture-bots.json",
+        ".hath0r/evals/history/eval-refactor-mcp-central-architecture-plan.json",
+        ".hath0r/memory/sessions/sess-20261031-095809-2919a3.json",
+        ".hath0r/memory/sessions/sess-20261031-100320-4a07d8.json",
+        ".hath0r/memory/sessions/sess-20261031-100732-78cdec.json",
+        ".hath0r/memory/sessions/sess-20261031-101144-433224.json",
+        "docs/observe/mcp-central-architecture-roadmap-20261031.md"
       ],
-      "UNVERIFIED_FILE_PRESENCE": []
+      "UNVERIFIED_FILE_PRESENCE": [
+        "VERSION",
+        "="
+      ]
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 6,
-      "UNVERIFIED_FILE_PRESENCE": 0
+      "STATIC_AST_ANALYSIS": 17,
+      "UNVERIFIED_FILE_PRESENCE": 2
     }
   },
   "blocking_reasons": [],
   "observability_sync": {
     "mode": "live_synced",
     "phoenix_logged": true,
-    "mlflow_run_id": "e6cfb2dfa7e543ed8ad616372c76498a"
+    "mlflow_run_id": "4436935c59114e1fb703e5fa34a63566"
   },
-  "content_hash": "sha256:5f17bd769e6f2fb3e8a5a54227169c12e9affbfea22bf87775c7e55d3b1126e9"
+  "content_hash": "sha256:621edb8cd4ee4273a39fb372645ad0d0419516edc5e9c208ba56aee3d65aa61a"
 }

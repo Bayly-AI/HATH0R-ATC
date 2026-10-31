@@ -1,0 +1,51 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261031-101144-433224",
+  "prior_session_id": "sess-20261031-100732-78cdec",
+  "parent_session_id": "sess-20261031-100732-78cdec",
+  "revision": 6,
+  "content_hash": "sha256:79bb093ba3490127654d284ce3bf3a7822bde0c2f81ff34a8d577cdc502dfed1",
+  "base_graph_hash": "sha256:3ea4b4e0800f0a381e99cd126b1bd60e9b2c408971464d9eac5e8be7d3d48111",
+  "task_id": "issue-80",
+  "role": null,
+  "repo_name": "hath0r-atc",
+  "status": "completed",
+  "started_at": "2026-10-31T10:11:44.555486+00:00",
+  "updated_at": "2026-10-31T10:12:55.175246+00:00",
+  "ended_at": "2026-10-31T10:12:51.269048+00:00",
+  "read_count": 2,
+  "write_count": 5,
+  "last_read_at": "2026-10-31T10:12:48.546580+00:00",
+  "last_write_at": "2026-10-31T10:12:55.175246+00:00",
+  "active_focus": "mcp-central-architecture-issue-plan",
+  "prior_summary": "ished MCP-central architecture roadm; Compounded episode:issue-80: Published M; Completed Issue #80: published MCP-centr",
+  "recalled_nodes": [
+    {
+      "id": "decision:mcp-central-tools-workflows-architecture",
+      "type": "decision",
+      "label": "Centralize Tools, Workflows, SuperSqueeze & Knowledge in HAT",
+      "snippet": "Refactored Hath0r architecture plan: (1) Migrate 28+ CLI-trapped MCP tools from hath0r_cli"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-31T10:12:55.175246+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:issue-80: Task Evaluation issue-80 (R=1.00, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "issue-80",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:issue-80"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "episode:issue-80",
+    "eval:issue-80"
+  ],
+  "capsule_bytes": 1811
+}

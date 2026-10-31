@@ -1,55 +1,51 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261029-132735-028ad9",
-  "prior_session_id": "sess-20261029-122307-55c823",
-  "parent_session_id": "sess-20261029-122307-55c823",
-  "revision": 19,
-  "content_hash": "sha256:a402e2a1bc0f21ab0c5d05d8f2d5401bfec42b3bed4856a8affc3d7d9d98bb7a",
-  "base_graph_hash": "sha256:aca3d257548122d66860016989b75a34cf13f0e019fe26e5c31f1e4c170a5451",
-  "task_id": "rule-sync-and-workflow-upgrade",
+  "session_id": "sess-20261031-101144-433224",
+  "prior_session_id": "sess-20261031-100732-78cdec",
+  "parent_session_id": "sess-20261031-100732-78cdec",
+  "revision": 6,
+  "content_hash": "sha256:79bb093ba3490127654d284ce3bf3a7822bde0c2f81ff34a8d577cdc502dfed1",
+  "base_graph_hash": "sha256:3ea4b4e0800f0a381e99cd126b1bd60e9b2c408971464d9eac5e8be7d3d48111",
+  "task_id": "issue-80",
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "completed",
-  "started_at": "2026-10-29T13:27:35.402179+00:00",
-  "updated_at": "2026-10-29T17:33:39.508508+00:00",
-  "ended_at": "2026-10-29T14:17:05.229452+00:00",
-  "read_count": 5,
-  "write_count": 14,
-  "last_read_at": "2026-10-29T17:33:34.363610+00:00",
-  "last_write_at": "2026-10-29T17:33:39.508508+00:00",
-  "active_focus": "Cataloging Hath0r technology stack",
-  "prior_summary": "ounded eval:release-v0-5-6: Task Eva; Reviewed CLI, Framework, MCP, POC, and A; Compounded episode:list-hath0r-technolog",
+  "started_at": "2026-10-31T10:11:44.555486+00:00",
+  "updated_at": "2026-10-31T10:12:55.175246+00:00",
+  "ended_at": "2026-10-31T10:12:51.269048+00:00",
+  "read_count": 2,
+  "write_count": 5,
+  "last_read_at": "2026-10-31T10:12:48.546580+00:00",
+  "last_write_at": "2026-10-31T10:12:55.175246+00:00",
+  "active_focus": "mcp-central-architecture-issue-plan",
+  "prior_summary": "ished MCP-central architecture roadm; Compounded episode:issue-80: Published M; Completed Issue #80: published MCP-centr",
   "recalled_nodes": [
     {
-      "id": "fact:repo-hath0r-atc-orientation",
-      "type": "fact",
-      "label": "hath0r-atc Repository Memory Orientation",
-      "snippet": "hath0r-atc: **Canonical control tower** for the OpenSource Project (`hath0r-opensource`) \u2014"
+      "id": "decision:mcp-central-tools-workflows-architecture",
+      "type": "decision",
+      "label": "Centralize Tools, Workflows, SuperSqueeze & Knowledge in HAT",
+      "snippet": "Refactored Hath0r architecture plan: (1) Migrate 28+ CLI-trapped MCP tools from hath0r_cli"
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-29T17:33:39.508508+00:00",
+      "timestamp": "2026-10-31T10:12:55.175246+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:list-hath0r-technologies: Task Evaluation list-hath0r-technologies (R=1.00, PASS)",
+      "summary": "Compounded eval:issue-80: Task Evaluation issue-80 (R=1.00, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "list-hath0r-technologies",
+        "issue-80",
         "passed",
         "compounded"
       ],
-      "node_id": "eval:list-hath0r-technologies"
+      "node_id": "eval:issue-80"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "eval:eval-baseline-hath0r-atc",
-    "episode:clean-repo-hath0r-atc",
-    "eval:clean-repo-hath0r-atc",
-    "eval:release-v0-5-6",
-    "episode:list-hath0r-technologies",
-    "eval:list-hath0r-technologies"
+    "episode:issue-80",
+    "eval:issue-80"
   ],
-  "capsule_bytes": 2029
+  "capsule_bytes": 1811
 }

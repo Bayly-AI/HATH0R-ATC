@@ -5,6 +5,13 @@ All notable changes to **HATH0R-ATC** are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.7] - 2026-10-31
+
+### Added
+- **HATH0R MCP-Central Architecture, SuperSqueeze & Bot Execution Plan (`#80`)**:
+  - Published canonical cross-repo roadmap [`docs/observe/mcp-central-architecture-roadmap-20261031.md`](docs/observe/mcp-central-architecture-roadmap-20261031.md) tracking GitHub Issues `Bayly-AI/HATH0R-MCP#85`, `Bayly-AI/HATH0R-MCP#86`, `Bayly-AI/HATH0R-CLI#551`–`#554`, `Bayly-AI/HATH0R-Agentic-Framework#313`, and `Bayly-AI/HATH0R-ATC#80`.
+  - Codified the `Task → Hath0r-CLI (⇄ Hath0r-MCP) → Computer → Web` 4-stage iteration cascade, `SuperSqueeze` (`SuperCompressBot`) middleware pipeline, 7 architecture-preserving bots, and mandatory per-issue Test + 4-Tier Eval (`CR-TASK-EVAL-001`) + SemVer PR gate.
+
 ## [0.5.6] - 2026-10-29
 
 ### Added
