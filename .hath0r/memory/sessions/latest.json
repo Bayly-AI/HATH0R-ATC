@@ -1,35 +1,35 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261031-101422-5b46af",
-  "prior_session_id": "sess-20261031-101144-433224",
-  "parent_session_id": "sess-20261031-101144-433224",
-  "revision": 6,
-  "content_hash": "sha256:b24423bcd079d124d2f2dbaff152e1ca0f607b44efadfdd5cfc801cca6bbfd1d",
-  "base_graph_hash": "sha256:b8a1ff46e2a22441019619e92e666dd1176346228c7891ffebf33db52233a3c3",
+  "session_id": "sess-20261031-102202-b782f2",
+  "prior_session_id": "sess-20261031-101422-5b46af",
+  "parent_session_id": "sess-20261031-101422-5b46af",
+  "revision": 7,
+  "content_hash": "sha256:2da4c796b467623397273279920120aef8d1c9bd99a98cc0b5ac00c80f63d277",
+  "base_graph_hash": "sha256:ebafda16f079b2e2c483ec71e39621677bbbe49136d6f7558a53c6ad316d06ae",
   "task_id": null,
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "completed",
-  "started_at": "2026-10-31T10:14:22.208050+00:00",
-  "updated_at": "2026-10-31T10:18:42.546082+00:00",
-  "ended_at": "2026-10-31T10:18:38.570617+00:00",
+  "started_at": "2026-10-31T10:22:02.527395+00:00",
+  "updated_at": "2026-10-31T10:30:50.419055+00:00",
+  "ended_at": "2026-10-31T10:30:10.582295+00:00",
   "read_count": 2,
-  "write_count": 5,
-  "last_read_at": "2026-10-31T10:14:22.986044+00:00",
-  "last_write_at": "2026-10-31T10:18:42.546082+00:00",
-  "active_focus": "Ensure OpenFeature, OpenObserve, and OpenTelemetry adherence across Hath0r core architecture, issues, and bots",
-  "prior_summary": "ed OpenFeature, OpenObserve (cfg/obse; Compounded decision:openfeature-openobse; Completed OpenFeature, OpenObserve, and",
+  "write_count": 6,
+  "last_read_at": "2026-10-31T10:22:03.414935+00:00",
+  "last_write_at": "2026-10-31T10:30:50.419055+00:00",
+  "active_focus": "Audit hath0r-net Docker network, Arize Phoenix, MLflow (Hathor-MLFLOW), and Cruise Control integration across the plan and issues",
+  "prior_summary": "ounded decision:hath0r-net-phoenix-m; Completed hath0r-net Phoenix, MLflow, an; Compounded eval:issue-80: Task Evaluatio",
   "recalled_nodes": [
     {
-      "id": "insight:bots",
-      "type": "insight",
-      "label": "Synthesized Insight on bots",
-      "snippet": "Consolidated from 2 memory nodes tagged 'bots'. Recurring themes: tools, supersqueeze, arc"
+      "id": "episode:decision-radar-architecture-plan",
+      "type": "episode",
+      "label": "Hath0r Decision Radar Architecture Plan and GitHub Issues",
+      "snippet": "Formulated comprehensive architectural plan for the Hath0r Decision Radar (Minority Report"
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-31T10:18:42.546082+00:00",
+      "timestamp": "2026-10-31T10:30:50.419055+00:00",
       "kind": "compound",
       "summary": "Compounded eval:issue-80: Task Evaluation issue-80 (R=1.00, PASS)",
       "tags": [
@@ -44,8 +44,8 @@
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "decision:openfeature-openobserve-otel-core-adherence",
+    "decision:hath0r-net-phoenix-mlflow-cruise-control-integration",
     "eval:issue-80"
   ],
-  "capsule_bytes": 1845
+  "capsule_bytes": 1931
 }

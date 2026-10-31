@@ -22,24 +22,29 @@ To maximize technology utilization across the Hath0r OpenSource Suite and guaran
 3. **Mandatory OpenFeature, OpenObserve (`OpenObservation`) & OpenTelemetry (`OTel`) Core Adherence**:
    - **OpenFeature (`cfg/feature-flags/openfeature.json` & `catalog.example.json`)**: Every runtime toggle, MCP workflow route, SuperSqueeze compression stage, and bot gate MUST evaluate through an OpenFeature-compatible client (`mcp.supersqueeze.enabled`, `mcp.workflows.central_dispatch`, `iteration.cascade.strict_mode`, `bots.architecture_preservation.enforce`) with `evaluation_context` (`targetingKey`, `environment`, `product`, `service.name`) and safe-for-production defaults. No ad-hoc `if os.getenv(...)` sprawl.
    - **OpenTelemetry (`cfg/observability/otel.json`)**: Every MCP tool call, CLI command, workflow step, and bot dispatch MUST emit OTLP/OpenInference spans (`AGENT | LLM | TOOL | RETRIEVER | GUARDRAIL`) with required resource attributes (`service.name`, `service.namespace="hath0r-opensource"`, `deployment.environment`, `service.version`) and OpenFeature correlation attributes (`feature_flag.key`, `feature_flag.variant`). Legacy `ddtrace` in `hath0r-mcp/src/knowledgebase/core/observability.py` is replaced by canonical OTel.
-   - **OpenObserve / OpenObservation (`cfg/observability/openobservation.json`)**: Every service tracks the 4 Golden Signals (`latency`, `traffic`, `errors`, `saturation`), suite SLIs (`mcp.health.success_rate >= 0.99`, `mcp.tool.error_rate < 0.05`, `factory.step.abort_rate < 0.10`, `supersqueeze.token_savings_ratio >= 0.35`, `iteration.cascade.adherence_rate >= 0.95`), and event classes (`security`, `governance`, `ops`, `product`), spooling non-blockingly (`never_block: true`, `never_secrets: true`) to `.hath0r/spool/telemetry-*.jsonl` when collectors (`localhost:58000`) are offline.
-4. **Mandatory Per-Issue Test + 4-Tier Eval + SemVer + PR Gate**:
-   - Every issue in the roadmap MUST execute the full verification lifecycle (Unit/Integration Tests + MemoryGraph Compounding + 4-Tier Task Evaluation with `R_task >= 0.80` + SemVer Bump + PR to `development` + SonarCloud Quality Gate) before advancing to the next issue.
+   - **OpenObserve / OpenObservation (`cfg/observability/openobservation.json`)**: Every service tracks the 4 Golden Signals (`latency`, `traffic`, `errors`, `saturation`), suite SLIs (`mcp.health.success_rate >= 0.99`, `mcp.tool.error_rate < 0.05`, `factory.step.abort_rate < 0.10`, `supersqueeze.token_savings_ratio >= 0.35`, `iteration.cascade.adherence_rate >= 0.95`), and event classes (`security`, `governance`, `ops`, `product`), spooling non-blockingly (`never_block: true`, `never_secrets: true`) to `.hath0r/spool/telemetry-*.jsonl` when collectors (`http://localhost:38000/phoenix` / `http://Hath0r-phoenix:6006`) are offline.
+4. **Full `hath0r-net` Network Utilization (`Hath0r-phoenix`, `Hathor-MLFLOW`, `Hath0r-Cruise-Control`, `Hath0r-MCP`, `Hath0r-Edge`)**:
+   - All suite containers communicate over **`hath0r-net`** (`172.23.0.0/16`) behind **`Hath0r-Edge`** (`http://localhost:38000`):
+     - **Arize Phoenix (`Hath0r-phoenix`, `172.23.0.8`, host `:36006`/`:34317`/`:34318`, edge `http://localhost:38000/phoenix`)**: Ingests OTLP/OpenInference spans (`/v1/traces`, `/v1/metrics`) from `HATH0R-CLI`, `HATH0R-MCP`, `Hath0r-Cruise-Control`, and `TaskEvaluatorBot` (`hath0r.eval.task`). Fixes legacy 1-Nation `localhost:58000/phoenix` port drift across all 5 repos' `cfg/observability/otel.json`.
+     - **MLflow (`Hathor-MLFLOW`, `172.23.0.4`, host `:35000`, edge `http://localhost:38000/mlflow/`)**: Tracks every 4-Tier Task Evaluation run (`hath0r-task-evals`), CCCD calibration (`cccd-calibration`), and prompt calibration (`hath0r-prompt-calibration`) with `SuperSqueeze` compression metrics, `IterationCascade` telemetry, OpenFeature flag variants, and cross-linked `phoenix.trace_id` tags.
+     - **Cruise Control (`Hath0r-Cruise-Control`, `172.23.0.3`, host `:38090`, edge `http://localhost:38000/cruise/radar` & `/api/decisions`)**: Serves as the live Agent Decision Control Layer & Unblocking Engine (`DecisionRadarBot`), enforcing bidirectional Input/Output work boundary gates (`approve-in`, `approve-out`), transitive unblocking impact (`U(d)`), and event-driven `FactSettlementEngine` probes (`eval.gate.passed:<task_id>`, `mlflow.run.logged:<task_id>`, `phoenix.trace.verified:<trace_id>`).
+5. **Mandatory Per-Issue Test + 4-Tier Eval + SemVer + PR Gate**:
+   - Every issue in the roadmap MUST execute the full verification lifecycle (Unit/Integration Tests + MemoryGraph Compounding + 4-Tier Task Evaluation with `R_task >= 0.80` synced to `Hath0r-phoenix` & `Hathor-MLFLOW` + Cruise Control Settlement + SemVer Bump + PR to `development` + SonarCloud Quality Gate) before advancing to the next issue.
 
 ---
 
 ## 2. Cross-Repository GitHub Issue Matrix
 
-| Order | Repository | Issue | Title & Scope (with OpenFeature + OpenObserve + OpenTelemetry) |
+| Order | Repository | Issue | Title & Scope (with OpenFeature + OpenObserve + OpenTelemetry + Phoenix + MLflow + Cruise Control) |
 |---|---|---|---|
-| **1** | `Bayly-AI/HATH0R-MCP` | [#85](https://github.com/Bayly-AI/HATH0R-MCP/issues/85) | **Centralize Suite Tools, SuperSqueeze Middleware, OTel/OpenObserve/OpenFeature & Clean Legacy `infraos_*` Schemas in HATH0R-MCP**: Port 28+ CLI-trapped MCP tools into `hath0r-mcp`, expose `hath0r_supersqueeze` gated by OpenFeature (`mcp.supersqueeze.enabled`), replace `ddtrace` in `observability.py` with OpenTelemetry + OpenObservation `.hath0r/spool` non-blocking export, and remove legacy `infraos_*` references. |
-| **2** | `Bayly-AI/HATH0R-MCP` | [#86](https://github.com/Bayly-AI/HATH0R-MCP/issues/86) | **Expose Declarative Workflows, Factories, BotRegistry Dispatch, MemoryGraph & Cruise Control in HATH0R-MCP**: Add `hath0r_workflow_*`, `hath0r_bot_*`, `hath0r_task_*`, `hath0r_memory_*`, `hath0r_decision_radar`, and `hath0r_tlp_plan` endpoints to `HATH0R-MCP` with OTel span tracing (`run_id`, `factory_id`, `feature_flag.*`), OpenFeature flags (`mcp.workflows.central_dispatch`), and OpenObservation SLI tracking (`factory.step.abort_rate`). |
-| **3** | `Bayly-AI/HATH0R-CLI` | [#551](https://github.com/Bayly-AI/HATH0R-CLI/issues/551) | **Register All 69 Bots in `BotRegistry` & Wire `SuperSqueezeBot` Across CAG, Hybrid Router, HAHP & CLI**: Map all 22+ unmapped bots in `step_runner.py`, add `hath0r supersqueeze`, wire `SuperCompressBot` into `CAGEngine`/`HybridCAGRAGRouter`/`HAHPEnvelope` gated by OpenFeature (`mcp.supersqueeze.enabled`), and emit OTel spans + OpenObservation `supersqueeze.token_savings_ratio` SLIs. |
-| **4** | `Bayly-AI/HATH0R-CLI` | [#552](https://github.com/Bayly-AI/HATH0R-CLI/issues/552) | **Implement `MCPCentralizationBot` & `MCPWorkflowEngineBot` and Route CLI Commands Through HATH0R-MCP (`Priority 1`)**: Route `hath0r` CLI commands through `HATH0R-MCP` first (governed by OpenFeature `mcp.workflows.central_dispatch` and W3C `traceparent` OTel propagation), fix blocking OTLP retries in `telemetry.py` to honor OpenObservation `never_block: true`, and pin SHA-256 schemas via `BITEVerifierBot`. |
-| **5** | `Bayly-AI/HATH0R-CLI` | [#553](https://github.com/Bayly-AI/HATH0R-CLI/issues/553) | **Implement `IterationCascadeBot` to Enforce `Task → Hath0r-CLI/MCP → Computer → Web` Escalation**: Upgrade `NeuralIntentClassifier` to 4 cascade stages (`STAGE_1_TASK`, `STAGE_2_CLI_MCP`, `STAGE_3_COMPUTER`, `STAGE_4_WEB`), gate enforcement via OpenFeature (`iteration.cascade.strict_mode`), emit OTel `cascade.stage` span attributes, and track OpenObservation `iteration.cascade.adherence_rate` in `TaskEvaluatorBot` Tier 2. |
-| **6** | `Bayly-AI/HATH0R-CLI` | [#554](https://github.com/Bayly-AI/HATH0R-CLI/issues/554) | **Implement `ArchitecturePreservationBot`, `SubstrateUtilizationBot` & `TaskCompletionVerifierBot` and Wire Task Factories**: Enforce `CR-CLI-FEATURE-STANDARD-001`, `CR-SUBSTRATE-001`, and **OpenFeature + OpenObservation + OpenTelemetry adherence** (`otel.json`, `openobservation.json`, `openfeature.json` presence, zero raw `ddtrace` / ad-hoc env flags, `feature_flag.*` span correlation) across all repos and task factories. |
-| **7** | `Bayly-AI/HATH0R-Agentic-Framework` | [#313](https://github.com/Bayly-AI/HATH0R-Agentic-Framework/issues/313) | **Add Engine-Level `SuperSqueeze` Pipeline Stage, 4-Stage `IterationCascade` Contract & OTel/OpenFeature/OpenObserve Schemas**: Add `contracts/hath0r-iteration-cascade-v1.schema.json` and `contracts/hath0r-mcp-workflow-v1.schema.json`, add `feature_flag.*` and OpenObservation golden-signal emission to `OTELTracerBot` (`otel_tracer.py`), and ratify `CR-ITERATION-CASCADE-001` & `CR-MCP-CENTRAL-001`. |
-| **8** | `Bayly-AI/HATH0R-ATC` | [#80](https://github.com/Bayly-AI/HATH0R-ATC/issues/80) | **Publish Canonical Suite Execution Plan & Complete OpenFeature / OpenObservation / OTel Configs in HATH0R-ATC**: Commit this roadmap, add `cfg/observability/openobservation.json` and updated `cfg/feature-flags/catalog.example.json` to `HATH0R-ATC`, validate tests & 4-tier evals, bump SemVer, and merge PR [#81](https://github.com/Bayly-AI/HATH0R-ATC/pull/81) to `development`. |
+| **1** | `Bayly-AI/HATH0R-MCP` | [#85](https://github.com/Bayly-AI/HATH0R-MCP/issues/85) | **Centralize Suite Tools, SuperSqueeze Middleware, OTel/OpenObserve/OpenFeature & Clean Legacy `infraos_*` Schemas in HATH0R-MCP**: Port 28+ CLI-trapped MCP tools into `hath0r-mcp`, expose `hath0r_supersqueeze` gated by OpenFeature (`mcp.supersqueeze.enabled`), replace `ddtrace` in `observability.py` with OpenTelemetry exporting to `Hath0r-phoenix` (`http://Hath0r-phoenix:6006` / `http://localhost:38000/phoenix`) + OpenObservation `.hath0r/spool` fallback, and remove legacy `infraos_*` references. |
+| **2** | `Bayly-AI/HATH0R-MCP` | [#86](https://github.com/Bayly-AI/HATH0R-MCP/issues/86) | **Expose Declarative Workflows, Factories, BotRegistry Dispatch, MemoryGraph, Phoenix, MLflow & Cruise Control in HATH0R-MCP**: Expose `mcp_workflow_*`, `mcp_factory_*`, `mcp_bot_*`, `mcp_memory_*`, `mcp_cruise_*` (bridged to `http://Hath0r-Cruise-Control:8090/api/decisions`), `mcp_mlflow_*` (bridged to `http://Hathor-MLFLOW:5000/mlflow`), and `mcp_phoenix_*` (bridged to `http://Hath0r-phoenix:6006`) in `HATH0R-MCP`. |
+| **3** | `Bayly-AI/HATH0R-CLI` | [#551](https://github.com/Bayly-AI/HATH0R-CLI/issues/551) | **Register All 69 Bots in `BotRegistry` & Wire `SuperSqueezeBot` + `hath0r-net` Phoenix/MLflow/Cruise Control**: Register all 21 unmapped bots (including `DecisionRadarBot`, `PhoenixManagerBot`, `PhoenixObserverBot`, `MLflowManagerBot`, `SuperCompressBot`) in `step_runner.py`, fix `otel.json` (`38000/phoenix` vs `58000`), fix `PhoenixObserverBot`/`MLflowManagerBot` container & port mappings on `hath0r-net`, and wire `SuperSqueeze` across CAG/Router/HAHP/CLI. |
+| **4** | `Bayly-AI/HATH0R-CLI` | [#552](https://github.com/Bayly-AI/HATH0R-CLI/issues/552) | **Implement `MCPCentralizationBot` & `MCPWorkflowEngineBot` and Route CLI Commands Through HATH0R-MCP (`Priority 1`)**: Route `hath0r` CLI commands through `HATH0R-MCP` (`http://127.0.0.1:38083` / `http://localhost:38000/mcp/`) first, propagate W3C `traceparent` + `feature_flag.*` into `Hath0r-phoenix`, and auto-sync workflow boundaries with `Hath0r-Cruise-Control` (`hath0r cruise sync`). |
+| **5** | `Bayly-AI/HATH0R-CLI` | [#553](https://github.com/Bayly-AI/HATH0R-CLI/issues/553) | **Implement `IterationCascadeBot` to Enforce `Task → Hath0r-CLI/MCP → Computer → Web` Escalation**: Enforce 4-stage cascade, check `Hath0r-Cruise-Control` settled facts at Stage 1, emit `iteration.cascade.stage` spans to `Hath0r-phoenix`, and log cascade adherence metrics to `Hathor-MLFLOW` (`hath0r-task-evals`). |
+| **6** | `Bayly-AI/HATH0R-CLI` | [#554](https://github.com/Bayly-AI/HATH0R-CLI/issues/554) | **Implement `ArchitecturePreservationBot`, `SubstrateUtilizationBot` & `TaskCompletionVerifierBot` and Wire Task Factories**: Audit `otel.json` (`http://localhost:38000/phoenix`), `openobservation.json`, and `openfeature.json` across all 5 repos, add `FactSettlementEngine` probes (`eval.gate.passed`, `mlflow.run.logged`, `phoenix.trace.verified`) in `DecisionRadarBot`, and verify `Hath0r-phoenix` + `Hathor-MLFLOW` + `Hath0r-Cruise-Control` sync before task completion. |
+| **7** | `Bayly-AI/HATH0R-Agentic-Framework` | [#313](https://github.com/Bayly-AI/HATH0R-Agentic-Framework/issues/313) | **Add Engine-Level `SuperSqueeze` Pipeline Stage, 4-Stage `IterationCascade` Contract & Phoenix/MLflow/Cruise Control Hooks**: Update `cfg/observability/otel.json` (`http://localhost:38000/phoenix`), wire `OTELTracerBot` to `Hath0r-phoenix`, log engine evaluation telemetry to `Hathor-MLFLOW`, and integrate Cruise Control boundary gates into engine pipeline stages. |
+| **8** | `Bayly-AI/HATH0R-ATC` | [#80](https://github.com/Bayly-AI/HATH0R-ATC/issues/80) | **Publish Canonical Suite Execution Plan & Align `hath0r-net` Phoenix, MLflow & Cruise Control Configs in HATH0R-ATC**: Update `cfg/observability/otel.json` (`http://localhost:38000/phoenix` + `network_services`), wire `OTEL_EXPORTER_OTLP_ENDPOINT`, `MLFLOW_TRACKING_URI`, and `HATH0R_CRUISE_URL` in `deploy/docker/docker-compose.yml`, add `cfg/observability/openobservation.json`, validate `make smoke` (24/24 PASS), `pytest`, and 4-tier evals, and merge PR [#81](https://github.com/Bayly-AI/HATH0R-ATC/pull/81). |
 
 ---
 
@@ -55,18 +60,41 @@ To maximize technology utilization across the Hath0r OpenSource Suite and guaran
 
 ---
 
-## 4. Mandatory Per-Issue Execution Protocol (Tests + Evals + PR)
+## 4. `hath0r-net` Network Topology: Arize Phoenix, MLflow & Cruise Control
 
-Every issue above MUST be executed using the canonical 7-step CLI lifecycle:
+All infrastructure and observability services in the Hath0r OpenSource Suite run on the canonical **`hath0r-net`** Docker network (`172.23.0.0/16`, compose project `hath0r`, `CR-DOCKER-HATH0R-GROUP-001`) behind **`Hath0r-Edge`** (`http://localhost:38000`):
+
+| Container | DNS Aliases on `hath0r-net` | Host Port → Container Port | Edge Gateway Route (`Hath0r-Edge` `:38000`) | Architectural Role in the Execution Plan |
+|---|---|---|---|---|
+| **`Hath0r-Edge`** | `Hath0r-Edge`, `hath0r-nginx`, `nginx`, `h0-nginx` (`172.23.0.2`) | `0.0.0.0:38000 -> 80/tcp` | `/healthz`, `/mcp/`, `/phoenix/`, `/v1/traces`, `/v1/metrics`, `/otlp/`, `/mlflow/`, `/cruise/`, `/api/decisions` | Unified reverse proxy & OTLP/API gateway for host CLI and external tools |
+| **`Hath0r-phoenix`** | `Hath0r-phoenix`, `hath0r-phoenix`, `phoenix`, `h0-phoenix` (`172.23.0.8`) | `36006 -> 6006/tcp`<br>`34317 -> 4317/tcp` (gRPC)<br>`34318 -> 4318/tcp` (HTTP) | `http://localhost:38000/phoenix/`<br>`http://localhost:38000/v1/traces` | **Arize Phoenix OTel & OpenInference Collector**: Receives distributed traces (`AGENT`, `LLM`, `TOOL`, `RETRIEVER`, `GUARDRAIL`, `EVALUATOR`), `feature_flag.*` attributes, and `SuperSqueeze` token-saving spans |
+| **`Hathor-MLFLOW`** | `Hathor-MLFLOW`, `hath0r-mlflow`, `mlflow`, `h0-mlflow` (`172.23.0.4`) | `35000 -> 5000/tcp` | `http://localhost:38000/mlflow/` | **MLOps Experiment Tracking & Model Registry**: Persists 4-Tier Task Evaluations (`hath0r-task-evals`), CCCD calibration (`cccd-calibration`), and prompt calibration (`hath0r-prompt-calibration`) with cross-linked `phoenix.trace_id` tags |
+| **`Hath0r-Cruise-Control`** | `Hath0r-Cruise-Control`, `hath0r-cruise-control`, `cruise-control`, `h0-cruise` (`172.23.0.3`) | `38090 -> 8090/tcp` | `http://localhost:38000/cruise/radar`<br>`http://localhost:38000/api/decisions` | **Agent Decision Control Layer & Unblocking Engine (`DecisionRadarBot`)**: Manages the 7 canonical decision wedges, transitive unblocking impact (`U(d)`), bidirectional Input/Output work boundary gates (`approve-in`, `approve-out`), and event-driven `FactSettlementEngine` |
+| **`Hath0r-MCP`** | `Hath0r-MCP`, `hath0r-mcp`, `mcp` (`172.23.0.7`) | `127.0.0.1:38083 -> 8083/tcp` | `http://localhost:38000/mcp/` | **Central Suite MCP Hub (`Priority 1`)**: Centralizes all suite tools, workflows, factories, `BotRegistry` dispatch, `SuperSqueeze` middleware, and bridges to `Hath0r-phoenix`, `Hathor-MLFLOW`, and `Hath0r-Cruise-Control` over `hath0r-net` |
+| **`Hath0r-Sessions`** | `Hath0r-Sessions`, `hath0r-redis`, `redis`, `h0-redis` (`172.23.0.5`) | internal `6379/tcp` | internal `hath0r-net` | Shared Redis session & cache state |
+| **`Hath0r-Data`** | `Hath0r-Data`, `hath0r-postgres`, `postgres`, `h0-postgres` (`172.23.0.6`) | `35432 -> 5432/tcp` | internal `hath0r-net` | Canonical PostgreSQL persistence |
+
+---
+
+## 5. Mandatory Per-Issue Execution Protocol (Tests + Evals + Phoenix + MLflow + Cruise Control + PR)
+
+Every issue above MUST be executed using the canonical CLI lifecycle:
 
 ```bash
-# 1. Start work branch & micro-memory session
+# 1. Start work branch, micro-memory session & sync Cruise Control decisions
+export OTEL_EXPORTER_OTLP_ENDPOINT="http://localhost:38000/phoenix"
 hath0r task start --issue <ISSUE_NUMBER> --slug <SHORT_SLUG> --prefix feature
+hath0r cruise sync
 
-# 2. Author Governance Documentation Hexad + Implementation + Unit/Integration Tests
-pytest
+# 2. Verify hath0r-net Phoenix, MLflow & Cruise Control health
+hath0r observe status
+hath0r mlflow status
+hath0r cruise status
 
-# 3. Compound MemoryGraph & synchronize SHA-256 file hashes (CR-MEMORY-COMPOUND-001)
+# 3. Author Governance Documentation Hexad + Implementation + Unit/Integration Tests
+pytest -q
+
+# 4. Compound MemoryGraph & synchronize SHA-256 file hashes (CR-MEMORY-COMPOUND-001)
 hath0r memory session read
 hath0r memory session write --summary "<SUMMARY>" --kind finding
 hath0r memory compound --id "episode:issue-<ISSUE_NUMBER>" --type episode --label "<LABEL>" --content "<CONTENT>"
@@ -74,17 +102,21 @@ hath0r memory session end --summary "Completed Issue #<ISSUE_NUMBER>"
 hath0r memory hash --sync
 hath0r memory verify
 
-# 4. Run & verify 4-Tier Hybrid Task Evaluation Gate (CR-TASK-EVAL-001: R_task >= 0.80)
+# 5. Run & verify 4-Tier Hybrid Task Evaluation Gate (CR-TASK-EVAL-001: R_task >= 0.80)
+#    Automatically emits OTel EVALUATOR span to Hath0r-phoenix and logs run to Hathor-MLFLOW (hath0r-task-evals)
 hath0r evals run --task-id "issue-<ISSUE_NUMBER>"
 hath0r memory hash --sync
 hath0r evals verify
 
-# 5. Bump SemVer (VERSION, pyproject.toml, CHANGELOG.md) & validate (CR-SEMVER-BUMP-001)
+# 6. Settle Cruise Control facts & boundary gates
+hath0r cruise settle
+
+# 7. Bump SemVer (VERSION, pyproject.toml, CHANGELOG.md) & validate (CR-SEMVER-BUMP-001)
 hath0r release validate
 
-# 6. Check SonarCloud & preflight gates (CR-SONAR-PREANNOUNCE-001)
-hath0r preflight
+# 8. Check SonarCloud & preflight gates (CR-SONAR-PREANNOUNCE-001)
+hath0r quality sonar
 
-# 7. Open Pull Request targeting development & monitor checks (CR-BRANCH-GOV-001)
+# 9. Open Pull Request targeting development & monitor checks (CR-BRANCH-GOV-001)
 hath0r pr create --semver minor
 ```

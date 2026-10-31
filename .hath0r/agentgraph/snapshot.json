@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-atc",
-  "timestamp": "2026-10-31T10:18:42.620170+00:00",
+  "timestamp": "2026-10-31T10:30:50.514659+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -592,7 +592,7 @@
       "properties": {
         "path": "docs/observe/mcp-central-architecture-roadmap-20261031.md",
         "category": "observe",
-        "size_bytes": 12951
+        "size_bytes": 18257
       },
       "is_current": true
     },
@@ -1220,7 +1220,7 @@
       "content": "4-Tier Task Evaluation for issue-67 on branch feature/67-automatic-task-evals: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1242,7 +1242,7 @@
       "content": "4-Tier Task Evaluation for pr-68 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1322,7 +1322,7 @@
       "content": "4-Tier Task Evaluation for pr-68-merged on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1368,7 +1368,7 @@
       "content": "Added Hath0r-Cruise-Control container to hath0r Docker group in HATH0R-ATC with port 38090, persistent volume hath0r_cruise_data, and NGINX /cruise/ reverse proxy",
       "properties": {
         "source_files": {
-          "deploy/docker/docker-compose.yml": "sha256:2ac8948bdea35943a0abcd3dfaedcafb74c8f21a65af33c84ed90d73e3909f9b"
+          "deploy/docker/docker-compose.yml": "sha256:430a89d9cb91671cdcc38c342b1d6da533f20505a457add409e6b55ba368d961"
         },
         "source": "local_memory",
         "tags": [
@@ -1407,7 +1407,7 @@
       "content": "4-Tier Task Evaluation for eval-baseline-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1429,7 +1429,7 @@
       "content": "4-Tier Task Evaluation for atc-71-cruise-control-docs-sync on branch chore/71-cruise-control-docs-and-eval-sync: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1494,7 +1494,7 @@
       "content": "4-Tier Task Evaluation for cccd-calibrated-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1516,7 +1516,7 @@
       "content": "4-Tier Task Evaluation for branch-docs-73-clean-repo-workflow on branch docs/73-clean-repo-workflow: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1538,7 +1538,7 @@
       "content": "4-Tier Task Evaluation for clean-repo-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1560,7 +1560,7 @@
       "content": "4-Tier Task Evaluation for issue-76 on branch chore/76-eval-scorecard-summary-rule: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1622,7 +1622,7 @@
       "content": "4-Tier Task Evaluation for aws-ses-forwarder-rbayly-gmail on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1684,7 +1684,7 @@
       "content": "4-Tier Task Evaluation for knostic-architecture-analysis on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1722,7 +1722,7 @@
       "content": "4-Tier Task Evaluation for knostic-hath0r-issues-plan on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1763,7 +1763,7 @@
       "content": "4-Tier Task Evaluation for task-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1809,7 +1809,7 @@
       "content": "4-Tier Task Evaluation for release-v0.5.6 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1870,7 +1870,7 @@
       "content": "4-Tier Task Evaluation for list-hath0r-technologies on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -1916,7 +1916,7 @@
       "content": "4-Tier Task Evaluation for analyze-hath0r-architecture-bots on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -2007,7 +2007,7 @@
       "content": "4-Tier Task Evaluation for refactor-mcp-central-architecture-plan on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
         },
         "source": "local_memory",
         "tags": [
@@ -2158,7 +2158,7 @@
       "content": "4-Tier Task Evaluation for issue-80 on branch chore/80-mcp-central-architecture-issue: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -2252,6 +2252,72 @@
         "write_count": 5,
         "status": "completed",
         "byte_size": 1845,
+        "source": "local_memory",
+        "tags": [
+          "session",
+          "micro-session",
+          "completed"
+        ],
+        "importance": 0.75
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:decision:hath0r-net-phoenix-mlflow-cruise-control-integration",
+      "plane": "memory",
+      "type": "decision",
+      "label": "hath0r-net Phoenix, MLflow & Cruise Control Full Integration",
+      "content": "Fixed otel.json default_endpoint from legacy 1-Nation port 58000 to live Hath0r-Edge http://localhost:38000/phoenix (Hath0r-phoenix:6006), wired MLFLOW_TRACKING_URI (http://Hathor-MLFLOW:5000/mlflow) and HATH0R_CRUISE_URL (http://Hath0r-Cruise-Control:8090) across hath0r-net, and updated all 8 GitHub Issues and roadmap.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "hath0r-net",
+          "phoenix",
+          "mlflow",
+          "cruise-control",
+          "otel",
+          "issue-80",
+          "decision",
+          "compounded"
+        ],
+        "importance": 0.99
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:insight:otel",
+      "plane": "memory",
+      "type": "insight",
+      "label": "Synthesized Insight on otel",
+      "content": "Consolidated from 2 memory nodes tagged 'otel'. Recurring themes: phoenix, mlflow, http, openfeature. Latest context: Fixed otel.json default_endpoint from legacy 1-Nation port 58000 to live Hath0r-Edge http://localhost:38000/phoenix (Hath0r-phoenix:6006), wired MLFLOW_TRACKING",
+      "properties": {
+        "constituent_count": 2,
+        "source_tag": "otel",
+        "source": "local_memory",
+        "tags": [
+          "otel",
+          "insight",
+          "reflection",
+          "compounded"
+        ],
+        "importance": 1.0
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:session:sess-20261031-102202-b782f2",
+      "plane": "memory",
+      "type": "session",
+      "label": "Micro Session sess-20261031-102202-b782f2",
+      "content": "Micro Session sess-20261031-102202-b782f2 [completed] | Focus: Audit hath0r-net Docker network, Arize Phoenix, MLflow (Hathor-MLFLOW), and Cruise Control integration across the plan and issues | Reads: 2, Writes: 6 | Entries: Compounded eval:issue-80: Task Evaluation issue-80 (R=1.00, PASS)",
+      "properties": {
+        "session_id": "sess-20261031-102202-b782f2",
+        "prior_session_id": "sess-20261031-101422-5b46af",
+        "parent_session_id": "sess-20261031-101422-5b46af",
+        "read_count": 2,
+        "write_count": 6,
+        "status": "completed",
+        "byte_size": 1931,
         "source": "local_memory",
         "tags": [
           "session",
@@ -3343,6 +3409,54 @@
       "is_current": true
     },
     {
+      "source": "memory:session:sess-20261031-101422-5b46af",
+      "target": "memory:session:sess-20261031-102202-b782f2",
+      "relation": "PRECEDES",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261031-102202-b782f2",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:decision:hath0r-net-phoenix-mlflow-cruise-control-integration",
+      "target": "memory:episode:issue-80",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:decision:hath0r-net-phoenix-mlflow-cruise-control-integration",
+      "target": "memory:session:sess-20261031-102202-b782f2",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:insight:otel",
+      "target": "memory:decision:openfeature-openobserve-otel-core-adherence",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:insight:otel",
+      "target": "memory:decision:hath0r-net-phoenix-mlflow-cruise-control-integration",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:issue-80",
+      "target": "memory:session:sess-20261031-102202-b782f2",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:issue-80",
+      "target": "memory:session:sess-20261031-102202-b782f2",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
       "source": "rule:rules",
       "target": "role:developer",
       "relation": "GOVERNS",
@@ -3836,6 +3950,24 @@
     },
     {
       "source": "memory:session:sess-20261031-101422-5b46af",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:decision:hath0r-net-phoenix-mlflow-cruise-control-integration",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:insight:otel",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261031-102202-b782f2",
       "target": "role:developer",
       "relation": "INFORMS",
       "is_current": true

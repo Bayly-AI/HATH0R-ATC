@@ -230,6 +230,10 @@ services:
       HATH0R_NO_BROWSER: "1"
       HATH0R_NO_BANNER: "1"
       HATH0R_CRUISE_PORT: "8090"
+      OTEL_SERVICE_NAME: "hath0r-cruise-control"
+      OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT:-http://Hath0r-phoenix:6006}
+      MLFLOW_TRACKING_URI: ${MLFLOW_TRACKING_URI:-http://Hathor-MLFLOW:5000/mlflow}
+      HATH0R_MCP_URL: ${HATH0R_MCP_URL:-http://Hath0r-MCP:8083}
     volumes:
       - hath0r_cruise_data:/app/.hath0r/decisions
     healthcheck:
@@ -269,6 +273,10 @@ services:
       HATH0R_MCP_ENVIRONMENT: ${HATH0R_MCP_ENVIRONMENT:-local}
       HATH0R_MCP_KNOWLEDGE_ROOT: /app/knowledgebase/canonical
       HATH0R_MCP_TOKEN: ${HATH0R_MCP_TOKEN:-}
+      OTEL_SERVICE_NAME: "hath0r-mcp"
+      OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT:-http://Hath0r-phoenix:6006}
+      MLFLOW_TRACKING_URI: ${MLFLOW_TRACKING_URI:-http://Hathor-MLFLOW:5000/mlflow}
+      HATH0R_CRUISE_URL: ${HATH0R_CRUISE_URL:-http://Hath0r-Cruise-Control:8090}
     read_only: true
     tmpfs: [/tmp]
     cap_drop: [ALL]
