@@ -1,0 +1,175 @@
+{
+  "schema_version": "hath0r.evals.scorecard/v1",
+  "rule_id": "CR-TASK-EVAL-001",
+  "eval_id": "eval-20261031-123348-38843e",
+  "task_id": "issue-105",
+  "issue_number": 80,
+  "repo_name": "hath0r-atc",
+  "branch": "chore/80-mcp-central-architecture-issue",
+  "evaluated_at": "2026-10-31T12:33:48.861148+00:00",
+  "duration_ms": 1045.55,
+  "passed_gate": true,
+  "r_task": 0.9622,
+  "min_reward_threshold": 0.8,
+  "weights": {
+    "deterministic": 0.4,
+    "trajectory": 0.2,
+    "adversarial": 0.25,
+    "goal_alignment": 0.15
+  },
+  "tier_scores": {
+    "deterministic": 0.9845,
+    "trajectory": 0.9255,
+    "adversarial": 0.976,
+    "goal_alignment": 0.9287
+  },
+  "tiers": {
+    "deterministic": {
+      "score": 0.9845,
+      "passed": true,
+      "passed_checks": 5,
+      "total_checks": 5,
+      "sub_scores": {
+        "version_valid": 1.0,
+        "agentgraph_valid": 1.0,
+        "memory_compounded": 0.98,
+        "test_suite": 0.9914,
+        "calibration_4h": 0.9407
+      },
+      "checks": {
+        "version_valid": {
+          "passed": true,
+          "version": "0.5.7",
+          "changelog_aligned": true,
+          "error": null
+        },
+        "agentgraph_valid": {
+          "passed": true,
+          "cycles": 0,
+          "contradictions": 0,
+          "claude_md_synced": true
+        },
+        "memory_compounded": {
+          "passed": true,
+          "compounded_nodes_count": 54,
+          "session_read_verified": true,
+          "session_write_verified": true,
+          "hashes_verified": true,
+          "graphs_not_ignored": true,
+          "error": null
+        },
+        "test_suite": {
+          "passed": true,
+          "commands_run": 2,
+          "duration_s": 0.728,
+          "results": [
+            {
+              "command": [
+                "python3",
+                "-m",
+                "pytest",
+                "-q"
+              ],
+              "ok": true,
+              "exit_code": 0,
+              "stdout_tail": "............                                                             [100%]\n12 passed in 0.06s\n",
+              "stderr_tail": ""
+            },
+            {
+              "command": [
+                "python3",
+                "-m",
+                "ruff",
+                "check",
+                "tests"
+              ],
+              "ok": true,
+              "exit_code": 0,
+              "stdout_tail": "All checks passed!\n",
+              "stderr_tail": ""
+            }
+          ]
+        },
+        "calibration_4h": {
+          "passed": true,
+          "is_fresh": true,
+          "age_hours": 1.97,
+          "max_age_hours": 4.0
+        }
+      }
+    },
+    "trajectory": {
+      "score": 0.9255,
+      "passed": true,
+      "tokens_used": 140,
+      "max_tokens": 50000,
+      "estimated_usd": 0.00042,
+      "max_usd": 0.25,
+      "session_id": "sess-20261031-122248-32c450",
+      "session_reads": 2,
+      "session_writes": 4,
+      "session_bytes": 1996,
+      "capsule_fill_ratio": 0.9746,
+      "within_capsule_budget": true,
+      "latency_ms": 819.59,
+      "taguchi_quality_loss": 0.0101,
+      "taguchi_score": 0.9547,
+      "snr_db": 7.75
+    },
+    "adversarial": {
+      "score": 0.976,
+      "passed": true,
+      "adversarial_flaws_count": 0,
+      "adversarial_flaws": [],
+      "tech_debts_count": 0,
+      "auto_created_issues": [],
+      "minor_findings": [],
+      "added_lines_count": 4,
+      "change_categories": {
+        "ui": [],
+        "script": [],
+        "text": [
+          "docs/observe/MASTER_HANDOFF_MCP_CENTRAL_ARCHITECTURE.md"
+        ],
+        "other": []
+      },
+      "changed_files_count": 1
+    },
+    "goal_alignment": {
+      "score": 0.9287,
+      "passed": true,
+      "task_id": "issue-105",
+      "issue_number": 80,
+      "active_focus": "Active working session in hath0r-atc",
+      "goal_keywords_count": 5,
+      "goal_overlap_score": 0.98,
+      "compounded_nodes_count": 54,
+      "consensus_score": 0.826
+    }
+  },
+  "evidence_trust_report": {
+    "schema": "hath0r.security.evidence_trust_report/1",
+    "tiers": {
+      "VERIFIED_EXECUTION": [
+        ".hath0r/evals/latest.json"
+      ],
+      "STATIC_AST_ANALYSIS": [
+        ".hath0r/memory/hashes.json",
+        "docs/observe/MASTER_HANDOFF_MCP_CENTRAL_ARCHITECTURE.md"
+      ],
+      "UNVERIFIED_FILE_PRESENCE": []
+    },
+    "counts": {
+      "VERIFIED_EXECUTION": 1,
+      "STATIC_AST_ANALYSIS": 2,
+      "UNVERIFIED_FILE_PRESENCE": 0
+    }
+  },
+  "blocking_reasons": [],
+  "observability_sync": {
+    "mode": "live_synced",
+    "phoenix_logged": true,
+    "mlflow_run_id": "a6043304838a437a82cd13281e87ebb5"
+  },
+  "content_hash": "sha256:d36b542a339595f7b81423f606b3a111bcf5ad461e8bf0d9e64d3035812a5662"
+}
