@@ -2,8 +2,8 @@
   "active_calibration": true,
   "auto_calibrate_pre_task": true,
   "ttl_hours": 4.0,
-  "last_run_timestamp": "2026-10-31T10:35:47Z",
-  "total_calibration_runs": 4,
+  "last_run_timestamp": "2026-10-31T14:36:18Z",
+  "total_calibration_runs": 5,
   "current_parameters": {
     "temperature": 0.5,
     "max_tokens": 2048,
@@ -72,6 +72,20 @@
       "mean_snr_db": -41.4122,
       "quality_loss": 4.7333,
       "mlflow_run_id": "33894a403bf3489a90dbcaa44cd18799"
+    },
+    {
+      "run_id": 5,
+      "timestamp": "2026-10-31T14:36:18Z",
+      "iterations": 3,
+      "signature_compiled": "default_agent_signature",
+      "optimal_parameters": {
+        "temperature": 0.5,
+        "top_p": 0.9,
+        "guardrail_threshold": 0.85
+      },
+      "mean_snr_db": -41.4122,
+      "quality_loss": 4.7333,
+      "mlflow_run_id": "f77a0a7fc2e04e2b92eaa2b9b6ddac7d"
     }
   ]
 }
