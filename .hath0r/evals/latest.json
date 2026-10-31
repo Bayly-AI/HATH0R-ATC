@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261031-103048-961af4",
+  "eval_id": "eval-20261031-103555-16edf6",
   "task_id": "issue-80",
   "issue_number": 80,
   "repo_name": "hath0r-atc",
   "branch": "chore/80-mcp-central-architecture-issue",
-  "evaluated_at": "2026-10-31T10:30:48.772470+00:00",
-  "duration_ms": 1085.02,
+  "evaluated_at": "2026-10-31T10:35:55.583473+00:00",
+  "duration_ms": 1026.02,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 46,
+          "compounded_nodes_count": 47,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -89,14 +89,14 @@
       "max_tokens": 50000,
       "estimated_usd": 0.0,
       "max_usd": 0.25,
-      "session_id": "sess-20261031-102202-b782f2",
+      "session_id": "sess-20261031-103156-bcbc3d",
       "session_reads": 2,
-      "session_writes": 5,
-      "session_bytes": 1931,
+      "session_writes": 4,
+      "session_bytes": 1770,
       "within_capsule_budget": true,
-      "latency_ms": 933.57,
-      "taguchi_quality_loss": 0.0109,
-      "snr_db": 6.62
+      "latency_ms": 881.65,
+      "taguchi_quality_loss": 0.0097,
+      "snr_db": 7.11
     },
     "adversarial": {
       "score": 1.0,
@@ -113,8 +113,8 @@
       "passed": true,
       "task_id": "issue-80",
       "issue_number": 80,
-      "active_focus": "Audit hath0r-net Docker network, Arize Phoenix, MLflow (Hathor-MLFLOW), and Cruise Control integration across the plan and issues",
-      "compounded_nodes_count": 46,
+      "active_focus": "Factor in automated 4-hour agent calibration TTL and automatic pre-task calibration execution across the plan, configs, and issues",
+      "compounded_nodes_count": 47,
       "consensus_score": 1.0
     }
   },
@@ -125,25 +125,24 @@
         ".hath0r/evals/latest.json"
       ],
       "STATIC_AST_ANALYSIS": [
-        "tests/test_contracts.py",
         ".hath0r/agentgraph/snapshot.json",
-        ".hath0r/evals/history/eval-issue-80.json",
-        ".hath0r/evals/latest.json",
+        ".hath0r/cccd_state.json",
+        ".hath0r/l2ws_warmstarts.json",
         ".hath0r/memory/graph.json",
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
         "CHANGELOG.md",
-        "cfg/observability/otel.json",
-        "deploy/docker/docker-compose.yml",
+        "cfg/feature-flags/catalog.example.json",
+        "cfg/observability/openobservation.json",
         "docs/observe/mcp-central-architecture-roadmap-20261031.md",
-        ".hath0r/memory/sessions/sess-20261031-102202-b782f2.json"
+        ".hath0r/memory/sessions/sess-20261031-103156-bcbc3d.json"
       ],
       "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 13,
+      "STATIC_AST_ANALYSIS": 12,
       "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
@@ -151,7 +150,7 @@
   "observability_sync": {
     "mode": "live_synced",
     "phoenix_logged": true,
-    "mlflow_run_id": "35b6dc9a67c140a393ecff7c9db6ae31"
+    "mlflow_run_id": "78d6fd5081074569bf0ece352e18d1c5"
   },
-  "content_hash": "sha256:9b03d5a2b4bec8a0775cd9c9629c939fc91689bd5c3a6b3a7f95bdb1cbfb4e8d"
+  "content_hash": "sha256:de02a384ea43a15081215b242479ffbca478bb08cd21a14c4665ef1b63327c24"
 }

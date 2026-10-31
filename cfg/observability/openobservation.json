@@ -16,7 +16,8 @@
     {"id": "mcp.tool.error_rate", "target_max": 0.05, "window": "1h"},
     {"id": "factory.step.abort_rate", "target_max": 0.1, "window": "24h"},
     {"id": "supersqueeze.token_savings_ratio", "target": 0.35, "window": "24h"},
-    {"id": "iteration.cascade.adherence_rate", "target": 0.95, "window": "24h"}
+    {"id": "iteration.cascade.adherence_rate", "target": 0.95, "window": "24h"},
+    {"id": "cccd.calibration.freshness_4h_rate", "target": 1.0, "window": "4h"}
   ],
   "event_classes": ["security", "governance", "ops", "product"],
   "spool": {

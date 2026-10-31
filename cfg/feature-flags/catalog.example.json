@@ -41,6 +41,18 @@
       "description": "Enforce ArchitecturePreservationBot, SubstrateUtilizationBot, and TaskCompletionVerifierBot gates",
       "type": "boolean",
       "default": true
+    },
+    {
+      "key": "cccd.auto_calibrate.pre_task_enabled",
+      "description": "Automatically run CCCD agent calibration (DSPy + Taguchi L9 + L2WS + MLflow/Phoenix) prior to a task when calibration TTL expires",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "cccd.auto_calibrate.ttl_hours",
+      "description": "Maximum calibration age in hours before automatic pre-task re-calibration is triggered",
+      "type": "number",
+      "default": 4.0
     }
   ]
 }

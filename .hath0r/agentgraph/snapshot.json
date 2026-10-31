@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-atc",
-  "timestamp": "2026-10-31T10:30:50.514659+00:00",
+  "timestamp": "2026-10-31T10:35:57.239213+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -592,7 +592,7 @@
       "properties": {
         "path": "docs/observe/mcp-central-architecture-roadmap-20261031.md",
         "category": "observe",
-        "size_bytes": 18257
+        "size_bytes": 20672
       },
       "is_current": true
     },
@@ -1220,7 +1220,7 @@
       "content": "4-Tier Task Evaluation for issue-67 on branch feature/67-automatic-task-evals: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1242,7 +1242,7 @@
       "content": "4-Tier Task Evaluation for pr-68 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1322,7 +1322,7 @@
       "content": "4-Tier Task Evaluation for pr-68-merged on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1407,7 +1407,7 @@
       "content": "4-Tier Task Evaluation for eval-baseline-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1429,7 +1429,7 @@
       "content": "4-Tier Task Evaluation for atc-71-cruise-control-docs-sync on branch chore/71-cruise-control-docs-and-eval-sync: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1494,7 +1494,7 @@
       "content": "4-Tier Task Evaluation for cccd-calibrated-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1516,7 +1516,7 @@
       "content": "4-Tier Task Evaluation for branch-docs-73-clean-repo-workflow on branch docs/73-clean-repo-workflow: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1538,7 +1538,7 @@
       "content": "4-Tier Task Evaluation for clean-repo-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1560,7 +1560,7 @@
       "content": "4-Tier Task Evaluation for issue-76 on branch chore/76-eval-scorecard-summary-rule: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1622,7 +1622,7 @@
       "content": "4-Tier Task Evaluation for aws-ses-forwarder-rbayly-gmail on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1684,7 +1684,7 @@
       "content": "4-Tier Task Evaluation for knostic-architecture-analysis on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1722,7 +1722,7 @@
       "content": "4-Tier Task Evaluation for knostic-hath0r-issues-plan on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1763,7 +1763,7 @@
       "content": "4-Tier Task Evaluation for task-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1809,7 +1809,7 @@
       "content": "4-Tier Task Evaluation for release-v0.5.6 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1870,7 +1870,7 @@
       "content": "4-Tier Task Evaluation for list-hath0r-technologies on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -1916,7 +1916,7 @@
       "content": "4-Tier Task Evaluation for analyze-hath0r-architecture-bots on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -2007,7 +2007,7 @@
       "content": "4-Tier Task Evaluation for refactor-mcp-central-architecture-plan on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:77c70f8760e8063e3ff188db36a5389e159f595b456c4327a37beae8c2cfedfd"
+          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
         },
         "source": "local_memory",
         "tags": [
@@ -2158,7 +2158,7 @@
       "content": "4-Tier Task Evaluation for issue-80 on branch chore/80-mcp-central-architecture-issue: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:4e751156a9345633aa9d61e7028f664fc848033dfc73fef978e53261a87f5045"
+          ".hath0r/evals/latest.json": "sha256:e0ff6c4671f512f358d767fd1c2f8aaade2b6e7e9f37fea912e04141fb265bdc"
         },
         "source": "local_memory",
         "tags": [
@@ -2318,6 +2318,54 @@
         "write_count": 6,
         "status": "completed",
         "byte_size": 1931,
+        "source": "local_memory",
+        "tags": [
+          "session",
+          "micro-session",
+          "completed"
+        ],
+        "importance": 0.75
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:rule:cr-cccd-calibrate-4h-001",
+      "plane": "memory",
+      "type": "rule",
+      "label": "Automated 4-Hour Pre-Task Agent Calibration Gate (CR-CCCD-CALIBRATE-4H-001)",
+      "content": "Enforce a 4.0-hour calibration TTL in .hath0r/cccd_state.json (cccd.auto_calibrate.ttl_hours=4.0). When expired, automatically execute CCCDCalibrationLoop.run_calibration() (DSPy + Taguchi L9 + L2WS + MLflow/Phoenix) prior to starting any task.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "cccd",
+          "calibration",
+          "taguchi",
+          "dspy",
+          "l2ws",
+          "mlflow",
+          "phoenix",
+          "issue-80",
+          "rule",
+          "compounded"
+        ],
+        "importance": 0.99
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:session:sess-20261031-103156-bcbc3d",
+      "plane": "memory",
+      "type": "session",
+      "label": "Micro Session sess-20261031-103156-bcbc3d",
+      "content": "Micro Session sess-20261031-103156-bcbc3d [completed] | Focus: Factor in automated 4-hour agent calibration TTL and automatic pre-task calibration execution across the plan, configs, and issues | Reads: 2, Writes: 5 | Entries: Compounded eval:issue-80: Task Evaluation issue-80 (R=1.00, PASS)",
+      "properties": {
+        "session_id": "sess-20261031-103156-bcbc3d",
+        "prior_session_id": "sess-20261031-102202-b782f2",
+        "parent_session_id": "sess-20261031-102202-b782f2",
+        "read_count": 2,
+        "write_count": 5,
+        "status": "completed",
+        "byte_size": 1881,
         "source": "local_memory",
         "tags": [
           "session",
@@ -3457,6 +3505,42 @@
       "is_current": true
     },
     {
+      "source": "memory:session:sess-20261031-102202-b782f2",
+      "target": "memory:session:sess-20261031-103156-bcbc3d",
+      "relation": "PRECEDES",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261031-103156-bcbc3d",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-cccd-calibrate-4h-001",
+      "target": "memory:episode:issue-80",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-cccd-calibrate-4h-001",
+      "target": "memory:session:sess-20261031-103156-bcbc3d",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:issue-80",
+      "target": "memory:session:sess-20261031-103156-bcbc3d",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:issue-80",
+      "target": "memory:session:sess-20261031-103156-bcbc3d",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
       "source": "rule:rules",
       "target": "role:developer",
       "relation": "GOVERNS",
@@ -3968,6 +4052,18 @@
     },
     {
       "source": "memory:session:sess-20261031-102202-b782f2",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-cccd-calibrate-4h-001",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261031-103156-bcbc3d",
       "target": "role:developer",
       "relation": "INFORMS",
       "is_current": true
