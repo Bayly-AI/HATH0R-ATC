@@ -1,15 +1,15 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261031-105152-30ddce",
+  "eval_id": "eval-20261031-105640-d31751",
   "task_id": "issue-80",
   "issue_number": 80,
   "repo_name": "hath0r-atc",
   "branch": "chore/80-mcp-central-architecture-issue",
-  "evaluated_at": "2026-10-31T10:51:52.743875+00:00",
-  "duration_ms": 1199.33,
+  "evaluated_at": "2026-10-31T10:56:40.863175+00:00",
+  "duration_ms": 1250.38,
   "passed_gate": true,
-  "r_task": 0.9611,
+  "r_task": 0.9689,
   "min_reward_threshold": 0.8,
   "weights": {
     "deterministic": 0.4,
@@ -18,14 +18,14 @@
     "goal_alignment": 0.15
   },
   "tier_scores": {
-    "deterministic": 0.9903,
-    "trajectory": 0.9336,
-    "adversarial": 0.956,
+    "deterministic": 0.99,
+    "trajectory": 0.9479,
+    "adversarial": 0.976,
     "goal_alignment": 0.9287
   },
   "tiers": {
     "deterministic": {
-      "score": 0.9903,
+      "score": 0.99,
       "passed": true,
       "passed_checks": 5,
       "total_checks": 5,
@@ -33,8 +33,8 @@
         "version_valid": 1.0,
         "agentgraph_valid": 1.0,
         "memory_compounded": 0.98,
-        "test_suite": 0.9909,
-        "calibration_4h": 0.9832
+        "test_suite": 0.9908,
+        "calibration_4h": 0.9812
       },
       "checks": {
         "version_valid": {
@@ -51,7 +51,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 49,
+          "compounded_nodes_count": 50,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -61,7 +61,7 @@
         "test_suite": {
           "passed": true,
           "commands_run": 2,
-          "duration_s": 0.829,
+          "duration_s": 0.841,
           "results": [
             {
               "command": [
@@ -72,7 +72,7 @@
               ],
               "ok": true,
               "exit_code": 0,
-              "stdout_tail": "............                                                             [100%]\n12 passed in 0.07s\n",
+              "stdout_tail": "............                                                             [100%]\n12 passed in 0.06s\n",
               "stderr_tail": ""
             },
             {
@@ -93,62 +93,57 @@
         "calibration_4h": {
           "passed": true,
           "is_fresh": true,
-          "age_hours": 0.27,
+          "age_hours": 0.35,
           "max_age_hours": 4.0
         }
       }
     },
     "trajectory": {
-      "score": 0.9336,
+      "score": 0.9479,
       "passed": true,
       "tokens_used": 143,
       "max_tokens": 50000,
       "estimated_usd": 0.000429,
       "max_usd": 0.25,
-      "session_id": "sess-20261031-104835-b7b4fc",
+      "session_id": "sess-20261031-105243-9d1cff",
       "session_reads": 2,
-      "session_writes": 4,
-      "session_bytes": 1856,
-      "capsule_fill_ratio": 0.9062,
+      "session_writes": 3,
+      "session_bytes": 1644,
+      "capsule_fill_ratio": 0.8027,
       "within_capsule_budget": true,
-      "latency_ms": 927.73,
-      "taguchi_quality_loss": 0.0129,
-      "taguchi_score": 0.9477,
-      "snr_db": 6.67
+      "latency_ms": 941.92,
+      "taguchi_quality_loss": 0.0133,
+      "taguchi_score": 0.9467,
+      "snr_db": 6.54
     },
     "adversarial": {
-      "score": 0.956,
+      "score": 0.976,
       "passed": true,
       "adversarial_flaws_count": 0,
       "adversarial_flaws": [],
       "tech_debts_count": 0,
       "auto_created_issues": [],
       "minor_findings": [],
-      "added_lines_count": 48,
+      "added_lines_count": 10,
       "change_categories": {
         "ui": [],
         "script": [],
         "text": [
-          "AGENTS.md",
-          "CHANGELOG.md",
-          "CLAUDE.md",
-          "cfg/feature-flags/catalog.example.json",
-          "cfg/observability/openobservation.json",
           "docs/observe/mcp-central-architecture-roadmap-20261031.md"
         ],
         "other": []
       },
-      "changed_files_count": 6
+      "changed_files_count": 1
     },
     "goal_alignment": {
       "score": 0.9287,
       "passed": true,
       "task_id": "issue-80",
       "issue_number": 80,
-      "active_focus": "Codify Canonical Feature-as-a-Service (>=1 Bot), Level 1 (HATH0R-MCP) & Level 2 (HATH0R-CLI / Bot Memory) AgentGraph hierarchy, and Workflow-First Standard (off",
-      "goal_keywords_count": 16,
+      "active_focus": "Active working session in hath0r-atc",
+      "goal_keywords_count": 5,
       "goal_overlap_score": 0.98,
-      "compounded_nodes_count": 49,
+      "compounded_nodes_count": 50,
       "consensus_score": 0.826
     }
   },
@@ -164,29 +159,22 @@
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
-        "AGENTS.md",
-        "CHANGELOG.md",
-        "CLAUDE.md",
-        "cfg/feature-flags/catalog.example.json",
-        "cfg/observability/openobservation.json",
         "docs/observe/mcp-central-architecture-roadmap-20261031.md",
-        ".hath0r/memory/sessions/sess-20261031-104835-b7b4fc.json"
+        ".hath0r/memory/sessions/sess-20261031-105243-9d1cff.json"
       ],
-      "UNVERIFIED_FILE_PRESENCE": [
-        ".hath0r/agentgraph/snapshot.ttl"
-      ]
+      "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 12,
-      "UNVERIFIED_FILE_PRESENCE": 1
+      "STATIC_AST_ANALYSIS": 7,
+      "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
   "blocking_reasons": [],
   "observability_sync": {
     "mode": "live_synced",
     "phoenix_logged": true,
-    "mlflow_run_id": "4c8f0428d12b4d86add414f43f6d73d7"
+    "mlflow_run_id": "e8fb9d2d0ad6413da2761481263ebcf1"
   },
-  "content_hash": "sha256:046e5ace496ed846c0009a6dc4d467876be22edc12d5df5e4dd43aea5aa81780"
+  "content_hash": "sha256:5ced871afd3686ab89a6e7d83c70140b90dd3f9c88435fc83990c21beeff85cb"
 }
