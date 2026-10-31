@@ -1,35 +1,35 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261031-101144-433224",
-  "prior_session_id": "sess-20261031-100732-78cdec",
-  "parent_session_id": "sess-20261031-100732-78cdec",
+  "session_id": "sess-20261031-101422-5b46af",
+  "prior_session_id": "sess-20261031-101144-433224",
+  "parent_session_id": "sess-20261031-101144-433224",
   "revision": 6,
-  "content_hash": "sha256:79bb093ba3490127654d284ce3bf3a7822bde0c2f81ff34a8d577cdc502dfed1",
-  "base_graph_hash": "sha256:3ea4b4e0800f0a381e99cd126b1bd60e9b2c408971464d9eac5e8be7d3d48111",
-  "task_id": "issue-80",
+  "content_hash": "sha256:b24423bcd079d124d2f2dbaff152e1ca0f607b44efadfdd5cfc801cca6bbfd1d",
+  "base_graph_hash": "sha256:b8a1ff46e2a22441019619e92e666dd1176346228c7891ffebf33db52233a3c3",
+  "task_id": null,
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "completed",
-  "started_at": "2026-10-31T10:11:44.555486+00:00",
-  "updated_at": "2026-10-31T10:12:55.175246+00:00",
-  "ended_at": "2026-10-31T10:12:51.269048+00:00",
+  "started_at": "2026-10-31T10:14:22.208050+00:00",
+  "updated_at": "2026-10-31T10:18:42.546082+00:00",
+  "ended_at": "2026-10-31T10:18:38.570617+00:00",
   "read_count": 2,
   "write_count": 5,
-  "last_read_at": "2026-10-31T10:12:48.546580+00:00",
-  "last_write_at": "2026-10-31T10:12:55.175246+00:00",
-  "active_focus": "mcp-central-architecture-issue-plan",
-  "prior_summary": "ished MCP-central architecture roadm; Compounded episode:issue-80: Published M; Completed Issue #80: published MCP-centr",
+  "last_read_at": "2026-10-31T10:14:22.986044+00:00",
+  "last_write_at": "2026-10-31T10:18:42.546082+00:00",
+  "active_focus": "Ensure OpenFeature, OpenObserve, and OpenTelemetry adherence across Hath0r core architecture, issues, and bots",
+  "prior_summary": "ed OpenFeature, OpenObserve (cfg/obse; Compounded decision:openfeature-openobse; Completed OpenFeature, OpenObserve, and",
   "recalled_nodes": [
     {
-      "id": "decision:mcp-central-tools-workflows-architecture",
-      "type": "decision",
-      "label": "Centralize Tools, Workflows, SuperSqueeze & Knowledge in HAT",
-      "snippet": "Refactored Hath0r architecture plan: (1) Migrate 28+ CLI-trapped MCP tools from hath0r_cli"
+      "id": "insight:bots",
+      "type": "insight",
+      "label": "Synthesized Insight on bots",
+      "snippet": "Consolidated from 2 memory nodes tagged 'bots'. Recurring themes: tools, supersqueeze, arc"
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-31T10:12:55.175246+00:00",
+      "timestamp": "2026-10-31T10:18:42.546082+00:00",
       "kind": "compound",
       "summary": "Compounded eval:issue-80: Task Evaluation issue-80 (R=1.00, PASS)",
       "tags": [
@@ -44,8 +44,8 @@
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "episode:issue-80",
+    "decision:openfeature-openobserve-otel-core-adherence",
     "eval:issue-80"
   ],
-  "capsule_bytes": 1811
+  "capsule_bytes": 1845
 }

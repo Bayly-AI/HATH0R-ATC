@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-31T10:12:56.071221+00:00",
+  "updated_at": "2026-10-31T10:18:43.692371+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -264,7 +264,7 @@
       "updated_at": "2026-10-28T13:32:43.767808+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -288,7 +288,7 @@
       "updated_at": "2026-10-28T13:53:08.660404+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -373,7 +373,7 @@
       "updated_at": "2026-10-28T13:53:18.915330+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -465,7 +465,7 @@
       "updated_at": "2026-10-29T13:58:51.595484+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -489,7 +489,7 @@
       "updated_at": "2026-10-28T14:39:58.148052+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -560,7 +560,7 @@
       "updated_at": "2026-10-28T14:56:38.783598+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -584,7 +584,7 @@
       "updated_at": "2026-10-28T15:17:42.929782+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -608,7 +608,7 @@
       "updated_at": "2026-10-29T14:17:06.122279+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -632,7 +632,7 @@
       "updated_at": "2026-10-28T17:37:28.152548+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -699,7 +699,7 @@
       "updated_at": "2026-10-28T19:46:19.140609+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -766,7 +766,7 @@
       "updated_at": "2026-10-29T12:23:12.787609+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -807,7 +807,7 @@
       "updated_at": "2026-10-29T12:28:21.656697+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -852,7 +852,7 @@
       "updated_at": "2026-10-31T10:09:23.274772+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -902,7 +902,7 @@
       "updated_at": "2026-10-29T14:31:35.335257+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -967,7 +967,7 @@
       "updated_at": "2026-10-29T17:33:39.468630+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -1017,7 +1017,7 @@
       "updated_at": "2026-10-31T10:00:49.110009+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -1114,7 +1114,7 @@
       "updated_at": "2026-10-31T10:04:34.930650+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -1268,14 +1268,14 @@
         "passed",
         "compounded"
       ],
-      "valid_from": "2026-10-31T10:12:55.131407+00:00",
+      "valid_from": "2026-10-31T10:18:42.505930+00:00",
       "valid_to": null,
       "is_current": true,
       "created_at": "2026-10-31T10:12:55.131407+00:00",
-      "updated_at": "2026-10-31T10:12:55.131407+00:00",
+      "updated_at": "2026-10-31T10:18:42.505930+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:74798bf4449f75ba83a2bcc6c7fd8daa5fec4f744102bc7b0d43f99e1cca51d9"
+          ".hath0r/evals/latest.json": "sha256:185b9d7b80c8aff78b74efde3658e07f276dbba6a08597645a98466f175fdf1c"
         }
       }
     },
@@ -1303,6 +1303,76 @@
         "write_count": 5,
         "status": "completed",
         "byte_size": 1811
+      }
+    },
+    {
+      "id": "decision:openfeature-openobserve-otel-core-adherence",
+      "type": "decision",
+      "label": "OpenFeature, OpenObserve & OpenTelemetry Core Architecture Adherence",
+      "content": "Enforced OpenFeature, OpenObservation (golden signals, SLIs, non-blocking .hath0r/spool), and OpenTelemetry (OTLP + OpenInference + feature_flag.* correlation) across HATH0R-ATC, HATH0R-MCP, HATH0R-CLI, HATH0R-Framework, and all 8 GitHub Issues.",
+      "importance": 0.98,
+      "tags": [
+        "openfeature",
+        "openobserve",
+        "openobservation",
+        "opentelemetry",
+        "otel",
+        "issue-80",
+        "decision",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T10:18:37.564132+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T10:18:37.564132+00:00",
+      "updated_at": "2026-10-31T10:18:37.564132+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "insight:issue-80",
+      "type": "insight",
+      "label": "Synthesized Insight on issue-80",
+      "content": "Consolidated from 2 memory nodes tagged 'issue-80'. Recurring themes: architecture, published, central, github. Latest context: Enforced OpenFeature, OpenObservation (golden signals, SLIs, non-blocking .hath0r/spool), and OpenTelemetry (OTLP + OpenInference + feature_flag.* correlation) ",
+      "importance": 1.0,
+      "tags": [
+        "issue-80",
+        "insight",
+        "reflection",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T10:18:37.631419+00:00",
+      "is_current": true,
+      "created_at": "2026-10-31T10:18:37.631419+00:00",
+      "updated_at": "2026-10-31T10:18:37.631419+00:00",
+      "metadata": {
+        "constituent_count": 2,
+        "source_tag": "issue-80"
+      }
+    },
+    {
+      "id": "session:sess-20261031-101422-5b46af",
+      "type": "session",
+      "label": "Micro Session sess-20261031-101422-5b46af",
+      "content": "Micro Session sess-20261031-101422-5b46af [completed] | Focus: Ensure OpenFeature, OpenObserve, and OpenTelemetry adherence across Hath0r core architecture, issues, and bots | Reads: 2, Writes: 5 | Entries: Compounded eval:issue-80: Task Evaluation issue-80 (R=1.00, PASS)",
+      "importance": 0.75,
+      "tags": [
+        "session",
+        "micro-session",
+        "completed"
+      ],
+      "valid_from": "2026-10-31T10:14:22.208050+00:00",
+      "valid_to": "2026-10-31T10:18:38.570617+00:00",
+      "is_current": true,
+      "created_at": "2026-10-31T10:14:22.208050+00:00",
+      "updated_at": "2026-10-31T10:18:42.546082+00:00",
+      "metadata": {
+        "session_id": "sess-20261031-101422-5b46af",
+        "prior_session_id": "sess-20261031-101144-433224",
+        "parent_session_id": "sess-20261031-101144-433224",
+        "read_count": 2,
+        "write_count": 5,
+        "status": "completed",
+        "byte_size": 1845
       }
     }
   ],
@@ -2624,8 +2694,72 @@
       "weight": 1.0,
       "valid_from": "2026-10-31T10:12:55.177513+00:00",
       "is_current": true
+    },
+    {
+      "source": "session:sess-20261031-101144-433224",
+      "target": "session:sess-20261031-101422-5b46af",
+      "relation": "PRECEDES",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T10:14:22.217128+00:00",
+      "is_current": true
+    },
+    {
+      "source": "session:sess-20261031-101422-5b46af",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "weight": 0.8,
+      "valid_from": "2026-10-31T10:14:22.217128+00:00",
+      "is_current": true
+    },
+    {
+      "source": "decision:openfeature-openobserve-otel-core-adherence",
+      "target": "episode:issue-80",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T10:18:37.564132+00:00",
+      "is_current": true
+    },
+    {
+      "source": "decision:openfeature-openobserve-otel-core-adherence",
+      "target": "session:sess-20261031-101422-5b46af",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T10:18:37.609424+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:issue-80",
+      "target": "episode:issue-80",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T10:18:37.631419+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:issue-80",
+      "target": "decision:openfeature-openobserve-otel-core-adherence",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T10:18:37.631419+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:issue-80",
+      "target": "session:sess-20261031-101422-5b46af",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T10:18:42.505930+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:issue-80",
+      "target": "session:sess-20261031-101422-5b46af",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T10:18:42.548113+00:00",
+      "is_current": true
     }
   ],
-  "revision": 266,
-  "content_hash": "sha256:65b105fad86f6c82e04d14ef6aabce0ecc50cee38b94b158fc79240f15a643db"
+  "revision": 278,
+  "content_hash": "sha256:0247221321eaaad705b688a70869c184cf06a93706f880261678241e5240b189"
 }

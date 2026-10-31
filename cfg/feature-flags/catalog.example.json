@@ -17,6 +17,30 @@
       "description": "Enable extended docker smoke checks",
       "type": "boolean",
       "default": false
+    },
+    {
+      "key": "mcp.supersqueeze.enabled",
+      "description": "Enable query-aware SuperSqueeze context compression across MCP, CAG, and HAHP",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "mcp.workflows.central_dispatch",
+      "description": "Route CLI factory workflows and BotRegistry calls through HATH0R-MCP (Priority 1)",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "iteration.cascade.strict_mode",
+      "description": "Enforce strict Task -> Hath0r-CLI/MCP -> Computer -> Web iteration cascade",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "bots.architecture_preservation.enforce",
+      "description": "Enforce ArchitecturePreservationBot, SubstrateUtilizationBot, and TaskCompletionVerifierBot gates",
+      "type": "boolean",
+      "default": true
     }
   ]
 }

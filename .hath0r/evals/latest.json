@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261031-101253-fc8757",
+  "eval_id": "eval-20261031-101841-0e30ca",
   "task_id": "issue-80",
   "issue_number": 80,
   "repo_name": "hath0r-atc",
   "branch": "chore/80-mcp-central-architecture-issue",
-  "evaluated_at": "2026-10-31T10:12:53.917539+00:00",
-  "duration_ms": 966.92,
+  "evaluated_at": "2026-10-31T10:18:41.332774+00:00",
+  "duration_ms": 970.79,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 41,
+          "compounded_nodes_count": 44,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -62,7 +62,7 @@
               ],
               "ok": true,
               "exit_code": 0,
-              "stdout_tail": "............                                                             [100%]\n12 passed in 0.05s\n",
+              "stdout_tail": "............                                                             [100%]\n12 passed in 0.06s\n",
               "stderr_tail": ""
             },
             {
@@ -89,14 +89,14 @@
       "max_tokens": 50000,
       "estimated_usd": 0.0,
       "max_usd": 0.25,
-      "session_id": "sess-20261031-101144-433224",
+      "session_id": "sess-20261031-101422-5b46af",
       "session_reads": 2,
       "session_writes": 4,
-      "session_bytes": 1713,
+      "session_bytes": 1748,
       "within_capsule_budget": true,
-      "latency_ms": 831.69,
-      "taguchi_quality_loss": 0.0086,
-      "snr_db": 7.62
+      "latency_ms": 832.43,
+      "taguchi_quality_loss": 0.0087,
+      "snr_db": 7.61
     },
     "adversarial": {
       "score": 1.0,
@@ -113,8 +113,8 @@
       "passed": true,
       "task_id": "issue-80",
       "issue_number": 80,
-      "active_focus": "mcp-central-architecture-issue-plan",
-      "compounded_nodes_count": 41,
+      "active_focus": "Ensure OpenFeature, OpenObserve, and OpenTelemetry adherence across Hath0r core architecture, issues, and bots",
+      "compounded_nodes_count": 44,
       "consensus_score": 1.0
     }
   },
@@ -127,38 +127,33 @@
       "STATIC_AST_ANALYSIS": [
         ".hath0r/agentgraph/snapshot.json",
         ".hath0r/cccd_state.json",
-        ".hath0r/evals/history/eval-task-hath0r-atc.json",
-        ".hath0r/evals/latest.json",
         ".hath0r/l2ws_warmstarts.json",
         ".hath0r/memory/graph.json",
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
         "CHANGELOG.md",
-        ".hath0r/evals/history/eval-analyze-hath0r-architecture-bots.json",
-        ".hath0r/evals/history/eval-refactor-mcp-central-architecture-plan.json",
-        ".hath0r/memory/sessions/sess-20261031-095809-2919a3.json",
-        ".hath0r/memory/sessions/sess-20261031-100320-4a07d8.json",
-        ".hath0r/memory/sessions/sess-20261031-100732-78cdec.json",
-        ".hath0r/memory/sessions/sess-20261031-101144-433224.json",
-        "docs/observe/mcp-central-architecture-roadmap-20261031.md"
+        "cfg/feature-flags/catalog.example.json",
+        "docs/governance/SUITE_STANDARDS.md",
+        "docs/observe/mcp-central-architecture-roadmap-20261031.md",
+        ".hath0r/memory/sessions/sess-20261031-101422-5b46af.json",
+        "cfg/observability/openobservation.json"
       ],
       "UNVERIFIED_FILE_PRESENCE": [
-        "VERSION",
         "="
       ]
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 17,
-      "UNVERIFIED_FILE_PRESENCE": 2
+      "STATIC_AST_ANALYSIS": 13,
+      "UNVERIFIED_FILE_PRESENCE": 1
     }
   },
   "blocking_reasons": [],
   "observability_sync": {
     "mode": "live_synced",
     "phoenix_logged": true,
-    "mlflow_run_id": "4436935c59114e1fb703e5fa34a63566"
+    "mlflow_run_id": "7781d6732a6d430881c10521ef6d8ab9"
   },
-  "content_hash": "sha256:621edb8cd4ee4273a39fb372645ad0d0419516edc5e9c208ba56aee3d65aa61a"
+  "content_hash": "sha256:8257bfa6e14373f2e36b1ef8048fe6d88f041592c668f37396f7fccd15d1c8f4"
 }
