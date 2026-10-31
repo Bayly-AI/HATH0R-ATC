@@ -10,9 +10,21 @@ def test_contracts_directory_exists() -> None:
 
 def test_cfg_observability() -> None:
     otel_path = Path(__file__).parent.parent / "cfg" / "observability" / "otel.json"
-    if otel_path.is_file():
-        data = json.loads(otel_path.read_text(encoding="utf-8"))
-        assert "resource" in data
+    assert otel_path.is_file()
+    data = json.loads(otel_path.read_text(encoding="utf-8"))
+    assert "resource" in data
+    assert data["exporters"]["otlp"]["default_endpoint"] == "http://localhost:38000/phoenix"
+    assert "network_services" in data
+    assert data["network_services"]["docker_network"] == "hath0r-net"
+    assert data["network_services"]["phoenix"]["container"] == "Hath0r-phoenix"
+    assert data["network_services"]["mlflow"]["container"] == "Hathor-MLFLOW"
+    assert data["network_services"]["cruise_control"]["container"] == "Hath0r-Cruise-Control"
+
+    openobs_path = Path(__file__).parent.parent / "cfg" / "observability" / "openobservation.json"
+    assert openobs_path.is_file()
+    openobs_data = json.loads(openobs_path.read_text(encoding="utf-8"))
+    assert openobs_data["kind"] == "OpenObservationConfig"
+    assert openobs_data["spool"]["never_block"] is True
 
 
 def test_docker_compose_mlflow() -> None:

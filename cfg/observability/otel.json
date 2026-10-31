@@ -18,7 +18,39 @@
       "protocol": "http/protobuf",
       "endpoint_env": "OTEL_EXPORTER_OTLP_ENDPOINT",
       "headers_env": "OTEL_EXPORTER_OTLP_HEADERS",
-      "default_endpoint": "http://localhost:58000/phoenix"
+      "default_endpoint": "http://localhost:38000/phoenix",
+      "direct_endpoint": "http://localhost:36006",
+      "internal_network_endpoint": "http://Hath0r-phoenix:6006"
+    }
+  },
+  "network_services": {
+    "docker_network": "hath0r-net",
+    "edge_gateway": "http://localhost:38000",
+    "phoenix": {
+      "container": "Hath0r-phoenix",
+      "edge_url": "http://localhost:38000/phoenix",
+      "direct_http_url": "http://localhost:36006",
+      "direct_grpc_url": "localhost:34317",
+      "internal_url": "http://Hath0r-phoenix:6006"
+    },
+    "mlflow": {
+      "container": "Hathor-MLFLOW",
+      "edge_url": "http://localhost:38000/mlflow",
+      "direct_url": "http://localhost:35000/mlflow",
+      "internal_url": "http://Hathor-MLFLOW:5000/mlflow"
+    },
+    "cruise_control": {
+      "container": "Hath0r-Cruise-Control",
+      "edge_url": "http://localhost:38000/cruise/radar",
+      "decisions_api_url": "http://localhost:38000/api/decisions",
+      "direct_url": "http://localhost:38090",
+      "internal_url": "http://Hath0r-Cruise-Control:8090"
+    },
+    "mcp": {
+      "container": "Hath0r-MCP",
+      "edge_url": "http://localhost:38000/mcp",
+      "direct_url": "http://127.0.0.1:38083",
+      "internal_url": "http://Hath0r-MCP:8083"
     }
   },
   "traces": {

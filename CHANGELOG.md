@@ -5,6 +5,18 @@ All notable changes to **HATH0R-ATC** are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.7] - 2026-10-31
+
+### Added
+- **HATH0R MCP-Central Architecture, SuperSqueeze & Bot Execution Plan (`#80`)**:
+  - Published canonical cross-repo roadmap [`docs/observe/mcp-central-architecture-roadmap-20261031.md`](docs/observe/mcp-central-architecture-roadmap-20261031.md) tracking GitHub Issues `Bayly-AI/HATH0R-MCP#85`, `Bayly-AI/HATH0R-MCP#86`, `Bayly-AI/HATH0R-CLI#551`–`#554`, `Bayly-AI/HATH0R-Agentic-Framework#313`, and `Bayly-AI/HATH0R-ATC#80`.
+  - Codified the `Task → Hath0r-CLI (⇄ Hath0r-MCP) → Computer → Web` 4-stage iteration cascade, `SuperSqueeze` (`SuperCompressBot`) middleware pipeline, 7 architecture-preserving bots, and mandatory per-issue Test + 4-Tier Eval (`CR-TASK-EVAL-001`) + SemVer PR gate.
+  - Added canonical OpenObservation stub [`cfg/observability/openobservation.json`](cfg/observability/openobservation.json), populated OpenFeature catalog flags in [`cfg/feature-flags/catalog.example.json`](cfg/feature-flags/catalog.example.json), updated [`docs/governance/SUITE_STANDARDS.md`](docs/governance/SUITE_STANDARDS.md), and enforced **OpenFeature + OpenObserve (`OpenObservation`) + OpenTelemetry (`OTel`)** core architecture adherence across all 8 GitHub Issues and bot contracts.
+  - Aligned [`cfg/observability/otel.json`](cfg/observability/otel.json) (`default_endpoint: http://localhost:38000/phoenix`, `network_services` topology) and [`deploy/docker/docker-compose.yml`](deploy/docker/docker-compose.yml) with live **`hath0r-net`** endpoints for **Arize Phoenix (`Hath0r-phoenix`)**, **MLflow (`Hathor-MLFLOW`)**, and **Cruise Control (`Hath0r-Cruise-Control`)**.
+  - Added **Automated 4-Hour Agent Calibration TTL (`max_age_hours = 4.0`) & Automatic Pre-Task Calibration Execution (`ensure_calibrated(max_age_hours=4.0)`)** across `.hath0r/cccd_state.json`, OpenFeature (`cccd.auto_calibrate.pre_task_enabled`, `cccd.auto_calibrate.ttl_hours`), OpenObservation (`cccd.calibration.freshness_4h_rate`), the roadmap, and all linked GitHub Issues.
+  - Linked `Bayly-AI/HATH0R-CLI#555` eliminating binary `1.0000` score inflation in `TaskEvaluatorBot` in favor of continuous Taguchi, FinOps, AST diff, and semantic goal-alignment grading.
+  - Ratified **`CR-FEATURE-WORKFLOW-STANDARD-001`** in [`AGENTS.md`](AGENTS.md), [`CLAUDE.md`](CLAUDE.md), and the roadmap: every Feature is a Service run by `>= 1` Bot; tools and knowledge reside on `HATH0R-MCP` (**Level 1**) and CLI/Bot Memory reside in `HATH0R-CLI` / `.hath0r/memory/` (**Level 2**), all utilizing **`AgentGraph`**; and **Everything We Do Is a Workflow** (if missing, offer to create one first).
+
 ## [0.5.6] - 2026-10-29
 
 ### Added

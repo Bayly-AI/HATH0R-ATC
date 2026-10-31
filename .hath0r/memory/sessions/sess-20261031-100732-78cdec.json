@@ -1,0 +1,50 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261031-100732-78cdec",
+  "prior_session_id": "sess-20261031-100320-4a07d8",
+  "parent_session_id": "sess-20261031-100320-4a07d8",
+  "revision": 3,
+  "content_hash": "sha256:34b0794439ce8a8443f46cd2a021f8a3f886cfbb01b3d51969bc9b48ae444417",
+  "base_graph_hash": "sha256:b2f02ff77dfee18ee0a5f0bdf5d13be31a921ab17c9f12a59e89628454832ece",
+  "task_id": null,
+  "role": null,
+  "repo_name": "hath0r-atc",
+  "status": "active",
+  "started_at": "2026-10-31T10:07:32.169527+00:00",
+  "updated_at": "2026-10-31T10:09:23.337475+00:00",
+  "ended_at": null,
+  "read_count": 2,
+  "write_count": 2,
+  "last_read_at": "2026-10-31T10:07:33.355372+00:00",
+  "last_write_at": "2026-10-31T10:09:23.337475+00:00",
+  "active_focus": "Create the MCP-centralized architecture, SuperSqueeze, Iteration Cascade, and Architecture-Preserving Bots plan as GitHub Issues across HATH0R-MCP, HATH0R-CLI, ",
+  "prior_summary": "re-plan: Task Evaluation refactor-mcp-central-architecture-plan (R=1.00, PASS); Started session focus: Create the MCP-ce",
+  "recalled_nodes": [
+    {
+      "id": "decision:mcp-central-tools-workflows-architecture",
+      "type": "decision",
+      "label": "Centralize Tools, Workflows, SuperSqueeze & Knowledge in HAT",
+      "snippet": "Refactored Hath0r architecture plan: (1) Migrate 28+ CLI-trapped MCP tools from hath0r_cli"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-31T10:09:23.337475+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:task-hath0r-atc: Task Evaluation task-hath0r-atc (R=1.00, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "task-hath0r-atc",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:task-hath0r-atc"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "eval:task-hath0r-atc"
+  ],
+  "capsule_bytes": 1908
+}
