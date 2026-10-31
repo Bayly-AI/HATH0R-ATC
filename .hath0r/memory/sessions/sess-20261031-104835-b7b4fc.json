@@ -1,0 +1,51 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261031-104835-b7b4fc",
+  "prior_session_id": "sess-20261031-104137-419843",
+  "parent_session_id": "sess-20261031-104137-419843",
+  "revision": 6,
+  "content_hash": "sha256:690718a6e840a40b465bf9ddc4b0ef99cb3d22815f9f21196f1974f95d7a00e4",
+  "base_graph_hash": "sha256:8f41769cbec5758fe7bac4ca15880fa29c97b806fd1329a142bcc980105aaaab",
+  "task_id": null,
+  "role": null,
+  "repo_name": "hath0r-atc",
+  "status": "completed",
+  "started_at": "2026-10-31T10:48:35.348127+00:00",
+  "updated_at": "2026-10-31T10:51:54.435701+00:00",
+  "ended_at": "2026-10-31T10:51:49.966840+00:00",
+  "read_count": 2,
+  "write_count": 5,
+  "last_read_at": "2026-10-31T10:48:36.103848+00:00",
+  "last_write_at": "2026-10-31T10:51:54.435701+00:00",
+  "active_focus": "Codify Canonical Feature-as-a-Service (>=1 Bot), Level 1 (HATH0R-MCP) & Level 2 (HATH0R-CLI / Bot Memory) AgentGraph hierarchy, and Workflow-First Standard (off",
+  "prior_summary": "fied CR-FEATURE-WORKFLOW-STANDARD-00; Compounded rule:cr-feature-workflow-stan; Completed CR-FEATURE-WORKFLOW-STANDARD-0",
+  "recalled_nodes": [
+    {
+      "id": "decision:mcp-central-tools-workflows-architecture",
+      "type": "decision",
+      "label": "Centralize Tools, Workflows, SuperSqueeze & Knowledge in HAT",
+      "snippet": "Refactored Hath0r architecture plan: (1) Migrate 28+ CLI-trapped MCP tools from hath0r_cli"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-31T10:51:54.435701+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:issue-80: Task Evaluation issue-80 (R=0.96, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "issue-80",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:issue-80"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "rule:cr-feature-workflow-standard-001",
+    "eval:issue-80"
+  ],
+  "capsule_bytes": 1951
+}

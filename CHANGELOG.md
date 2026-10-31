@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Aligned [`cfg/observability/otel.json`](cfg/observability/otel.json) (`default_endpoint: http://localhost:38000/phoenix`, `network_services` topology) and [`deploy/docker/docker-compose.yml`](deploy/docker/docker-compose.yml) with live **`hath0r-net`** endpoints for **Arize Phoenix (`Hath0r-phoenix`)**, **MLflow (`Hathor-MLFLOW`)**, and **Cruise Control (`Hath0r-Cruise-Control`)**.
   - Added **Automated 4-Hour Agent Calibration TTL (`max_age_hours = 4.0`) & Automatic Pre-Task Calibration Execution (`ensure_calibrated(max_age_hours=4.0)`)** across `.hath0r/cccd_state.json`, OpenFeature (`cccd.auto_calibrate.pre_task_enabled`, `cccd.auto_calibrate.ttl_hours`), OpenObservation (`cccd.calibration.freshness_4h_rate`), the roadmap, and all linked GitHub Issues.
   - Linked `Bayly-AI/HATH0R-CLI#555` eliminating binary `1.0000` score inflation in `TaskEvaluatorBot` in favor of continuous Taguchi, FinOps, AST diff, and semantic goal-alignment grading.
+  - Ratified **`CR-FEATURE-WORKFLOW-STANDARD-001`** in [`AGENTS.md`](AGENTS.md), [`CLAUDE.md`](CLAUDE.md), and the roadmap: every Feature is a Service run by `>= 1` Bot; tools and knowledge reside on `HATH0R-MCP` (**Level 1**) and CLI/Bot Memory reside in `HATH0R-CLI` / `.hath0r/memory/` (**Level 2**), all utilizing **`AgentGraph`**; and **Everything We Do Is a Workflow** (if missing, offer to create one first).
 
 ## [0.5.6] - 2026-10-29
 

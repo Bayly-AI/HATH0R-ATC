@@ -53,6 +53,18 @@
       "description": "Maximum calibration age in hours before automatic pre-task re-calibration is triggered",
       "type": "number",
       "default": 4.0
+    },
+    {
+      "key": "workflow.first.strict_offer",
+      "description": "Enforce Workflow-First Standard: require every task to execute via a declarative workflow or offer to create one first",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "feature.service_bot.enforce",
+      "description": "Enforce Canonical Feature Definition: every feature is a service run by >=1 Bot with Level 1 (HATH0R-MCP) and Level 2 (HATH0R-CLI / Bot Memory) utilizing AgentGraph",
+      "type": "boolean",
+      "default": true
     }
   ]
 }

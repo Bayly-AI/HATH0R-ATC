@@ -203,6 +203,10 @@ hath0r:definesRole a owl:ObjectProperty .
     rdfs:label "Readme" ;
     hath0r:inPlane "knowledge" .
 
+<https://hath0r.dev/ontology/v1#doc:docs__observe__mcp-central-architecture-roadmap-20261031_md> a hath0r:Plane ;
+    rdfs:label "Mcp Central Architecture Roadmap 20261031" ;
+    hath0r:inPlane "knowledge" .
+
 <https://hath0r.dev/ontology/v1#doc:docs__rules__cr-branch-gov-001-canonical-branches_md> a hath0r:Plane ;
     rdfs:label "Cr Branch Gov 001 Canonical Branches" ;
     hath0r:inPlane "knowledge" .
@@ -222,6 +226,26 @@ hath0r:definesRole a owl:ObjectProperty .
 hath0r:governs a owl:ObjectProperty .
 
 hath0r:informs a owl:ObjectProperty .
+
+<https://hath0r.dev/ontology/v1#memory:decision:continuous-non-inflated-task-eval-scoring> a hath0r:Plane ;
+    rdfs:label "Continuous Non-Inflated 4-Tier Task Evaluation Scoring (Issue #555)" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:decision:hath0r-net-phoenix-mlflow-cruise-control-integration> a hath0r:Plane ;
+    rdfs:label "hath0r-net Phoenix, MLflow & Cruise Control Full Integration" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:decision:mcp-central-tools-workflows-architecture> a hath0r:Plane ;
+    rdfs:label "Centralize Tools, Workflows, SuperSqueeze & Knowledge in HATH0R-MCP Supporting HATH0R-CLI" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:decision:openfeature-openobserve-otel-core-adherence> a hath0r:Plane ;
+    rdfs:label "OpenFeature, OpenObserve & OpenTelemetry Core Architecture Adherence" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
 <https://hath0r.dev/ontology/v1#memory:episode:atc-69-cruise-control-container> a hath0r:Plane ;
     rdfs:label "Hath0r-Cruise-Control Container in HATH0R-ATC (#69)" ;
@@ -258,13 +282,28 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
+<https://hath0r.dev/ontology/v1#memory:episode:issue-80> a hath0r:Plane ;
+    rdfs:label "Published MCP-Central Architecture & Bot Execution Plan (#80)" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
 <https://hath0r.dev/ontology/v1#memory:episode:knostic-hath0r-issues-plan> a hath0r:Plane ;
     rdfs:label "Knostic Security Suite Implementation Plan & GitHub Issues (CR-AGENTIC-SEC-001)" ;
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
+<https://hath0r.dev/ontology/v1#memory:episode:list-hath0r-technologies> a hath0r:Plane ;
+    rdfs:label "Hath0r Technology Stack Inventory" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
 <https://hath0r.dev/ontology/v1#memory:episode:pr-68> a hath0r:Plane ;
     rdfs:label "PR #68 Merged: CR-TASK-EVAL-001 Automatic Task Evals" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:eval:analyze-hath0r-architecture-bots> a hath0r:Plane ;
+    rdfs:label "Task Evaluation analyze-hath0r-architecture-bots (R=1.00, PASS)" ;
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
@@ -308,6 +347,11 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
+<https://hath0r.dev/ontology/v1#memory:eval:issue-80> a hath0r:Plane ;
+    rdfs:label "Task Evaluation issue-80 (R=0.96, PASS)" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
 <https://hath0r.dev/ontology/v1#memory:eval:knostic-architecture-analysis> a hath0r:Plane ;
     rdfs:label "Task Evaluation knostic-architecture-analysis (R=1.00, PASS)" ;
     hath0r:inPlane "memory" ;
@@ -315,6 +359,11 @@ hath0r:informs a owl:ObjectProperty .
 
 <https://hath0r.dev/ontology/v1#memory:eval:knostic-hath0r-issues-plan> a hath0r:Plane ;
     rdfs:label "Task Evaluation knostic-hath0r-issues-plan (R=1.00, PASS)" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:eval:list-hath0r-technologies> a hath0r:Plane ;
+    rdfs:label "Task Evaluation list-hath0r-technologies (R=1.00, PASS)" ;
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
@@ -328,8 +377,13 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
+<https://hath0r.dev/ontology/v1#memory:eval:refactor-mcp-central-architecture-plan> a hath0r:Plane ;
+    rdfs:label "Task Evaluation refactor-mcp-central-architecture-plan (R=1.00, PASS)" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
 <https://hath0r.dev/ontology/v1#memory:eval:release-v0-5-6> a hath0r:Plane ;
-    rdfs:label "Task Evaluation release-v0.5.6 (R=0.90, FAIL)" ;
+    rdfs:label "Task Evaluation release-v0.5.6 (R=1.00, PASS)" ;
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
@@ -348,6 +402,16 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
+<https://hath0r.dev/ontology/v1#memory:insight:architecture> a hath0r:Plane ;
+    rdfs:label "Synthesized Insight on architecture" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:insight:bots> a hath0r:Plane ;
+    rdfs:label "Synthesized Insight on bots" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
 <https://hath0r.dev/ontology/v1#memory:insight:cr-task-eval-001> a hath0r:Plane ;
     rdfs:label "Synthesized Insight on cr-task-eval-001" ;
     hath0r:inPlane "memory" ;
@@ -363,13 +427,43 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
+<https://hath0r.dev/ontology/v1#memory:insight:hath0r-tech-supersqueeze-bot-recommendations> a hath0r:Plane ;
+    rdfs:label "Hath0r Technology Utilization, SuperSqueeze & Architecture Bot Recommendations" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:insight:issue-80> a hath0r:Plane ;
+    rdfs:label "Synthesized Insight on issue-80" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
 <https://hath0r.dev/ontology/v1#memory:insight:knostic-ai-architecture> a hath0r:Plane ;
     rdfs:label "Knostic.ai Agentic Endpoint & Supply Chain Architecture Analysis" ;
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
+<https://hath0r.dev/ontology/v1#memory:insight:mcp-central> a hath0r:Plane ;
+    rdfs:label "Synthesized Insight on mcp-central" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:insight:otel> a hath0r:Plane ;
+    rdfs:label "Synthesized Insight on otel" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:insight:supersqueeze> a hath0r:Plane ;
+    rdfs:label "Synthesized Insight on supersqueeze" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
 <https://hath0r.dev/ontology/v1#memory:rule:cr-bai-001> a hath0r:Rule ;
     rdfs:label "Promotion Path Policy" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:rule:cr-cccd-calibrate-4h-001> a hath0r:Rule ;
+    rdfs:label "Automated 4-Hour Pre-Task Agent Calibration Gate (CR-CCCD-CALIBRATE-4H-001)" ;
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
@@ -425,6 +519,51 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
+<https://hath0r.dev/ontology/v1#memory:session:sess-20261031-095809-2919a3> a hath0r:Plane ;
+    rdfs:label "Micro Session sess-20261031-095809-2919a3" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:session:sess-20261031-100320-4a07d8> a hath0r:Plane ;
+    rdfs:label "Micro Session sess-20261031-100320-4a07d8" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:session:sess-20261031-100732-78cdec> a hath0r:Plane ;
+    rdfs:label "Micro Session sess-20261031-100732-78cdec" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:session:sess-20261031-101144-433224> a hath0r:Plane ;
+    rdfs:label "Micro Session sess-20261031-101144-433224" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:session:sess-20261031-101422-5b46af> a hath0r:Plane ;
+    rdfs:label "Micro Session sess-20261031-101422-5b46af" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:session:sess-20261031-102202-b782f2> a hath0r:Plane ;
+    rdfs:label "Micro Session sess-20261031-102202-b782f2" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:session:sess-20261031-103156-bcbc3d> a hath0r:Plane ;
+    rdfs:label "Micro Session sess-20261031-103156-bcbc3d" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:session:sess-20261031-104137-419843> a hath0r:Plane ;
+    rdfs:label "Micro Session sess-20261031-104137-419843" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:session:sess-20261031-104835-b7b4fc> a hath0r:Plane ;
+    rdfs:label "Micro Session sess-20261031-104835-b7b4fc" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
 <https://hath0r.dev/ontology/v1#role:reader> a hath0r:AgentRole ;
     rdfs:label "Read-Only Agent" ;
     hath0r:inPlane "rules" .
@@ -471,6 +610,11 @@ hath0r:informs a owl:ObjectProperty .
 
 <https://hath0r.dev/ontology/v1#rule:cr-docker-hath0r-group-001> a hath0r:Plane ;
     rdfs:label "Rule cr-docker-hath0r-group-001" ;
+    hath0r:governs <https://hath0r.dev/ontology/v1#role:developer> ;
+    hath0r:inPlane "rules" .
+
+<https://hath0r.dev/ontology/v1#rule:cr-feature-workflow-standard-001> a hath0r:Plane ;
+    rdfs:label "Rule CR-FEATURE-WORKFLOW-STANDARD-001" ;
     hath0r:governs <https://hath0r.dev/ontology/v1#role:developer> ;
     hath0r:inPlane "rules" .
 
