@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added canonical OpenObservation stub [`cfg/observability/openobservation.json`](cfg/observability/openobservation.json), populated OpenFeature catalog flags in [`cfg/feature-flags/catalog.example.json`](cfg/feature-flags/catalog.example.json), updated [`docs/governance/SUITE_STANDARDS.md`](docs/governance/SUITE_STANDARDS.md), and enforced **OpenFeature + OpenObserve (`OpenObservation`) + OpenTelemetry (`OTel`)** core architecture adherence across all 8 GitHub Issues and bot contracts.
   - Aligned [`cfg/observability/otel.json`](cfg/observability/otel.json) (`default_endpoint: http://localhost:38000/phoenix`, `network_services` topology) and [`deploy/docker/docker-compose.yml`](deploy/docker/docker-compose.yml) with live **`hath0r-net`** endpoints for **Arize Phoenix (`Hath0r-phoenix`)**, **MLflow (`Hathor-MLFLOW`)**, and **Cruise Control (`Hath0r-Cruise-Control`)**.
   - Added **Automated 4-Hour Agent Calibration TTL (`max_age_hours = 4.0`) & Automatic Pre-Task Calibration Execution (`ensure_calibrated(max_age_hours=4.0)`)** across `.hath0r/cccd_state.json`, OpenFeature (`cccd.auto_calibrate.pre_task_enabled`, `cccd.auto_calibrate.ttl_hours`), OpenObservation (`cccd.calibration.freshness_4h_rate`), the roadmap, and all linked GitHub Issues.
+  - Linked `Bayly-AI/HATH0R-CLI#555` eliminating binary `1.0000` score inflation in `TaskEvaluatorBot` in favor of continuous Taguchi, FinOps, AST diff, and semantic goal-alignment grading.
 
 ## [0.5.6] - 2026-10-29
 

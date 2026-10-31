@@ -1,15 +1,15 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261031-103555-16edf6",
+  "eval_id": "eval-20261031-104747-2abbd3",
   "task_id": "issue-80",
   "issue_number": 80,
   "repo_name": "hath0r-atc",
   "branch": "chore/80-mcp-central-architecture-issue",
-  "evaluated_at": "2026-10-31T10:35:55.583473+00:00",
-  "duration_ms": 1026.02,
+  "evaluated_at": "2026-10-31T10:47:47.952012+00:00",
+  "duration_ms": 1052.11,
   "passed_gate": true,
-  "r_task": 1.0,
+  "r_task": 0.9646,
   "min_reward_threshold": 0.8,
   "weights": {
     "deterministic": 0.4,
@@ -18,31 +18,40 @@
     "goal_alignment": 0.15
   },
   "tier_scores": {
-    "deterministic": 1.0,
-    "trajectory": 1.0,
-    "adversarial": 1.0,
-    "goal_alignment": 1.0
+    "deterministic": 0.9907,
+    "trajectory": 0.9301,
+    "adversarial": 0.972,
+    "goal_alignment": 0.9287
   },
   "tiers": {
     "deterministic": {
-      "score": 1.0,
+      "score": 0.9907,
       "passed": true,
-      "passed_checks": 4,
-      "total_checks": 4,
+      "passed_checks": 5,
+      "total_checks": 5,
+      "sub_scores": {
+        "version_valid": 1.0,
+        "agentgraph_valid": 1.0,
+        "memory_compounded": 0.98,
+        "test_suite": 0.9915,
+        "calibration_4h": 0.985
+      },
       "checks": {
         "version_valid": {
           "passed": true,
           "version": "0.5.7",
+          "changelog_aligned": true,
           "error": null
         },
         "agentgraph_valid": {
           "passed": true,
           "cycles": 0,
-          "contradictions": 0
+          "contradictions": 0,
+          "claude_md_synced": true
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 47,
+          "compounded_nodes_count": 48,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -52,6 +61,7 @@
         "test_suite": {
           "passed": true,
           "commands_run": 2,
+          "duration_s": 0.705,
           "results": [
             {
               "command": [
@@ -62,7 +72,7 @@
               ],
               "ok": true,
               "exit_code": 0,
-              "stdout_tail": "............                                                             [100%]\n12 passed in 0.06s\n",
+              "stdout_tail": "............                                                             [100%]\n12 passed in 0.05s\n",
               "stderr_tail": ""
             },
             {
@@ -79,43 +89,63 @@
               "stderr_tail": ""
             }
           ]
+        },
+        "calibration_4h": {
+          "passed": true,
+          "is_fresh": true,
+          "age_hours": 0.2,
+          "max_age_hours": 4.0
         }
       }
     },
     "trajectory": {
-      "score": 1.0,
+      "score": 0.9301,
       "passed": true,
-      "tokens_used": 0,
+      "tokens_used": 140,
       "max_tokens": 50000,
-      "estimated_usd": 0.0,
+      "estimated_usd": 0.00042,
       "max_usd": 0.25,
-      "session_id": "sess-20261031-103156-bcbc3d",
+      "session_id": "sess-20261031-104137-419843",
       "session_reads": 2,
-      "session_writes": 4,
-      "session_bytes": 1770,
+      "session_writes": 5,
+      "session_bytes": 1932,
+      "capsule_fill_ratio": 0.9434,
       "within_capsule_budget": true,
-      "latency_ms": 881.65,
-      "taguchi_quality_loss": 0.0097,
-      "snr_db": 7.11
+      "latency_ms": 797.12,
+      "taguchi_quality_loss": 0.0095,
+      "taguchi_score": 0.9562,
+      "snr_db": 7.99
     },
     "adversarial": {
-      "score": 1.0,
+      "score": 0.972,
       "passed": true,
       "adversarial_flaws_count": 0,
       "adversarial_flaws": [],
       "tech_debts_count": 0,
       "auto_created_issues": [],
-      "change_categories": {},
-      "changed_files_count": 0
+      "minor_findings": [],
+      "added_lines_count": 4,
+      "change_categories": {
+        "ui": [],
+        "script": [],
+        "text": [
+          "CHANGELOG.md",
+          "docs/observe/mcp-central-architecture-roadmap-20261031.md"
+        ],
+        "other": []
+      },
+      "changed_files_count": 2
     },
     "goal_alignment": {
-      "score": 1.0,
+      "score": 0.9287,
       "passed": true,
       "task_id": "issue-80",
       "issue_number": 80,
-      "active_focus": "Factor in automated 4-hour agent calibration TTL and automatic pre-task calibration execution across the plan, configs, and issues",
-      "compounded_nodes_count": 47,
-      "consensus_score": 1.0
+      "active_focus": "Audit TaskEvaluatorBot (task_evaluator_bot.py) 4-Tier evaluation implementation to uncover why scores always default/inflate to 1.00 and design rigorous continu",
+      "goal_keywords_count": 16,
+      "goal_overlap_score": 0.98,
+      "compounded_nodes_count": 48,
+      "consensus_score": 0.826
     }
   },
   "evidence_trust_report": {
@@ -126,23 +156,21 @@
       ],
       "STATIC_AST_ANALYSIS": [
         ".hath0r/agentgraph/snapshot.json",
-        ".hath0r/cccd_state.json",
-        ".hath0r/l2ws_warmstarts.json",
+        ".hath0r/evals/history/eval-issue-80.json",
+        ".hath0r/evals/latest.json",
         ".hath0r/memory/graph.json",
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
         "CHANGELOG.md",
-        "cfg/feature-flags/catalog.example.json",
-        "cfg/observability/openobservation.json",
         "docs/observe/mcp-central-architecture-roadmap-20261031.md",
-        ".hath0r/memory/sessions/sess-20261031-103156-bcbc3d.json"
+        ".hath0r/memory/sessions/sess-20261031-104137-419843.json"
       ],
       "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 12,
+      "STATIC_AST_ANALYSIS": 10,
       "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
@@ -150,7 +178,7 @@
   "observability_sync": {
     "mode": "live_synced",
     "phoenix_logged": true,
-    "mlflow_run_id": "78d6fd5081074569bf0ece352e18d1c5"
+    "mlflow_run_id": "7829c3bd32ba421bbe95d8e9cf449a9d"
   },
-  "content_hash": "sha256:de02a384ea43a15081215b242479ffbca478bb08cd21a14c4665ef1b63327c24"
+  "content_hash": "sha256:e7e201759adda3f77c6abc26690c81cd9df7a856637391e39883f7d1c2ea5fb1"
 }

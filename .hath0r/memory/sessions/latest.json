@@ -1,24 +1,24 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261031-103156-bcbc3d",
-  "prior_session_id": "sess-20261031-102202-b782f2",
-  "parent_session_id": "sess-20261031-102202-b782f2",
-  "revision": 6,
-  "content_hash": "sha256:b3fdc51199bfd10c2008371c1fe27153bb0233aeb6ff78d5d4f6fc08aa71cdb3",
-  "base_graph_hash": "sha256:d20eed7d3f261d8f5e9e364c90da711b06d664d0934ad5d0ebcd3c9f673bdab7",
+  "session_id": "sess-20261031-104137-419843",
+  "prior_session_id": "sess-20261031-103156-bcbc3d",
+  "parent_session_id": "sess-20261031-103156-bcbc3d",
+  "revision": 7,
+  "content_hash": "sha256:b07b6a57f099f5de2f0d7757cc6ad6d2529e6fcd546e832cc03e2708efb3bebc",
+  "base_graph_hash": "sha256:7ec2e9eb229706c39000ae4b69c81fce7d1b20cc7c6c2632d3c5124b4908403c",
   "task_id": null,
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "completed",
-  "started_at": "2026-10-31T10:31:56.773089+00:00",
-  "updated_at": "2026-10-31T10:35:57.152788+00:00",
-  "ended_at": "2026-10-31T10:35:52.755598+00:00",
+  "started_at": "2026-10-31T10:41:37.348278+00:00",
+  "updated_at": "2026-10-31T10:47:49.429319+00:00",
+  "ended_at": "2026-10-31T10:46:19.331336+00:00",
   "read_count": 2,
-  "write_count": 5,
-  "last_read_at": "2026-10-31T10:31:57.703015+00:00",
-  "last_write_at": "2026-10-31T10:35:57.152788+00:00",
-  "active_focus": "Factor in automated 4-hour agent calibration TTL and automatic pre-task calibration execution across the plan, configs, and issues",
-  "prior_summary": "d automated 4-hour agent calibration; Compounded rule:cr-cccd-calibrate-4h-001; Completed 4-hour automated pre-task agen",
+  "write_count": 6,
+  "last_read_at": "2026-10-31T10:41:38.141057+00:00",
+  "last_write_at": "2026-10-31T10:47:49.429319+00:00",
+  "active_focus": "Audit TaskEvaluatorBot (task_evaluator_bot.py) 4-Tier evaluation implementation to uncover why scores always default/inflate to 1.00 and design rigorous continu",
+  "prior_summary": "ounded decision:continuous-non-infla; Completed continuous non-inflated 4-Tier; Compounded eval:issue-80: Task Evaluatio",
   "recalled_nodes": [
     {
       "id": "rule:cr-task-eval-001",
@@ -29,9 +29,9 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-31T10:35:57.152788+00:00",
+      "timestamp": "2026-10-31T10:47:49.429319+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:issue-80: Task Evaluation issue-80 (R=1.00, PASS)",
+      "summary": "Compounded eval:issue-80: Task Evaluation issue-80 (R=0.96, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
@@ -44,8 +44,8 @@
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "rule:cr-cccd-calibrate-4h-001",
+    "decision:continuous-non-inflated-task-eval-scoring",
     "eval:issue-80"
   ],
-  "capsule_bytes": 1881
+  "capsule_bytes": 1932
 }
