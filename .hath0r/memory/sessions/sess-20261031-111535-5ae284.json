@@ -1,0 +1,51 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261031-111535-5ae284",
+  "prior_session_id": "sess-20261031-105243-9d1cff",
+  "parent_session_id": "sess-20261031-105243-9d1cff",
+  "revision": 6,
+  "content_hash": "sha256:c1badbe2cfe2d4fbab845d1e5712b199a9f368853b7b80411d6eef73248949a7",
+  "base_graph_hash": "sha256:7f1d4ffdc9a39acf8ecc50cf36ed6bc6fe8df4b8ed3e8343a6de3d6835eb519c",
+  "task_id": "Update Master Hand-Off after completing Ticket #1 (Bayly-AI/HATH0R-MCP#85 -> PR #87)",
+  "role": null,
+  "repo_name": "hath0r-atc",
+  "status": "completed",
+  "started_at": "2026-10-31T11:15:35.845815+00:00",
+  "updated_at": "2026-10-31T11:15:42.876406+00:00",
+  "ended_at": "2026-10-31T11:15:38.947234+00:00",
+  "read_count": 2,
+  "write_count": 4,
+  "last_read_at": "2026-10-31T11:15:36.623529+00:00",
+  "last_write_at": "2026-10-31T11:15:42.876406+00:00",
+  "active_focus": "Active working session in hath0r-atc",
+  "prior_summary": "ated and updated Master Hand-Off (doc; Compounded episode:master-handoff-ticket; Master Hand-Off updated after Ticket #1",
+  "recalled_nodes": [
+    {
+      "id": "episode:atc-69-cruise-control-container",
+      "type": "episode",
+      "label": "Hath0r-Cruise-Control Container in HATH0R-ATC (#69)",
+      "snippet": "Added Hath0r-Cruise-Control container to hath0r Docker group in HATH0R-ATC with port 38090"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-31T11:15:42.876406+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:issue-80: Task Evaluation issue-80 (R=0.97, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "issue-80",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:issue-80"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "episode:master-handoff-ticket-1-completed",
+    "eval:issue-80"
+  ],
+  "capsule_bytes": 1893
+}
