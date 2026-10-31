@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-31T14:15:45.505645+00:00",
+  "updated_at": "2026-10-31T14:27:45.831026+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -264,7 +264,7 @@
       "updated_at": "2026-10-28T13:32:43.767808+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -288,7 +288,7 @@
       "updated_at": "2026-10-28T13:53:08.660404+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -373,7 +373,7 @@
       "updated_at": "2026-10-28T13:53:18.915330+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -465,7 +465,7 @@
       "updated_at": "2026-10-29T13:58:51.595484+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -489,7 +489,7 @@
       "updated_at": "2026-10-28T14:39:58.148052+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -560,7 +560,7 @@
       "updated_at": "2026-10-28T14:56:38.783598+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -584,7 +584,7 @@
       "updated_at": "2026-10-28T15:17:42.929782+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -608,7 +608,7 @@
       "updated_at": "2026-10-29T14:17:06.122279+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -632,7 +632,7 @@
       "updated_at": "2026-10-28T17:37:28.152548+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -699,7 +699,7 @@
       "updated_at": "2026-10-28T19:46:19.140609+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -766,7 +766,7 @@
       "updated_at": "2026-10-29T12:23:12.787609+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -807,7 +807,7 @@
       "updated_at": "2026-10-29T12:28:21.656697+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -852,7 +852,7 @@
       "updated_at": "2026-10-31T10:09:23.274772+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -902,7 +902,7 @@
       "updated_at": "2026-10-29T14:31:35.335257+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -967,7 +967,7 @@
       "updated_at": "2026-10-29T17:33:39.468630+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -1017,7 +1017,7 @@
       "updated_at": "2026-10-31T10:00:49.110009+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -1114,7 +1114,7 @@
       "updated_at": "2026-10-31T10:04:34.930650+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -1258,8 +1258,8 @@
     {
       "id": "eval:issue-80",
       "type": "eval",
-      "label": "Task Evaluation issue-80 (R=0.96, PASS)",
-      "content": "4-Tier Task Evaluation for issue-80 on branch chore/80-mcp-central-architecture-issue: R_task=0.9593 (det=0.98, traj=0.93, adv=0.98, goal=0.93). Gate=PASSED.",
+      "label": "Task Evaluation issue-80 (R=0.95, PASS)",
+      "content": "4-Tier Task Evaluation for issue-80 on branch chore/80-mcp-central-architecture-issue: R_task=0.9463 (det=0.98, traj=0.92, adv=0.93, goal=0.93). Gate=PASSED.",
       "importance": 0.85,
       "tags": [
         "eval",
@@ -1268,14 +1268,14 @@
         "passed",
         "compounded"
       ],
-      "valid_from": "2026-10-31T14:15:45.443760+00:00",
+      "valid_from": "2026-10-31T14:27:44.111545+00:00",
       "valid_to": null,
       "is_current": true,
       "created_at": "2026-10-31T10:12:55.131407+00:00",
-      "updated_at": "2026-10-31T14:15:45.443760+00:00",
+      "updated_at": "2026-10-31T14:27:44.111545+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:69203b009f8ba56e1da274bf57ecb1ab3a4b0d2ef8dadec2e4dd9ab92d330b87"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -1691,7 +1691,7 @@
       "updated_at": "2026-10-31T11:41:50.053533+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -1758,7 +1758,7 @@
       "updated_at": "2026-10-31T12:22:55.411184+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
     },
@@ -1782,15 +1782,336 @@
       "updated_at": "2026-10-31T12:33:50.261290+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:b2cd9c23b3903deb1bc3501ddc837997a7d3ded8e1b89d643a003ef7f5accde3"
+          ".hath0r/evals/latest.json": "sha256:c343d075f90261fca92cc2f1f92e2fe9efef159ddcf9adb19d46f8a2b324a064"
         }
       }
+    },
+    {
+      "id": "episode:pr-87",
+      "type": "episode",
+      "label": "Knowledge Share (pr-87)",
+      "content": "Centralized Level 1 suite tools & knowledge on AgentGraph, SuperSqueeze middleware, and OTel/OpenObserve/OpenFeature in HATH0R-MCP (#85)",
+      "importance": 0.8,
+      "tags": [
+        "knowledge-share",
+        "pr-87",
+        "bayly-ai/hath0r-mcp",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:00.671560+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:00.671560+00:00",
+      "updated_at": "2026-10-31T14:26:00.671560+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "insight:pr-87",
+      "type": "insight",
+      "label": "Synthesized Insight on pr-87",
+      "content": "Consolidated from 2 memory nodes tagged 'pr-87'. Recurring themes: master, hand, updated, after. Latest context: Centralized Level 1 suite tools & knowledge on AgentGraph, SuperSqueeze middleware, and OTel/OpenObserve/OpenFeature in HATH0R-MCP (#85)",
+      "importance": 1.0,
+      "tags": [
+        "pr-87",
+        "insight",
+        "reflection",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:00.769705+00:00",
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:00.769705+00:00",
+      "updated_at": "2026-10-31T14:26:00.769705+00:00",
+      "metadata": {
+        "constituent_count": 2,
+        "source_tag": "pr-87"
+      }
+    },
+    {
+      "id": "episode:pr-88",
+      "type": "episode",
+      "label": "Knowledge Share (pr-88)",
+      "content": "Workflow-First engine, missing-workflow offer, BotRegistry dispatch, Level 1/2 AgentGraph & MemoryGraph sync, 4h calibration, and Phoenix/MLflow/Cruise Control tools in HATH0R-MCP (#86)",
+      "importance": 0.8,
+      "tags": [
+        "knowledge-share",
+        "pr-88",
+        "bayly-ai/hath0r-mcp",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:01.711501+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:01.711501+00:00",
+      "updated_at": "2026-10-31T14:26:01.711501+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "insight:knowledge-share",
+      "type": "insight",
+      "label": "Synthesized Insight on knowledge-share",
+      "content": "Consolidated from 2 memory nodes tagged 'knowledge-share'. Recurring themes: knowledge, share, level, tools. Latest context: Workflow-First engine, missing-workflow offer, BotRegistry dispatch, Level 1/2 AgentGraph & MemoryGraph sync, 4h calibration, and Phoenix/MLflow/Cruise Control ",
+      "importance": 0.95,
+      "tags": [
+        "knowledge-share",
+        "insight",
+        "reflection",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:01.807305+00:00",
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:01.807305+00:00",
+      "updated_at": "2026-10-31T14:26:01.807305+00:00",
+      "metadata": {
+        "constituent_count": 2,
+        "source_tag": "knowledge-share"
+      }
+    },
+    {
+      "id": "insight:bayly-ai/hath0r-mcp",
+      "type": "insight",
+      "label": "Synthesized Insight on bayly-ai/hath0r-mcp",
+      "content": "Consolidated from 2 memory nodes tagged 'bayly-ai/hath0r-mcp'. Recurring themes: knowledge, share, level, tools. Latest context: Workflow-First engine, missing-workflow offer, BotRegistry dispatch, Level 1/2 AgentGraph & MemoryGraph sync, 4h calibration, and Phoenix/MLflow/Cruise Control ",
+      "importance": 0.95,
+      "tags": [
+        "bayly-ai/hath0r-mcp",
+        "insight",
+        "reflection",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:01.807305+00:00",
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:01.807305+00:00",
+      "updated_at": "2026-10-31T14:26:01.807305+00:00",
+      "metadata": {
+        "constituent_count": 2,
+        "source_tag": "bayly-ai/hath0r-mcp"
+      }
+    },
+    {
+      "id": "episode:pr-556",
+      "type": "episode",
+      "label": "Knowledge Share (pr-556)",
+      "content": "Registered all 69+ bots as feature service owners in BotRegistry, enforced 4-hour pre-task auto-calibration, and wired SuperSqueeze across Level 1/2 AgentGraph (#551)",
+      "importance": 0.8,
+      "tags": [
+        "knowledge-share",
+        "pr-556",
+        "bayly-ai/hath0r-cli",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:02.880866+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:02.880866+00:00",
+      "updated_at": "2026-10-31T14:26:02.880866+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "episode:pr-557",
+      "type": "episode",
+      "label": "Knowledge Share (pr-557)",
+      "content": "Implemented MCPCentralizationBot & MCPWorkflowEngineBot, Workflow-First missing-workflow offer, and Level 1/2 AgentGraph bridge (#552)",
+      "importance": 0.8,
+      "tags": [
+        "knowledge-share",
+        "pr-557",
+        "bayly-ai/hath0r-cli",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:03.890559+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:03.890559+00:00",
+      "updated_at": "2026-10-31T14:26:03.890559+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "insight:bayly-ai/hath0r-cli",
+      "type": "insight",
+      "label": "Synthesized Insight on bayly-ai/hath0r-cli",
+      "content": "Consolidated from 2 memory nodes tagged 'bayly-ai/hath0r-cli'. Recurring themes: knowledge, share, level, agentgraph. Latest context: Implemented MCPCentralizationBot & MCPWorkflowEngineBot, Workflow-First missing-workflow offer, and Level 1/2 AgentGraph bridge (#552)",
+      "importance": 0.95,
+      "tags": [
+        "bayly-ai/hath0r-cli",
+        "insight",
+        "reflection",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:03.991430+00:00",
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:03.991430+00:00",
+      "updated_at": "2026-10-31T14:26:03.991430+00:00",
+      "metadata": {
+        "constituent_count": 2,
+        "source_tag": "bayly-ai/hath0r-cli"
+      }
+    },
+    {
+      "id": "episode:pr-558",
+      "type": "episode",
+      "label": "Knowledge Share (pr-558)",
+      "content": "Implemented IterationCascadeBot enforcing 4-stage execution hierarchy (Task -> Hath0r-CLI/MCP -> Computer -> Web) (#553)",
+      "importance": 0.8,
+      "tags": [
+        "knowledge-share",
+        "pr-558",
+        "bayly-ai/hath0r-cli",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:04.917699+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:04.917699+00:00",
+      "updated_at": "2026-10-31T14:26:04.917699+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "episode:pr-559",
+      "type": "episode",
+      "label": "Knowledge Share (pr-559)",
+      "content": "Implemented ArchitecturePreservationBot, SubstrateUtilizationBot & TaskCompletionVerifierBot enforcing CR-FEATURE-WORKFLOW-STANDARD-001 across all 5 repos (#554)",
+      "importance": 0.8,
+      "tags": [
+        "knowledge-share",
+        "pr-559",
+        "bayly-ai/hath0r-cli",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:05.876054+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:05.876054+00:00",
+      "updated_at": "2026-10-31T14:26:05.876054+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "episode:pr-560",
+      "type": "episode",
+      "label": "Knowledge Share (pr-560)",
+      "content": "Upgraded TaskEvaluatorBot with continuous non-binary 4-tier grading (0.80 <= R_task < 1.00) replacing 1.00 score inflation (#555)",
+      "importance": 0.8,
+      "tags": [
+        "knowledge-share",
+        "pr-560",
+        "bayly-ai/hath0r-cli",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:06.839219+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:06.839219+00:00",
+      "updated_at": "2026-10-31T14:26:06.839219+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "episode:pr-562",
+      "type": "episode",
+      "label": "Knowledge Share (pr-562)",
+      "content": "Implemented LocalQualityGateBot (CR-LOCAL-QGATES-001), per-repo thresholds.json with SonarCloud canonical thresholds (Errors<=0, Coverage>=80%, Complexity<=15, Duplication<=3%), tech-aware test system scaffolding, and TaskEvaluatorBot integration (#561)",
+      "importance": 0.8,
+      "tags": [
+        "knowledge-share",
+        "pr-562",
+        "bayly-ai/hath0r-cli",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:07.823759+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:07.823759+00:00",
+      "updated_at": "2026-10-31T14:26:07.823759+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "episode:pr-314",
+      "type": "episode",
+      "label": "Knowledge Share (pr-314)",
+      "content": "Added Workflow-First & Service-Bot contracts (CR-FEATURE-WORKFLOW-STANDARD-001), Level 1/2 AgentGraph routing, 4h CalibrationGateStage, SuperSqueezeStage, and IterationCascade to hath0r-framework (#313)",
+      "importance": 0.8,
+      "tags": [
+        "knowledge-share",
+        "pr-314",
+        "bayly-ai/hath0r-agentic-framework",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:08.833493+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:08.833493+00:00",
+      "updated_at": "2026-10-31T14:26:08.833493+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "episode:pr-81",
+      "type": "episode",
+      "label": "Knowledge Share (pr-81)",
+      "content": "Codified CR-FEATURE-WORKFLOW-STANDARD-001, Level 1/2 AgentGraph topology, 4h auto-calibration, continuous evals, Local Q-Gates, and hath0r-net Phoenix/MLflow/Cruise Control in HATH0R-ATC (#80)",
+      "importance": 0.8,
+      "tags": [
+        "knowledge-share",
+        "pr-81",
+        "bayly-ai/hath0r-atc",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:09.759740+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:09.759740+00:00",
+      "updated_at": "2026-10-31T14:26:09.759740+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "episode:pr-107",
+      "type": "episode",
+      "label": "Knowledge Share (pr-107)",
+      "content": "Codified CR-CLI-ENTRY-001, CR-FEATURE-WORKFLOW-STANDARD-001, thresholds.json, and hath0r-net OTel/MLflow/Cruise Control endpoints in HATH0R-POC (#105)",
+      "importance": 0.8,
+      "tags": [
+        "knowledge-share",
+        "pr-107",
+        "bayly-ai/hath0r-agentic-poc",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:26:10.782243+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:26:10.782243+00:00",
+      "updated_at": "2026-10-31T14:26:10.782243+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "knowledge:suite-arch-and-local-qgates-20261031",
+      "type": "concept",
+      "label": "Suite MCP-Central Architecture & Local Quality Gates (CR-LOCAL-QGATES-001)",
+      "content": "All 11 MCP-Central Architecture & Local Quality Gate PRs (#87, #88, #556-#560, #562, #314, #81, #107) completed, CLEAN, and shared to Group KB Hub and HATH0R-MCP.",
+      "importance": 0.8,
+      "tags": [
+        "concept",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T14:27:01.710958+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T14:27:01.710958+00:00",
+      "updated_at": "2026-10-31T14:27:01.710958+00:00",
+      "metadata": {}
     },
     {
       "id": "session:sess-20261031-122248-32c450",
       "type": "session",
       "label": "Micro Session sess-20261031-122248-32c450",
-      "content": "Micro Session sess-20261031-122248-32c450 [completed] | Focus: Active working session in hath0r-atc | Reads: 2, Writes: 7 | Entries: Compounded eval:issue-80: Task Evaluation issue-80 (R=0.96, PASS)",
+      "content": "Micro Session sess-20261031-122248-32c450 [completed] | Focus: Active working session in hath0r-atc | Reads: 2, Writes: 20 | Entries: Compounded eval:issue-80: Task Evaluation issue-80 (R=0.95, PASS)",
       "importance": 0.75,
       "tags": [
         "session",
@@ -1801,15 +2122,15 @@
       "valid_to": "2026-10-31T12:22:51.553813+00:00",
       "is_current": true,
       "created_at": "2026-10-31T12:22:48.013760+00:00",
-      "updated_at": "2026-10-31T14:15:45.498288+00:00",
+      "updated_at": "2026-10-31T14:27:44.172687+00:00",
       "metadata": {
         "session_id": "sess-20261031-122248-32c450",
         "prior_session_id": "sess-20261031-111535-5ae284",
         "parent_session_id": "sess-20261031-111535-5ae284",
         "read_count": 2,
-        "write_count": 7,
+        "write_count": 20,
         "status": "completed",
-        "byte_size": 1979
+        "byte_size": 2008
       }
     }
   ],
@@ -3643,8 +3964,352 @@
       "weight": 1.0,
       "valid_from": "2026-10-31T13:23:35.755435+00:00",
       "is_current": true
+    },
+    {
+      "source": "episode:pr-87",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:00.671560+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-87",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:00.671560+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-87",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:00.736925+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:pr-87",
+      "target": "episode:master-handoff-ticket-1-completed",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:00.769705+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:pr-87",
+      "target": "episode:pr-87",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:00.769705+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-88",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:01.711501+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-88",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:01.711501+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-88",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:01.774409+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:knowledge-share",
+      "target": "episode:pr-87",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:01.807305+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:knowledge-share",
+      "target": "episode:pr-88",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:01.807305+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:bayly-ai/hath0r-mcp",
+      "target": "episode:pr-87",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:01.807305+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:bayly-ai/hath0r-mcp",
+      "target": "episode:pr-88",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:01.807305+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-556",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:02.880866+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-556",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:02.880866+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-556",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:02.946525+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-557",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:03.890559+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-557",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:03.890559+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-557",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:03.958535+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:bayly-ai/hath0r-cli",
+      "target": "episode:pr-556",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:03.991430+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:bayly-ai/hath0r-cli",
+      "target": "episode:pr-557",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:03.991430+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-558",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:04.917699+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-558",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:04.917699+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-558",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:04.979135+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-559",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:05.876054+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-559",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:05.876054+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-559",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:05.952574+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-560",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:06.839219+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-560",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:06.839219+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-560",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:06.901198+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-562",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:07.823759+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-562",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:07.823759+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-562",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:07.887139+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-314",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:08.833493+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-314",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:08.833493+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-314",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:08.896897+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-81",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:09.759740+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-81",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:09.759740+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-81",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:09.823566+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-107",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:10.782243+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-107",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:10.782243+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:pr-107",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:26:10.843467+00:00",
+      "is_current": true
+    },
+    {
+      "source": "knowledge:suite-arch-and-local-qgates-20261031",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:27:01.710958+00:00",
+      "is_current": true
+    },
+    {
+      "source": "knowledge:suite-arch-and-local-qgates-20261031",
+      "target": "session:sess-20261031-122248-32c450",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T14:27:01.777910+00:00",
+      "is_current": true
     }
   ],
-  "revision": 381,
-  "content_hash": "sha256:445da3fa0379c41cbe4d3a451e488c92d468c27dabe4e35730bb9306ebd54161"
+  "revision": 425,
+  "content_hash": "sha256:c8bab5156394f83f5e11f314d5f2073077da81dbc62cd311dd68f6b33b47b040"
 }
