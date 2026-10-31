@@ -1,55 +1,52 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261029-132735-028ad9",
-  "prior_session_id": "sess-20261029-122307-55c823",
-  "parent_session_id": "sess-20261029-122307-55c823",
-  "revision": 19,
-  "content_hash": "sha256:a402e2a1bc0f21ab0c5d05d8f2d5401bfec42b3bed4856a8affc3d7d9d98bb7a",
-  "base_graph_hash": "sha256:aca3d257548122d66860016989b75a34cf13f0e019fe26e5c31f1e4c170a5451",
-  "task_id": "rule-sync-and-workflow-upgrade",
+  "session_id": "sess-20261031-111535-5ae284",
+  "prior_session_id": "sess-20261031-105243-9d1cff",
+  "parent_session_id": "sess-20261031-105243-9d1cff",
+  "revision": 7,
+  "content_hash": "sha256:627f71482596451d39c4c970bd046d12cbd94fd40b657f22fdd88eb9fe31da37",
+  "base_graph_hash": "sha256:7f1d4ffdc9a39acf8ecc50cf36ed6bc6fe8df4b8ed3e8343a6de3d6835eb519c",
+  "task_id": "Update Master Hand-Off after completing Ticket #1 (Bayly-AI/HATH0R-MCP#85 -> PR #87)",
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "completed",
-  "started_at": "2026-10-29T13:27:35.402179+00:00",
-  "updated_at": "2026-10-29T17:33:39.508508+00:00",
-  "ended_at": "2026-10-29T14:17:05.229452+00:00",
-  "read_count": 5,
-  "write_count": 14,
-  "last_read_at": "2026-10-29T17:33:34.363610+00:00",
-  "last_write_at": "2026-10-29T17:33:39.508508+00:00",
-  "active_focus": "Cataloging Hath0r technology stack",
-  "prior_summary": "ounded eval:release-v0-5-6: Task Eva; Reviewed CLI, Framework, MCP, POC, and A; Compounded episode:list-hath0r-technolog",
+  "started_at": "2026-10-31T11:15:35.845815+00:00",
+  "updated_at": "2026-10-31T11:41:50.111664+00:00",
+  "ended_at": "2026-10-31T11:15:38.947234+00:00",
+  "read_count": 2,
+  "write_count": 5,
+  "last_read_at": "2026-10-31T11:15:36.623529+00:00",
+  "last_write_at": "2026-10-31T11:41:50.111664+00:00",
+  "active_focus": "Active working session in hath0r-atc",
+  "prior_summary": "pounded episode:master-handoff-ticket; Master Hand-Off updated after Ticket #1; Compounded eval:issue-80: Task Evaluatio",
   "recalled_nodes": [
     {
-      "id": "fact:repo-hath0r-atc-orientation",
-      "type": "fact",
-      "label": "hath0r-atc Repository Memory Orientation",
-      "snippet": "hath0r-atc: **Canonical control tower** for the OpenSource Project (`hath0r-opensource`) \u2014"
+      "id": "episode:atc-69-cruise-control-container",
+      "type": "episode",
+      "label": "Hath0r-Cruise-Control Container in HATH0R-ATC (#69)",
+      "snippet": "Added Hath0r-Cruise-Control container to hath0r Docker group in HATH0R-ATC with port 38090"
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-29T17:33:39.508508+00:00",
+      "timestamp": "2026-10-31T11:41:50.111664+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:list-hath0r-technologies: Task Evaluation list-hath0r-technologies (R=1.00, PASS)",
+      "summary": "Compounded eval:issue-80-handoff-update-86: Task Evaluation issue-80-handoff-update-86 (R=0.96, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "list-hath0r-technologies",
+        "issue-80-handoff-update-86",
         "passed",
         "compounded"
       ],
-      "node_id": "eval:list-hath0r-technologies"
+      "node_id": "eval:issue-80-handoff-update-86"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "eval:eval-baseline-hath0r-atc",
-    "episode:clean-repo-hath0r-atc",
-    "eval:clean-repo-hath0r-atc",
-    "eval:release-v0-5-6",
-    "episode:list-hath0r-technologies",
-    "eval:list-hath0r-technologies"
+    "episode:master-handoff-ticket-1-completed",
+    "eval:issue-80",
+    "eval:issue-80-handoff-update-86"
   ],
-  "capsule_bytes": 2029
+  "capsule_bytes": 2004
 }

@@ -1,0 +1,128 @@
+{
+  "schema_version": "hath0r.evals.scorecard/v1",
+  "rule_id": "CR-TASK-EVAL-001",
+  "eval_id": "eval-20261031-100041-7a23ae",
+  "task_id": "analyze-hath0r-architecture-bots",
+  "issue_number": null,
+  "repo_name": "hath0r-atc",
+  "branch": "development",
+  "evaluated_at": "2026-10-31T10:00:41.208367+00:00",
+  "duration_ms": 229.03,
+  "passed_gate": true,
+  "r_task": 1.0,
+  "min_reward_threshold": 0.8,
+  "weights": {
+    "deterministic": 0.4,
+    "trajectory": 0.2,
+    "adversarial": 0.25,
+    "goal_alignment": 0.15
+  },
+  "tier_scores": {
+    "deterministic": 1.0,
+    "trajectory": 1.0,
+    "adversarial": 1.0,
+    "goal_alignment": 1.0
+  },
+  "tiers": {
+    "deterministic": {
+      "score": 1.0,
+      "passed": true,
+      "passed_checks": 4,
+      "total_checks": 4,
+      "checks": {
+        "version_valid": {
+          "passed": true,
+          "version": "0.5.6",
+          "error": null
+        },
+        "agentgraph_valid": {
+          "passed": true,
+          "cycles": 0,
+          "contradictions": 0
+        },
+        "memory_compounded": {
+          "passed": true,
+          "compounded_nodes_count": 35,
+          "session_read_verified": true,
+          "session_write_verified": true,
+          "hashes_verified": true,
+          "graphs_not_ignored": true,
+          "error": null
+        },
+        "test_suite": {
+          "passed": true,
+          "skipped": true,
+          "message": "Test execution skipped via flag or dry-run."
+        }
+      }
+    },
+    "trajectory": {
+      "score": 1.0,
+      "passed": true,
+      "tokens_used": 0,
+      "max_tokens": 50000,
+      "estimated_usd": 0.0,
+      "max_usd": 0.25,
+      "session_id": "sess-20261031-095809-2919a3",
+      "session_reads": 2,
+      "session_writes": 3,
+      "session_bytes": 1998,
+      "within_capsule_budget": true,
+      "latency_ms": 81.64,
+      "taguchi_quality_loss": 0.0001,
+      "snr_db": 27.78
+    },
+    "adversarial": {
+      "score": 1.0,
+      "passed": true,
+      "adversarial_flaws_count": 0,
+      "adversarial_flaws": [],
+      "tech_debts_count": 0,
+      "auto_created_issues": [],
+      "change_categories": {},
+      "changed_files_count": 0
+    },
+    "goal_alignment": {
+      "score": 1.0,
+      "passed": true,
+      "task_id": "analyze-hath0r-architecture-bots",
+      "issue_number": null,
+      "active_focus": "Active working session in hath0r-atc",
+      "compounded_nodes_count": 35,
+      "consensus_score": 1.0
+    }
+  },
+  "evidence_trust_report": {
+    "schema": "hath0r.security.evidence_trust_report/1",
+    "tiers": {
+      "VERIFIED_EXECUTION": [
+        ".hath0r/evals/latest.json"
+      ],
+      "STATIC_AST_ANALYSIS": [
+        ".hath0r/agentgraph/snapshot.json",
+        ".hath0r/cccd_state.json",
+        ".hath0r/evals/latest.json",
+        ".hath0r/l2ws_warmstarts.json",
+        ".hath0r/memory/graph.json",
+        ".hath0r/memory/hashes.json",
+        ".hath0r/memory/sessions/current.json",
+        ".hath0r/memory/sessions/latest.json",
+        ".hath0r/evals/history/eval-analyze-hath0r-architecture-bots.json",
+        ".hath0r/memory/sessions/sess-20261031-095809-2919a3.json"
+      ],
+      "UNVERIFIED_FILE_PRESENCE": []
+    },
+    "counts": {
+      "VERIFIED_EXECUTION": 1,
+      "STATIC_AST_ANALYSIS": 10,
+      "UNVERIFIED_FILE_PRESENCE": 0
+    }
+  },
+  "blocking_reasons": [],
+  "observability_sync": {
+    "mode": "live_synced",
+    "phoenix_logged": true,
+    "mlflow_run_id": "1ce47e9dbcfc4a28b74732d9bd8414aa"
+  },
+  "content_hash": "sha256:46d3cc8395e68646af053115d14345b673d1c608f9e1a79befb6f35eb73ff5c4"
+}

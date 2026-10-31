@@ -17,6 +17,54 @@
       "description": "Enable extended docker smoke checks",
       "type": "boolean",
       "default": false
+    },
+    {
+      "key": "mcp.supersqueeze.enabled",
+      "description": "Enable query-aware SuperSqueeze context compression across MCP, CAG, and HAHP",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "mcp.workflows.central_dispatch",
+      "description": "Route CLI factory workflows and BotRegistry calls through HATH0R-MCP (Priority 1)",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "iteration.cascade.strict_mode",
+      "description": "Enforce strict Task -> Hath0r-CLI/MCP -> Computer -> Web iteration cascade",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "bots.architecture_preservation.enforce",
+      "description": "Enforce ArchitecturePreservationBot, SubstrateUtilizationBot, and TaskCompletionVerifierBot gates",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "cccd.auto_calibrate.pre_task_enabled",
+      "description": "Automatically run CCCD agent calibration (DSPy + Taguchi L9 + L2WS + MLflow/Phoenix) prior to a task when calibration TTL expires",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "cccd.auto_calibrate.ttl_hours",
+      "description": "Maximum calibration age in hours before automatic pre-task re-calibration is triggered",
+      "type": "number",
+      "default": 4.0
+    },
+    {
+      "key": "workflow.first.strict_offer",
+      "description": "Enforce Workflow-First Standard: require every task to execute via a declarative workflow or offer to create one first",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "feature.service_bot.enforce",
+      "description": "Enforce Canonical Feature Definition: every feature is a service run by >=1 Bot with Level 1 (HATH0R-MCP) and Level 2 (HATH0R-CLI / Bot Memory) utilizing AgentGraph",
+      "type": "boolean",
+      "default": true
     }
   ]
 }

@@ -1,0 +1,33 @@
+{
+  "apiVersion": "hath0r.observability.openobservation/v1",
+  "kind": "OpenObservationConfig",
+  "metadata": {
+    "name": "hath0r-atc-openobservation",
+    "control_tower": "Bayly-AI/HATH0R-CLI",
+    "control_tower_ref": "cfg/observability/openobservation.json",
+    "updated": "2026-10-31",
+    "issue": 80,
+    "product": "HATH0R-ATC"
+  },
+  "golden_signals": ["latency", "traffic", "errors", "saturation"],
+  "slis": [
+    {"id": "atc.edge.health.success_rate", "target": 0.99, "window": "24h"},
+    {"id": "mcp.health.success_rate", "target": 0.99, "window": "24h"},
+    {"id": "mcp.tool.error_rate", "target_max": 0.05, "window": "1h"},
+    {"id": "factory.step.abort_rate", "target_max": 0.1, "window": "24h"},
+    {"id": "supersqueeze.token_savings_ratio", "target": 0.35, "window": "24h"},
+    {"id": "iteration.cascade.adherence_rate", "target": 0.95, "window": "24h"},
+    {"id": "cccd.calibration.freshness_4h_rate", "target": 1.0, "window": "4h"},
+    {"id": "workflow.first.coverage_rate", "target": 1.0, "window": "24h"}
+  ],
+  "event_classes": ["security", "governance", "ops", "product"],
+  "spool": {
+    "path": ".hath0r/spool",
+    "never_block": true,
+    "never_secrets": true
+  },
+  "alert_hooks": {
+    "webhook_url_env": "HATH0R_OBSERVATION_WEBHOOK_URL"
+  },
+  "standards_ref": "https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/openobservation-standards.md"
+}

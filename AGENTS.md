@@ -24,11 +24,18 @@
 | Local Memory Space | [`.hath0r/memory/`](.hath0r/memory/) (`hath0r memory read <topic>`) |
 | Tri-Graph Substrate | KnowledgeGraph AST · ContextGraph Subsystems · MemoryGraph |
 
-## CR-CLI-ENTRY-001: Start with the CLI (CRITICAL — Org-Wide · CANONICAL)
+## CR-CLI-ENTRY-001: Start with the CLI & Workflow-First Standard (CRITICAL — Org-Wide · CANONICAL)
 
 1. **Start with the CLI (CRITICAL ENTRY GATE)**: When receiving ANY request or starting any task, agents **MUST ALWAYS START WITH THE OPERATOR CLI (`hath0r`)** rather than inventing ad-hoc scripts. Check `hath0r --help` and the matching `hath0r <group> --help` first.
-2. **Missing Capability Offer**: If the required connection, MCP, workflow, bot, or factory does not exist in `hath0r`, offer to register the missing capability, using the original request as the acceptance test.
-3. **Docs before code**: Require procedure/playbook/runbook before scaffolding implementation.
+2. **Canonical Feature Definition (`CR-FEATURE-WORKFLOW-STANDARD-001`)**:
+   - **Every Feature is a Service run by at least one Bot (`>= 1` Bot)**: No feature, command, or capability may exist without at least one owning Bot in `BotRegistry`.
+   - **Level 1 (`HATH0R-MCP`) & Level 2 (`HATH0R-CLI` / Bot Memory) Hierarchy (All Utilizing `AgentGraph`)**:
+     - **Level 1 (`HATH0R-MCP` — `hath0r-mcp`)**: Tools, workflows, factories, and canonical knowledge reside on the **MCP (Level 1)**, governed and routed through **`AgentGraph`**.
+     - **Level 2 (`HATH0R-CLI` or Bot Memory — `.hath0r/memory/`)**: Operator CLI execution (`hath0r`) and Bot Micro-Memory / `MemoryGraph` reside at **Level 2**, synchronized with **`AgentGraph`** (`hath0r agentgraph query|route|sync|validate`).
+3. **Workflow-First Standard (`Everything We Do Is a Workflow`)**:
+   - **Everything we do is a Workflow**: Every agent or operator task MUST execute as a declarative workflow (`HATH0R-MCP` workflow tool / `cfg/factories/*.yaml` / `.hath0r/workflows/*.yaml`).
+   - **Mandatory Missing-Workflow / Capability Offer**: If a workflow, connection, MCP tool, bot, or factory does not exist for what we are doing, **STOP and offer to create the workflow/capability first**, using the original request as the acceptance test.
+4. **Docs before code**: Require procedure/playbook/runbook before scaffolding implementation.
 
 Canonical: [HATH0R-CLI `docs/governance/cli-first-rules.md`](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/cli-first-rules.md).
 

@@ -1,0 +1,51 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261031-095809-2919a3",
+  "prior_session_id": "sess-20261029-132735-028ad9",
+  "parent_session_id": "sess-20261029-132735-028ad9",
+  "revision": 6,
+  "content_hash": "sha256:0e8d321b4d7e0b81be979fed87540039d98bd2efe853febdf1c97bf64f5e9e32",
+  "base_graph_hash": "sha256:76a3e28960c393b4d40ed9f0eed91bd79fd51fe5192ea5f9e8b0ceded9a39e75",
+  "task_id": null,
+  "role": null,
+  "repo_name": "hath0r-atc",
+  "status": "active",
+  "started_at": "2026-10-31T09:58:09.243470+00:00",
+  "updated_at": "2026-10-31T10:00:49.146341+00:00",
+  "ended_at": null,
+  "read_count": 2,
+  "write_count": 4,
+  "last_read_at": "2026-10-31T09:58:09.940805+00:00",
+  "last_write_at": "2026-10-31T10:00:49.146341+00:00",
+  "active_focus": "Active working session in hath0r-atc",
+  "prior_summary": "pounded eval:analyze-hath0r-architect; Analyzed Hath0r technology stack across; Compounded insight:hath0r-tech-supersque",
+  "recalled_nodes": [
+    {
+      "id": "episode:atc-69-cruise-control-container",
+      "type": "episode",
+      "label": "Hath0r-Cruise-Control Container in HATH0R-ATC (#69)",
+      "snippet": "Added Hath0r-Cruise-Control container to hath0r Docker group in HATH0R-ATC with port 38090"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-31T10:00:49.146341+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:analyze-hath0r-architecture-bots: Task Evaluation analyze-hath0r-architecture-bots (R=1.00, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "analyze-hath0r-architecture-bots",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:analyze-hath0r-architecture-bots"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "eval:analyze-hath0r-architecture-bots",
+    "insight:hath0r-tech-supersqueeze-bot-recommendations"
+  ],
+  "capsule_bytes": 1909
+}

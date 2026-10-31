@@ -31,6 +31,7 @@ Local CLI checkout (operators): `/Users/raybayly/Development/OpenSource/hathor-c
 | Topic | ATC path | Notes |
 |-------|----------|-------|
 | OTel | [`cfg/observability/otel.json`](../../cfg/observability/otel.json) | `service.name=hath0r-atc` |
+| OpenObservation | [`cfg/observability/openobservation.json`](../../cfg/observability/openobservation.json) | Golden signals, SLIs & `.hath0r/spool` policy |
 | OpenFeature | [`cfg/feature-flags/openfeature.json`](../../cfg/feature-flags/openfeature.json) | product `HATH0R-ATC` |
 | Docker group (runtime) | [`deploy/docker/`](../../deploy/docker/) | **Canonical runtime** compose for `hath0r` / `hath0r-net` |
 | Docker group (template pointer) | [`cfg/docker/groups/hath0r/`](../../cfg/docker/groups/hath0r/) | Points at CLI template + ATC deploy |
