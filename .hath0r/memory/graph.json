@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-31T11:15:43.722974+00:00",
+  "updated_at": "2026-10-31T11:41:51.104142+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -264,7 +264,7 @@
       "updated_at": "2026-10-28T13:32:43.767808+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -288,7 +288,7 @@
       "updated_at": "2026-10-28T13:53:08.660404+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -373,7 +373,7 @@
       "updated_at": "2026-10-28T13:53:18.915330+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -465,7 +465,7 @@
       "updated_at": "2026-10-29T13:58:51.595484+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -489,7 +489,7 @@
       "updated_at": "2026-10-28T14:39:58.148052+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -560,7 +560,7 @@
       "updated_at": "2026-10-28T14:56:38.783598+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -584,7 +584,7 @@
       "updated_at": "2026-10-28T15:17:42.929782+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -608,7 +608,7 @@
       "updated_at": "2026-10-29T14:17:06.122279+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -632,7 +632,7 @@
       "updated_at": "2026-10-28T17:37:28.152548+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -699,7 +699,7 @@
       "updated_at": "2026-10-28T19:46:19.140609+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -766,7 +766,7 @@
       "updated_at": "2026-10-29T12:23:12.787609+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -807,7 +807,7 @@
       "updated_at": "2026-10-29T12:28:21.656697+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -852,7 +852,7 @@
       "updated_at": "2026-10-31T10:09:23.274772+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -902,7 +902,7 @@
       "updated_at": "2026-10-29T14:31:35.335257+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -967,7 +967,7 @@
       "updated_at": "2026-10-29T17:33:39.468630+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -1017,7 +1017,7 @@
       "updated_at": "2026-10-31T10:00:49.110009+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -1114,7 +1114,7 @@
       "updated_at": "2026-10-31T10:04:34.930650+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -1275,7 +1275,7 @@
       "updated_at": "2026-10-31T11:15:42.827644+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f4f647b481a22cb4bd2a606d1ec5d20cc69df47b25f32a6a30a4b2caf4794316"
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
         }
       }
     },
@@ -1672,10 +1672,34 @@
       "metadata": {}
     },
     {
+      "id": "eval:issue-80-handoff-update-86",
+      "type": "eval",
+      "label": "Task Evaluation issue-80-handoff-update-86 (R=0.96, PASS)",
+      "content": "4-Tier Task Evaluation for issue-80-handoff-update-86 on branch chore/80-mcp-central-architecture-issue: R_task=0.9642 (det=0.99, traj=0.93, adv=0.98, goal=0.93). Gate=PASSED.",
+      "importance": 0.85,
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "issue-80-handoff-update-86",
+        "passed",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T11:41:50.053533+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T11:41:50.053533+00:00",
+      "updated_at": "2026-10-31T11:41:50.053533+00:00",
+      "metadata": {
+        "source_files": {
+          ".hath0r/evals/latest.json": "sha256:bb01ff6ddf93257373c61252dec319c7e59df1ab02c2f43cf3e20ebc3ed5773b"
+        }
+      }
+    },
+    {
       "id": "session:sess-20261031-111535-5ae284",
       "type": "session",
       "label": "Micro Session sess-20261031-111535-5ae284",
-      "content": "Micro Session sess-20261031-111535-5ae284 [completed] | Focus: Active working session in hath0r-atc | Reads: 2, Writes: 4 | Entries: Compounded eval:issue-80: Task Evaluation issue-80 (R=0.97, PASS)",
+      "content": "Micro Session sess-20261031-111535-5ae284 [completed] | Focus: Active working session in hath0r-atc | Reads: 2, Writes: 5 | Entries: Compounded eval:issue-80-handoff-update-86: Task Evaluation issue-80-handoff-update-86 (R=0.96, PASS)",
       "importance": 0.75,
       "tags": [
         "session",
@@ -1686,15 +1710,15 @@
       "valid_to": "2026-10-31T11:15:38.947234+00:00",
       "is_current": true,
       "created_at": "2026-10-31T11:15:35.845815+00:00",
-      "updated_at": "2026-10-31T11:15:42.876406+00:00",
+      "updated_at": "2026-10-31T11:41:50.111664+00:00",
       "metadata": {
         "session_id": "sess-20261031-111535-5ae284",
         "prior_session_id": "sess-20261031-105243-9d1cff",
         "parent_session_id": "sess-20261031-105243-9d1cff",
         "read_count": 2,
-        "write_count": 4,
+        "write_count": 5,
         "status": "completed",
-        "byte_size": 1893
+        "byte_size": 2004
       }
     }
   ],
@@ -3384,8 +3408,40 @@
       "weight": 1.0,
       "valid_from": "2026-10-31T11:15:42.879216+00:00",
       "is_current": true
+    },
+    {
+      "source": "eval:issue-80-handoff-update-86",
+      "target": "concept:tri-graph",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T11:41:50.053533+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:issue-80-handoff-update-86",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T11:41:50.053533+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:issue-80-handoff-update-86",
+      "target": "session:sess-20261031-111535-5ae284",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T11:41:50.053533+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:issue-80-handoff-update-86",
+      "target": "session:sess-20261031-111535-5ae284",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T11:41:50.114499+00:00",
+      "is_current": true
     }
   ],
-  "revision": 355,
-  "content_hash": "sha256:b71949137e0f076a97a8133538ddab3bab24cafa2878bed1b34efc12eb1fdef2"
+  "revision": 359,
+  "content_hash": "sha256:bb36b2bdf924014ca6292eb500ce0843fabaf9777fc2016d12337accb80ac38f"
 }
