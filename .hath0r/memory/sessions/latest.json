@@ -3,50 +3,53 @@
   "session_id": "sess-20261031-161643-8c06be",
   "prior_session_id": "sess-20261031-122248-32c450",
   "parent_session_id": "sess-20261031-122248-32c450",
-  "revision": 6,
-  "content_hash": "sha256:68011262cda132f1bf80261f499e08604354202730ffcc428b90bbe1712d3fbb",
-  "base_graph_hash": "sha256:adf374c6191b3e8bb791eef1750f9ceafb7645baafd4697797929f0674453d03",
+  "revision": 11,
+  "content_hash": "sha256:1d1736640e97c968bd56d30218ee6b0f055c230a7a76fa4ff0ea3e7877034dc5",
+  "base_graph_hash": "sha256:b8d37c5598572f1a8f895db98f2a175f203641093b97e5633834d8df8a244ddf",
   "task_id": null,
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "completed",
   "started_at": "2026-10-31T16:16:43.107377+00:00",
-  "updated_at": "2026-10-31T16:25:41.042852+00:00",
+  "updated_at": "2026-11-01T15:43:50.757337+00:00",
   "ended_at": "2026-10-31T16:16:43.310044+00:00",
-  "read_count": 2,
-  "write_count": 5,
-  "last_read_at": "2026-10-31T16:16:43.148539+00:00",
-  "last_write_at": "2026-10-31T16:25:41.042852+00:00",
-  "active_focus": "clean-repo-hath0r-atc",
-  "prior_summary": "ounded episode:clean-repo-hath0r-atc; Clean Repo Lifecycle completed for hath0; Compounded eval:clean-repo-hath0r-atc: T",
+  "read_count": 4,
+  "write_count": 8,
+  "last_read_at": "2026-11-01T15:43:50.757337+00:00",
+  "last_write_at": "2026-11-01T15:43:50.629674+00:00",
+  "active_focus": "Repository orientation verified for HATH0R-ATC",
+  "prior_summary": "ounded eval:clean-all-repos-developm; Compounded fact:repo-hath0r-atc-orientat; Compounded rule:cr-task-eval-001: Automa",
   "recalled_nodes": [
     {
-      "id": "insight:hath0r-atc",
-      "type": "insight",
-      "label": "Synthesized Insight on hath0r-atc",
-      "snippet": "Consolidated from 2 memory nodes tagged 'hath0r-atc'. Recurring themes: opensource, clean,"
+      "id": "fact:repo-hath0r-atc-orientation",
+      "type": "fact",
+      "label": "HATH0R-ATC Repository Memory Orientation",
+      "snippet": "HATH0R-ATC: **Canonical control tower** for the OpenSource Project (`hath0r-opensource`) \u2014"
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-31T16:25:41.042852+00:00",
+      "timestamp": "2026-11-01T15:43:50.629674+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:clean-all-repos-development: Task Evaluation clean-all-repos-development (R=0.96, PASS)",
+      "summary": "Compounded eval:eval-baseline-hath0r-atc: Task Evaluation eval-baseline-hath0r-atc (R=0.87, FAIL)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "clean-all-repos-development",
-        "passed",
+        "eval-baseline-hath0r-atc",
+        "failed",
         "compounded"
       ],
-      "node_id": "eval:clean-all-repos-development"
+      "node_id": "eval:eval-baseline-hath0r-atc"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
     "episode:clean-repo-hath0r-atc",
     "eval:clean-repo-hath0r-atc",
-    "eval:clean-all-repos-development"
+    "eval:clean-all-repos-development",
+    "fact:repo-hath0r-atc-orientation",
+    "rule:cr-task-eval-001",
+    "eval:eval-baseline-hath0r-atc"
   ],
-  "capsule_bytes": 1874
+  "capsule_bytes": 2017
 }

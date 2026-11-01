@@ -1,15 +1,15 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261029-135851-8fa1ec",
+  "eval_id": "eval-20261101-154350-c0098e",
   "task_id": "eval-baseline-hath0r-atc",
   "issue_number": null,
-  "repo_name": "hath0r-atc",
+  "repo_name": "HATH0R-ATC",
   "branch": "development",
-  "evaluated_at": "2026-10-29T13:58:51.367968+00:00",
-  "duration_ms": 213.02,
-  "passed_gate": true,
-  "r_task": 1.0,
+  "evaluated_at": "2026-11-01T15:43:50.415326+00:00",
+  "duration_ms": 125.0,
+  "passed_gate": false,
+  "r_task": 0.8691,
   "min_reward_threshold": 0.8,
   "weights": {
     "deterministic": 0.4,
@@ -18,78 +18,282 @@
     "goal_alignment": 0.15
   },
   "tier_scores": {
-    "deterministic": 1.0,
-    "trajectory": 1.0,
-    "adversarial": 1.0,
-    "goal_alignment": 1.0
+    "deterministic": 0.7473,
+    "trajectory": 0.9293,
+    "adversarial": 0.98,
+    "goal_alignment": 0.9287
   },
   "tiers": {
     "deterministic": {
-      "score": 1.0,
-      "passed": true,
-      "passed_checks": 4,
-      "total_checks": 4,
+      "score": 0.7473,
+      "passed": false,
+      "passed_checks": 5,
+      "total_checks": 6,
+      "sub_scores": {
+        "version_valid": 1.0,
+        "agentgraph_valid": 1.0,
+        "memory_compounded": 0.0,
+        "test_suite": 0.88,
+        "calibration_4h": 0.82,
+        "local_quality_gates": 0.974
+      },
       "checks": {
         "version_valid": {
           "passed": true,
-          "version": "0.5.5",
+          "version": "0.5.7",
+          "changelog_aligned": true,
           "error": null
         },
         "agentgraph_valid": {
           "passed": true,
           "cycles": 0,
-          "contradictions": 0
+          "contradictions": 0,
+          "claude_md_synced": true
         },
         "memory_compounded": {
-          "passed": true,
-          "compounded_nodes_count": 29,
+          "passed": false,
+          "compounded_nodes_count": 72,
           "session_read_verified": true,
           "session_write_verified": true,
-          "hashes_verified": true,
+          "hashes_verified": false,
           "graphs_not_ignored": true,
-          "error": null
+          "error": "CR-MEMORY-COMPOUND-001: Memory file hash verification failed (mismatched=1, missing=0, stale_source_files=0). Run 'hath0r memory hash --sync' or re-compound stale knowledge nodes."
         },
         "test_suite": {
           "passed": true,
           "skipped": true,
-          "message": "Test execution skipped via flag or dry-run."
+          "message": "Test execution skipped via flag or dry-run (-0.12 confidence deduction)."
+        },
+        "calibration_4h": {
+          "passed": true,
+          "is_fresh": false,
+          "age_hours": 23.4,
+          "max_age_hours": 4.0
+        },
+        "local_quality_gates": {
+          "passed": true,
+          "technology": "infra-python",
+          "thresholds_file": "C:\\Users\\RaymondBayly\\Documents\\HATH0R-ATC\\thresholds.json",
+          "qgate_score": 0.974,
+          "failing_gates": [],
+          "gates": {
+            "errors": {
+              "gate": "errors",
+              "passed": true,
+              "actual_errors": 0,
+              "max_errors": 0,
+              "comparator": "<=",
+              "score": 1.0,
+              "findings": []
+            },
+            "coverage": {
+              "gate": "coverage",
+              "passed": true,
+              "actual_coverage_pct": 88.5,
+              "min_coverage_pct": 80.0,
+              "comparator": ">=",
+              "source": "test_suite_symbol_verification",
+              "score": 0.9267
+            },
+            "complexity": {
+              "gate": "complexity",
+              "passed": true,
+              "max_observed_complexity": 1,
+              "avg_complexity": 0.0,
+              "max_complexity": 15,
+              "comparator": "<=",
+              "functions_scanned": 0,
+              "offending_functions": [],
+              "score": 0.99
+            },
+            "duplication": {
+              "gate": "duplication",
+              "passed": true,
+              "duplicated_lines_pct": 0.0,
+              "max_duplicated_lines_pct": 3.0,
+              "comparator": "<=",
+              "duplicated_lines": 0,
+              "total_analyzed_lines": 0,
+              "duplicated_blocks": [],
+              "score": 0.99
+            }
+          },
+          "report": {
+            "success": true,
+            "passed": true,
+            "rule_id": "CR-LOCAL-QGATES-001",
+            "repo_name": "HATH0R-ATC",
+            "technology": "infra-python",
+            "thresholds_file": "C:\\Users\\RaymondBayly\\Documents\\HATH0R-ATC\\thresholds.json",
+            "thresholds_file_exists": true,
+            "thresholds": {
+              "max_errors": 0,
+              "min_coverage_pct": 80.0,
+              "max_complexity": 15,
+              "max_duplicated_lines_pct": 3.0,
+              "new_reliability_rating": 1,
+              "new_security_rating": 1,
+              "new_maintainability_rating": 1,
+              "min_security_hotspots_reviewed_pct": 100.0
+            },
+            "files_analyzed": 2,
+            "qgate_score": 0.974,
+            "failing_gates": [],
+            "gates": {
+              "errors": {
+                "gate": "errors",
+                "passed": true,
+                "actual_errors": 0,
+                "max_errors": 0,
+                "comparator": "<=",
+                "score": 1.0,
+                "findings": []
+              },
+              "coverage": {
+                "gate": "coverage",
+                "passed": true,
+                "actual_coverage_pct": 88.5,
+                "min_coverage_pct": 80.0,
+                "comparator": ">=",
+                "source": "test_suite_symbol_verification",
+                "score": 0.9267
+              },
+              "complexity": {
+                "gate": "complexity",
+                "passed": true,
+                "max_observed_complexity": 1,
+                "avg_complexity": 0.0,
+                "max_complexity": 15,
+                "comparator": "<=",
+                "functions_scanned": 0,
+                "offending_functions": [],
+                "score": 0.99
+              },
+              "duplication": {
+                "gate": "duplication",
+                "passed": true,
+                "duplicated_lines_pct": 0.0,
+                "max_duplicated_lines_pct": 3.0,
+                "comparator": "<=",
+                "duplicated_lines": 0,
+                "total_analyzed_lines": 0,
+                "duplicated_blocks": [],
+                "score": 0.99
+              }
+            }
+          }
         }
       }
     },
     "trajectory": {
-      "score": 1.0,
+      "score": 0.9293,
       "passed": true,
-      "tokens_used": 0,
+      "tokens_used": 660,
       "max_tokens": 50000,
-      "estimated_usd": 0.0,
+      "estimated_usd": 0.00198,
       "max_usd": 0.25,
-      "session_id": "sess-20261029-132735-028ad9",
+      "session_id": "sess-20261031-161643-8c06be",
       "session_reads": 3,
-      "session_writes": 5,
-      "session_bytes": 1897,
+      "session_writes": 7,
+      "session_bytes": 1982,
+      "capsule_fill_ratio": 0.9678,
       "within_capsule_budget": true,
-      "latency_ms": 78.39,
-      "taguchi_quality_loss": 0.0001,
-      "snr_db": 28.14
+      "latency_ms": 94.0,
+      "taguchi_quality_loss": 0.0002,
+      "taguchi_score": 0.9795,
+      "snr_db": 26.02
     },
     "adversarial": {
-      "score": 1.0,
+      "score": 0.98,
       "passed": true,
       "adversarial_flaws_count": 0,
       "adversarial_flaws": [],
       "tech_debts_count": 0,
       "auto_created_issues": [],
-      "change_categories": {},
+      "minor_findings": [],
+      "added_lines_count": 0,
+      "change_categories": {
+        "ui": [],
+        "script": [],
+        "text": [],
+        "other": []
+      },
       "changed_files_count": 0
     },
     "goal_alignment": {
-      "score": 1.0,
+      "score": 0.9287,
       "passed": true,
       "task_id": "eval-baseline-hath0r-atc",
       "issue_number": null,
-      "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-atc",
-      "compounded_nodes_count": 29,
-      "consensus_score": 1.0
+      "active_focus": "Provisioning CR-TASK-EVAL-001 for HATH0R-ATC",
+      "goal_keywords_count": 5,
+      "goal_overlap_score": 0.98,
+      "compounded_nodes_count": 72,
+      "consensus_score": 0.826
+    }
+  },
+  "local_quality_gates": {
+    "success": true,
+    "passed": true,
+    "rule_id": "CR-LOCAL-QGATES-001",
+    "repo_name": "HATH0R-ATC",
+    "technology": "infra-python",
+    "thresholds_file": "C:\\Users\\RaymondBayly\\Documents\\HATH0R-ATC\\thresholds.json",
+    "thresholds_file_exists": true,
+    "thresholds": {
+      "max_errors": 0,
+      "min_coverage_pct": 80.0,
+      "max_complexity": 15,
+      "max_duplicated_lines_pct": 3.0,
+      "new_reliability_rating": 1,
+      "new_security_rating": 1,
+      "new_maintainability_rating": 1,
+      "min_security_hotspots_reviewed_pct": 100.0
+    },
+    "files_analyzed": 2,
+    "qgate_score": 0.974,
+    "failing_gates": [],
+    "gates": {
+      "errors": {
+        "gate": "errors",
+        "passed": true,
+        "actual_errors": 0,
+        "max_errors": 0,
+        "comparator": "<=",
+        "score": 1.0,
+        "findings": []
+      },
+      "coverage": {
+        "gate": "coverage",
+        "passed": true,
+        "actual_coverage_pct": 88.5,
+        "min_coverage_pct": 80.0,
+        "comparator": ">=",
+        "source": "test_suite_symbol_verification",
+        "score": 0.9267
+      },
+      "complexity": {
+        "gate": "complexity",
+        "passed": true,
+        "max_observed_complexity": 1,
+        "avg_complexity": 0.0,
+        "max_complexity": 15,
+        "comparator": "<=",
+        "functions_scanned": 0,
+        "offending_functions": [],
+        "score": 0.99
+      },
+      "duplication": {
+        "gate": "duplication",
+        "passed": true,
+        "duplicated_lines_pct": 0.0,
+        "max_duplicated_lines_pct": 3.0,
+        "comparator": "<=",
+        "duplicated_lines": 0,
+        "total_analyzed_lines": 0,
+        "duplicated_blocks": [],
+        "score": 0.99
+      }
     }
   },
   "evidence_trust_report": {
@@ -98,29 +302,20 @@
       "VERIFIED_EXECUTION": [
         ".hath0r/evals/latest.json"
       ],
-      "STATIC_AST_ANALYSIS": [
-        ".hath0r/evals/post-task-hook.sh",
-        ".hath0r/agentgraph/snapshot.json",
-        ".hath0r/evals/history/eval-eval-baseline-hath0r-atc.json",
-        ".hath0r/evals/latest.json",
-        ".hath0r/memory/graph.json",
-        ".hath0r/memory/hashes.json",
-        ".hath0r/memory/sessions/current.json",
-        ".hath0r/memory/sessions/latest.json",
-        ".hath0r/memory/sessions/sess-20261029-132735-028ad9.json",
-        "cfg/evals/task-eval.json"
-      ],
+      "STATIC_AST_ANALYSIS": [],
       "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 10,
+      "STATIC_AST_ANALYSIS": 0,
       "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
-  "blocking_reasons": [],
+  "blocking_reasons": [
+    "Tier 1 deterministic gate failed: memory_compounded"
+  ],
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:0a62aaacf18e38365a49ed137d0463d9ba3f8b63d2577aef526f867fe7d75a5b"
+  "content_hash": "sha256:0a9b85a82c98924eea8aad8843146dbcf8b544d373826a954a0a72109c24c173"
 }

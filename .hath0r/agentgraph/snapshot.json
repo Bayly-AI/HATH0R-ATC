@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
-  "graph_id": "agentgraph-hath0r-atc",
-  "timestamp": "2026-10-31T16:25:41.171803+00:00",
+  "graph_id": "agentgraph-HATH0R-ATC",
+  "timestamp": "2026-11-01T15:43:50.724913+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -16,14 +16,14 @@
       "is_current": true
     },
     {
-      "id": "doc:agents-deploy",
+      "id": "doc:agents-cfg",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "AGENTS.md (deploy)",
-      "content": "# AGENTS.md — Deploy Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Deployment & Infrastructure Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `deploy` |\n| Scope | Docker Compose, NGINX Edge Ingress, Redis Shared State, Local Network (`hath0r-net`) |\n| Docker Group | `hath0r` |\n| External Network | `hath0r-net` (Subnet: `172.38.0.0/16` / standard bridge) |\n| Local Port Mapping | `38xxx` range |\n\n## Operational Guidelines\n\n1. **Docker Group Membership (`CR-DOCKER-HATH0R-GROUP-001`)**: All services managed by or joining ATC must belong to the `hath0r` Docker group.\n2. **Edge Proxy**: NGINX acts as the reverse proxy edge (`deploy/docker/nginx.conf`) routing requests across OpenSource services.\n3. **State Management**: Shared Redis instance (`hath0r-redis`) manages suite session cache and distributed locks.\n4. **Secrets Isolation**: No secret injection into git; utilize external credentials ",
+      "label": "AGENTS.md (cfg)",
+      "content": "# AGENTS.md — Configuration Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Configuration & Governance Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `cfg` |\n| Scope | Suite Identity, Product Catalog, Control Tower Topology, Observability Pointers |\n| Role | Central configuration registry for OpenSource suite members |\n\n## Operational Guidelines\n\n1. **Central Group Controller**: Suite configuration in [`cfg/suite.yaml`](suite.yaml) and [`cfg/control-tower.yaml`](control-tower.yaml) governs membership policies across all repositories in this workspace.\n2. **Product Catalog**: Canonical repository metadata, paths, and remotes are indexed in [`cfg/products.yaml`](products.yaml).\n3. **Observability & Feature Flags**: Pointers to OpenTelemetry (`cfg/observability/`) and OpenFeature (`cfg/feature-flags/`) stubs are maintained here.\n4. **Zero Git Secrets**: Never commit tokens, passwords, or cre",
       "properties": {
-        "path": "deploy/AGENTS.md",
-        "subsystem": "deploy"
+        "path": "cfg\\AGENTS.md",
+        "subsystem": "cfg"
       },
       "is_current": true
     },
@@ -34,20 +34,20 @@
       "label": "AGENTS.md (contracts)",
       "content": "# AGENTS.md — Contracts Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Contracts & JSON Schemas Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `contracts` |\n| Scope | JSON Schemas, Exit Code Registry, CLI/Tower Interoperability Contracts |\n| Standards Authority | `Bayly-AI/HATH0R-Agentic-Framework` |\n| Pinned Version | `0.2.0` / `0.3.0` / `0.4.0` |\n\n## Operational Guidelines\n\n1. **Schema Authority**: Pinned schemas define the invariant envelope contracts between CLI, Control Tower, and member services.\n2. **Backward Compatibility**: Schema additions must be backward compatible; removing or altering required fields is prohibited without explicit SemVer major bump.\n3. **Exit Code Mapping**: All automated processes and bots must emit standard exit codes defined in [`exit-codes.yaml`](exit-codes.yaml).\n\n## Key Files & Direct Links\n\n- [exit-codes.yaml](file:///Users/raybayly/Development/OpenS",
       "properties": {
-        "path": "contracts/AGENTS.md",
+        "path": "contracts\\AGENTS.md",
         "subsystem": "contracts"
       },
       "is_current": true
     },
     {
-      "id": "doc:agents-tests",
+      "id": "doc:agents-deploy",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "AGENTS.md (tests)",
-      "content": "# AGENTS.md — Tests Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Test Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `tests` |\n| Scope | Infrastructure Smoke Tests, Bootstrap Verification, Contract Testing |\n| Entrypoints | `make smoke`, `make bootstrap`, `./bin/hath0r-bootstrap.sh` |\n\n## Operational Guidelines\n\n1. **Bootstrap Validation**: Always run `make bootstrap` or `./bin/hath0r-bootstrap.sh` to ensure layout and identity conformance.\n2. **Smoke Testing**: Run `make smoke` against live local containers to verify edge NGINX and Redis connectivity.\n3. **Contract Tests**: Verify that ATC schemas validate against the canonical framework schemas.\n\n## Key Files & Direct Links\n\n- [hath0r-bootstrap.sh](file:///Users/raybayly/Development/OpenSource/hath0r-atc/bin/hath0r-bootstrap.sh): Local fileset and environment verification script.\n- [smoke-test.sh](file:///Users/raybayly/Development/O",
+      "label": "AGENTS.md (deploy)",
+      "content": "# AGENTS.md — Deploy Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Deployment & Infrastructure Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `deploy` |\n| Scope | Docker Compose, NGINX Edge Ingress, Redis Shared State, Local Network (`hath0r-net`) |\n| Docker Group | `hath0r` |\n| External Network | `hath0r-net` (Subnet: `172.38.0.0/16` / standard bridge) |\n| Local Port Mapping | `38xxx` range |\n\n## Operational Guidelines\n\n1. **Docker Group Membership (`CR-DOCKER-HATH0R-GROUP-001`)**: All services managed by or joining ATC must belong to the `hath0r` Docker group.\n2. **Edge Proxy**: NGINX acts as the reverse proxy edge (`deploy/docker/nginx.conf`) routing requests across OpenSource services.\n3. **State Management**: Shared Redis instance (`hath0r-redis`) manages suite session cache and distributed locks.\n4. **Secrets Isolation**: No secret injection into git; utilize external credentials ",
       "properties": {
-        "path": "tests/AGENTS.md",
-        "subsystem": "tests"
+        "path": "deploy\\AGENTS.md",
+        "subsystem": "deploy"
       },
       "is_current": true
     },
@@ -58,20 +58,8 @@
       "label": "AGENTS.md (docs)",
       "content": "# AGENTS.md — Documentation Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Documentation Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `docs` |\n| Scope | Operational Runbooks, Governance Rules, Observation Logs, Deployment Guides |\n| Standard | Standard Playbook → Procedure → Runbook taxonomy (`HATHOR-GUIDE-001`) |\n\n## Operational Guidelines\n\n1. **Docs Before Code**: Before changing operational infrastructure, verify or update the runbook at [`docs/runbook.md`](runbook.md).\n2. **Observation Archives**: Operational smoke test logs and health snapshots are archived in `docs/observe/` and `docs/archive/`.\n3. **Governance References**: Branch promotion, PR workflow hardening, SonarCloud gates, and Docker group rules live in `docs/governance/` and `docs/rules/`.\n\n## Key Files & Direct Links\n\n- [runbook.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/docs/runbook.md): Technology ",
       "properties": {
-        "path": "docs/AGENTS.md",
+        "path": "docs\\AGENTS.md",
         "subsystem": "docs"
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:agents-cfg",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "AGENTS.md (cfg)",
-      "content": "# AGENTS.md — Configuration Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Configuration & Governance Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `cfg` |\n| Scope | Suite Identity, Product Catalog, Control Tower Topology, Observability Pointers |\n| Role | Central configuration registry for OpenSource suite members |\n\n## Operational Guidelines\n\n1. **Central Group Controller**: Suite configuration in [`cfg/suite.yaml`](suite.yaml) and [`cfg/control-tower.yaml`](control-tower.yaml) governs membership policies across all repositories in this workspace.\n2. **Product Catalog**: Canonical repository metadata, paths, and remotes are indexed in [`cfg/products.yaml`](products.yaml).\n3. **Observability & Feature Flags**: Pointers to OpenTelemetry (`cfg/observability/`) and OpenFeature (`cfg/feature-flags/`) stubs are maintained here.\n4. **Zero Git Secrets**: Never commit tokens, passwords, or cre",
-      "properties": {
-        "path": "cfg/AGENTS.md",
-        "subsystem": "cfg"
       },
       "is_current": true
     },
@@ -82,7 +70,7 @@
       "label": "AGENTS.md (lib)",
       "content": "# AGENTS.md — Library Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Shared Libraries & Scripts Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `lib` |\n| Scope | Shared helper scripts, telemetry utilities, asset bundles |\n\n## Operational Guidelines\n\n1. **Self-Contained Utilities**: Helper scripts and modules should be modular and avoid external dependency bloat.\n2. **Python Compatibility**: All python scripts in `lib/` must support Python 3.10+.\n3. **No Side Effects on Import**: Modules in `lib/` must not perform network or filesystem mutations on import.\n\n## Key Files & Direct Links\n\n- [rules.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/lib/rules.md): Library design rules.\n- [canonical.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/lib/canonical.md): Library assets index.\n",
       "properties": {
-        "path": "lib/AGENTS.md",
+        "path": "lib\\AGENTS.md",
         "subsystem": "lib"
       },
       "is_current": true
@@ -94,8 +82,20 @@
       "label": "AGENTS.md (site)",
       "content": "# AGENTS.md — Site Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Portal & Static Web Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `site` |\n| Scope | Static Landing Portal, Control Tower Dashboard UI |\n\n## Operational Guidelines\n\n1. **Lightweight & Portable**: Site assets must be lightweight and function without heavy Node build chains or remote dependencies.\n2. **Local Serving**: Serve cleanly behind NGINX at port `38080` (or root path `/`).\n3. **No External CDN Lock-In**: Avoid external third-party CDN scripts or fonts.\n\n## Key Files & Direct Links\n\n- [README.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/site/README.md): Site subsystem overview.\n- [rules.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/site/rules.md): Static site design rules.\n- [canonical.md](file:///Users/raybayly/Development/OpenSource/hath0r-atc/site/canonical.md): Site structure index.",
       "properties": {
-        "path": "site/AGENTS.md",
+        "path": "site\\AGENTS.md",
         "subsystem": "site"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-tests",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (tests)",
+      "content": "# AGENTS.md — Tests Subsystem (HATH0R-ATC)\n\n> Hyper-context node for **HATH0R ATC Test Subsystem**.\n> Parent Node: [`../AGENTS.md`](../AGENTS.md)\n\n## Subsystem Identity & Role\n\n| Field | Value |\n|---|---|\n| Subsystem | `tests` |\n| Scope | Infrastructure Smoke Tests, Bootstrap Verification, Contract Testing |\n| Entrypoints | `make smoke`, `make bootstrap`, `./bin/hath0r-bootstrap.sh` |\n\n## Operational Guidelines\n\n1. **Bootstrap Validation**: Always run `make bootstrap` or `./bin/hath0r-bootstrap.sh` to ensure layout and identity conformance.\n2. **Smoke Testing**: Run `make smoke` against live local containers to verify edge NGINX and Redis connectivity.\n3. **Contract Tests**: Verify that ATC schemas validate against the canonical framework schemas.\n\n## Key Files & Direct Links\n\n- [hath0r-bootstrap.sh](file:///Users/raybayly/Development/OpenSource/hath0r-atc/bin/hath0r-bootstrap.sh): Local fileset and environment verification script.\n- [smoke-test.sh](file:///Users/raybayly/Development/O",
+      "properties": {
+        "path": "tests\\AGENTS.md",
+        "subsystem": "tests"
       },
       "is_current": true
     },
@@ -104,9 +104,9 @@
       "plane": "rules",
       "type": "rule_policy",
       "label": "Rule rules",
-      "content": "# Deploy Subsystem — Local Rules & Constraints\n\n> Constraints and governance for Docker infrastructure in HATH0R-ATC.\n\n## CR-DOCKER-HATH0R-GROUP-001 Constraints\n\n1. **Group Name**: Top-level compose `name:` must always be `hath0r`.\n2. **Network Policy**: Use external bridge network `hath0r-net`. Never create unattached isolated networks for suite members.\n3. **Container Naming**: Canonical container names: `Hath0r-Edge` (edge), `Hath0r-Sessions` (redis), `Hath0r-Data` (postgres), `Hath0r-phoenix` (phoenix), `Hathor-MLFLOW` (mlflow), `Hath0r-MCP` (mcp). Legacy `hath0r-*` network aliases are maintained for backwards compatibility.\n4. **Mandatory Labels**:\n   - `com.hath0r.org=bayly-ai`\n   - `com.hath0r.project=hath0r-opensource`\n   - `com.hath0r.component=<component_name>`\n   - `com.hath0r.container=<container_name>`\n5. **Security Constraints**:\n   - Non-root user execution whenever possible.\n   - Read-only root filesystem (`read_only: true`) with explicit temporary volume mounts.\n   - Drop all unnecessary Linux capabilities (`cap_drop: [ALL]`).\n   - `security_opt: [no-new-privileges:true]`.\n",
+      "content": "# Configuration Subsystem — Local Rules & Constraints\n\n> Constraints and schema requirements for HATH0R-ATC configurations.\n\n## Rules\n\n1. **Schema Validation**: All YAML files must parse cleanly and match their respective schema definitions.\n2. **Hidden Root Pointer**: Suite configurations must reference `.hath0r/` only (`cr-hath0r-root-001`).\n3. **No Secret Storage**: Secrets must be stored outside git in `/Users/raybayly/Development/.credentials/`.\n4. **Member Immutability**: Changes to `cfg/suite.yaml` or `cfg/products.yaml` require approval by CODEOWNERS.\n",
       "properties": {
-        "path": "deploy/rules.md",
+        "path": "cfg\\rules.md",
         "priority": 3,
         "restricted_actions": []
       },
@@ -119,7 +119,7 @@
       "label": "Rule rules",
       "content": "# Contracts Subsystem — Local Rules & Constraints\n\n> Constraints and schema governance for HATH0R-ATC.\n\n## Rules\n\n1. **Envelope Conformance**: Output responses must validate against `hath0r-cli-response-v1.schema.json`.\n2. **Schema Mutability**: Do NOT edit schema definitions directly in member repos without syncing from `Bayly-AI/HATH0R-Agentic-Framework/lib/schemas`.\n3. **Exit Code Validation**: Tools must return exit codes specified in `contracts/exit-codes.yaml`.\n4. **No Undocumented Extensions**: Unknown payload properties must be declared or rejected per strict JSONSchema standards.\n",
       "properties": {
-        "path": "contracts/rules.md",
+        "path": "contracts\\rules.md",
         "priority": 3,
         "restricted_actions": []
       },
@@ -130,9 +130,9 @@
       "plane": "rules",
       "type": "rule_policy",
       "label": "Rule rules",
-      "content": "# Tests Subsystem — Local Rules & Constraints\n\n> Constraints and requirements for tests in HATH0R-ATC.\n\n## Rules\n\n1. **State Cleanliness**: Tests must not leave dangling temporary containers or untracked test fixtures.\n2. **Network Isolation**: Tests asserting Docker connectivity must verify `hath0r-net` availability before sending traffic.\n3. **Exit Code Validation**: Smoke and bootstrap scripts must exit with code 0 on success and non-zero on error.\n",
+      "content": "# Deploy Subsystem — Local Rules & Constraints\n\n> Constraints and governance for Docker infrastructure in HATH0R-ATC.\n\n## CR-DOCKER-HATH0R-GROUP-001 Constraints\n\n1. **Group Name**: Top-level compose `name:` must always be `hath0r`.\n2. **Network Policy**: Use external bridge network `hath0r-net`. Never create unattached isolated networks for suite members.\n3. **Container Naming**: Canonical container names: `Hath0r-Edge` (edge), `Hath0r-Sessions` (redis), `Hath0r-Data` (postgres), `Hath0r-phoenix` (phoenix), `Hathor-MLFLOW` (mlflow), `Hath0r-MCP` (mcp). Legacy `hath0r-*` network aliases are maintained for backwards compatibility.\n4. **Mandatory Labels**:\n   - `com.hath0r.org=bayly-ai`\n   - `com.hath0r.project=hath0r-opensource`\n   - `com.hath0r.component=<component_name>`\n   - `com.hath0r.container=<container_name>`\n5. **Security Constraints**:\n   - Non-root user execution whenever possible.\n   - Read-only root filesystem (`read_only: true`) with explicit temporary volume mounts.\n   - Drop all unnecessary Linux capabilities (`cap_drop: [ALL]`).\n   - `security_opt: [no-new-privileges:true]`.\n",
       "properties": {
-        "path": "tests/rules.md",
+        "path": "deploy\\rules.md",
         "priority": 3,
         "restricted_actions": []
       },
@@ -145,20 +145,7 @@
       "label": "Rule rules",
       "content": "# Documentation Subsystem — Local Rules & Constraints\n\n> Constraints and formatting standards for documentation in HATH0R-ATC.\n\n## Rules\n\n1. **Taxonomy Discipline**: Structure documentation according to canonical hierarchy: Playbook (troubleshooting/triage) → Procedure (step-by-step operation) → Runbook (lifecycle/service ops).\n2. **Path Pointers**: Relative links must use markdown format and valid file targets.\n3. **Redaction**: Never write plain text tokens, API keys, or private SSH keys into markdown files.\n4. **Header Consistency**: Markdown documents must include front-matter or initial block summary with document ownership and status.\n",
       "properties": {
-        "path": "docs/rules.md",
-        "priority": 3,
-        "restricted_actions": []
-      },
-      "is_current": true
-    },
-    {
-      "id": "rule:rules",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "Rule rules",
-      "content": "# Configuration Subsystem — Local Rules & Constraints\n\n> Constraints and schema requirements for HATH0R-ATC configurations.\n\n## Rules\n\n1. **Schema Validation**: All YAML files must parse cleanly and match their respective schema definitions.\n2. **Hidden Root Pointer**: Suite configurations must reference `.hath0r/` only (`cr-hath0r-root-001`).\n3. **No Secret Storage**: Secrets must be stored outside git in `/Users/raybayly/Development/.credentials/`.\n4. **Member Immutability**: Changes to `cfg/suite.yaml` or `cfg/products.yaml` require approval by CODEOWNERS.\n",
-      "properties": {
-        "path": "cfg/rules.md",
+        "path": "docs\\rules.md",
         "priority": 3,
         "restricted_actions": []
       },
@@ -171,7 +158,7 @@
       "label": "Rule rules",
       "content": "# Library Subsystem — Local Rules & Constraints\n\n> Constraints and standards for shared code in HATH0R-ATC.\n\n## Rules\n\n1. **Modularity**: Functions should be single-purpose and type-annotated (`from __future__ import annotations`).\n2. **Error Handling**: Raise explicit exception types rather than broad `Exception`.\n3. **No Direct Secret Access**: Accept credentials via configuration objects or function arguments.\n",
       "properties": {
-        "path": "lib/rules.md",
+        "path": "lib\\rules.md",
         "priority": 3,
         "restricted_actions": []
       },
@@ -184,7 +171,20 @@
       "label": "Rule rules",
       "content": "# Site Subsystem — Local Rules & Constraints\n\n> Constraints for static web portal assets in HATH0R-ATC.\n\n## Rules\n\n1. **Self-Contained**: HTML/CSS/JS must reside entirely in-repo with relative asset paths.\n2. **Security**: Content-Security-Policy compliant; no inline executable scripts or eval.\n3. **Responsive**: Portable layout across standard desktop and mobile viewports.\n",
       "properties": {
-        "path": "site/rules.md",
+        "path": "site\\rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Tests Subsystem — Local Rules & Constraints\n\n> Constraints and requirements for tests in HATH0R-ATC.\n\n## Rules\n\n1. **State Cleanliness**: Tests must not leave dangling temporary containers or untracked test fixtures.\n2. **Network Isolation**: Tests asserting Docker connectivity must verify `hath0r-net` availability before sending traffic.\n3. **Exit Code Validation**: Smoke and bootstrap scripts must exit with code 0 on success and non-zero on error.\n",
+      "properties": {
+        "path": "tests\\rules.md",
         "priority": 3,
         "restricted_actions": []
       },
@@ -197,7 +197,7 @@
       "label": "Rule cr-branch-gov-001-canonical-branches",
       "content": "---\nid: cr-branch-gov-001\ntitle: Canonical Branch & PR Governance\nversion: 0.2.0\nseverity: CRITICAL\napplies_to: \"hath0r-opensource\"\neffective_date: 2026-05-16\nlast_updated: 2026-09-23\n---\n\n# CR-BRANCH-GOV-001 — Canonical Branch & PR Governance (CRITICAL)\n\n## Integration (long-lived) branches\n\n```\ndevelopment → testing → staging → master\n```\n\n- Do **not** skip stages or reverse-promote.\n- `development` is the **default integration branch** for day-to-day delivery.\n- `master` is the **production** line (not a day-to-day PR target).\n- `main` is not used as an integration branch; prefer `master` for production.\n\n## Feature-branch workflow (CANONICAL)\n\n1. Branch from **`development`**.\n2. Implement on `feature/*`, `fix/*`, `chore/*`, or `docs/*` (issue number required).\n3. Open PR with **base = `development`**.\n4. Merge into **`development` only**.\n5. Promote: `development` → `testing` → `staging` → `master` (release path).\n\n### Forbidden\n\n- Normal delivery PRs targeting `master` or `main`\n- Feature PRs targeting `testing` or `staging`\n- Unreviewed pushes of delivery work to `master`\n\n## Agent checklist\n\n- [ ] Work branch is not `master` / `main` / `development`\n- [ ] Branched from latest `development`\n- [ ] PR base is `development`\n",
       "properties": {
-        "path": "docs/rules/cr-branch-gov-001-canonical-branches.md",
+        "path": "docs\\rules\\cr-branch-gov-001-canonical-branches.md",
         "priority": 4,
         "restricted_actions": []
       },
@@ -210,7 +210,7 @@
       "label": "Rule cr-docker-hath0r-group-001",
       "content": "---\nid: cr-docker-hath0r-group-001\ntitle: Canonical hath0r Docker group for all OpenSource workspace repos\nversion: 1.0.0\nseverity: CRITICAL\nstatus: canonical\napplies_to: \"/Users/raybayly/Development/OpenSource/**\"\neffective_date: 2026-09-23\nsuite: hath0r-opensource\n---\n\n# CR-DOCKER-HATH0R-GROUP-001 — hath0r Docker group (CANONICAL)\n\n## Rule statement\n\n**Every repository, service, and container defined under the `OpenSource` workspace folder is a member of the Docker Compose project / Docker Desktop group `hath0r` for local suite runtime.**\n\nThis is **canonical** and not optional for local OpenSource suite runtime.\n\n## Workspace root\n\n```text\n/Users/raybayly/Development/OpenSource\n```\n\nIncludes (now and future):\n\n- Control tower (`hath0r-atc/`)\n- Standalone MCP (`hath0r-mcp/`)\n- Operator CLI (`hathor-cli/`)\n- Framework (`hath0r/`)\n- Any additional clone under this directory\n\n## Canonical artifacts\n\n| Artifact | Value |\n|----------|--------|\n| Compose project name (`name:`) | `hath0r` |\n| Docker Desktop group | `hath0r` |\n| Network | `hath0r-net` (external, shared) |\n| Shared communication | container `hath0r-nginx` |\n| Shared state | container `hath0r-redis` |\n| Image naming | `hath0r/{component}:tag` |\n| Project label | `com.hath0r.project=hath0r-opensource` |\n| Org label | `com.hath0r.org=bayly-ai` |\n\n## Required compose skeleton\n\n```yaml\nname: hath0r\n\nservices:\n  example:\n    image: hath0r/example:local\n    container_name: hath0r-example\n    networks:\n      hath0r-net:\n   ",
       "properties": {
-        "path": "docs/rules/cr-docker-hath0r-group-001.md",
+        "path": "docs\\rules\\cr-docker-hath0r-group-001.md",
         "priority": 4,
         "restricted_actions": []
       },
@@ -399,42 +399,6 @@
       "is_current": true
     },
     {
-      "id": "contract:hath0r-voice-action-v1.schema.json",
-      "plane": "knowledge",
-      "type": "contract",
-      "label": "HATH0R Voice Action Contract v1",
-      "content": "Standardized contract for voice-driven intent recognition, routing, and dispatch across platforms and agents in HATHOR.",
-      "properties": {
-        "schema_id": "https://hath0r.dev/schemas/hath0r-voice-action-v1.schema.json",
-        "path": "contracts/hath0r-voice-action-v1.schema.json"
-      },
-      "is_current": true
-    },
-    {
-      "id": "contract:hath0r-cli-response-v1.schema.json",
-      "plane": "knowledge",
-      "type": "contract",
-      "label": "hath0r.cli.response/1",
-      "content": "Top-level structured JSON response envelope for hath0r CLI machine output (HATHOR-TS-005 §4).",
-      "properties": {
-        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-response-v1.schema.json",
-        "path": "contracts/hath0r-cli-response-v1.schema.json"
-      },
-      "is_current": true
-    },
-    {
-      "id": "contract:hath0r-docker-workflow-v1.schema.json",
-      "plane": "knowledge",
-      "type": "contract",
-      "label": "Hath0r Docker Workflow Specification",
-      "content": "Declarative Docker workflow contract for Hath0r container validation and Docker Factory execution.",
-      "properties": {
-        "schema_id": "https://schemas.baylyai.com/hath0r/contracts/hath0r-docker-workflow-v1.schema.json",
-        "path": "contracts/hath0r-docker-workflow-v1.schema.json"
-      },
-      "is_current": true
-    },
-    {
       "id": "contract:hath0r-cli-diagnostic-v1.schema.json",
       "plane": "knowledge",
       "type": "contract",
@@ -442,7 +406,7 @@
       "content": "Structured diagnostic entry for hath0r CLI machine responses (HATHOR-TS-005 §5).",
       "properties": {
         "schema_id": "https://schemas.hath0r.dev/hath0r-cli-diagnostic-v1.schema.json",
-        "path": "contracts/hath0r-cli-diagnostic-v1.schema.json"
+        "path": "contracts\\hath0r-cli-diagnostic-v1.schema.json"
       },
       "is_current": true
     },
@@ -454,31 +418,7 @@
       "content": "Command-specific data payload for the doctor operation (HATHOR-TS-005 §10). Placed under response envelope field data when command is doctor.",
       "properties": {
         "schema_id": "https://schemas.hath0r.dev/hath0r-cli-doctor-v1.schema.json",
-        "path": "contracts/hath0r-cli-doctor-v1.schema.json"
-      },
-      "is_current": true
-    },
-    {
-      "id": "contract:hath0r-mcp-servers-v1.schema.json",
-      "plane": "knowledge",
-      "type": "contract",
-      "label": "Hath0r MCP Servers Configuration",
-      "content": "Configuration specification for Model Context Protocol (MCP) servers with priority ordering and scope rules.",
-      "properties": {
-        "schema_id": "https://schema.bayly.ai/hath0r/contracts/hath0r-mcp-servers-v1.schema.json",
-        "path": "contracts/hath0r-mcp-servers-v1.schema.json"
-      },
-      "is_current": true
-    },
-    {
-      "id": "contract:hath0r-cli-kb-products-v1.schema.json",
-      "plane": "knowledge",
-      "type": "contract",
-      "label": "hath0r.cli.kb-products.data/1",
-      "content": "Command-specific data payload for the kb.products operation (HATHOR-TS-005 §12). Placed under response envelope field data when command is kb.products.",
-      "properties": {
-        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-kb-products-v1.schema.json",
-        "path": "contracts/hath0r-cli-kb-products-v1.schema.json"
+        "path": "contracts\\hath0r-cli-doctor-v1.schema.json"
       },
       "is_current": true
     },
@@ -490,19 +430,31 @@
       "content": "Command-specific data payload for the kb.path operation (HATHOR-TS-005 §11). Placed under response envelope field data when command is kb.path. Path is operator data; POC adapters must strip it from normal browser responses.",
       "properties": {
         "schema_id": "https://schemas.hath0r.dev/hath0r-cli-kb-path-v1.schema.json",
-        "path": "contracts/hath0r-cli-kb-path-v1.schema.json"
+        "path": "contracts\\hath0r-cli-kb-path-v1.schema.json"
       },
       "is_current": true
     },
     {
-      "id": "contract:hath0r-factory-v1.schema.json",
+      "id": "contract:hath0r-cli-kb-products-v1.schema.json",
       "plane": "knowledge",
       "type": "contract",
-      "label": "Hath0rFactoryManifest",
-      "content": "Schema definition for Hath0r declarative automation factories and orchestrated micro-bots.",
+      "label": "hath0r.cli.kb-products.data/1",
+      "content": "Command-specific data payload for the kb.products operation (HATHOR-TS-005 §12). Placed under response envelope field data when command is kb.products.",
       "properties": {
-        "schema_id": "https://raw.githubusercontent.com/Bayly-AI/HATH0R-Agentic-Framework/development/contracts/hath0r-factory-v1.schema.json",
-        "path": "contracts/hath0r-factory-v1.schema.json"
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-kb-products-v1.schema.json",
+        "path": "contracts\\hath0r-cli-kb-products-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-response-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.response/1",
+      "content": "Top-level structured JSON response envelope for hath0r CLI machine output (HATHOR-TS-005 §4).",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-response-v1.schema.json",
+        "path": "contracts\\hath0r-cli-response-v1.schema.json"
       },
       "is_current": true
     },
@@ -514,423 +466,471 @@
       "content": "Command-specific data payload for the version operation (HATHOR-TS-005 §9). Placed under response envelope field data when command is version.",
       "properties": {
         "schema_id": "https://schemas.hath0r.dev/hath0r-cli-version-v1.schema.json",
-        "path": "contracts/hath0r-cli-version-v1.schema.json"
+        "path": "contracts\\hath0r-cli-version-v1.schema.json"
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__canonical_md",
+      "id": "contract:hath0r-docker-workflow-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "Hath0r Docker Workflow Specification",
+      "content": "Declarative Docker workflow contract for Hath0r container validation and Docker Factory execution.",
+      "properties": {
+        "schema_id": "https://schemas.baylyai.com/hath0r/contracts/hath0r-docker-workflow-v1.schema.json",
+        "path": "contracts\\hath0r-docker-workflow-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-factory-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "Hath0rFactoryManifest",
+      "content": "Schema definition for Hath0r declarative automation factories and orchestrated micro-bots.",
+      "properties": {
+        "schema_id": "https://raw.githubusercontent.com/Bayly-AI/HATH0R-Agentic-Framework/development/contracts/hath0r-factory-v1.schema.json",
+        "path": "contracts\\hath0r-factory-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-mcp-servers-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "Hath0r MCP Servers Configuration",
+      "content": "Configuration specification for Model Context Protocol (MCP) servers with priority ordering and scope rules.",
+      "properties": {
+        "schema_id": "https://schema.bayly.ai/hath0r/contracts/hath0r-mcp-servers-v1.schema.json",
+        "path": "contracts\\hath0r-mcp-servers-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-voice-action-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "HATH0R Voice Action Contract v1",
+      "content": "Standardized contract for voice-driven intent recognition, routing, and dispatch across platforms and agents in HATHOR.",
+      "properties": {
+        "schema_id": "https://hath0r.dev/schemas/hath0r-voice-action-v1.schema.json",
+        "path": "contracts\\hath0r-voice-action-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\canonical_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
       "label": "Canonical",
       "content": "# Documentation Subsystem — Canonical Taxonomy & Index\n\n> Canonical reference structure for HATH0R-ATC documentation.\n\n## Documentation Structure\n\n```text\ndocs/\n  INDEX.md                   # Full documentation taxonomy and index\n  runbook.md                 # Technology runbook (ATC lifecycle & ops)\n  deployment-local-docker.md # Docker group deployment guide\n  governance/                # Governance policies (branch rules, PR workflow, SUITE_STANDARDS)\n  rules/                     # Architecture & container rules (CR-DOCKER-HATH0R-GROUP-001)\n  observe/                   # Smoke test observations and operational logs\n  archive/                   # Historic verification artifacts\n```\n",
       "properties": {
-        "path": "docs/canonical.md",
+        "path": "docs\\canonical.md",
         "category": "docs",
-        "size_bytes": 695
+        "size_bytes": 711
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__runbook_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Runbook",
-      "content": "# Runbook: HATH0R ATC (Control Tower)\n\n> Canonical operations runbook for **HATH0R ATC**.  \n> Satisfies Hath0r initialization gate **CR-HATH0R-INIT-001**.  \n> Tech family: Docker Compose control tower / suite infrastructure (peer: 1-Nation ATC).\n\n---\n\n## 1. Overview\n\nHATH0R ATC is the **infrastructure**, **observation**, and **central group controller** for the OpenSource Project (`hath0r-opensource`).\n\n| Responsibility | Owned here |\n|----------------|------------|\n| Docker group `hath0r` + network `hath0r-net` | Yes |\n| Shared edge `hath0r-nginx` + state `hath0r-redis` | Yes |\n| Optional `hath0r-postgres` | Yes (profile `db`) |\n| MCP service process | **No** — standalone `../hath0r-mcp` |\n| Operator CLI binary `hath0r` | **No** — `../hathor-cli` |\n| Framework application code | **No** — `../hath0r` (supported by this tower) |\n\n---\n\n## 2. Prerequisites\n\n- Docker Desktop (or Engine + Compose v2)\n- `make`, `curl`, `bash`\n- Optional: `hath0r` CLI on PATH for doctor/bootstrap\n- No conflicting listeners on `:38000` / `:35432`\n\n---\n\n## 3. Install / bootstrap\n\n```bash\ncd /Users/raybayly/Development/OpenSource/hath0r-atc\ncp .env.example .env   # optional overrides\n./bin/hath0r-bootstrap.s",
-      "properties": {
-        "path": "docs/runbook.md",
-        "category": "docs",
-        "size_bytes": 3920
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__INDEX_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Index",
-      "content": "# Hath0r ATC docs index\n\n| Doc | Purpose |\n|-----|---------|\n| [runbook.md](runbook.md) | Operator/dev runbook (CR-HATH0R-INIT-001) |\n| [deployment-local-docker.md](deployment-local-docker.md) | Local Docker deploy record |\n| [observe/README.md](observe/README.md) | Observation surfaces |\n| [rules/cr-docker-hath0r-group-001.md](rules/cr-docker-hath0r-group-001.md) | Docker group membership |\n| [rules/cr-branch-gov-001-canonical-branches.md](rules/cr-branch-gov-001-canonical-branches.md) | Branch/PR governance |\n| [governance/SUITE_STANDARDS.md](governance/SUITE_STANDARDS.md) | Suite standards hub (CLI control tower pins) |\n| [governance/semantic-versioning.md](governance/semantic-versioning.md) | SemVer pointer (`VERSION`) |\n| [governance/workflow-documentation-standard.md](governance/workflow-documentation-standard.md) | Procedure/strategy/playbook standard |\n| [governance/cli-first-rules.md](governance/cli-first-rules.md) | CLI-first (cr-cli-first-001) |\n| [governance/opentelemetry-standards.md](governance/opentelemetry-standards.md) | OTel pointer + local stub |\n| [governance/openfeature-standards.md](governance/openfeature-standards.md) | OpenFeature pointer + local stub |\n| [g",
-      "properties": {
-        "path": "docs/INDEX.md",
-        "category": "docs",
-        "size_bytes": 1519
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__TICKET-AGENTGRAPH-REFACTOR_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Ticket Agentgraph Refactor",
-      "content": "---\ntitle: \"Ticket: Refactor Agents Files to Utilize AgentGraph Substrate\"\nrepository: \"OpenSource/hath0r-atc\"\ngithub_issue: \"https://github.com/Bayly-AI/HATH0R-ATC/issues/31\"\ncreated: \"2026-10-03\"\nstatus: \"closed\"\nclosed_at: \"2026-10-03\"\nvalidation_result: \"PASSED (29 nodes, 15 edges)\"\n---\n\n# Refactor Agent Files to Utilize Hath0r AgentGraph Substrate\n\n## Repository Context\n- **Repository**: `OpenSource/hath0r-atc`\n- **System Archetype / Role**: OpenSource Suite Edge & Orchestration\n- **Technology Stack**: Docker Compose / Python / NGINX\n- **Primary Subsystems**: `deploy`, `cfg`, `site`\n- **Current Agent Files**: `AGENTS.md`, `deploy/AGENTS.md`, `contracts/AGENTS.md`, `tests/AGENTS.md`, `docs/AGENTS.md`, `cfg/AGENTS.md` (+2 more) (8 total)\n- **Current AgentGraph Snapshot**: Initialized (29 nodes, 9 edges)\n\n---\n\n## Architectural Purpose\n\nUnder **CR-BAI-001** and the **Hath0r Zero-Prompt-Tax Governance** model, storing static policies, rules, and tool authorizations as monolithic Markdown documents in `AGENTS.md` wastes 40%–60% of LLM context windows and introduces probabilistic security bypasses. \n\nThis work refactors this repository's agent configuration into the deterministic **A",
-      "properties": {
-        "path": "docs/TICKET-AGENTGRAPH-REFACTOR.md",
-        "category": "docs",
-        "size_bytes": 4336
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__rules_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Rules",
-      "content": "# Documentation Subsystem — Local Rules & Constraints\n\n> Constraints and formatting standards for documentation in HATH0R-ATC.\n\n## Rules\n\n1. **Taxonomy Discipline**: Structure documentation according to canonical hierarchy: Playbook (troubleshooting/triage) → Procedure (step-by-step operation) → Runbook (lifecycle/service ops).\n2. **Path Pointers**: Relative links must use markdown format and valid file targets.\n3. **Redaction**: Never write plain text tokens, API keys, or private SSH keys into markdown files.\n4. **Header Consistency**: Markdown documents must include front-matter or initial block summary with document ownership and status.\n",
-      "properties": {
-        "path": "docs/rules.md",
-        "category": "docs",
-        "size_bytes": 655
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__deployment-local-docker_md",
+      "id": "doc:docs\\deployment-local-docker_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
       "label": "Deployment Local Docker",
       "content": "# Deployment — Hath0r local Docker group\n\nLocal suite runtime for the **OpenSource Project**, owned by **Hath0r ATC**: one Docker Compose project, one network, shared edge (NGINX) and shared state (Redis). MCP remains a **standalone** sibling that joins the same network.\n\n| Field | Value |\n|-------|-------|\n| Status | **Scaffolded (local)** · **CANONICAL** |\n| Documented | 2026-09-23 |\n| Rule | `CR-DOCKER-HATH0R-GROUP-001` |\n| Compose project | `hath0r` |\n| Network | `hath0r-net` |\n| Workspace root | `/Users/raybayly/Development/OpenSource` (ATC at `hath0r-atc/`) |\n| GitHub | [Bayly-AI/HATH0R-ATC](https://github.com/Bayly-AI/HATH0R-ATC) |\n| Membership scope | **All repos under the workspace root** |\n| Canonical compose | `hath0r-atc/deploy/docker/docker-compose.yml` |\n| Ops entry | `cd hath0r-atc && make docker-up` |\n\n## Canonical membership (CRITICAL)\n\n**Every repository under `/Users/raybayly/Development/OpenSource` is part of the `hath0r` Docker group** for local suite runtime. Product git remotes may differ; Docker project name does **not**.\n\nPolicy: [`docs/rules/cr-docker-hath0r-group-001.md`](rules/cr-docker-hath0r-group-001.md) · [`AGENTS.md`](../AGENTS.md)\n\n## Purpose\n\n1. K",
       "properties": {
-        "path": "docs/deployment-local-docker.md",
+        "path": "docs\\deployment-local-docker.md",
         "category": "docs",
-        "size_bytes": 5462
+        "size_bytes": 5592
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__observe__mcp-central-architecture-roadmap-20261031_md",
+      "id": "doc:docs\\INDEX_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Mcp Central Architecture Roadmap 20261031",
-      "content": "# HATH0R MCP-Central Architecture, SuperSqueeze & Bot Execution Plan\n\n> **Control Tower**: `HATH0R-ATC` (`Bayly-AI/HATH0R-ATC` · Issue [#80](https://github.com/Bayly-AI/HATH0R-ATC/issues/80))  \n> **Paired Governance & MCP Hub**: `HATH0R-CLI` (`Bayly-AI/HATH0R-CLI`) ⇄ `HATH0R-MCP` (`Bayly-AI/HATH0R-MCP`)  \n> **Cognitive Substrate**: `HATH0R-Agentic-Framework` (`Bayly-AI/HATH0R-Agentic-Framework`)  \n> **Date**: 2026-10-31 · **Rules**: `CR-CLI-ENTRY-001` · `CR-CLI-MCP-ECOSYSTEM-001` · `CR-SUBSTRATE-001` · `CR-MEMORY-COMPOUND-001` · `CR-TASK-EVAL-001` · `CR-SEMVER-BUMP-001`\n\n---\n\n## 1. Executive Summary & Architectural Directive\n\nTo maximize technology utilization across the Hath0r OpenSource Suite and guarantee that every task is **finished, completed, and accurate**, the suite architecture is unified around seven core invariants:\n\n0. **Canonical Feature Definition & Workflow-First Standard (`CR-FEATURE-WORKFLOW-STANDARD-001`)**:\n   - **Every Feature Is a Service Run by `>= 1` Bot**: Every feature in the Hath0r ecosystem is a service owned and executed by **at least one Bot** (`src/hath0r_cli/bots/`, registered in `BotRegistry`). Zero orphan commands or scripts.\n   - **2-Level Tool, K",
+      "label": "Index",
+      "content": "# Hath0r ATC docs index\n\n| Doc | Purpose |\n|-----|---------|\n| [runbook.md](runbook.md) | Operator/dev runbook (CR-HATH0R-INIT-001) |\n| [deployment-local-docker.md](deployment-local-docker.md) | Local Docker deploy record |\n| [observe/README.md](observe/README.md) | Observation surfaces |\n| [rules/cr-docker-hath0r-group-001.md](rules/cr-docker-hath0r-group-001.md) | Docker group membership |\n| [rules/cr-branch-gov-001-canonical-branches.md](rules/cr-branch-gov-001-canonical-branches.md) | Branch/PR governance |\n| [governance/SUITE_STANDARDS.md](governance/SUITE_STANDARDS.md) | Suite standards hub (CLI control tower pins) |\n| [governance/semantic-versioning.md](governance/semantic-versioning.md) | SemVer pointer (`VERSION`) |\n| [governance/workflow-documentation-standard.md](governance/workflow-documentation-standard.md) | Procedure/strategy/playbook standard |\n| [governance/cli-first-rules.md](governance/cli-first-rules.md) | CLI-first (cr-cli-first-001) |\n| [governance/opentelemetry-standards.md](governance/opentelemetry-standards.md) | OTel pointer + local stub |\n| [governance/openfeature-standards.md](governance/openfeature-standards.md) | OpenFeature pointer + local stub |\n| [g",
       "properties": {
-        "path": "docs/observe/mcp-central-architecture-roadmap-20261031.md",
-        "category": "observe",
-        "size_bytes": 23978
+        "path": "docs\\INDEX.md",
+        "category": "docs",
+        "size_bytes": 1538
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__observe__MASTER_HANDOFF_MCP_CENTRAL_ARCHITECTURE_md",
+      "id": "doc:docs\\rules_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Master Handoff Mcp Central Architecture",
-      "content": "# Master Hand-Off: Hath0r MCP-Central Architecture, Two-Level `AgentGraph`, Workflow-First & Continuous Evals\n\n> **Document ID**: `MASTER-HANDOFF-MCP-ARCH-20261031`  \n> **Control Tower**: `Bayly-AI/HATH0R-ATC` (`/Users/raybayly/Development/OpenSource/hath0r-atc`)  \n> **Canonical Roadmap**: [`docs/observe/mcp-central-architecture-roadmap-20261031.md`](mcp-central-architecture-roadmap-20261031.md)  \n> **Last Updated**: 2026-10-31 (**ALL 10 TICKETS COMPLETED WITH OPEN PRs TARGETING `development` · `5/5` FLEET ARCH VERIFY `PASS`**)  \n> **Mandatory Rule for All Subsequent Sessions**: **After completing EVERY ticket, you MUST update this Master Hand-Off document (`docs/observe/MASTER_HANDOFF_MCP_CENTRAL_ARCHITECTURE.md`) with the ticket's status, branch/PR URL, test results, and Continuous 4-Tier Eval Scorecard (`R_task`), commit, and push before handing off to the next session.**\n\n---\n\n## 1. Non-Negotiable Architectural Invariants\n\n1. **Canonical Feature Definition (`CR-FEATURE-WORKFLOW-STANDARD-001`)**:\n   - **Every Feature Is a Service Run by `>= 1` Bot**: Every feature, CLI command, MCP tool, or workflow is backed by a formal Service and owned by at least one registered Bot in `BotRe",
+      "label": "Rules",
+      "content": "# Documentation Subsystem — Local Rules & Constraints\n\n> Constraints and formatting standards for documentation in HATH0R-ATC.\n\n## Rules\n\n1. **Taxonomy Discipline**: Structure documentation according to canonical hierarchy: Playbook (troubleshooting/triage) → Procedure (step-by-step operation) → Runbook (lifecycle/service ops).\n2. **Path Pointers**: Relative links must use markdown format and valid file targets.\n3. **Redaction**: Never write plain text tokens, API keys, or private SSH keys into markdown files.\n4. **Header Consistency**: Markdown documents must include front-matter or initial block summary with document ownership and status.\n",
       "properties": {
-        "path": "docs/observe/MASTER_HANDOFF_MCP_CENTRAL_ARCHITECTURE.md",
-        "category": "observe",
-        "size_bytes": 9334
+        "path": "docs\\rules.md",
+        "category": "docs",
+        "size_bytes": 665
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__observe__README_md",
+      "id": "doc:docs\\runbook_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Readme",
-      "content": "# Observation (Hath0r ATC)\n\n**Hath0r ATC** is the OpenSource Project **observation** hub as well as infrastructure and group controller.\n\n## Current surfaces\n\n| Surface | Path / command |\n|---------|----------------|\n| Docker group status | `make docker-status` |\n| Smoke (edge + Redis + optional MCP) | `make smoke` / `./deploy/docker/smoke-test.sh` |\n| Reports | `docs/reports/` |\n| Runtime archive | `docs/archive/` |\n\n## Direction\n\nExpand toward fuller Observe capabilities while keeping **status and smoke ownership in ATC** so the control tower remains the single place operators check suite health for framework builds.\n",
+      "label": "Runbook",
+      "content": "# Runbook: HATH0R ATC (Control Tower)\n\n> Canonical operations runbook for **HATH0R ATC**.  \n> Satisfies Hath0r initialization gate **CR-HATH0R-INIT-001**.  \n> Tech family: Docker Compose control tower / suite infrastructure (peer: 1-Nation ATC).\n\n---\n\n## 1. Overview\n\nHATH0R ATC is the **infrastructure**, **observation**, and **central group controller** for the OpenSource Project (`hath0r-opensource`).\n\n| Responsibility | Owned here |\n|----------------|------------|\n| Docker group `hath0r` + network `hath0r-net` | Yes |\n| Shared edge `hath0r-nginx` + state `hath0r-redis` | Yes |\n| Optional `hath0r-postgres` | Yes (profile `db`) |\n| MCP service process | **No** — standalone `../hath0r-mcp` |\n| Operator CLI binary `hath0r` | **No** — `../hathor-cli` |\n| Framework application code | **No** — `../hath0r` (supported by this tower) |\n\n---\n\n## 2. Prerequisites\n\n- Docker Desktop (or Engine + Compose v2)\n- `make`, `curl`, `bash`\n- Optional: `hath0r` CLI on PATH for doctor/bootstrap\n- No conflicting listeners on `:38000` / `:35432`\n\n---\n\n## 3. Install / bootstrap\n\n```bash\ncd /Users/raybayly/Development/OpenSource/hath0r-atc\ncp .env.example .env   # optional overrides\n./bin/hath0r-bootstrap.s",
       "properties": {
-        "path": "docs/observe/README.md",
-        "category": "observe",
-        "size_bytes": 627
+        "path": "docs\\runbook.md",
+        "category": "docs",
+        "size_bytes": 4052
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__workflow-documentation-standard_md",
+      "id": "doc:docs\\TICKET-AGENTGRAPH-REFACTOR_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Workflow Documentation Standard",
-      "content": "# Workflow documentation standard (ATC pointer)\n\nCanonical suite policy: [HATH0R-CLI workflow-documentation-standard.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/workflow-documentation-standard.md).\n\n## Required document types (suite)\n\n| Type | Purpose | ATC home |\n|------|---------|----------|\n| Procedure | Step sequences operators follow | `docs/governance/checklists/`, `docs/governance/playbooks/` |\n| Strategy | Why/when choices | Prefer CLI `docs/governance/strategies/` unless ATC-specific |\n| Playbook | Multi-step incident/release narratives | `docs/governance/playbooks/` |\n| Runbook | Day-2 ops for this product | [`docs/runbook.md`](../runbook.md) |\n| Checklist | PR/gate gates | `docs/governance/checklists/` |\n\n## ATC notes\n\n- ATC already carries PR workflow playbooks/checklists under `docs/governance/`.\n- Docker workflows for the suite should follow CLI factory/workflow JSON when present; runtime compose remains [`deploy/docker/`](../../deploy/docker/).\n- New operator procedures for observation or group control should land here and link this standard.\n\nIssue: #15 · related docker workflows: #9\n",
+      "label": "Ticket Agentgraph Refactor",
+      "content": "---\ntitle: \"Ticket: Refactor Agents Files to Utilize AgentGraph Substrate\"\nrepository: \"OpenSource/hath0r-atc\"\ngithub_issue: \"https://github.com/Bayly-AI/HATH0R-ATC/issues/31\"\ncreated: \"2026-10-03\"\nstatus: \"closed\"\nclosed_at: \"2026-10-03\"\nvalidation_result: \"PASSED (29 nodes, 15 edges)\"\n---\n\n# Refactor Agent Files to Utilize Hath0r AgentGraph Substrate\n\n## Repository Context\n- **Repository**: `OpenSource/hath0r-atc`\n- **System Archetype / Role**: OpenSource Suite Edge & Orchestration\n- **Technology Stack**: Docker Compose / Python / NGINX\n- **Primary Subsystems**: `deploy`, `cfg`, `site`\n- **Current Agent Files**: `AGENTS.md`, `deploy/AGENTS.md`, `contracts/AGENTS.md`, `tests/AGENTS.md`, `docs/AGENTS.md`, `cfg/AGENTS.md` (+2 more) (8 total)\n- **Current AgentGraph Snapshot**: Initialized (29 nodes, 9 edges)\n\n---\n\n## Architectural Purpose\n\nUnder **CR-BAI-001** and the **Hath0r Zero-Prompt-Tax Governance** model, storing static policies, rules, and tool authorizations as monolithic Markdown documents in `AGENTS.md` wastes 40%–60% of LLM context windows and introduces probabilistic security bypasses. \n\nThis work refactors this repository's agent configuration into the deterministic **A",
       "properties": {
-        "path": "docs/governance/workflow-documentation-standard.md",
-        "category": "governance",
-        "size_bytes": 1150
+        "path": "docs\\TICKET-AGENTGRAPH-REFACTOR.md",
+        "category": "docs",
+        "size_bytes": 4418
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__openfeature-standards_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Openfeature Standards",
-      "content": "# OpenFeature standards (ATC pointer)\n\nCanonical: [HATH0R-CLI openfeature-standards.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/openfeature-standards.md).\n\nLocal stub: [`../../cfg/feature-flags/openfeature.json`](../../cfg/feature-flags/openfeature.json)  \nExample catalog: [`../../cfg/feature-flags/catalog.example.json`](../../cfg/feature-flags/catalog.example.json)\n\nProvider options and secrets via env only (`OPENFEATURE_PROVIDER_OPTIONS`). Fail-safe defaults on.\n\nIssue: #12\n",
-      "properties": {
-        "path": "docs/governance/openfeature-standards.md",
-        "category": "governance",
-        "size_bytes": 513
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__governance__semantic-versioning_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Semantic Versioning",
-      "content": "# Semantic Versioning — HATH0R ATC\n\nCanonical suite policy: [HATH0R-CLI semantic-versioning.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/semantic-versioning.md) (SemVer 2.0.0).\n\n## ATC Rules & Single Canonical Source of Truth\n\nThe root [`VERSION`](../../VERSION) file is the **exclusive canonical source of truth** for HATH0R ATC version state.\n\n| Rule | Value | Description |\n|------|-------|-------------|\n| Canonical version file | [`VERSION`](../../VERSION) | Single-line SemVer string (`MAJOR.MINOR.PATCH`) |\n| Changelog alignment | [`CHANGELOG.md`](../../CHANGELOG.md) | Must contain matching section `## [X.Y.Z]` |\n| PR Declaration | `version-policy-guard.yml` | All PRs must declare impact (`semver:patch`, `minor`, `major`, `none`) |\n| Release Runbook | [`release-runbook.md`](playbooks/release-runbook.md) | Step-by-step operational release procedures |\n| Tag Format | `vX.Y.Z` (e.g. `v0.2.2`) | Annotated Git tags triggering `.github/workflows/release.yml` |\n\n## SemVer Impact Taxonomy\n\n- **MAJOR (`semver:major`)**: Breaking architectural changes, incompatible configuration schema shifts, or backwards-incompatible API changes.\n- **MINOR (`semver:minor`)**",
-      "properties": {
-        "path": "docs/governance/semantic-versioning.md",
-        "category": "governance",
-        "size_bytes": 1485
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__governance__cli-first-rules_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Cli First Rules",
-      "content": "# CLI-first rules (ATC pointer)\n\nCanonical: [HATH0R-CLI cli-first-rules.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/cli-first-rules.md).\n\n## ATC application\n\nFor connections, MCP orientation, workflows/factories, Docker workflows, KB path, or suite orientation:\n\n1. Prefer the **`hath0r`** operator CLI (`../hathor-cli`) when installed.\n2. Prefer ATC **Make** targets for Docker group lifecycle (`make docker-up`, `make smoke`).\n3. Avoid inventing parallel ad-hoc scripts that bypass CLI/ATC entrypoints.\n\nSee also `AGENTS.md` § CLI-first (`cr-cli-first-001`).\n\nIssue: #14\n",
-      "properties": {
-        "path": "docs/governance/cli-first-rules.md",
-        "category": "governance",
-        "size_bytes": 606
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__governance__openobservation-standards_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Openobservation Standards",
-      "content": "# OpenObservation standards (ATC pointer)\n\nCanonical suite policy: [HATH0R-CLI openobservation-standards.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/openobservation-standards.md).\n\n## ATC ownership\n\nATC is the **observation hub** for OpenSource (`docs/observe/`, smoke baselines, operational archives).\n\n| Local surface | Path |\n|---------------|------|\n| Observation index | [`../observe/README.md`](../observe/README.md) |\n| Runbook | [`../runbook.md`](../runbook.md) |\n| OTel stub (export path) | [`../../cfg/observability/otel.json`](../../cfg/observability/otel.json) |\n\nAlign golden signals, event classes, and spool locations with the CLI standard; do not fork semantics.\n\nIssue: #11\n",
-      "properties": {
-        "path": "docs/governance/openobservation-standards.md",
-        "category": "governance",
-        "size_bytes": 723
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__governance__pr-workflow_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Pr Workflow",
-      "content": "# PR workflow hardening (CR-BAI-001 / cr-branch-gov-001)\n\n> Control tower: `Bayly-AI/HATH0R-CLI`  \n> Companion: `docs/governance/branch-rules.md`  \n> Issue track: PR workflow hardening (all-repos)\n\n## Canonical end-to-end flow\n\n```text\n1) GitHub issue created (required)\n2) Work branch from development:\n     feature|bugfix|hotfix|enhancement|research|fix|chore/<issue>-slug\n3) Implement on work branch\n4) PR: work branch → development\n5) Review: agents/bots + required checks (validate-promotion-path, CI, quality gates)\n6) Owner CODEOWNERS approval → merge → development\n7) Cut release branch: release/x.x.x (from development when ready)\n8) Promote → testing (deploy + validate)\n9) HUMAN REVIEW GATE  ← hard stop for automated/agent-heavy path\n   Human initiates release to staging\n10) testing → release PR → Human review → merge → staging\n11) staging → release PR → Human review → merge → master (Production)\n```\n\n### Hard stops\n\n| Stage | Who reviews | Notes |\n|-------|-------------|-------|\n| Work PR → `development` | Agents/bots + CODEOWNERS (`@somesayray`) | Primary automation surface |\n| → `testing` | CI + promotion path check | Deploy/validate before next stage |\n| → `staging` | **Human",
-      "properties": {
-        "path": "docs/governance/pr-workflow.md",
-        "category": "governance",
-        "size_bytes": 4225
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__governance__opentelemetry-standards_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Opentelemetry Standards",
-      "content": "# OpenTelemetry standards (ATC pointer)\n\nCanonical: [HATH0R-CLI opentelemetry-standards.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/opentelemetry-standards.md).\n\nLocal stub: [`../../cfg/observability/otel.json`](../../cfg/observability/otel.json) — `service.name=hath0r-atc`, namespace `hath0r-opensource`.\n\nRequired resource attributes follow the control tower: `service.name`, `service.namespace`, `deployment.environment`, `service.version` (from `VERSION` when instrumented).\n\nSecrets / OTLP headers: credentials root only — never commit.\n\nIssue: #13\n",
-      "properties": {
-        "path": "docs/governance/opentelemetry-standards.md",
-        "category": "governance",
-        "size_bytes": 591
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__governance__sonarcloud-quality-gates_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Sonarcloud Quality Gates",
-      "content": "# SonarCloud Quality Gates (PR hard stop)\n\n> Control tower: `Bayly-AI/HATH0R-CLI`  \n> Ticket track: PR quality gates — SonarCloud hard stop (all-repos)\n\n## Policy (CRITICAL)\n\n1. **SonarCloud Quality Gate** is the **only** canonical threshold source for ratings, coverage, duplications, security hotspots, etc.\n2. **Do not** invent or relax project-local threshold numbers in `sonar-project.properties` (no `sonar.coverage.minimum`, no homemade rating floors that diverge from the cloud gate).\n3. If the Quality Gate **fails**, the PR **cannot** be merged until fixed (required check **SonarCloud Quality Gate**).\n4. Fix findings; **do not** weaken the org/project Quality Gate to go green.\n\n## CI\n\nWorkflow: `.github/workflows/sonarcloud-quality-gate.yml`\n\n- Runs on PRs into `development` / `testing` / `staging` / `master`\n- Runs scan against **SonarCloud** (`https://sonarcloud.io`)\n- Sets `sonar.qualitygate.wait=true` so the job **fails** when the gate fails\n\nRequired check context name: **`SonarCloud Quality Gate`**\n\n## Required secrets / variables\n\n| Name | Type | Purpose |\n|------|------|---------|\n| `SONAR_TOKEN` | Actions **secret** | SonarCloud analysis token (repo or org) |\n| `SONAR_",
-      "properties": {
-        "path": "docs/governance/sonarcloud-quality-gates.md",
-        "category": "governance",
-        "size_bytes": 2889
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__governance__SUITE_STANDARDS_md",
-      "plane": "knowledge",
-      "type": "knowledge_doc",
-      "label": "Suite Standards",
-      "content": "# Suite standards (HATH0R-ATC member pointer)\n\n> **Role:** HATH0R-ATC is the OpenSource **infrastructure / observation / Docker-group control tower**.  \n> **Canonical policy prose and shared cfg templates** for suite-wide epics live in the operator control tower **HATH0R-CLI** (`Bayly-AI/HATH0R-CLI`, branch `development`).  \n> This document pins ATC to those standards and lists local stubs.\n\nUpdated: 2026-09-24 · Fan-out issues: #11–#16, #8–#10, #2, #21\n\n## Control tower (canonical)\n\n| Surface | GitHub (`development`) |\n|---------|-------------------------|\n| Repo | https://github.com/Bayly-AI/HATH0R-CLI |\n| OTel standards | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/opentelemetry-standards.md |\n| OTel cfg | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/cfg/observability/otel.json |\n| OpenFeature standards | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/openfeature-standards.md |\n| OpenFeature cfg | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/cfg/feature-flags/openfeature.json |\n| OpenObservation | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/openobservation-standards.md |\n| CLI-",
-      "properties": {
-        "path": "docs/governance/SUITE_STANDARDS.md",
-        "category": "governance",
-        "size_bytes": 4448
-      },
-      "is_current": true
-    },
-    {
-      "id": "doc:docs__governance__branch-rules_md",
+      "id": "doc:docs\\governance\\branch-rules_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
       "label": "Branch Rules",
       "content": "# Branch rules (cr-branch-gov-001 / CR-BAI-001)\n\n> Control tower source: `Bayly-AI/HATH0R-CLI`  \n> Applies org-wide to Hath0r/OpenSource, BAI, and 1-Nation product repos.  \n> Issue track: define-branch-rules (all-repos)\n\n## Locked canonical branches\n\n| Branch | Role | Protection |\n|--------|------|------------|\n| `development` | Default integration; **only** target for work PRs | PR + 1 review + CODEOWNERS + `validate-promotion-path` + no force-push/delete |\n| `testing` | Pre-staging validation | Same; heads: `development` or `release/x.x.x` |\n| `staging` | Pre-production | Same; heads: `testing` or `release/x.x.x`; **human review** |\n| `master` | Production | Same; heads: `staging` or `release/x.x.x`; **human review** |\n\n## Work branches (PR → `development` only)\n\n```text\nfeature|bugfix|hotfix|enhancement|research|fix|chore/<issue-number>-short-slug\n```\n\n- Create a GitHub **issue first** (no issue → no branch).\n- Branch **from `development` only**.\n- **Never** open work PRs into `testing`, `staging`, or `master`.\n\n## Release branches\n\n```text\nrelease/x.x.x\n```\n\nExamples: `release/1.4.0`, `release/2.0.0-rc.1`\n\n- Cut from `development` when a release train starts.\n- Used **only** fo",
       "properties": {
-        "path": "docs/governance/branch-rules.md",
+        "path": "docs\\governance\\branch-rules.md",
         "category": "governance",
-        "size_bytes": 2603
+        "size_bytes": 2677
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__docker-group-standard_md",
+      "id": "doc:docs\\governance\\cli-first-rules_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Cli First Rules",
+      "content": "# CLI-first rules (ATC pointer)\n\nCanonical: [HATH0R-CLI cli-first-rules.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/cli-first-rules.md).\n\n## ATC application\n\nFor connections, MCP orientation, workflows/factories, Docker workflows, KB path, or suite orientation:\n\n1. Prefer the **`hath0r`** operator CLI (`../hathor-cli`) when installed.\n2. Prefer ATC **Make** targets for Docker group lifecycle (`make docker-up`, `make smoke`).\n3. Avoid inventing parallel ad-hoc scripts that bypass CLI/ATC entrypoints.\n\nSee also `AGENTS.md` § CLI-first (`cr-cli-first-001`).\n\nIssue: #14\n",
+      "properties": {
+        "path": "docs\\governance\\cli-first-rules.md",
+        "category": "governance",
+        "size_bytes": 621
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\governance\\docker-group-standard_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
       "label": "Docker Group Standard",
       "content": "# Docker group standard (ATC pointer)\n\nCanonical prose/template: [HATH0R-CLI docker-group-standard.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/docker-group-standard.md).\n\n**ATC is the runtime owner** of group `hath0r`:\n\n- Deploy: [`../../deploy/docker/`](../../deploy/docker/)\n- Cfg pointer: [`../../cfg/docker/groups/hath0r/README.md`](../../cfg/docker/groups/hath0r/README.md)\n- Rule: [`../rules/cr-docker-hath0r-group-001.md`](../rules/cr-docker-hath0r-group-001.md)\n\nIssues: #16 · #9\n",
       "properties": {
-        "path": "docs/governance/docker-group-standard.md",
+        "path": "docs\\governance\\docker-group-standard.md",
         "category": "governance",
-        "size_bytes": 521
+        "size_bytes": 532
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__checklists__sonarcloud-pr-gate_md",
+      "id": "doc:docs\\governance\\openfeature-standards_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Sonarcloud Pr Gate",
-      "content": "# Checklist: SonarCloud PR Quality Gate\n\n- [ ] `SONAR_TOKEN` configured (repo or org secret)\n- [ ] `SONAR_ORGANIZATION` set if not default\n- [ ] `sonar-project.properties` has identity/sources only (no local gate threshold overrides)\n- [ ] Workflow `.github/workflows/sonarcloud-quality-gate.yml` present\n- [ ] Branch protection requires check **SonarCloud Quality Gate** (where plan allows)\n- [ ] Sample PR shows check; failed gate blocks merge\n- [ ] PR template / AGENTS mention Sonar hard stop\n- [ ] Docs published / linked for agents\n",
+      "label": "Openfeature Standards",
+      "content": "# OpenFeature standards (ATC pointer)\n\nCanonical: [HATH0R-CLI openfeature-standards.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/openfeature-standards.md).\n\nLocal stub: [`../../cfg/feature-flags/openfeature.json`](../../cfg/feature-flags/openfeature.json)  \nExample catalog: [`../../cfg/feature-flags/catalog.example.json`](../../cfg/feature-flags/catalog.example.json)\n\nProvider options and secrets via env only (`OPENFEATURE_PROVIDER_OPTIONS`). Fail-safe defaults on.\n\nIssue: #12\n",
       "properties": {
-        "path": "docs/governance/checklists/sonarcloud-pr-gate.md",
-        "category": "checklists",
-        "size_bytes": 538
+        "path": "docs\\governance\\openfeature-standards.md",
+        "category": "governance",
+        "size_bytes": 523
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__checklists__pr-release-to-master_md",
+      "id": "doc:docs\\governance\\openobservation-standards_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Pr Release To Master",
-      "content": "# Checklist: release → master (Production)\n\n- [ ] Staging validated\n- [ ] Human opens release PR → `master`\n- [ ] Head = `staging` or `release/x.x.x`\n- [ ] Environment `production` human approval\n- [ ] `validate-promotion-path` green\n- [ ] Tag `vX.Y.Z` + GitHub Release planned/executed\n- [ ] Post-prod smoke complete\n- [ ] Incident channel aware (if applicable)\n",
+      "label": "Openobservation Standards",
+      "content": "# OpenObservation standards (ATC pointer)\n\nCanonical suite policy: [HATH0R-CLI openobservation-standards.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/openobservation-standards.md).\n\n## ATC ownership\n\nATC is the **observation hub** for OpenSource (`docs/observe/`, smoke baselines, operational archives).\n\n| Local surface | Path |\n|---------------|------|\n| Observation index | [`../observe/README.md`](../observe/README.md) |\n| Runbook | [`../runbook.md`](../runbook.md) |\n| OTel stub (export path) | [`../../cfg/observability/otel.json`](../../cfg/observability/otel.json) |\n\nAlign golden signals, event classes, and spool locations with the CLI standard; do not fork semantics.\n\nIssue: #11\n",
       "properties": {
-        "path": "docs/governance/checklists/pr-release-to-master.md",
-        "category": "checklists",
-        "size_bytes": 367
+        "path": "docs\\governance\\openobservation-standards.md",
+        "category": "governance",
+        "size_bytes": 740
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__checklists__pr-pre-merge-development_md",
+      "id": "doc:docs\\governance\\opentelemetry-standards_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Pr Pre Merge Development",
-      "content": "# Checklist: pre-merge → development\n\n- [ ] Linked GitHub issue in branch name and PR body (`Fixes #N` / `Refs #N`)\n- [ ] Branch named `feature|bugfix|hotfix|enhancement|research|fix|chore/<n>-slug`\n- [ ] PR base is **`development`**\n- [ ] Feature PR template completed\n- [ ] `validate-promotion-path` green\n- [ ] CI / tests green\n- [ ] Quality gates (Sonar etc.) green when enabled\n- [ ] CODEOWNERS review requested/approved\n- [ ] No secrets in diff\n- [ ] Docs/runbooks updated if workflow changed\n",
+      "label": "Opentelemetry Standards",
+      "content": "# OpenTelemetry standards (ATC pointer)\n\nCanonical: [HATH0R-CLI opentelemetry-standards.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/opentelemetry-standards.md).\n\nLocal stub: [`../../cfg/observability/otel.json`](../../cfg/observability/otel.json) — `service.name=hath0r-atc`, namespace `hath0r-opensource`.\n\nRequired resource attributes follow the control tower: `service.name`, `service.namespace`, `deployment.environment`, `service.version` (from `VERSION` when instrumented).\n\nSecrets / OTLP headers: credentials root only — never commit.\n\nIssue: #13\n",
       "properties": {
-        "path": "docs/governance/checklists/pr-pre-merge-development.md",
-        "category": "checklists",
-        "size_bytes": 501
+        "path": "docs\\governance\\opentelemetry-standards.md",
+        "category": "governance",
+        "size_bytes": 602
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__checklists__pr-human-gate-before-staging_md",
+      "id": "doc:docs\\governance\\pr-workflow_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Pr Human Gate Before Staging",
-      "content": "# Checklist: HUMAN GATE before staging\n\n**Automation and agent review STOP here. A human initiates staging.**\n\n- [ ] Testing environment validated (functional + smoke)\n- [ ] No open Sev-1/Sev-2 on testing build\n- [ ] Human owner named for staging deploy\n- [ ] Release PR base = `staging`\n- [ ] Head = `testing` or `release/x.x.x`\n- [ ] GitHub Environment `staging` approval by human (`@somesayray` or designated)\n- [ ] Change window / communications done if required\n- [ ] Rollback plan attached to PR\n",
+      "label": "Pr Workflow",
+      "content": "# PR workflow hardening (CR-BAI-001 / cr-branch-gov-001)\n\n> Control tower: `Bayly-AI/HATH0R-CLI`  \n> Companion: `docs/governance/branch-rules.md`  \n> Issue track: PR workflow hardening (all-repos)\n\n## Canonical end-to-end flow\n\n```text\n1) GitHub issue created (required)\n2) Work branch from development:\n     feature|bugfix|hotfix|enhancement|research|fix|chore/<issue>-slug\n3) Implement on work branch\n4) PR: work branch → development\n5) Review: agents/bots + required checks (validate-promotion-path, CI, quality gates)\n6) Owner CODEOWNERS approval → merge → development\n7) Cut release branch: release/x.x.x (from development when ready)\n8) Promote → testing (deploy + validate)\n9) HUMAN REVIEW GATE  ← hard stop for automated/agent-heavy path\n   Human initiates release to staging\n10) testing → release PR → Human review → merge → staging\n11) staging → release PR → Human review → merge → master (Production)\n```\n\n### Hard stops\n\n| Stage | Who reviews | Notes |\n|-------|-------------|-------|\n| Work PR → `development` | Agents/bots + CODEOWNERS (`@somesayray`) | Primary automation surface |\n| → `testing` | CI + promotion path check | Deploy/validate before next stage |\n| → `staging` | **Human",
       "properties": {
-        "path": "docs/governance/checklists/pr-human-gate-before-staging.md",
-        "category": "checklists",
-        "size_bytes": 502
+        "path": "docs\\governance\\pr-workflow.md",
+        "category": "governance",
+        "size_bytes": 4329
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__checklists__pr-pre-promote-testing_md",
+      "id": "doc:docs\\governance\\semantic-versioning_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Pr Pre Promote Testing",
-      "content": "# Checklist: pre-promote → testing\n\n- [ ] Release notes / version bump prepared\n- [ ] `release/x.x.x` cut from current `development` (or documented equivalent)\n- [ ] Release PR template completed\n- [ ] Head is `development` or `release/x.x.x` only\n- [ ] Base is `testing`\n- [ ] `validate-promotion-path` green\n- [ ] Deploy + smoke/URL validation plan ready\n- [ ] Rollback owner identified\n",
+      "label": "Semantic Versioning",
+      "content": "# Semantic Versioning — HATH0R ATC\n\nCanonical suite policy: [HATH0R-CLI semantic-versioning.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/semantic-versioning.md) (SemVer 2.0.0).\n\n## ATC Rules & Single Canonical Source of Truth\n\nThe root [`VERSION`](../../VERSION) file is the **exclusive canonical source of truth** for HATH0R ATC version state.\n\n| Rule | Value | Description |\n|------|-------|-------------|\n| Canonical version file | [`VERSION`](../../VERSION) | Single-line SemVer string (`MAJOR.MINOR.PATCH`) |\n| Changelog alignment | [`CHANGELOG.md`](../../CHANGELOG.md) | Must contain matching section `## [X.Y.Z]` |\n| PR Declaration | `version-policy-guard.yml` | All PRs must declare impact (`semver:patch`, `minor`, `major`, `none`) |\n| Release Runbook | [`release-runbook.md`](playbooks/release-runbook.md) | Step-by-step operational release procedures |\n| Tag Format | `vX.Y.Z` (e.g. `v0.2.2`) | Annotated Git tags triggering `.github/workflows/release.yml` |\n\n## SemVer Impact Taxonomy\n\n- **MAJOR (`semver:major`)**: Breaking architectural changes, incompatible configuration schema shifts, or backwards-incompatible API changes.\n- **MINOR (`semver:minor`)**",
       "properties": {
-        "path": "docs/governance/checklists/pr-pre-promote-testing.md",
-        "category": "checklists",
-        "size_bytes": 391
+        "path": "docs\\governance\\semantic-versioning.md",
+        "category": "governance",
+        "size_bytes": 1507
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__checklists__pr-post-merge-development_md",
+      "id": "doc:docs\\governance\\sonarcloud-quality-gates_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Pr Post Merge Development",
-      "content": "# Checklist: post-merge → development\n\n- [ ] Merge commit on `development`\n- [ ] CI on `development` still green (if applicable)\n- [ ] Follow-up issues filed for residual work\n- [ ] Knowledge/MCP share bot run when enabled\n- [ ] Decide: stay on development vs cut `release/x.x.x`\n",
+      "label": "Sonarcloud Quality Gates",
+      "content": "# SonarCloud Quality Gates (PR hard stop)\n\n> Control tower: `Bayly-AI/HATH0R-CLI`  \n> Ticket track: PR quality gates — SonarCloud hard stop (all-repos)\n\n## Policy (CRITICAL)\n\n1. **SonarCloud Quality Gate** is the **only** canonical threshold source for ratings, coverage, duplications, security hotspots, etc.\n2. **Do not** invent or relax project-local threshold numbers in `sonar-project.properties` (no `sonar.coverage.minimum`, no homemade rating floors that diverge from the cloud gate).\n3. If the Quality Gate **fails**, the PR **cannot** be merged until fixed (required check **SonarCloud Quality Gate**).\n4. Fix findings; **do not** weaken the org/project Quality Gate to go green.\n\n## CI\n\nWorkflow: `.github/workflows/sonarcloud-quality-gate.yml`\n\n- Runs on PRs into `development` / `testing` / `staging` / `master`\n- Runs scan against **SonarCloud** (`https://sonarcloud.io`)\n- Sets `sonar.qualitygate.wait=true` so the job **fails** when the gate fails\n\nRequired check context name: **`SonarCloud Quality Gate`**\n\n## Required secrets / variables\n\n| Name | Type | Purpose |\n|------|------|---------|\n| `SONAR_TOKEN` | Actions **secret** | SonarCloud analysis token (repo or org) |\n| `SONAR_",
       "properties": {
-        "path": "docs/governance/checklists/pr-post-merge-development.md",
-        "category": "checklists",
-        "size_bytes": 282
+        "path": "docs\\governance\\sonarcloud-quality-gates.md",
+        "category": "governance",
+        "size_bytes": 2958
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__playbooks__release-runbook_md",
+      "id": "doc:docs\\governance\\SUITE_STANDARDS_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Release Runbook",
-      "content": "# Release Runbook — HATH0R ATC\n\n> Role: Operational guide for versioning, release validation, and tag publishing.  \n> Status: Canonical · Member of `hath0r-opensource`  \n> Policy: [Semantic Versioning](../semantic-versioning.md) · [HATH0R-CLI SemVer](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/semantic-versioning.md)\n\n---\n\n## 1. Prerequisites\n\nBefore cutting a release:\n1. All PRs merged into `development`.\n2. Promotion gates satisfied: `development` -> `testing` -> `staging` -> `master`.\n3. Working tree is clean: `git status`.\n4. Quality checks pass: SonarCloud quality gate and branch governance.\n\n---\n\n## 2. Release Steps\n\n### Step 1: Validate Version and Changelog\nVerify alignment between `VERSION` and `CHANGELOG.md`:\n```bash\nhath0r release validate\n```\n\n### Step 2: Bump Version (if necessary)\nFor new releases, update the root `VERSION` file:\n```bash\necho \"0.2.3\" > VERSION\n```\nUpdate `CHANGELOG.md` with the new version section under `## [X.Y.Z] - YYYY-MM-DD`.\n\n### Step 3: Promote along Canonical Path\nPromote branch following CR-BAI-001:\n```bash\ngit checkout testing && git merge development\ngit checkout staging && git merge testing\ngit checkout master &&",
+      "label": "Suite Standards",
+      "content": "# Suite standards (HATH0R-ATC member pointer)\n\n> **Role:** HATH0R-ATC is the OpenSource **infrastructure / observation / Docker-group control tower**.  \n> **Canonical policy prose and shared cfg templates** for suite-wide epics live in the operator control tower **HATH0R-CLI** (`Bayly-AI/HATH0R-CLI`, branch `development`).  \n> This document pins ATC to those standards and lists local stubs.\n\nUpdated: 2026-09-24 · Fan-out issues: #11–#16, #8–#10, #2, #21\n\n## Control tower (canonical)\n\n| Surface | GitHub (`development`) |\n|---------|-------------------------|\n| Repo | https://github.com/Bayly-AI/HATH0R-CLI |\n| OTel standards | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/opentelemetry-standards.md |\n| OTel cfg | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/cfg/observability/otel.json |\n| OpenFeature standards | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/openfeature-standards.md |\n| OpenFeature cfg | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/cfg/feature-flags/openfeature.json |\n| OpenObservation | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/openobservation-standards.md |\n| CLI-",
       "properties": {
-        "path": "docs/governance/playbooks/release-runbook.md",
-        "category": "playbooks",
-        "size_bytes": 1579
+        "path": "docs\\governance\\SUITE_STANDARDS.md",
+        "category": "governance",
+        "size_bytes": 4509
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__playbooks__sonarcloud-quality-gate-playbook_md",
+      "id": "doc:docs\\governance\\workflow-documentation-standard_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Sonarcloud Quality Gate Playbook",
-      "content": "# Playbook: SonarCloud Quality Gate on PRs\n\n## First-time setup\n\n1. Log into SonarCloud with org admin.\n2. Ensure GitHub org `Bayly-AI` is bound (or correct Sonar org).\n3. Create project (or auto-provision on first scan) with **default/org Quality Gate** only.\n4. Generate project/org token → GitHub secret `SONAR_TOKEN`.\n5. Set Actions variable `SONAR_ORGANIZATION` if needed.\n6. Open a PR; confirm job **SonarCloud Quality Gate** runs.\n\n## PR failed the gate\n\n1. Open SonarCloud project → PR decoration / Quality Gate details.\n2. Fix **blocker/new code** conditions required by the gate (bugs, vulnerabilities, coverage on new code, etc.).\n3. Push commits; do **not** edit gate conditions.\n4. Re-run checks until green.\n\n## Missing SONAR_TOKEN\n\nJob fails closed with explicit error. Add secret, then re-run workflow.\n\n## Local preview (optional)\n\n```bash\n# token from credentials store — do not print\nexport SONAR_TOKEN=\"...\"   # from secure store\nsonar-scanner -Dsonar.qualitygate.wait=true\n```\n\nPrefer CI as source of truth.\n\n## Anti-patterns\n\n- Lowering coverage % in `sonar-project.properties` to pass CI\n- Disabling the workflow on protected branches\n- Marking the check optional on branch pro",
+      "label": "Workflow Documentation Standard",
+      "content": "# Workflow documentation standard (ATC pointer)\n\nCanonical suite policy: [HATH0R-CLI workflow-documentation-standard.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/workflow-documentation-standard.md).\n\n## Required document types (suite)\n\n| Type | Purpose | ATC home |\n|------|---------|----------|\n| Procedure | Step sequences operators follow | `docs/governance/checklists/`, `docs/governance/playbooks/` |\n| Strategy | Why/when choices | Prefer CLI `docs/governance/strategies/` unless ATC-specific |\n| Playbook | Multi-step incident/release narratives | `docs/governance/playbooks/` |\n| Runbook | Day-2 ops for this product | [`docs/runbook.md`](../runbook.md) |\n| Checklist | PR/gate gates | `docs/governance/checklists/` |\n\n## ATC notes\n\n- ATC already carries PR workflow playbooks/checklists under `docs/governance/`.\n- Docker workflows for the suite should follow CLI factory/workflow JSON when present; runtime compose remains [`deploy/docker/`](../../deploy/docker/).\n- New operator procedures for observation or group control should land here and link this standard.\n\nIssue: #15 · related docker workflows: #9\n",
       "properties": {
-        "path": "docs/governance/playbooks/sonarcloud-quality-gate-playbook.md",
-        "category": "playbooks",
-        "size_bytes": 1276
+        "path": "docs\\governance\\workflow-documentation-standard.md",
+        "category": "governance",
+        "size_bytes": 1171
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__governance__playbooks__pr-workflow-playbook_md",
+      "id": "doc:docs\\observe\\MASTER_HANDOFF_MCP_CENTRAL_ARCHITECTURE_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
-      "label": "Pr Workflow Playbook",
-      "content": "# Playbook: PR workflow (agent + human)\n\n## Scenario A — Feature delivery into development\n\n1. Confirm GitHub issue exists.\n2. `git fetch origin && git checkout development && git pull --ff-only`\n3. `git checkout -b feature/<issue>-short-slug`\n4. Implement; run local tests / `hath0r` preflight when available.\n5. Push branch; open PR with **feature** template, base `development`.\n6. Ensure `validate-promotion-path` and CI green.\n7. Request CODEOWNERS review (`@somesayray`).\n8. Agents may comment/review; merge only after required approvals + checks.\n9. Run post-merge development checklist.\n\n## Scenario B — Release train to testing\n\n1. Ensure development is green and release notes/version ready (version ticket).\n2. `git checkout development && git pull --ff-only`\n3. `git checkout -b release/x.x.x` (SemVer)\n4. Open **release** PR: `release/x.x.x` → `testing` (or `development` → `testing` if policy allows for that cut).\n5. Deploy/validate testing environment.\n6. Complete pre-promote-testing checklist.\n\n## Scenario C — Human gate to staging (STOP for automation)\n\n1. Human confirms testing sign-off.\n2. Human initiates release PR: `testing` or `release/x.x.x` → `staging`.\n3. Environment `s",
+      "label": "Master Handoff Mcp Central Architecture",
+      "content": "# Master Hand-Off: Hath0r MCP-Central Architecture, Two-Level `AgentGraph`, Workflow-First & Continuous Evals\n\n> **Document ID**: `MASTER-HANDOFF-MCP-ARCH-20261031`  \n> **Control Tower**: `Bayly-AI/HATH0R-ATC` (`/Users/raybayly/Development/OpenSource/hath0r-atc`)  \n> **Canonical Roadmap**: [`docs/observe/mcp-central-architecture-roadmap-20261031.md`](mcp-central-architecture-roadmap-20261031.md)  \n> **Last Updated**: 2026-10-31 (**ALL 10 TICKETS COMPLETED WITH OPEN PRs TARGETING `development` · `5/5` FLEET ARCH VERIFY `PASS`**)  \n> **Mandatory Rule for All Subsequent Sessions**: **After completing EVERY ticket, you MUST update this Master Hand-Off document (`docs/observe/MASTER_HANDOFF_MCP_CENTRAL_ARCHITECTURE.md`) with the ticket's status, branch/PR URL, test results, and Continuous 4-Tier Eval Scorecard (`R_task`), commit, and push before handing off to the next session.**\n\n---\n\n## 1. Non-Negotiable Architectural Invariants\n\n1. **Canonical Feature Definition (`CR-FEATURE-WORKFLOW-STANDARD-001`)**:\n   - **Every Feature Is a Service Run by `>= 1` Bot**: Every feature, CLI command, MCP tool, or workflow is backed by a formal Service and owned by at least one registered Bot in `BotRe",
       "properties": {
-        "path": "docs/governance/playbooks/pr-workflow-playbook.md",
-        "category": "playbooks",
-        "size_bytes": 1985
+        "path": "docs\\observe\\MASTER_HANDOFF_MCP_CENTRAL_ARCHITECTURE.md",
+        "category": "observe",
+        "size_bytes": 9378
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__rules__cr-branch-gov-001-canonical-branches_md",
+      "id": "doc:docs\\observe\\mcp-central-architecture-roadmap-20261031_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Mcp Central Architecture Roadmap 20261031",
+      "content": "# HATH0R MCP-Central Architecture, SuperSqueeze & Bot Execution Plan\n\n> **Control Tower**: `HATH0R-ATC` (`Bayly-AI/HATH0R-ATC` · Issue [#80](https://github.com/Bayly-AI/HATH0R-ATC/issues/80))  \n> **Paired Governance & MCP Hub**: `HATH0R-CLI` (`Bayly-AI/HATH0R-CLI`) ⇄ `HATH0R-MCP` (`Bayly-AI/HATH0R-MCP`)  \n> **Cognitive Substrate**: `HATH0R-Agentic-Framework` (`Bayly-AI/HATH0R-Agentic-Framework`)  \n> **Date**: 2026-10-31 · **Rules**: `CR-CLI-ENTRY-001` · `CR-CLI-MCP-ECOSYSTEM-001` · `CR-SUBSTRATE-001` · `CR-MEMORY-COMPOUND-001` · `CR-TASK-EVAL-001` · `CR-SEMVER-BUMP-001`\n\n---\n\n## 1. Executive Summary & Architectural Directive\n\nTo maximize technology utilization across the Hath0r OpenSource Suite and guarantee that every task is **finished, completed, and accurate**, the suite architecture is unified around seven core invariants:\n\n0. **Canonical Feature Definition & Workflow-First Standard (`CR-FEATURE-WORKFLOW-STANDARD-001`)**:\n   - **Every Feature Is a Service Run by `>= 1` Bot**: Every feature in the Hath0r ecosystem is a service owned and executed by **at least one Bot** (`src/hath0r_cli/bots/`, registered in `BotRegistry`). Zero orphan commands or scripts.\n   - **2-Level Tool, K",
+      "properties": {
+        "path": "docs\\observe\\mcp-central-architecture-roadmap-20261031.md",
+        "category": "observe",
+        "size_bytes": 24115
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\observe\\README_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Readme",
+      "content": "# Observation (Hath0r ATC)\n\n**Hath0r ATC** is the OpenSource Project **observation** hub as well as infrastructure and group controller.\n\n## Current surfaces\n\n| Surface | Path / command |\n|---------|----------------|\n| Docker group status | `make docker-status` |\n| Smoke (edge + Redis + optional MCP) | `make smoke` / `./deploy/docker/smoke-test.sh` |\n| Reports | `docs/reports/` |\n| Runtime archive | `docs/archive/` |\n\n## Direction\n\nExpand toward fuller Observe capabilities while keeping **status and smoke ownership in ATC** so the control tower remains the single place operators check suite health for framework builds.\n",
+      "properties": {
+        "path": "docs\\observe\\README.md",
+        "category": "observe",
+        "size_bytes": 643
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\rules\\cr-branch-gov-001-canonical-branches_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
       "label": "Cr Branch Gov 001 Canonical Branches",
       "content": "---\nid: cr-branch-gov-001\ntitle: Canonical Branch & PR Governance\nversion: 0.2.0\nseverity: CRITICAL\napplies_to: \"hath0r-opensource\"\neffective_date: 2026-05-16\nlast_updated: 2026-09-23\n---\n\n# CR-BRANCH-GOV-001 — Canonical Branch & PR Governance (CRITICAL)\n\n## Integration (long-lived) branches\n\n```\ndevelopment → testing → staging → master\n```\n\n- Do **not** skip stages or reverse-promote.\n- `development` is the **default integration branch** for day-to-day delivery.\n- `master` is the **production** line (not a day-to-day PR target).\n- `main` is not used as an integration branch; prefer `master` for production.\n\n## Feature-branch workflow (CANONICAL)\n\n1. Branch from **`development`**.\n2. Implement on `feature/*`, `fix/*`, `chore/*`, or `docs/*` (issue number required).\n3. Open PR with **base = `development`**.\n4. Merge into **`development` only**.\n5. Promote: `development` → `testing` → `staging` → `master` (release path).\n\n### Forbidden\n\n- Normal delivery PRs targeting `master` or `main`\n- Feature PRs targeting `testing` or `staging`\n- Unreviewed pushes of delivery work to `master`\n\n## Agent checklist\n\n- [ ] Work branch is not `master` / `main` / `development`\n- [ ] Branched from late",
       "properties": {
-        "path": "docs/rules/cr-branch-gov-001-canonical-branches.md",
+        "path": "docs\\rules\\cr-branch-gov-001-canonical-branches.md",
         "category": "rules",
-        "size_bytes": 1262
+        "size_bytes": 1304
       },
       "is_current": true
     },
     {
-      "id": "doc:docs__rules__cr-docker-hath0r-group-001_md",
+      "id": "doc:docs\\rules\\cr-docker-hath0r-group-001_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
       "label": "Cr Docker Hath0R Group 001",
       "content": "---\nid: cr-docker-hath0r-group-001\ntitle: Canonical hath0r Docker group for all OpenSource workspace repos\nversion: 1.0.0\nseverity: CRITICAL\nstatus: canonical\napplies_to: \"/Users/raybayly/Development/OpenSource/**\"\neffective_date: 2026-09-23\nsuite: hath0r-opensource\n---\n\n# CR-DOCKER-HATH0R-GROUP-001 — hath0r Docker group (CANONICAL)\n\n## Rule statement\n\n**Every repository, service, and container defined under the `OpenSource` workspace folder is a member of the Docker Compose project / Docker Desktop group `hath0r` for local suite runtime.**\n\nThis is **canonical** and not optional for local OpenSource suite runtime.\n\n## Workspace root\n\n```text\n/Users/raybayly/Development/OpenSource\n```\n\nIncludes (now and future):\n\n- Control tower (`hath0r-atc/`)\n- Standalone MCP (`hath0r-mcp/`)\n- Operator CLI (`hathor-cli/`)\n- Framework (`hath0r/`)\n- Any additional clone under this directory\n\n## Canonical artifacts\n\n| Artifact | Value |\n|----------|--------|\n| Compose project name (`name:`) | `hath0r` |\n| Docker Desktop group | `hath0r` |\n| Network | `hath0r-net` (external, shared) |\n| Shared communication | container `hath0r-nginx` |\n| Shared state | container `hath0r-redis` |\n| Image naming | `hat",
       "properties": {
-        "path": "docs/rules/cr-docker-hath0r-group-001.md",
+        "path": "docs\\rules\\cr-docker-hath0r-group-001.md",
         "category": "rules",
-        "size_bytes": 2883
+        "size_bytes": 2987
       },
       "is_current": true
     },
     {
-      "id": "doc:_hath0r__knowledgebase__README_md",
+      "id": "doc:docs\\governance\\checklists\\pr-human-gate-before-staging_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Human Gate Before Staging",
+      "content": "# Checklist: HUMAN GATE before staging\n\n**Automation and agent review STOP here. A human initiates staging.**\n\n- [ ] Testing environment validated (functional + smoke)\n- [ ] No open Sev-1/Sev-2 on testing build\n- [ ] Human owner named for staging deploy\n- [ ] Release PR base = `staging`\n- [ ] Head = `testing` or `release/x.x.x`\n- [ ] GitHub Environment `staging` approval by human (`@somesayray` or designated)\n- [ ] Change window / communications done if required\n- [ ] Rollback plan attached to PR\n",
+      "properties": {
+        "path": "docs\\governance\\checklists\\pr-human-gate-before-staging.md",
+        "category": "checklists",
+        "size_bytes": 514
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\governance\\checklists\\pr-post-merge-development_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Post Merge Development",
+      "content": "# Checklist: post-merge → development\n\n- [ ] Merge commit on `development`\n- [ ] CI on `development` still green (if applicable)\n- [ ] Follow-up issues filed for residual work\n- [ ] Knowledge/MCP share bot run when enabled\n- [ ] Decide: stay on development vs cut `release/x.x.x`\n",
+      "properties": {
+        "path": "docs\\governance\\checklists\\pr-post-merge-development.md",
+        "category": "checklists",
+        "size_bytes": 289
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\governance\\checklists\\pr-pre-merge-development_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Pre Merge Development",
+      "content": "# Checklist: pre-merge → development\n\n- [ ] Linked GitHub issue in branch name and PR body (`Fixes #N` / `Refs #N`)\n- [ ] Branch named `feature|bugfix|hotfix|enhancement|research|fix|chore/<n>-slug`\n- [ ] PR base is **`development`**\n- [ ] Feature PR template completed\n- [ ] `validate-promotion-path` green\n- [ ] CI / tests green\n- [ ] Quality gates (Sonar etc.) green when enabled\n- [ ] CODEOWNERS review requested/approved\n- [ ] No secrets in diff\n- [ ] Docs/runbooks updated if workflow changed\n",
+      "properties": {
+        "path": "docs\\governance\\checklists\\pr-pre-merge-development.md",
+        "category": "checklists",
+        "size_bytes": 513
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\governance\\checklists\\pr-pre-promote-testing_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Pre Promote Testing",
+      "content": "# Checklist: pre-promote → testing\n\n- [ ] Release notes / version bump prepared\n- [ ] `release/x.x.x` cut from current `development` (or documented equivalent)\n- [ ] Release PR template completed\n- [ ] Head is `development` or `release/x.x.x` only\n- [ ] Base is `testing`\n- [ ] `validate-promotion-path` green\n- [ ] Deploy + smoke/URL validation plan ready\n- [ ] Rollback owner identified\n",
+      "properties": {
+        "path": "docs\\governance\\checklists\\pr-pre-promote-testing.md",
+        "category": "checklists",
+        "size_bytes": 401
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\governance\\checklists\\pr-release-to-master_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Release To Master",
+      "content": "# Checklist: release → master (Production)\n\n- [ ] Staging validated\n- [ ] Human opens release PR → `master`\n- [ ] Head = `staging` or `release/x.x.x`\n- [ ] Environment `production` human approval\n- [ ] `validate-promotion-path` green\n- [ ] Tag `vX.Y.Z` + GitHub Release planned/executed\n- [ ] Post-prod smoke complete\n- [ ] Incident channel aware (if applicable)\n",
+      "properties": {
+        "path": "docs\\governance\\checklists\\pr-release-to-master.md",
+        "category": "checklists",
+        "size_bytes": 377
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\governance\\checklists\\sonarcloud-pr-gate_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Sonarcloud Pr Gate",
+      "content": "# Checklist: SonarCloud PR Quality Gate\n\n- [ ] `SONAR_TOKEN` configured (repo or org secret)\n- [ ] `SONAR_ORGANIZATION` set if not default\n- [ ] `sonar-project.properties` has identity/sources only (no local gate threshold overrides)\n- [ ] Workflow `.github/workflows/sonarcloud-quality-gate.yml` present\n- [ ] Branch protection requires check **SonarCloud Quality Gate** (where plan allows)\n- [ ] Sample PR shows check; failed gate blocks merge\n- [ ] PR template / AGENTS mention Sonar hard stop\n- [ ] Docs published / linked for agents\n",
+      "properties": {
+        "path": "docs\\governance\\checklists\\sonarcloud-pr-gate.md",
+        "category": "checklists",
+        "size_bytes": 548
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\governance\\playbooks\\pr-workflow-playbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Workflow Playbook",
+      "content": "# Playbook: PR workflow (agent + human)\n\n## Scenario A — Feature delivery into development\n\n1. Confirm GitHub issue exists.\n2. `git fetch origin && git checkout development && git pull --ff-only`\n3. `git checkout -b feature/<issue>-short-slug`\n4. Implement; run local tests / `hath0r` preflight when available.\n5. Push branch; open PR with **feature** template, base `development`.\n6. Ensure `validate-promotion-path` and CI green.\n7. Request CODEOWNERS review (`@somesayray`).\n8. Agents may comment/review; merge only after required approvals + checks.\n9. Run post-merge development checklist.\n\n## Scenario B — Release train to testing\n\n1. Ensure development is green and release notes/version ready (version ticket).\n2. `git checkout development && git pull --ff-only`\n3. `git checkout -b release/x.x.x` (SemVer)\n4. Open **release** PR: `release/x.x.x` → `testing` (or `development` → `testing` if policy allows for that cut).\n5. Deploy/validate testing environment.\n6. Complete pre-promote-testing checklist.\n\n## Scenario C — Human gate to staging (STOP for automation)\n\n1. Human confirms testing sign-off.\n2. Human initiates release PR: `testing` or `release/x.x.x` → `staging`.\n3. Environment `s",
+      "properties": {
+        "path": "docs\\governance\\playbooks\\pr-workflow-playbook.md",
+        "category": "playbooks",
+        "size_bytes": 2032
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\governance\\playbooks\\release-runbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Release Runbook",
+      "content": "# Release Runbook — HATH0R ATC\n\n> Role: Operational guide for versioning, release validation, and tag publishing.  \n> Status: Canonical · Member of `hath0r-opensource`  \n> Policy: [Semantic Versioning](../semantic-versioning.md) · [HATH0R-CLI SemVer](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/semantic-versioning.md)\n\n---\n\n## 1. Prerequisites\n\nBefore cutting a release:\n1. All PRs merged into `development`.\n2. Promotion gates satisfied: `development` -> `testing` -> `staging` -> `master`.\n3. Working tree is clean: `git status`.\n4. Quality checks pass: SonarCloud quality gate and branch governance.\n\n---\n\n## 2. Release Steps\n\n### Step 1: Validate Version and Changelog\nVerify alignment between `VERSION` and `CHANGELOG.md`:\n```bash\nhath0r release validate\n```\n\n### Step 2: Bump Version (if necessary)\nFor new releases, update the root `VERSION` file:\n```bash\necho \"0.2.3\" > VERSION\n```\nUpdate `CHANGELOG.md` with the new version section under `## [X.Y.Z] - YYYY-MM-DD`.\n\n### Step 3: Promote along Canonical Path\nPromote branch following CR-BAI-001:\n```bash\ngit checkout testing && git merge development\ngit checkout staging && git merge testing\ngit checkout master &&",
+      "properties": {
+        "path": "docs\\governance\\playbooks\\release-runbook.md",
+        "category": "playbooks",
+        "size_bytes": 1629
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs\\governance\\playbooks\\sonarcloud-quality-gate-playbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Sonarcloud Quality Gate Playbook",
+      "content": "# Playbook: SonarCloud Quality Gate on PRs\n\n## First-time setup\n\n1. Log into SonarCloud with org admin.\n2. Ensure GitHub org `Bayly-AI` is bound (or correct Sonar org).\n3. Create project (or auto-provision on first scan) with **default/org Quality Gate** only.\n4. Generate project/org token → GitHub secret `SONAR_TOKEN`.\n5. Set Actions variable `SONAR_ORGANIZATION` if needed.\n6. Open a PR; confirm job **SonarCloud Quality Gate** runs.\n\n## PR failed the gate\n\n1. Open SonarCloud project → PR decoration / Quality Gate details.\n2. Fix **blocker/new code** conditions required by the gate (bugs, vulnerabilities, coverage on new code, etc.).\n3. Push commits; do **not** edit gate conditions.\n4. Re-run checks until green.\n\n## Missing SONAR_TOKEN\n\nJob fails closed with explicit error. Add secret, then re-run workflow.\n\n## Local preview (optional)\n\n```bash\n# token from credentials store — do not print\nexport SONAR_TOKEN=\"...\"   # from secure store\nsonar-scanner -Dsonar.qualitygate.wait=true\n```\n\nPrefer CI as source of truth.\n\n## Anti-patterns\n\n- Lowering coverage % in `sonar-project.properties` to pass CI\n- Disabling the workflow on protected branches\n- Marking the check optional on branch pro",
+      "properties": {
+        "path": "docs\\governance\\playbooks\\sonarcloud-quality-gate-playbook.md",
+        "category": "playbooks",
+        "size_bytes": 1314
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:_hath0r\\knowledgebase\\README_md",
       "plane": "knowledge",
       "type": "knowledge_doc",
       "label": "Readme",
       "content": "# Knowledgebase stub (HATH0R ATC)\n\nThis is a **stub**. Canonical OpenSource Project knowledge lives at:\n\n```text\n/Users/raybayly/Development/OpenSource/.hath0r/knowledgebase\n```\n\nDo not duplicate corpus content here. ATC observation archives belong under `docs/archive/` and `docs/reports/`.\n",
       "properties": {
-        "path": ".hath0r/knowledgebase/README.md",
+        "path": ".hath0r\\knowledgebase\\README.md",
         "category": "knowledgebase",
-        "size_bytes": 292
+        "size_bytes": 301
       },
       "is_current": true
     },
@@ -943,7 +943,7 @@
       "properties": {
         "path": "README.md",
         "category": "root",
-        "size_bytes": 5089
+        "size_bytes": 5248
       },
       "is_current": true
     },
@@ -956,7 +956,7 @@
       "properties": {
         "path": "WARP.md",
         "category": "root",
-        "size_bytes": 4012
+        "size_bytes": 4091
       },
       "is_current": true
     },
@@ -1033,8 +1033,8 @@
       "id": "memory:fact:repo-hath0r-atc-orientation",
       "plane": "memory",
       "type": "fact",
-      "label": "hath0r-atc Repository Memory Orientation",
-      "content": "hath0r-atc: **Canonical control tower** for the OpenSource Project (`hath0r-opensource`) — infrastructure, observation, and Docker-group controller. | Field | Value | |-------|--------|",
+      "label": "HATH0R-ATC Repository Memory Orientation",
+      "content": "HATH0R-ATC: **Canonical control tower** for the OpenSource Project (`hath0r-opensource`) — infrastructure, observation, and Docker-group controller. | Field | Value | |-------|--------|",
       "properties": {
         "source": "local_memory",
         "tags": [
@@ -1207,7 +1207,7 @@
       "content": "4-Tier Task Evaluation for issue-67 on branch feature/67-automatic-task-evals: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1229,7 +1229,7 @@
       "content": "4-Tier Task Evaluation for pr-68 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1309,7 +1309,7 @@
       "content": "4-Tier Task Evaluation for pr-68-merged on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1355,7 +1355,7 @@
       "content": "Added Hath0r-Cruise-Control container to hath0r Docker group in HATH0R-ATC with port 38090, persistent volume hath0r_cruise_data, and NGINX /cruise/ reverse proxy",
       "properties": {
         "source_files": {
-          "deploy/docker/docker-compose.yml": "sha256:430a89d9cb91671cdcc38c342b1d6da533f20505a457add409e6b55ba368d961"
+          "deploy/docker/docker-compose.yml": "sha256:d355a2adb48c6654ef21d530c12dbee735075dabf176140486bf2cd98a099f49"
         },
         "source": "local_memory",
         "tags": [
@@ -1390,18 +1390,18 @@
       "id": "memory:eval:eval-baseline-hath0r-atc",
       "plane": "memory",
       "type": "eval",
-      "label": "Task Evaluation eval-baseline-hath0r-atc (R=1.00, PASS)",
-      "content": "4-Tier Task Evaluation for eval-baseline-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
+      "label": "Task Evaluation eval-baseline-hath0r-atc (R=0.87, FAIL)",
+      "content": "4-Tier Task Evaluation for eval-baseline-hath0r-atc on branch development: R_task=0.8691 (det=0.75, traj=0.93, adv=0.98, goal=0.93). Gate=FAILED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:5c6b1e9b68601dab70b18e392e4098b570cefca44bc50203ba389668900b4c97"
         },
         "source": "local_memory",
         "tags": [
           "eval",
           "cr-task-eval-001",
           "eval-baseline-hath0r-atc",
-          "passed",
+          "failed",
           "compounded"
         ],
         "importance": 0.85
@@ -1416,7 +1416,7 @@
       "content": "4-Tier Task Evaluation for atc-71-cruise-control-docs-sync on branch chore/71-cruise-control-docs-and-eval-sync: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1462,7 +1462,7 @@
       "content": "Added Hath0r-Cruise-Control to cfg/suite.yaml canonical_containers and docs/deployment-local-docker.md, and verified CR-TASK-EVAL-001",
       "properties": {
         "source_files": {
-          "cfg/suite.yaml": "sha256:7b56a5aab1e680b2653bca1522e117c4170a04b76942f0f0f1e61b6598504e75"
+          "cfg/suite.yaml": "sha256:b59979c01c2b51b7cba560c77b609e2c38b5ac690122e79cf18642caf24d0c14"
         },
         "source": "local_memory",
         "tags": [
@@ -1481,7 +1481,7 @@
       "content": "4-Tier Task Evaluation for cccd-calibrated-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1503,7 +1503,7 @@
       "content": "4-Tier Task Evaluation for branch-docs-73-clean-repo-workflow on branch docs/73-clean-repo-workflow: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1525,7 +1525,7 @@
       "content": "4-Tier Task Evaluation for clean-repo-hath0r-atc on branch development: R_task=0.9480 (det=0.94, traj=0.93, adv=0.98, goal=0.93). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1547,7 +1547,7 @@
       "content": "4-Tier Task Evaluation for issue-76 on branch chore/76-eval-scorecard-summary-rule: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1609,7 +1609,7 @@
       "content": "4-Tier Task Evaluation for aws-ses-forwarder-rbayly-gmail on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1671,7 +1671,7 @@
       "content": "4-Tier Task Evaluation for knostic-architecture-analysis on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1709,7 +1709,7 @@
       "content": "4-Tier Task Evaluation for knostic-hath0r-issues-plan on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1731,7 +1731,7 @@
       "content": "Completed all 6 workstreams of CR-AGENTIC-SEC-001 across HATH0R-Agentic-Framework v1.11.0 (#309), HATH0R-MCP v1.3.0 (#84), and HATH0R-CLI v1.14.0 (#537-#541).",
       "properties": {
         "source_files": {
-          "AGENTS.md": "sha256:cdc9f75354ab6b29076e9fd7bf0bf61220e1ee900033f870e6a49f189a007b77"
+          "AGENTS.md": "sha256:7cc30b198a4a86855d3eebbb59367de0afe41f00167e4608cd728d1ab8320e5b"
         },
         "source": "local_memory",
         "tags": [
@@ -1750,7 +1750,7 @@
       "content": "4-Tier Task Evaluation for task-hath0r-atc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1796,7 +1796,7 @@
       "content": "4-Tier Task Evaluation for release-v0.5.6 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1857,7 +1857,7 @@
       "content": "4-Tier Task Evaluation for list-hath0r-technologies on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1903,7 +1903,7 @@
       "content": "4-Tier Task Evaluation for analyze-hath0r-architecture-bots on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -1994,7 +1994,7 @@
       "content": "4-Tier Task Evaluation for refactor-mcp-central-architecture-plan on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -2145,7 +2145,7 @@
       "content": "4-Tier Task Evaluation for issue-80 on branch chore/80-mcp-central-architecture-issue: R_task=0.9463 (det=0.98, traj=0.92, adv=0.93, goal=0.93). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -2536,7 +2536,7 @@
       "content": "4-Tier Task Evaluation for issue-80-handoff-update-86 on branch chore/80-mcp-central-architecture-issue: R_task=0.9642 (det=0.99, traj=0.93, adv=0.98, goal=0.93). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -2598,7 +2598,7 @@
       "content": "4-Tier Task Evaluation for issue-80-all-9-complete on branch chore/80-mcp-central-architecture-issue: R_task=0.9537 (det=0.95, traj=0.94, adv=0.98, goal=0.93). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -2620,7 +2620,7 @@
       "content": "4-Tier Task Evaluation for issue-105 on branch chore/80-mcp-central-architecture-issue: R_task=0.9622 (det=0.98, traj=0.93, adv=0.98, goal=0.93). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:76a7d11f0ce8ebf3757fb643ecc31cc56a83f5270b7a85c74f41bb44f36cd11a"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -2971,7 +2971,7 @@
       "content": "4-Tier Task Evaluation for clean-all-repos-development on branch development: R_task=0.9551 (det=0.96, traj=0.93, adv=0.98, goal=0.93). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:c7bacf82825dc01bca67031d90dbf4071f084a466081aa64ea52ca42e278ab1c"
+          ".hath0r/evals/latest.json": "sha256:2af780e480860cf6639c44ae9099755ee1328fe874ecdac18894ca385c1b3224"
         },
         "source": "local_memory",
         "tags": [
@@ -2990,15 +2990,15 @@
       "plane": "memory",
       "type": "session",
       "label": "Micro Session sess-20261031-161643-8c06be",
-      "content": "Micro Session sess-20261031-161643-8c06be [completed] | Focus: clean-repo-hath0r-atc | Reads: 2, Writes: 5 | Entries: Compounded eval:clean-all-repos-development: Task Evaluation clean-all-repos-development (R=0.96, PASS)",
+      "content": "Micro Session sess-20261031-161643-8c06be [completed] | Focus: Provisioning CR-TASK-EVAL-001 for HATH0R-ATC | Reads: 3, Writes: 8 | Entries: Compounded eval:eval-baseline-hath0r-atc: Task Evaluation eval-baseline-hath0r-atc (R=0.87, FAIL)",
       "properties": {
         "session_id": "sess-20261031-161643-8c06be",
         "prior_session_id": "sess-20261031-122248-32c450",
         "parent_session_id": "sess-20261031-122248-32c450",
-        "read_count": 2,
-        "write_count": 5,
+        "read_count": 3,
+        "write_count": 8,
         "status": "completed",
-        "byte_size": 1874,
+        "byte_size": 2016,
         "source": "local_memory",
         "tags": [
           "session",
@@ -6966,6 +6966,30 @@
       "is_current": true
     },
     {
+      "source": "memory:fact:repo-hath0r-atc-orientation",
+      "target": "memory:session:sess-20261031-161643-8c06be",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-task-eval-001",
+      "target": "memory:session:sess-20261031-161643-8c06be",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:eval-baseline-hath0r-atc",
+      "target": "memory:session:sess-20261031-161643-8c06be",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:eval-baseline-hath0r-atc",
+      "target": "memory:session:sess-20261031-161643-8c06be",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
       "source": "rule:rules",
       "target": "role:developer",
       "relation": "GOVERNS",
@@ -8503,7 +8527,7 @@
     }
   ],
   "metadata": {
-    "repo_root": "/Users/raybayly/Development/OpenSource/hath0r-atc",
+    "repo_root": "C:\\Users\\RaymondBayly\\Documents\\HATH0R-ATC",
     "synced_sources": 62
   }
 }
