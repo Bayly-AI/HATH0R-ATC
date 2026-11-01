@@ -1,0 +1,56 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261101-180326-166a18",
+  "prior_session_id": "sess-20261031-161643-8c06be",
+  "parent_session_id": "sess-20261031-161643-8c06be",
+  "revision": 2,
+  "content_hash": "sha256:feece699d04d50b195bf15bc46e195f33dbc3ba01f2a8b6c40be43298ff01502",
+  "base_graph_hash": "sha256:3db7eec5e9657adf027a9d0c3bb9c0834f687c8f24ba517ad490afff8c841fd5",
+  "task_id": "clean-repos-and-fix-conflicts",
+  "role": null,
+  "repo_name": "HATH0R-ATC",
+  "status": "active",
+  "started_at": "2026-11-01T18:03:26.070065+00:00",
+  "updated_at": "2026-11-01T18:19:51.541518+00:00",
+  "ended_at": null,
+  "read_count": 1,
+  "write_count": 1,
+  "last_read_at": "2026-11-01T18:03:26.070065+00:00",
+  "last_write_at": "2026-11-01T18:19:51.541518+00:00",
+  "active_focus": "Active working session in HATH0R-ATC",
+  "prior_summary": "Compounded eval:eval-baseline-hath0r-atc: Task Evaluation eval-baseline-hath0r-atc (R=0.95, PASS)",
+  "recalled_nodes": [
+    {
+      "id": "rule:cr-task-eval-001",
+      "type": "rule",
+      "label": "Automatic Task Evaluation & Scorecard Summary Gate (CR-TASK-",
+      "snippet": "Every task must execute and pass the 4-tier hybrid evaluation pipeline (R_task >= 0.80), p"
+    },
+    {
+      "id": "insight:pr-87",
+      "type": "insight",
+      "label": "Synthesized Insight on pr-87",
+      "snippet": "Consolidated from 2 memory nodes tagged 'pr-87'. Recurring themes: master, hand, updated, "
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-11-01T18:19:51.541518+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:task-HATH0R-ATC: Task Evaluation task-HATH0R-ATC (R=0.77, FAIL)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "task-hath0r-atc",
+        "failed",
+        "compounded"
+      ],
+      "node_id": "eval:task-HATH0R-ATC"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "eval:task-HATH0R-ATC"
+  ],
+  "capsule_bytes": 1980
+}

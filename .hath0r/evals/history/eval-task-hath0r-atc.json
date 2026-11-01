@@ -1,15 +1,15 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261101-172659-3a3cb4",
+  "eval_id": "eval-20261101-181931-9e2c2b",
   "task_id": "task-HATH0R-ATC",
   "issue_number": null,
   "repo_name": "HATH0R-ATC",
   "branch": "development",
-  "evaluated_at": "2026-11-01T17:26:59.778767+00:00",
-  "duration_ms": 625.0,
-  "passed_gate": true,
-  "r_task": 0.9474,
+  "evaluated_at": "2026-11-01T18:19:31.397197+00:00",
+  "duration_ms": 1906.0,
+  "passed_gate": false,
+  "r_task": 0.7716,
   "min_reward_threshold": 0.8,
   "weights": {
     "deterministic": 0.4,
@@ -18,22 +18,22 @@
     "goal_alignment": 0.15
   },
   "tier_scores": {
-    "deterministic": 0.9433,
-    "trajectory": 0.9288,
+    "deterministic": 0.5537,
+    "trajectory": 0.8291,
     "adversarial": 0.98,
     "goal_alignment": 0.9287
   },
   "tiers": {
     "deterministic": {
-      "score": 0.9433,
-      "passed": true,
-      "passed_checks": 6,
+      "score": 0.5537,
+      "passed": false,
+      "passed_checks": 4,
       "total_checks": 6,
       "sub_scores": {
         "version_valid": 1.0,
         "agentgraph_valid": 1.0,
-        "memory_compounded": 0.98,
-        "test_suite": 0.88,
+        "memory_compounded": 0.0,
+        "test_suite": 0.0,
         "calibration_4h": 0.82,
         "local_quality_gates": 0.974
       },
@@ -51,23 +51,50 @@
           "claude_md_synced": true
         },
         "memory_compounded": {
-          "passed": true,
-          "compounded_nodes_count": 72,
+          "passed": false,
+          "compounded_nodes_count": 73,
           "session_read_verified": true,
-          "session_write_verified": true,
+          "session_write_verified": false,
           "hashes_verified": true,
           "graphs_not_ignored": true,
-          "error": null
+          "error": "CR-MEMORY-COMPOUND-001: Micro memory session read/write gate failed (read_count=1, write_count=0). Run 'hath0r memory session read' and 'hath0r memory session write' prior to announcing complete."
         },
         "test_suite": {
-          "passed": true,
-          "skipped": true,
-          "message": "Test execution skipped via flag or dry-run (-0.12 confidence deduction)."
+          "passed": false,
+          "commands_run": 2,
+          "duration_s": 0.296,
+          "results": [
+            {
+              "command": [
+                "python3",
+                "-m",
+                "pytest",
+                "-q"
+              ],
+              "ok": false,
+              "exit_code": 9009,
+              "stdout_tail": "",
+              "stderr_tail": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.\n"
+            },
+            {
+              "command": [
+                "python3",
+                "-m",
+                "ruff",
+                "check",
+                "tests"
+              ],
+              "ok": false,
+              "exit_code": 9009,
+              "stdout_tail": "",
+              "stderr_tail": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.\n"
+            }
+          ]
         },
         "calibration_4h": {
           "passed": true,
           "is_fresh": false,
-          "age_hours": 25.12,
+          "age_hours": 26.0,
           "max_age_hours": 4.0
         },
         "local_quality_gates": {
@@ -186,22 +213,22 @@
       }
     },
     "trajectory": {
-      "score": 0.9288,
+      "score": 0.8291,
       "passed": true,
-      "tokens_used": 140,
+      "tokens_used": 143,
       "max_tokens": 50000,
-      "estimated_usd": 0.00042,
+      "estimated_usd": 0.000429,
       "max_usd": 0.25,
-      "session_id": "sess-20261031-161643-8c06be",
-      "session_reads": 4,
-      "session_writes": 8,
-      "session_bytes": 2017,
-      "capsule_fill_ratio": 0.9849,
+      "session_id": "sess-20261101-180326-166a18",
+      "session_reads": 1,
+      "session_writes": 0,
+      "session_bytes": 2001,
+      "capsule_fill_ratio": 0.9771,
       "within_capsule_budget": true,
-      "latency_ms": 203.0,
-      "taguchi_quality_loss": 0.0006,
-      "taguchi_score": 0.9785,
-      "snr_db": 19.87
+      "latency_ms": 1344.0,
+      "taguchi_quality_loss": 0.0271,
+      "taguchi_score": 0.9123,
+      "snr_db": 3.45
     },
     "adversarial": {
       "score": 0.98,
@@ -225,10 +252,10 @@
       "passed": true,
       "task_id": "task-HATH0R-ATC",
       "issue_number": null,
-      "active_focus": "Repository orientation verified for HATH0R-ATC",
-      "goal_keywords_count": 4,
+      "active_focus": "Active working session in HATH0R-ATC",
+      "goal_keywords_count": 5,
       "goal_overlap_score": 0.98,
-      "compounded_nodes_count": 72,
+      "compounded_nodes_count": 73,
       "consensus_score": 0.826
     }
   },
@@ -302,18 +329,35 @@
       "VERIFIED_EXECUTION": [
         ".hath0r/evals/latest.json"
       ],
-      "STATIC_AST_ANALYSIS": [],
-      "UNVERIFIED_FILE_PRESENCE": []
+      "STATIC_AST_ANALYSIS": [
+        ".hath0r/agentgraph/snapshot.json",
+        ".hath0r/evals/history/eval-eval-baseline-hath0r-atc.json",
+        ".hath0r/evals/latest.json",
+        ".hath0r/memory/graph.json",
+        ".hath0r/memory/hashes.json",
+        ".hath0r/memory/sessions/current.json",
+        ".hath0r/memory/sessions/latest.json",
+        ".hath0r/memory/sessions/sess-20261031-161643-8c06be.json",
+        ".hath0r/memory/sessions/sess-20261101-180326-166a18.json"
+      ],
+      "UNVERIFIED_FILE_PRESENCE": [
+        ".hath0r/agentgraph/snapshot.ttl"
+      ]
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 0,
-      "UNVERIFIED_FILE_PRESENCE": 0
+      "STATIC_AST_ANALYSIS": 9,
+      "UNVERIFIED_FILE_PRESENCE": 1
     }
   },
-  "blocking_reasons": [],
+  "blocking_reasons": [
+    "Tier 1 deterministic gate failed: memory_compounded, test_suite",
+    "Composite reward R_task (0.7716) is below threshold (0.80)"
+  ],
   "observability_sync": {
-    "mode": "pending"
+    "mode": "spooled_local",
+    "phoenix_logged": true,
+    "mlflow_run_id": null
   },
-  "content_hash": "sha256:67ae2067ad09eb7426c91d183c992bcfdbd3fefbb190531ac8b9f9563934f970"
+  "content_hash": "sha256:7a79e24c3ce1848cb7cd4ce8fa1148b33fe3d1b77c58414a2f7dac721e808ffd"
 }
