@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-11-01T18:19:52.295549+00:00",
+  "updated_at": "2026-11-01T18:23:51.500030+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -264,7 +264,7 @@
       "updated_at": "2026-10-28T13:32:43.767808+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -288,7 +288,7 @@
       "updated_at": "2026-10-28T13:53:08.660404+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -373,7 +373,7 @@
       "updated_at": "2026-10-28T13:53:18.915330+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -465,7 +465,7 @@
       "updated_at": "2026-11-01T17:53:04.303212+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -489,7 +489,7 @@
       "updated_at": "2026-10-28T14:39:58.148052+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -560,7 +560,7 @@
       "updated_at": "2026-10-28T14:56:38.783598+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -584,7 +584,7 @@
       "updated_at": "2026-10-28T15:17:42.929782+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -608,7 +608,7 @@
       "updated_at": "2026-10-31T16:16:44.581882+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -632,7 +632,7 @@
       "updated_at": "2026-10-28T17:37:28.152548+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -699,7 +699,7 @@
       "updated_at": "2026-10-28T19:46:19.140609+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -766,7 +766,7 @@
       "updated_at": "2026-10-29T12:23:12.787609+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -807,7 +807,7 @@
       "updated_at": "2026-10-29T12:28:21.656697+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -852,7 +852,7 @@
       "updated_at": "2026-10-31T10:09:23.274772+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -902,7 +902,7 @@
       "updated_at": "2026-10-29T14:31:35.335257+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -967,7 +967,7 @@
       "updated_at": "2026-10-29T17:33:39.468630+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -1017,7 +1017,7 @@
       "updated_at": "2026-10-31T10:00:49.110009+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -1114,7 +1114,7 @@
       "updated_at": "2026-10-31T10:04:34.930650+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -1275,7 +1275,7 @@
       "updated_at": "2026-10-31T14:27:44.111545+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -1691,7 +1691,7 @@
       "updated_at": "2026-10-31T11:41:50.053533+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -1758,7 +1758,7 @@
       "updated_at": "2026-10-31T12:22:55.411184+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -1782,7 +1782,7 @@
       "updated_at": "2026-10-31T12:33:50.261290+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -2153,31 +2153,31 @@
       "updated_at": "2026-10-31T16:25:40.976430+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
     {
       "id": "eval:task-HATH0R-ATC",
       "type": "eval",
-      "label": "Task Evaluation task-HATH0R-ATC (R=0.77, FAIL)",
-      "content": "4-Tier Task Evaluation for task-HATH0R-ATC on branch development: R_task=0.7716 (det=0.55, traj=0.83, adv=0.98, goal=0.93). Gate=FAILED.",
+      "label": "Task Evaluation task-HATH0R-ATC (R=0.95, PASS)",
+      "content": "4-Tier Task Evaluation for task-HATH0R-ATC on branch development: R_task=0.9475 (det=0.94, traj=0.93, adv=0.98, goal=0.93). Gate=PASSED.",
       "importance": 0.85,
       "tags": [
         "eval",
         "cr-task-eval-001",
         "task-hath0r-atc",
-        "failed",
+        "passed",
         "compounded"
       ],
-      "valid_from": "2026-11-01T18:19:51.459236+00:00",
+      "valid_from": "2026-11-01T18:23:50.561987+00:00",
       "valid_to": null,
       "is_current": true,
       "created_at": "2026-11-01T17:27:00.405254+00:00",
-      "updated_at": "2026-11-01T18:19:51.459236+00:00",
+      "updated_at": "2026-11-01T18:23:50.561987+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:527cf5fb38ceffa59bc8583d5d0712d57bf00eb54a351255d919e88ff13e5279"
+          ".hath0r/evals/latest.json": "sha256:3f13cfc560d88126abda4e8931c3e2d7ac866c5a09c9243fafc30a12f7d3802a"
         }
       }
     },
@@ -2208,10 +2208,27 @@
       }
     },
     {
+      "id": "episode:conflict-resolution-development-sync",
+      "type": "episode",
+      "label": "Conflict Resolution & Development Sync",
+      "content": "Resolved conflicts, synced AgentGraph and MemoryGraph state, and pushed all changes to development.",
+      "importance": 0.8,
+      "tags": [
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-11-01T18:23:48.365727+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-11-01T18:23:48.365727+00:00",
+      "updated_at": "2026-11-01T18:23:48.365727+00:00",
+      "metadata": {}
+    },
+    {
       "id": "session:sess-20261101-180326-166a18",
       "type": "session",
       "label": "Micro Session sess-20261101-180326-166a18",
-      "content": "Micro Session sess-20261101-180326-166a18 [active] | Focus: Active working session in HATH0R-ATC | Reads: 1, Writes: 1 | Entries: Compounded eval:task-HATH0R-ATC: Task Evaluation task-HATH0R-ATC (R=0.77, FAIL)",
+      "content": "Micro Session sess-20261101-180326-166a18 [active] | Focus: Active working session in HATH0R-ATC | Reads: 2, Writes: 4 | Entries: Compounded eval:task-HATH0R-ATC: Task Evaluation task-HATH0R-ATC (R=0.95, PASS)",
       "importance": 0.75,
       "tags": [
         "session",
@@ -2222,15 +2239,15 @@
       "valid_to": null,
       "is_current": true,
       "created_at": "2026-11-01T18:03:26.070065+00:00",
-      "updated_at": "2026-11-01T18:19:51.541518+00:00",
+      "updated_at": "2026-11-01T18:23:50.650771+00:00",
       "metadata": {
         "session_id": "sess-20261101-180326-166a18",
         "prior_session_id": "sess-20261031-161643-8c06be",
         "parent_session_id": "sess-20261031-161643-8c06be",
-        "read_count": 1,
-        "write_count": 1,
+        "read_count": 2,
+        "write_count": 4,
         "status": "active",
-        "byte_size": 1980
+        "byte_size": 1789
       }
     }
   ],
@@ -4576,8 +4593,24 @@
       "weight": 1.0,
       "valid_from": "2026-11-01T18:19:51.544343+00:00",
       "is_current": true
+    },
+    {
+      "source": "episode:conflict-resolution-development-sync",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-11-01T18:23:48.365727+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:conflict-resolution-development-sync",
+      "target": "session:sess-20261101-180326-166a18",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-11-01T18:23:48.454245+00:00",
+      "is_current": true
     }
   ],
-  "revision": 488,
-  "content_hash": "sha256:890ad06ff4e892866b39864b216880256aa77e72f666ad2517e6a4d9a3bd0cce"
+  "revision": 497,
+  "content_hash": "sha256:3b4669b918381bbcd11e284fcfaa8c0d806e8628242d3420bb3228e671909474"
 }
