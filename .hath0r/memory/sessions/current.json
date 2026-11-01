@@ -3,22 +3,22 @@
   "session_id": "sess-20261031-161643-8c06be",
   "prior_session_id": "sess-20261031-122248-32c450",
   "parent_session_id": "sess-20261031-122248-32c450",
-  "revision": 11,
-  "content_hash": "sha256:1d1736640e97c968bd56d30218ee6b0f055c230a7a76fa4ff0ea3e7877034dc5",
+  "revision": 12,
+  "content_hash": "sha256:4502851f501ed00b38dcaf4dacf4fbdd201ae37a2a7979b805333c08aab05e14",
   "base_graph_hash": "sha256:b8d37c5598572f1a8f895db98f2a175f203641093b97e5633834d8df8a244ddf",
   "task_id": null,
   "role": null,
   "repo_name": "hath0r-atc",
   "status": "completed",
   "started_at": "2026-10-31T16:16:43.107377+00:00",
-  "updated_at": "2026-11-01T15:43:50.757337+00:00",
+  "updated_at": "2026-11-01T17:27:00.505864+00:00",
   "ended_at": "2026-10-31T16:16:43.310044+00:00",
   "read_count": 4,
-  "write_count": 8,
+  "write_count": 9,
   "last_read_at": "2026-11-01T15:43:50.757337+00:00",
-  "last_write_at": "2026-11-01T15:43:50.629674+00:00",
+  "last_write_at": "2026-11-01T17:27:00.505864+00:00",
   "active_focus": "Repository orientation verified for HATH0R-ATC",
-  "prior_summary": "ounded eval:clean-all-repos-developm; Compounded fact:repo-hath0r-atc-orientat; Compounded rule:cr-task-eval-001: Automa",
+  "prior_summary": "ounded fact:repo-hath0r-atc-orientat; Compounded rule:cr-task-eval-001: Automa; Compounded eval:eval-baseline-hath0r-atc",
   "recalled_nodes": [
     {
       "id": "fact:repo-hath0r-atc-orientation",
@@ -29,27 +29,27 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-11-01T15:43:50.629674+00:00",
+      "timestamp": "2026-11-01T17:27:00.505864+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:eval-baseline-hath0r-atc: Task Evaluation eval-baseline-hath0r-atc (R=0.87, FAIL)",
+      "summary": "Compounded eval:task-HATH0R-ATC: Task Evaluation task-HATH0R-ATC (R=0.95, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "eval-baseline-hath0r-atc",
-        "failed",
+        "task-hath0r-atc",
+        "passed",
         "compounded"
       ],
-      "node_id": "eval:eval-baseline-hath0r-atc"
+      "node_id": "eval:task-HATH0R-ATC"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "episode:clean-repo-hath0r-atc",
     "eval:clean-repo-hath0r-atc",
     "eval:clean-all-repos-development",
     "fact:repo-hath0r-atc-orientation",
     "rule:cr-task-eval-001",
-    "eval:eval-baseline-hath0r-atc"
+    "eval:eval-baseline-hath0r-atc",
+    "eval:task-HATH0R-ATC"
   ],
-  "capsule_bytes": 2017
+  "capsule_bytes": 1972
 }
