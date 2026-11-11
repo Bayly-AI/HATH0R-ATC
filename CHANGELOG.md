@@ -5,6 +5,11 @@ All notable changes to **HATH0R-ATC** are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] - 2026-11-11
+
+### Added
+- **SPC status panel** (Bayly-AI/HATH0R-CLI#594, epic #580): `docs/observe/spc-panel.md`, declarative `cfg/observability/spc-panel.json` and `make observe-spc`. ATC observes only; the numbers come from the HATH0R-CLI `spc-monitor-bot` (`hath0r spc status`) and the read-only HATH0R-MCP `quality_spc_status` tool. Low Cpk and control-chart signals are warnings; red means block mode or an active Andon stop.
+
 ## [0.5.8] - 2026-11-07
 
 ### Added

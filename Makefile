@@ -1,4 +1,4 @@
-.PHONY: help test test-pre-deploy test-post-deploy docker-up docker-up-db docker-down docker-ps docker-status docker-logs smoke bootstrap
+.PHONY: help test test-pre-deploy test-post-deploy docker-up docker-up-db docker-down docker-ps docker-status docker-logs smoke bootstrap observe-spc
 
 help:
 	@echo "Hath0r ATC (control tower)"
@@ -10,6 +10,7 @@ help:
 	@echo "  make docker-down | docker-ps | docker-status | docker-logs"
 	@echo "  make smoke           - edge + redis smoke test"
 	@echo "  make bootstrap       - layout/identity checks"
+	@echo "  make observe-spc     - SPC status panel (hath0r spc status)"
 
 test:
 	python3 -m pytest -v
@@ -44,3 +45,5 @@ smoke:
 bootstrap:
 	@./bin/hath0r-bootstrap.sh
 
+observe-spc:
+	@hath0r spc status
