@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.github/ISSUE_TEMPLATE/dmaic-improvement.yml` (CTQ metric, baseline, target, root cause, change, control plan), the same template HATH0R-CLI uses for `hath0r dmaic` projects (#592).
 - **SPC status panel** (Bayly-AI/HATH0R-CLI#594, epic #580): `docs/observe/spc-panel.md`, declarative `cfg/observability/spc-panel.json` and `make observe-spc`. ATC observes only; the numbers come from the HATH0R-CLI `spc-monitor-bot` (`hath0r spc status`) and the read-only HATH0R-MCP `quality_spc_status` tool. Low Cpk and control-chart signals are warnings; red means block mode or an active Andon stop.
 
+
 ## [0.5.8] - 2026-11-07
 
 ### Added
