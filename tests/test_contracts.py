@@ -68,3 +68,14 @@ def test_docker_compose_cruise_control_and_nginx_route() -> None:
     assert "location /api/decisions {" in nginx_content
 
 
+
+
+def test_cfg_spc_panel() -> None:
+    path = Path(__file__).parent.parent / "cfg" / "observability" / "spc-panel.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    assert data["kind"] == "SPCPanelConfig"
+    assert data["sources"]["mcp_tool"] == "quality_spc_status"
+    assert "spc-monitor-bot" in data["owning_bots"]
+    assert data["capability"]["mode"] == "warn"
+    assert data["capability"]["lsl"] == 0.8
+    assert "r_task" in data["metrics"]

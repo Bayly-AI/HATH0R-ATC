@@ -8,6 +8,7 @@
 |---------|----------------|
 | Docker group status | `make docker-status` |
 | Smoke (edge + Redis + optional MCP) | `make smoke` / `./deploy/docker/smoke-test.sh` |
+| SPC status panel (R_task, tiers, cost, latency; Cpk) | `make observe-spc` · [`spc-panel.md`](spc-panel.md) |
 | Reports | `docs/reports/` |
 | Runtime archive | `docs/archive/` |
 

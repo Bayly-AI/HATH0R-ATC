@@ -1,0 +1,31 @@
+{
+  "kind": "SPCPanelConfig",
+  "schema_version": "hath0r.atc.spc-panel/v1",
+  "issue": "Bayly-AI/HATH0R-CLI#594",
+  "description": "Suite SPC status panel. ATC only observes: the numbers come from the HATH0R-CLI spc-monitor-bot (hath0r spc) and are read through HATH0R-MCP quality_spc_status.",
+  "owning_bots": ["spc-monitor-bot", "phoenix-observer-bot"],
+  "sources": {
+    "cli": "hath0r -o json spc status",
+    "mcp_tool": "quality_spc_status",
+    "state_file": ".hath0r/spc/latest.json",
+    "contract": "https://github.com/Bayly-AI/HATH0R-CLI/blob/development/contracts/hath0r-spc-chart-v1.schema.json"
+  },
+  "metrics": ["r_task", "deterministic", "trajectory", "adversarial", "goal_alignment", "eval_duration_ms", "total_tokens", "cost_usd", "latency_ms"],
+  "capability": {
+    "metric": "r_task",
+    "lsl": 0.8,
+    "goal": 1.0,
+    "min_cpk_warn": 1.33,
+    "mode": "warn"
+  },
+  "status_levels": {
+    "green": "in_control and Cpk >= 1.33",
+    "amber": "provisional limits (< 20 points), a signal, or Cpk < 1.33 (warning)",
+    "red": "out_of_control in block mode, or an active Andon stop"
+  },
+  "related": {
+    "andon": "hath0r andon status / MCP andon_status",
+    "msa": "hath0r evals msa report / MCP evals_msa_report",
+    "fmea": "hath0r fmea report / MCP fmea_query"
+  }
+}
