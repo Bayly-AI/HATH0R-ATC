@@ -1,15 +1,15 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261031-161643-83cc02",
+  "eval_id": "eval-20261107-182411-a7df65",
   "task_id": "clean-repo-hath0r-atc",
   "issue_number": null,
   "repo_name": "hath0r-atc",
   "branch": "development",
-  "evaluated_at": "2026-10-31T16:16:43.932442+00:00",
-  "duration_ms": 640.27,
+  "evaluated_at": "2026-11-07T18:24:11.401936+00:00",
+  "duration_ms": 596.06,
   "passed_gate": true,
-  "r_task": 0.948,
+  "r_task": 0.9479,
   "min_reward_threshold": 0.8,
   "weights": {
     "deterministic": 0.4,
@@ -19,7 +19,7 @@
   },
   "tier_scores": {
     "deterministic": 0.9433,
-    "trajectory": 0.932,
+    "trajectory": 0.9313,
     "adversarial": 0.98,
     "goal_alignment": 0.9287
   },
@@ -52,7 +52,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 71,
+          "compounded_nodes_count": 74,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -67,7 +67,7 @@
         "calibration_4h": {
           "passed": true,
           "is_fresh": false,
-          "age_hours": 5.68,
+          "age_hours": 170.07,
           "max_age_hours": 4.0
         },
         "local_quality_gates": {
@@ -186,22 +186,22 @@
       }
     },
     "trajectory": {
-      "score": 0.932,
+      "score": 0.9313,
       "passed": true,
-      "tokens_used": 164,
+      "tokens_used": 143,
       "max_tokens": 50000,
-      "estimated_usd": 0.000492,
+      "estimated_usd": 0.000429,
       "max_usd": 0.25,
-      "session_id": "sess-20261031-161643-8c06be",
+      "session_id": "sess-20261107-182410-d7a00c",
       "session_reads": 2,
       "session_writes": 3,
-      "session_bytes": 1968,
-      "capsule_fill_ratio": 0.9609,
+      "session_bytes": 1981,
+      "capsule_fill_ratio": 0.9673,
       "within_capsule_budget": true,
-      "latency_ms": 203.79,
-      "taguchi_quality_loss": 0.0006,
-      "taguchi_score": 0.9785,
-      "snr_db": 19.84
+      "latency_ms": 190.12,
+      "taguchi_quality_loss": 0.0005,
+      "taguchi_score": 0.9788,
+      "snr_db": 20.44
     },
     "adversarial": {
       "score": 0.98,
@@ -228,7 +228,7 @@
       "active_focus": "clean-repo-hath0r-atc",
       "goal_keywords_count": 4,
       "goal_overlap_score": 0.98,
-      "compounded_nodes_count": 71,
+      "compounded_nodes_count": 74,
       "consensus_score": 0.826
     }
   },
@@ -308,7 +308,7 @@
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
-        ".hath0r/memory/sessions/sess-20261031-161643-8c06be.json"
+        ".hath0r/memory/sessions/sess-20261107-182410-d7a00c.json"
       ],
       "UNVERIFIED_FILE_PRESENCE": []
     },
@@ -322,5 +322,5 @@
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:ff2cd58e34056eff7a486e04f60496eed9118e96f48f5c37c47f1e624071e4d8"
+  "content_hash": "sha256:e7450670f0a45214a88176001bba336b8d66ab6f76773cac4be7aaba04e207a6"
 }
