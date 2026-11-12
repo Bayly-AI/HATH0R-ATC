@@ -1,0 +1,120 @@
+{
+  "schema_version": "hath0r.spc.status/v1",
+  "generated_at": "2026-11-11T20:20:59.731971+00:00",
+  "mode": "warn",
+  "metrics": {
+    "r_task": {
+      "status": "out_of_control",
+      "n": 25,
+      "center": 0.985675,
+      "ucl": 0.996271,
+      "lcl": 0.975079,
+      "latest": 0.9479,
+      "signals": 25,
+      "last_signal_index": 24
+    },
+    "deterministic": {
+      "status": "out_of_control",
+      "n": 25,
+      "center": 0.991325,
+      "ucl": 1.005365,
+      "lcl": 0.977285,
+      "latest": 0.9433,
+      "signals": 23,
+      "last_signal_index": 24
+    },
+    "trajectory": {
+      "status": "out_of_control",
+      "n": 25,
+      "center": 0.979565,
+      "ucl": 0.997622,
+      "lcl": 0.961508,
+      "latest": 0.9313,
+      "signals": 25,
+      "last_signal_index": 24
+    },
+    "adversarial": {
+      "status": "out_of_control",
+      "n": 25,
+      "center": 0.98575,
+      "ucl": 0.995688,
+      "lcl": 0.975812,
+      "latest": 0.98,
+      "signals": 25,
+      "last_signal_index": 24
+    },
+    "goal_alignment": {
+      "status": "out_of_control",
+      "n": 25,
+      "center": 0.97861,
+      "ucl": 0.98859,
+      "lcl": 0.96863,
+      "latest": 0.9287,
+      "signals": 25,
+      "last_signal_index": 24
+    },
+    "eval_duration_ms": {
+      "status": "out_of_control",
+      "n": 25,
+      "center": 576.347,
+      "ucl": 1444.53149,
+      "lcl": -291.83749,
+      "latest": 596.06,
+      "signals": 5,
+      "last_signal_index": 24
+    },
+    "total_tokens": {
+      "status": "out_of_control",
+      "n": 592,
+      "center": 7.55,
+      "ucl": 8.809798,
+      "lcl": 6.290202,
+      "latest": 7.0,
+      "signals": 571,
+      "last_signal_index": 591
+    },
+    "cost_usd": {
+      "status": "out_of_control",
+      "n": 592,
+      "center": 2.3e-05,
+      "ucl": 2.6e-05,
+      "lcl": 1.9e-05,
+      "latest": 2.1e-05,
+      "signals": 571,
+      "last_signal_index": 591
+    },
+    "latency_ms": {
+      "status": "in_control",
+      "n": 592,
+      "center": 0.0,
+      "ucl": 0.0,
+      "lcl": 0.0,
+      "latest": 0.0,
+      "signals": 0,
+      "last_signal_index": null
+    }
+  },
+  "capability": {
+    "n": 25,
+    "mean": 0.9786720000000001,
+    "lsl": 0.8,
+    "usl": null,
+    "cp": null,
+    "cpk": 17.061757968253968,
+    "pp": null,
+    "ppk": 2.384036669762672,
+    "capable": true,
+    "min_cpk_warn": 1.33
+  },
+  "warnings": [
+    "r_task: 25 out-of-control signal(s), latest at point 25 of 25",
+    "deterministic: 23 out-of-control signal(s), latest at point 25 of 25",
+    "trajectory: 25 out-of-control signal(s), latest at point 25 of 25",
+    "adversarial: 25 out-of-control signal(s), latest at point 25 of 25",
+    "goal_alignment: 25 out-of-control signal(s), latest at point 25 of 25",
+    "eval_duration_ms: 5 out-of-control signal(s), latest at point 25 of 25",
+    "total_tokens: 571 out-of-control signal(s), latest at point 592 of 592",
+    "cost_usd: 571 out-of-control signal(s), latest at point 592 of 592"
+  ],
+  "blocking": false
+}
