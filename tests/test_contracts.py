@@ -79,3 +79,27 @@ def test_cfg_spc_panel() -> None:
     assert data["capability"]["mode"] == "warn"
     assert data["capability"]["lsl"] == 0.8
     assert "r_task" in data["metrics"]
+
+
+def test_cfg_spc_panel_v2_levels() -> None:
+    path = Path(__file__).parent.parent / "cfg" / "observability" / "spc-panel.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    assert data["schema_version"] == "hath0r.atc.spc-panel/v2"
+    assert data["per_level"]["levels"] == ["L1", "L2", "L3", "L4", "L5"]
+    assert data["judge_severity"]["metric_pattern"].startswith("judge_severity@")
+
+
+def test_cfg_judge_calibration_panel() -> None:
+    path = Path(__file__).parent.parent / "cfg" / "observability" / "judge-calibration-panel.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    assert data["kind"] == "JudgeCalibrationPanelConfig"
+    assert data["sources"]["mcp_tool"] == "evals_judge_calibration_report"
+    assert "judge-calibration-bot" in data["owning_bots"]
+    assert data["gates"] == {"max_se": 0.10, "max_mnsq": 1.5, "removal_psi": 0.20, "bh_q": 0.05, "approved_by": "Ray", "approved_on": "2026-11-16"}
+    assert data["levels"]["code"] == ["L1", "L2", "L3", "L4", "L5"]
+    assert set(data["status_levels"]) == {"green", "amber", "red"}
+
+
+def test_makefile_observe_judges() -> None:
+    text = (Path(__file__).parent.parent / "Makefile").read_text(encoding="utf-8")
+    assert "observe-judges:" in text and "hath0r evals judges report" in text

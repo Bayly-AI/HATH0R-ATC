@@ -15,3 +15,4 @@
 ## Direction
 
 Expand toward fuller Observe capabilities while keeping **status and smoke ownership in ATC** so the control tower remains the single place operators check suite health for framework builds.
+- [Judge calibration panel](judge-calibration-panel.md): every judge, every complexity level, from the HATH0R-CLI MFRM study (#88).

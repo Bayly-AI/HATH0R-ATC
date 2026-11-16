@@ -32,3 +32,9 @@ Capability is R_task against the eval threshold (LSL 0.80, one-sided). The goal 
 
 R_task, the four tier scores, eval duration, total tokens, cost and latency. Limits are frozen per
 metric with `hath0r spc baseline -m <metric> [--recent]` in the CLI workspace.
+
+## Per level (v2, Bayly-AI/HATH0R-CLI#616)
+
+Scorecards carry the change's complexity level (L1 to L5). Chart one level with
+`hath0r spc chart -m r_task --level L4` (metric `r_task@L4`), and a judge's bias at a level with
+`judge_severity@<judge>:<level>`. See the [judge calibration panel](judge-calibration-panel.md).

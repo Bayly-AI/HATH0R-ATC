@@ -1,0 +1,38 @@
+{
+  "kind": "JudgeCalibrationPanelConfig",
+  "schema_version": "hath0r.atc.judge-calibration-panel/v1",
+  "issue": "Bayly-AI/HATH0R-ATC#88",
+  "epic": "Bayly-AI/HATH0R-CLI#610",
+  "description": "Status of every Hath0r judge at every complexity level from the latest many-facet Rasch calibration (Study B). ATC only observes: the numbers come from the HATH0R-CLI judge-calibration-bot (hath0r evals judges) and are read through HATH0R-MCP evals_judge_calibration_report.",
+  "owning_bots": ["judge-calibration-bot", "measurement-system-bot", "phoenix-observer-bot"],
+  "sources": {
+    "cli_report": "hath0r -o json evals judges report",
+    "cli_registry": "hath0r -o json evals judges status",
+    "mcp_tool": "evals_judge_calibration_report",
+    "state_files": [".hath0r/evals/judges/latest.json", ".hath0r/evals/judges/registry.json"],
+    "contract": "https://github.com/Bayly-AI/HATH0R-CLI/blob/development/contracts/hath0r-judge-calibration-v1.schema.json"
+  },
+  "levels": {
+    "code": ["L1", "L2", "L3", "L4", "L5"],
+    "jev": ["R1", "R2", "R3", "R4", "R5"],
+    "reasoning": ["6", "7", "8", "9", "10", "11", "12"]
+  },
+  "gates": {
+    "max_se": 0.10,
+    "max_mnsq": 1.5,
+    "removal_psi": 0.20,
+    "bh_q": 0.05,
+    "approved_by": "Ray",
+    "approved_on": "2026-11-16"
+  },
+  "status_levels": {
+    "green": "certified at the level: usable",
+    "amber": "not_certified: not enough information (SE above 0.10, too few parts, extreme cell, or no anchor)",
+    "red": "removed_bias or removed_noise: do not use this judge at this level"
+  },
+  "related": {
+    "msa": "hath0r evals msa report / MCP evals_msa_report (Study A, level-stratified Gage R&R)",
+    "spc": "hath0r spc chart -m judge_severity@<judge>:<level> / MCP quality_spc_status",
+    "complexity_levels": "https://github.com/Bayly-AI/HATH0R-CLI/blob/development/cfg/evals/complexity-levels.yaml"
+  }
+}

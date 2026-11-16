@@ -5,6 +5,14 @@ All notable changes to **HATH0R-ATC** are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0] - 2026-11-16
+
+### Added
+- **Judge calibration panel** (#88, epic Bayly-AI/HATH0R-CLI#610): `docs/observe/judge-calibration-panel.md`, `cfg/observability/judge-calibration-panel.json` and `make observe-judges`. Shows every judge's status (certified, not certified, removed for bias or noise) at every complexity level from the HATH0R-CLI many-facet Rasch study, read through `hath0r evals judges` or MCP `evals_judge_calibration_report`.
+
+### Changed
+- `cfg/observability/spc-panel.json` v2: per-level charts (`r_task@L1..L5`, `hath0r spc chart --level`) and judge severity series (`judge_severity@<judge>:<level>`).
+
 ## [0.6.0] - 2026-11-11
 
 ### Added
