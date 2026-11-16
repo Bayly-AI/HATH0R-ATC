@@ -1,16 +1,28 @@
 {
   "kind": "SPCPanelConfig",
-  "schema_version": "hath0r.atc.spc-panel/v1",
-  "issue": "Bayly-AI/HATH0R-CLI#594",
+  "schema_version": "hath0r.atc.spc-panel/v2",
   "description": "Suite SPC status panel. ATC only observes: the numbers come from the HATH0R-CLI spc-monitor-bot (hath0r spc) and are read through HATH0R-MCP quality_spc_status.",
-  "owning_bots": ["spc-monitor-bot", "phoenix-observer-bot"],
+  "owning_bots": [
+    "spc-monitor-bot",
+    "phoenix-observer-bot"
+  ],
   "sources": {
     "cli": "hath0r -o json spc status",
     "mcp_tool": "quality_spc_status",
     "state_file": ".hath0r/spc/latest.json",
     "contract": "https://github.com/Bayly-AI/HATH0R-CLI/blob/development/contracts/hath0r-spc-chart-v1.schema.json"
   },
-  "metrics": ["r_task", "deterministic", "trajectory", "adversarial", "goal_alignment", "eval_duration_ms", "total_tokens", "cost_usd", "latency_ms"],
+  "metrics": [
+    "r_task",
+    "deterministic",
+    "trajectory",
+    "adversarial",
+    "goal_alignment",
+    "eval_duration_ms",
+    "total_tokens",
+    "cost_usd",
+    "latency_ms"
+  ],
   "capability": {
     "metric": "r_task",
     "lsl": 0.8,
@@ -26,6 +38,29 @@
   "related": {
     "andon": "hath0r andon status / MCP andon_status",
     "msa": "hath0r evals msa report / MCP evals_msa_report",
-    "fmea": "hath0r fmea report / MCP fmea_query"
+    "fmea": "hath0r fmea report / MCP fmea_query",
+    "judges": "hath0r evals judges report / MCP evals_judge_calibration_report"
+  },
+  "issues": [
+    "Bayly-AI/HATH0R-CLI#594",
+    "Bayly-AI/HATH0R-CLI#616",
+    "Bayly-AI/HATH0R-ATC#88"
+  ],
+  "per_level": {
+    "levels": [
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5"
+    ],
+    "metric_pattern": "<metric>@<level>",
+    "example": "hath0r spc chart -m r_task --level L4",
+    "note": "Scorecards carry complexity.level (#616); a level with fewer than 20 points shows provisional limits."
+  },
+  "judge_severity": {
+    "metric_pattern": "judge_severity@<judge>:<level>",
+    "source": "psi per judge and level across judge calibration studies",
+    "panel": "cfg/observability/judge-calibration-panel.json"
   }
 }
